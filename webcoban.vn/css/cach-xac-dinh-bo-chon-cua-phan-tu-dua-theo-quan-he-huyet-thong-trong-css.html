@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:18 GMT -->
+<head>
+<title>Cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách xác định bộ chọn của một phần tử dựa theo quan hệ huyết thống">
+<meta name="description" content="Hướng dẫn cách xác định bộ chọn của một phần tử dựa theo các mối quan hệ huyết thống trong CSS, xác định bộ chọn của phần tử dựa theo quan hệ tổ tiên ông bà con cháu, quan hệ cha con, quan hệ anh em">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.8788.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" class='active'>- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống">Xác định bộ chọn dựa theo quan hệ huyết thống</h1>
+<div class="breadcrumb">
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Trong <a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" target="_blank" class="sss-link">Bài 05</a> thì tôi đã có hướng dẫn các bạn cách xác định bộ chọn của một phần tử rồi. Tuy nhiên, những cách đó chỉ phù hợp với các trường hợp đơn giản, còn đối với các trường hợp phức tạp hơn thì nó không thể nào xác định được chính xác bộ chọn của phần tử.</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Trong đoạn mã bên dưới, chúng ta có hai phần tử &lt;h1&gt; tương đối giống nhau, hai phần tử này đều có một số đặc điểm chung như: tên thẻ, class, thuộc tính, giá trị thuộc tính, . . . .</p>
+<pre>&lt;div class=&quot;html&quot;&gt;
+    &lt;h1 class=&quot;content&quot; title=&quot;hello&quot;&gt;Tài liệu học HTML&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div class=&quot;css&quot;&gt;
+    &lt;h1 class=&quot;content&quot; title=&quot;hello&quot;&gt;Tài liệu học CSS&lt;/h1&gt;
+&lt;/div&gt;</pre>
+<p>- Khi tôi muốn thiết lập nền màu hồng cho phần tử &lt;h1&gt; thứ nhất (Tài liệu học HTML) thì công việc đầu tiên mà tôi cần phải làm đó chính là xác định bộ chọn của nó, tôi áp dụng kiến thức <a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" target="_blank" class="sss-link">Bài 05</a> để xác định tất cả các bộ chọn có thể &amp; đã xác định được 31 bộ chọn như bên dưới:</p>
+<table class="table table-bordered">
+<tr>
+<td>h1</td>
+<td>.content</td>
+<td>[title]</td>
+</tr>
+<tr>
+<td>h1.content</td>
+<td>.content[title]</td>
+<td>[title="hello"]</td>
+</tr>
+<tr>
+<td>h1.content[title]</td>
+<td>.content[title="hello"]</td>
+<td>[title~="hello"]</td>
+</tr>
+<tr>
+<td>h1.content[title="hello"]</td>
+<td>.content[title~="hello"]</td>
+<td>[title*="hello"]</td>
+</tr>
+<tr>
+<td>h1.content[title~="hello"]</td>
+<td>.content[title*="hello"]</td>
+<td>[title^="hello"]</td>
+</tr>
+<tr>
+<td>h1.content[title*="hello"]</td>
+<td>.content[title^="hello"]</td>
+<td>[title$="hello"]</td></tr>
+<tr>
+<td>h1.content[title^="hello"]</td>
+<td>.content[title$="hello"]</td>
+<td>[title|="hello"]</td>
+</tr>
+<tr>
+<td>h1.content[title$="hello"]</td>
+<td>.content[title|="hello"]</td>
+<td></td>
+</tr>
+<tr>
+<td>h1.content[title|="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title~="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title*="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title^="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title$="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>h1[title|="hello"]</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<p>- Tuy nhiên, trong số 31 bộ chọn này thì không có bộ chọn nào xác định được chính xác phần tử &lt;h1&gt; thứ nhất, bởi vì chúng lấy luôn cả phần tử &lt;h1&gt; thứ hai, khiến cho phần tử &lt;h1&gt; thứ hai bị thiết lập nền màu hồng (trong khi tôi không mong muốn điều đó)</p>
+<div><a href="demo350d.html?file=3613" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- Từ đây, khi gặp phải trường hợp có nhiều phần tử giống nhau (giống như ví dụ phía trên), nếu chúng ta muốn xác định bộ chọn của một phần tử nào đó trong số chúng thì chúng ta không thể nào chỉ dựa vào kiến thức của <a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" target="_blank" class="sss-link">Bài 05</a> được nữa, mà bây giờ chúng ta cần phải kết hợp thêm một phương pháp mới đó chính là dựa vào quan hệ huyết thống của phần tử <a href="demo0c5e.html?file=3614" target="_blank" class="i-link-1">(Xem ví dụ)</a></p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>1) Các mối quan hệ huyết thống phổ biến</h2>
+<p>- Trong CSS, khi nói về quan hệ huyết thống giữa các phần tử thì chúng được chia ra làm bốn loại chính:</p>
+<ul>
+<li>(1) Mối quan hệ giữa: tổ tiên &amp; con cháu</li>
+<li>(2) Mối quan hệ giữa: cha &amp; con</li>
+<li>(3) Mối quan hệ giữa: anh &amp; em</li>
+<li>(4) Mối quan hệ giữa: anh liền kề &amp; em liền kề</li>
+</ul>
+<p>- Dưới đây là bảng mô tả sơ lược về bốn mối quan hệ trên:</p>
+<table class="table table-bordered">
+<tr>
+<td rowspan="2">tổ tiên &amp; con cháu</td>
+<td>
+<p>- A được gọi là tổ tiên của B khi A chứa B.</p>
+</td>
+</tr>
+<tr> 
+<td>
+<p>- B được gọi là con cháu của A khi B nằm bên trong A.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">cha &amp; con</td>
+<td><p>- A được gọi là cha của B khi A trực tiếp chứa B mà không thông qua bất kỳ một phần tử nào khác.</p></td>
+</tr>
+<tr>
+<td><p>- B được gọi là con của A khi B nằm trực tiếp bên trong A mà không thông qua bất kỳ một phần tử nào khác.</p></td>
+</tr>
+<tr>
+<td rowspan="2">anh &amp; em</td>
+<td><p>- A được gọi là anh của B khi A &amp; B có cùng cha (A phải khai báo trước B)</p></td>
+</tr>
+<tr>
+<td><p>- B được gọi là em của A khi B &amp; A có cùng cha (B phải khai báo sau A)</p></td>
+</tr>
+<tr>
+<td rowspan="2">anh liền kề  &amp; em liền kề</td>
+<td><p>- A được gọi là anh liền kề của B khi A là anh của B.</p>
+<p>(ngoài ra thì A còn phải là người anh nằm gần với B nhất)</td>
+</tr>
+<tr>
+<td><p>- B được gọi là em liền kề của A khi B là em của A.</p>
+<p>(ngoài ra thì B còn phải là người em nằm gần với A nhất)</td>
+</tr>
+</table>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><ul>
+<li>Mối quan hệ giữa <u>cha &amp; con</u> cũng được xem là mối quan hệ giữa <u>tổ tiên &amp; con cháu</u></li>
+<li>Mối quan hệ giữa <u>anh liền kề &amp; em liền kề</u> cũng được xem là mối quan hệ giữa <u>anh &amp; em</u></li>
+</ul></td>
+</tr>
+</table>
+<p>- Để giúp các bạn dễ hình dung hơn về bốn mối quan hệ trên thì tôi có một cái ví dụ minh họa như sau:</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một đoạn mã như bên dưới.</p>
+<div class="i-pre-not-color i-form-2">&lt;html&gt;
+&lt;body&gt;
+    &lt;h1&gt;Tài liệu học &lt;u&gt;Lập Trình Web&lt;/u&gt; từ cơ bản đếng nâng cao&lt;/h1&gt;
+    &lt;div&gt;
+        &lt;h3&gt;Tài liệu học HTML&lt;/h3&gt;
+        &lt;p&gt;Tài liệu học CSS&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;h4&gt;Tài liệu học JavaScript&lt;/h4&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p>- Từ đoạn mã trên, tôi xây dựng được một cái cây gia phả như sau.</p>
+<div class="j8sjk"><div>HTML</div><div>BODY</div><div>H1</div><div>DIV</div><div>H4</div><div>U</div><div>H3</div><div>P</div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<p>- Dựa vào cây gia phả, tôi lập được một cái bảng mô tả mối quan hệ huyết thống giữa các phần tử:</p>
+<table class="table table-bordered">
+<tr>
+<td>&lt;html&gt;</td>
+<td>
+<ul>
+<li>là cha của: &lt;body&gt;</li>
+<li>là tổ tiên của: &lt;body&gt;, &lt;h1&gt;, &lt;div&gt;, &lt;h4&gt;, &lt;u&gt;, &lt;h3&gt;, &lt;p&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;body&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;html&gt;</li>
+<li>là con cháu của: &lt;html&gt;</li>
+<li>là cha của: &lt;h1&gt;, &lt;div&gt;, &lt;h4&gt;</li>
+<li>là tổ tiên của của: &lt;h1&gt;, &lt;div&gt;, &lt;h4&gt;, &lt;u&gt;, &lt;h3&gt;, &lt;p&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;h1&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;body&gt;</li>
+<li>là con cháu của: &lt;body&gt;, &lt;html&gt;</li>
+<li>là cha của: &lt;u&gt;</li>
+<li>là tổ tiên của: &lt;u&gt;</li>
+<li>là anh của: &lt;div&gt;, &lt;h4&gt;</li>
+<li>là anh liền kề của: &lt;div&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;div&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;body&gt;</li>
+<li>là con cháu của: &lt;body&gt;, &lt;html&gt;</li>
+<li>là cha của: &lt;h3&gt;, &lt;p&gt;</li>
+<li>là tổ tiên của: &lt;h3&gt;, &lt;p&gt;</li>
+<li>là anh của: &lt;h4&gt;</li>
+<li>là anh liền kề của: &lt;h4&gt;</li>
+<li>là em của: &lt;h1&gt;</li>
+<li>là em liền kề của: &lt;h1&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;h4&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;body&gt;</li>
+<li>là con cháu của: &lt;body&gt;, &lt;html&gt;</li>
+<li>là em của: &lt;div&gt;, &lt;h1&gt;</li>
+<li>là em liền kề của: &lt;div&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;u&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;h1&gt;</li>
+<li>là con cháu của: &lt;h1&gt;, &lt;body&gt;, &lt;html&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;h3&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;div&gt;</li>
+<li>là con cháu của: &lt;div&gt;, &lt;body&gt;, &lt;html&gt;</li>
+<li>là anh của: &lt;p&gt;</li>
+<li>là anh liền kề của: &lt;p&gt;</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&lt;p&gt;</td>
+<td>
+<ul>
+<li>là con của: &lt;div&gt;</li>
+<li>là con cháu của: &lt;div&gt;, &lt;body&gt;, &lt;html&gt;</li>
+<li>là em của: &lt;h3&gt;</li>
+<li>là em liền kề của: &lt;h3&gt;</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Xác định bộ chọn của phần tử dựa theo quan hệ huyết thống</h2>
+<p>- Để xác định bộ chọn của một phần tử nào đó dựa vào các mối quan hệ huyết thống của nó thì chúng ta có bốn loại cú pháp như sau:</p>
+<table class="table table-bordered">
+<tr>
+<td>element1 element2</td>
+<td><p>- Chọn phần tử element2</p>
+<p>(với điều kiện phần tử element2 phải là <u>con cháu</u> của phần tử element1)</p></td>
+</tr>
+<tr>
+<td>element1 &gt; element2</td>
+<td><p>- Chọn phần tử element2</p>
+<p>(với điều kiện phần tử element2 phải là <u>con</u> của phần tử element1)</p></td>
+</tr>
+<tr>
+<td>element1 ~ element2</td>
+<td><p>- Chọn phần tử element2</p>
+<p>(với điều kiện phần tử element2 phải là <u>em</u> của phần tử element1)</p></td>
+</tr>
+<tr>
+<td>element1 + element2</td>
+<td><p>- Chọn phần tử element2</p>
+<p>(với điều kiện phần tử element2 phải là <u>em liền kề</u> của phần tử element1)</p></td>
+</tr>
+</table>
+<p>- Dưới đây là một số ví dụ:</p>
+<table class="table table-bordered">
+<tr>
+<td>.html h1</td>
+<td><p>- Chọn phần tử &lt;h1&gt;</p>
+<p>&#10153; với điều kiện nó phải là <u>con cháu</u> của phần tử có class là html</p></td>
+<td><a href="demo8015.html?file=3246" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>div &gt; u.test</td>
+<td><p>- Chọn phần tử &lt;u&gt; có class là test</p>
+<p>&#10153; với điều kiện nó phải là <u>con</u> của phần tử &lt;div&gt;</p></td>
+<td><a href="demod570.html?file=3247" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>h1.css ~ p</td>
+<td><p>- Chọn phần tử &lt;p&gt;</p>
+<p>&#10153; với điều kiện nó phải là <u>em</u> của phần tử &lt;h1&gt; có class là css</p></td>
+<td><a href="demo5e55.html?file=3248" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>h1 + p</td>
+<td><p>- Chọn phần tử &lt;p&gt;</p>
+<p>&#10153; với điều kiện nó phải là <u>em liền kề</u> của phần tử &lt;h1&gt;</i></p></td>
+<td><a href="demob0e5.html?file=3249" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>.html *</td>
+<td><p>- Chọn tất cả các phần tử <u>con cháu</u> của phần tử có class là html</p></td>
+<td><a href="demob3b3.html?file=3250" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>.html &gt; *</td>
+<td><p>- Chọn tất cả các phần tử <u>con</u> của phần tử có class là html</p></td>
+<td><a href="demo13d9.html?file=3251" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>h1 ~ *</td>
+<td><p>- Chọn tất cả các phần tử là <u>em</u> của phần tử &lt;h1&gt;</p></td>
+<td><a href="demoee05.html?file=3252" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>h1 + *</td>
+<td><p>- Chọn phần tử là <u>em liền kề</u> của phần tử &lt;h1&gt;</p></td>
+<td><a href="demof029.html?file=3253" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>h1 ~ p &gt; u</td>
+<td><p>- Chọn phần tử &lt;u&gt;</p>
+<p>&#10153; với điều kiện nó phải là <u>con</u> của phần tử &lt;p&gt;</p>
+<p>&#10153; và phần tử &lt;p&gt; phải là <u>em</u> của phần tử &lt;h1&gt;</p></td>
+<td><a href="demo7016.html?file=3254" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>.test01 h1 ~ p</td>
+<td><p>- Chọn phần tử &lt;p&gt;</p>
+<p>&#10153; với điều kiện nó phải là <u>em</u> của phần tử &lt;h1&gt;</p>
+<p>&#10153; và phần tử &lt;h1&gt; phải là <u>con cháu</u> của phần tử có class là test01</p></td>
+<td><a href="demo430e.html?file=3255" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+</table><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:22 GMT -->
+</html>

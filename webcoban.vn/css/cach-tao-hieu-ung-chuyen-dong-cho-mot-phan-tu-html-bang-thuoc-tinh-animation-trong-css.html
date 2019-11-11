@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:57 GMT -->
+<head>
+<title>Tạo hiệu ứng chuyển động cho phần tử bằng thuộc tính animation trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tạo hiệu ứng chuyển động cho phần tử bằng thuộc tính animation trong css">
+<meta name="description" content="Trong bài học này, tôi sẽ hướng dẫn các bạn cách sử dụng nhóm thuộc tính animation trong CSS để tạo hiệu ứng chuyển động cho một phần tử HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.5334.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" class='active'>- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Tạo hiệu ứng chuyển động cho phần tử bằng thuộc tính animation trong CSS">Cách tạo hiệu ứng chuyển động cho phần tử HTML</h1>
+<div class="breadcrumb">
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Thông thường, khi chúng ta muốn thiết lập hiệu ứng chuyển động cho một phần tử nào đó thì về cơ bản chúng ta cần phải thực hiện hai công việc.</p>
+<ul>
+<li>Công việc thứ nhất là tạo một cái @keyframes.</li>
+<li>Công việc thứ hai là sử dụng các thuộc tính animation để áp dụng @keyframes lên phần tử.</li>
+</ul>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một đoạn mã như bên dưới.</p>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #test{
+            background-color:green;
+            width:100px;
+            height:100px;
+            position:relative;
+            left:0px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Màn hình trình duyệt sẽ hiển thị là.</p>
+<div class="j4jsk i-brs03"><div></div></div>
+<p>- Bây giờ, tôi muốn tạo hiệu ứng chuyển động cho phần tử #test.</p>
+<p>(tôi muốn nó di chuyển sang bên phải 500px rồi trở về vị trí cũ, tiếp tục lặp lại hành động này)</p>
+<div class="j4ysk i-brs03"><div></div></div>
+<p>- Để làm được điều đó thì trước tiên tôi tạo một cái @keyframes có tên là <span>move_right</span>, nó sẽ cung cấp cho trình duyệt các thông tin như:</p>
+<ul>
+<li>Ở thời điểm 0% (khi hiệu ứng chuyển động chưa diễn ra) phần tử sẽ nằm ở vị trí left 0px.</li>
+<li>Ở thời điểm 100% (khi hiệu ứng chuyển động đã kết thúc) phần tử sẽ nằm ở vị trí left 500px.</li>
+</ul>
+<div class="i-pre-not-color i-form-4"><span style="color:#ff2271">@keyframes</span> <span style="color:#f5f2ea">move_right</span><span style="color:#f5f2ea">{</span>
+    <span style="color:#ff2271">0%</span><span style="color:#f5f2ea">{</span>
+        <span style="color:#6bd9f1">left</span><span style="color:#f5f2ea">:</span><span style="color:#a277ed">0</span><span style="color:#ff2271">px</span><span style="color:#f5f2ea">;</span>
+    <span style="color:#f5f2ea">}</span>
+    <span style="color:#ff2271">100%</span><span style="color:#f5f2ea">{</span>
+        <span style="color:#6bd9f1">left</span><span style="color:#f5f2ea">:</span><span style="color:#a277ed">500</span><span style="color:#ff2271">px</span><span style="color:#f5f2ea">;</span>
+    <span style="color:#f5f2ea">}</span>
+<span style="color:#f5f2ea">}</span></div>
+<p>- Sau khi đã xây dựng xong cái @keyframes, tôi sẽ sử dụng các thuộc tính animation để áp dụng cái @keyframes đó lên phần tử.</p>
+<p>- Trong trường hợp này thì tôi sử dụng ba thuộc tính:</p>
+<ul>
+<li>Thuộc tính <strong>animation-name</strong> dùng để xác định tên của cái @keyframes mà tôi muốn áp dụng lên phần tử.</li>
+<li>Thuộc tính <strong>animation-duration</strong> dùng để xác định &quot;thời lượng&quot; của một chu kỳ hiệu ứng chuyển động (tôi thiết lập 3 giây)</li>
+<li>Thuộc tính <strong>animation-iteration-count</strong> dùng để xác định &quot;số lần lặp lại&quot; một chu kỳ hiệu ứng chuyển động (tôi thiết lập giá trị infinite có nghĩa là không giới hạn số lần lặp lại)</li>
+</ul>
+<div class="i-pre-not-color i-form-4"><span style="color:#6bd9f1">animation-name</span><span style="color:#f5f2ea">:</span><span style="color:#f5f2ea">move_right;</span>
+<span style="color:#6bd9f1">animation-duration</span><span style="color:#f5f2ea">:</span><span style="color:#a277ed">3</span><span style="color:#ff2271">s</span><span style="color:#f5f2ea">;</span>
+<span style="color:#6bd9f1">animation-iteration-count</span><span style="color:#f5f2ea">:</span><span style="color:#f5f2ea">infinite;</span></div>
+<div><a href="demod558.html?file=3539" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>1) Cách tạo một cái @keyframes</h2>
+<p>- @keyframes đóng vai trò giống như là một cái <u>mô hình</u> dùng để mô tả định dạng (style) của phần tử tại những thời điểm khác nhau trong quá trình diễn ra hiệu ứng chuyển động.</p>
+<p>- Để tạo một cái @keyframes thì chúng ta sử dụng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2"><div>@keyframes tên-keyframes {
+    thời điểm 1 {
+        thuộc tính 1 : giá trị của thuộc tính ở thời điểm 1;
+        thuộc tính 2 : giá trị của thuộc tính ở thời điểm 1;
+        thuộc tính 3 : giá trị của thuộc tính ở thời điểm 1;
+    }
+    thời điểm 2 {
+        thuộc tính 1 : giá trị của thuộc tính ở thời điểm 2;
+        thuộc tính 2 : giá trị của thuộc tính ở thời điểm 2;
+        thuộc tính 3 : giá trị của thuộc tính ở thời điểm 2;
+    }
+    thời điểm 3 {
+        thuộc tính 1 : giá trị của thuộc tính ở thời điểm 3;
+        thuộc tính 2 : giá trị của thuộc tính ở thời điểm 3;
+        thuộc tính 3 : giá trị của thuộc tính ở thời điểm 3;
+    }
+}</div></div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>@keyframes move{
+    0%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+    10%{
+        top:0px;
+        left:400px;
+        background-color:red;
+    }
+    40%{
+        top:200px;
+        left:400px;
+        background-color:green;
+    }
+    100%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+}</pre>
+<div><a href="demof24b.html?file=3540" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là một số điều mà chúng ta cần phải lưu ý khi tạo @keyframes.</p>
+<p>&#9940; Đối với những hiệu ứng chuyển động làm thay đổi vị trí của phần tử thì chúng ta phải thiết lập cho phần tử thuộc tính position với một trong các giá trị là <u>relative</u>, <u>absolute</u>, <u>fixed</u>. Bởi vì nếu không thiết lập các giá trị này thì phần tử sẽ không thể di chuyển được.</p>
+<p>&#9940; Đối với những hiệu ứng chuyển động làm thay đổi kích thước của phần tử thì các bạn cần phải cân nhắc việc thiết lập thuộc tính position với giá trị <u>absolute</u> hoặc <u>fixed</u> cho phần tử. Bởi vì nếu không thiết lập một trong hai giá trị này thì khi phần tử thay đổi kích thước, nó sẽ làm ảnh hưởng đến vị trí của các phần tử xung quanh.</p>
+<p>&#9940; Tại mỗi mốc thời điểm, chúng ta <u>nên</u> khai báo đầy đủ những thuộc tính được nhắc đến trong hiệu ứng chuyển động (chẳng hạn như cái ví dụ minh họa phía trên, tại bốn mốc thời điểm 0% 10% 40% 100% tôi đều khai báo đầy đủ ba thuộc tính top, left, background-color)</p>
+<p>&#9940; Thời điểm 0% có thể thay thế bằng chữ <u>from</u>, thời điểm 100% có thể thay thế bằng chữ <u>to</u>.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Danh sách các thuộc tính animation</h2>
+<p>- Dưới đây là danh sách các thuộc tính nằm trong nhóm animation.</p>
+<p>(các bạn vui lòng bấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để xem chi tiết chức năng &amp; cách sử dụng của từng thuộc tính)</p>
+<table class="table table-bordered jskoa">
+<tr>
+<td>animation-name</td>
+<td>
+<p>- Thuộc tính này dùng để xác định tên của cái @keyframes mà chúng ta muốn áp dụng lên phần tử để tạo hiệu ứng chuyển động.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-name</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation-duration</td>
+<td>
+<p> - Thuộc tính này dùng để thiết lập &quot;thời lượng&quot; của một chu kỳ hiệu ứng chuyển động.</p>
+<div class="sss-view-z"><a href="demof054.html?file=3541" target="_blank"><span class="fa fa-file-text-o fa-lg"></span></a></div>
+</td>
+</tr>
+<tr>
+<td>animation-iteration-count</td>
+<td>
+<p>- Thuộc tính này dùng để thiết lập &quot;số lần lặp lại&quot; một chu kỳ hiệu ứng chuyển động.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-iteration-count</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation-delay</td>
+<td>
+<p>- Thuộc tính này dùng để thiết lập &quot;khoảng thời gian phải chờ đợi&quot; trước khi hiệu ứng chuyển động được diễn ra.</p>
+<div class="sss-view-z"><a href="demoe605.html?file=3543" target="_blank"><span class="fa fa-file-text-o fa-lg"></span></a></div>
+</td>
+</tr>
+<tr>
+<td>animation-direction</td>
+<td>
+<p>- Thuộc tính này dùng để &quot;điều hướng&quot; hiệu ứng chuyển động.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-direction</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation-fill-mode</td>
+<td>
+<p>- Thuộc tính này dùng để chỉ định bộ định dạng (style) mà phần tử sẽ được áp dụng ở thời điểm trước khi hiệu ứng chuyển động diễn ra &amp; sau khi hiệu ứng chuyển động kết thúc.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-fill-mode</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation-play-state</td>
+<td>
+<p>- Thuộc tính này dùng để tùy chỉnh việc <span class="mark2">tiếp tục</span> hay <span class="mark2">tạm ngưng</span> hiệu ứng chuyển động.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-play-state</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation-timing-function</td>
+<td>
+<p>- Thuộc tính này dùng để tùy chỉnh &quot;tốc độ chuyển động&quot; của hiệu ứng ở từng giai đoạn.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation-timing-function</div></span></div>
+</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>
+<p>- Thuộc tính này là cú pháp tổng quát dùng để thiết lập hiệu ứng chuyển động cho phần tử (thay vì phải kết hợp các thuộc tính animation riêng lẻ phía trên thì bây giờ chúng ta chỉ cần sử dụng mỗi thuộc tính này là đủ)</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-animation</div></span></div>
+</td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách áp dụng nhiều @keyframes lên một phần tử</h2>
+<p>- Trong các ví dụ minh họa ở trên, những cái hiệu ứng chuyển động do tôi tạo ra đều là hiệu ứng chuyển động thuộc loại đơn giản nhất. Sau này, tùy vào công việc mà các bạn sẽ phải tạo ra những cái hiệu ứng chuyển động phức tạp hơn rất nhiều, nếu chỉ sử dụng duy nhất một cái @keyframes thì sẽ không thể nào đáp ứng được yêu cầu, khi đó chúng ta cần phải áp dụng nhiều @keyframes lên phần tử.</p>
+<p>- Để áp dụng nhiều @keyframes lên một phần tử thì khi thiết lập giá trị cho thuộc tính animation-name, chúng ta cần phải gán nhiều @keyframes &amp; kèm theo một dấu phẩy nằm giữa mỗi hai @keyframes.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more"><p>- Tôi tạo hiệu ứng chuyển động cho phần tử #test bởi ba @keyframes: move, reSize, bgColor</p></div>
+<hr>
+<pre>#test{
+    background-color:green;
+    width:50px;
+    height:50px;
+    position:relative;
+    animation-name:move,reSize,bgColor;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+}
+@keyframes move{
+    from{left:0px;}
+    to{left:500px;}
+}
+@keyframes reSize{
+    from{width:50px;height:50px;}
+    to{width:100px;height:100px;}
+}
+@keyframes bgColor{
+    from{background-color:green;}
+    to{background-color:blue;}
+}</pre>
+<div><a href="demo0e88.html?file=3548" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Đối với những thuộc tính animation khác cũng tương tự như vậy, nếu các bạn muốn thiết lập nhiều giá trị để đáp ứng cho riêng từng cái @keyframes thì các bạn cần phải gán cho nó nhiều giá trị kèm theo một dấu phẩy nằm giữa mỗi hai giá trị.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre class="i-not-color">animation-name: move, reSize, bgColor;
+animation-duration: 3s;
+animation-iteration-count: infinite, 2, infinite;</pre>
+<div><a href="demo64b9.html?file=3549" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="zzz-big-form">
+<div class="ttt-animation-name">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation-name</strong> dùng để xác định tên của cái @keyframes mà chúng ta muốn áp dụng lên phần tử để tạo hiệu ứng chuyển động.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-name: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>name</td>
+<td><p>- Chỉ định cụ thể tên của cái @keyframes mà chúng ta muốn áp dụng lên phần tử.</p></td>
+</tr>
+<tr>
+<td>none</td>
+<td><p>- Không thiết lập hiệu ứng chuyển động cho phần tử.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-name có giá trị là none)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-name từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation-iteration-count">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation-iteration-count</strong> dùng để thiết lập &quot;số lần lặp lại&quot; một chu kỳ hiệu ứng chuyển động.</p>
+<table class="tbbang_luuy">
+<tr>
+<td><img src="../home/image/lamp.png"></div></td>
+<td><p>&quot;Số lần lặp lại&quot; là bao gồm luôn cả lần thực thi đầu tiên.</p></td>
+</tr>
+</table>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-iteration-count: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>number</td>
+<td><p>- Chỉ định cụ thể số lần lặp lại một chu kỳ hiệu ứng chuyển động.</p></td>
+<td rowspan="4"><a href="demo7a29.html?file=3542" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>infinite</td>
+<td><p>- Không giới hạn số lần lặp lại (lặp lại mãi mãi)</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-iteration-count có giá trị là 1)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-iteration-count từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation-direction">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation-direction</strong> dùng để điều hướng hiệu ứng chuyển động.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-direction: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Hiệu ứng chuyển động diễn ra theo chiều xuôi.</p></td>
+<td rowspan="6"><a href="demo12a4.html?file=3586" target=_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>reverse</td>
+<td><p>- Hiệu ứng chuyển động diễn ra theo chiều ngược.</p></td>
+</tr>
+<tr>
+<td>alternate</td>
+<td><p>- Hiệu ứng chuyển động động diễn ra theo chiều xuôi trước, sau đó diễn ra theo chiều ngược.</p></td>
+</tr>
+<tr>
+<td>alternate-reverse</td>
+<td><p>- Hiệu ứng chuyển động động diễn ra theo chiều ngược trước, sau đó diễn ra theo chiều xuôi.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-direction có giá trị là normal)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-direction từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation-fill-mode">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation-fill-mode</strong> dùng để chỉ định bộ định dạng (style) mà phần tử sẽ được áp dụng ở thời điểm trước khi hiệu ứng chuyển động diễn ra &amp; sau khi hiệu ứng chuyển động kết thúc.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-fill-mode: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>none</td>
+<td><p>- Trước khi hiệu ứng chuyển động được diễn ra &amp; sau khi hiệu ứng chuyển động kết thúc, phần tử sẽ sử dụng style mặc định của nó.</p></td>
+<td rowspan="6"><a href="demo7b8a.html?file=3544" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>forwards</td>
+<td>
+<p>- Trước khi hiệu ứng chuyển động diễn ra thì phần tử sẽ sử dụng style mặc định của nó.</p>
+<p>- Sau khi hiệu ứng chuyển động kết thúc thì phần tử sẽ sử dụng style của trạng thái cuối cùng.</p>
+</td>
+</tr>
+<tr>
+<td>backwards</td>
+<td>
+<p>- Trước khi hiệu ứng chuyển động diễn ra thì phần tử sẽ sử dụng style của trạng thái đầu tiên.</p>
+<p>- Sau khi hiệu ứng chuyển động kết thúc thì phần tử sẽ sử dụng style mặc định của nó.</p>
+</td>
+</tr>
+<tr>
+<td>both</td>
+<td>
+<p>- Trước khi hiệu ứng chuyển động diễn ra thì phần tử sẽ sử dụng style của trạng thái đầu tiên.</p>
+<p>- Sau khi hiệu ứng chuyển động kết thúc thì phần tử sẽ sử dụng style của trạng thái cuối cùng.</p>
+</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-fill-mode có giá trị là none)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-fill-mode từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Trạng thái &quot;đầu tiên&quot; &amp; &quot;cuối cùng&quot; còn phụ thuộc vào hai thuộc tính <strong>animation-direction</strong> &amp; <strong>animation-iteration-count</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation-play-state">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation-play-state</strong> dùng để tùy chỉnh việc <span class="mark2">tiếp tục</span> hay <span class="mark2">tạm ngưng</span> hiệu ứng chuyển động.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-play-state: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>running</td>
+<td><p>- Hiệu ứng chuyển động tiếp tục được diễn ra.</p></td>
+<td rowspan="4"><a href="demod5d2.html?file=3545" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>paused</td>
+<td><p>- Tạm ngưng hiệu ứng chuyển động.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-play-state có giá trị là running)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-play-state từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation-timing-function">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thông thường, tại một cặp thời điểm liền kề, khi hiệu ứng chuyển động diễn ra thì mặc định hiệu ứng sẽ chuyển động khá chậm ở giai đoạn đầu, nhanh dần ở giai đoạn giữa, chậm lại ở giai đoạn cuối.</p>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>animation-timing-function</strong> thì chúng ta có thể thiết lập lại tốc độ chuyển động của hiệu ứng ở từng giai đoạn.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation-timing-function: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bảy loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>linear</td>
+<td><p>- Cùng một tốc độ từ đầu đến cuối.</p></td>
+<td rowspan="7"><a href="demo5711.html?file=3546" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>ease</td>
+<td><p>- Khá chậm ở giai đoạn đầu, nhanh dần ở giai đoạn giữa, chậm lại ở giai đoạn cuối.</p></td>
+</tr>
+<tr>
+<td>ease-in</td>
+<td><p>- Chậm ở giai đoạn đầu, nhanh ở giai đoạn sau.</p></td>
+</tr>
+<tr>
+<td>ease-out</td>
+<td><p>- Nhanh ở giai đoạn đầu, chậm ở giai đoạn sau.</p></td>
+</tr>
+<tr>
+<td>ease-in-out</td>
+<td><p>- Chậm ở giai đoạn đầu &amp; giai đoạn cuối, nhanh ở giai đoạn giữa.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính animation-timing-function có giá trị là ease)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính animation-timing-function từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-animation">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>animation</strong> là cú pháp tổng quát dùng để thiết lập hiệu ứng chuyển động cho phần tử.</p>
+<p>(thay vì phải sử dụng kết hợp nhiều thuộc tính animation riêng lẻ thì bây giờ chúng ta chỉ cần dùng mỗi thuộc tính này là đủ)</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">animation: name duration timing-function delay iteration-count direction fill-mode play-state;</div>
+<p>- Trong đó, tám giá trị <span class="mark2">name</span> <span class="mark2">duration</span> <span class="mark2">timing-function</span> <span class="mark2">delay</span> <span class="mark2">iteration-count</span> <span class="mark2">direction</span> <span class="mark2">fill-mode</span> <span class="mark2">play-state</span> lần lượt là giá trị của tám thuộc tính:</p>
+<ul>
+<li>animation-name</li>
+<li>animation-duration</li>
+<li>animation-iteration-count</li>
+<li>animation-delay</li>
+<li>animation-direction</li>
+<li>animation-fill-mode</li>
+<li>animation-play-state</li>
+<li>animation-timing-function</li>
+</ul>
+<p>- Tuy nhiên, thuộc tính <strong>animation</strong> không bắt buộc chúng ta phải gán cho nó đủ tám giá trị, những giá trị của thuộc tính nào còn thiếu thì trình duyệt sẽ tự động áp dụng giá trị mặc định của thuộc tính đó.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>#test{
+    background-color:green;
+    width:100px;
+    height:100px;
+    position:relative;
+    animation:move 3s infinite;
+}
+@keyframes move{
+    from{left:0px;}
+    to{left:500px;}
+}</pre>
+<div><a href="demo2440.html?file=3547" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.5594.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:02 GMT -->
+</html>

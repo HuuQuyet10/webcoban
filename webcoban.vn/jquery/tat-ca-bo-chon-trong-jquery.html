@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/tat-ca-bo-chon-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:56 GMT -->
+<head>
+<title>Danh sách tất cả các bộ chọn (selector) trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tất cả bộ chọn trong jQuery,tat ca bo chon trong jQuery">
+<meta name="description" content="Danh sách tất cả các bộ chọn trong jQuery">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" class='active'>- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Danh sách tất cả các bộ chọn (selector) trong jQuery">Danh sách tất cả các bộ chọn (selector) trong jQuery</h1>
+<div class="breadcrumb">
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="tat-ca-su-kien-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<style type="text/css">
+.kdjdbs td:nth-child(2){
+font-family:monospace;
+}
+</style>
+<table class="table table-bordered table-striped form_new_38 kdjdbs" style="margin-top:20px">
+    <tr>
+        <th style="width:185px">Bộ chọn</th>
+        <th style="width:250px">Ví dụ</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td><a href="chon-tat-ca-cac-phan-tu-trong-trang-web.html" target="_blank">*</a></td>
+        <td>$("*")</td>
+        <td>- Chọn tất cả các phần tử</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-id-trong-jquery-chon-phan-tu-dua-theo-id.html" target="_blank">#id</a></td>
+        <td>$("#firstName")</td>
+        <td>- Chọn phần tử có thuộc tính id với giá trị là firstName</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-class-trong-jquery.html" target="_blank">.class</a></td>
+        <td>$(".info")</td>
+        <td>- Chọn tất cả các phần tử mà thuộc tính class của nó có chứa lớp info</td>
+    </tr>
+    <tr>
+        <td>selector1,selector2</td>
+        <td>$(".info,#first")</td>
+        <td>- Chọn tất cả các phần tử mà thuộc tính class của nó có chứa lớp info, hoặc có thuộc tính id với giá trị là first</td>
+    </tr>
+    <tr>
+        <td>element</td>
+        <td>$("div")</td>
+        <td>- Chọn tất cả các phần tử &lt;div&gt;</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-first-trong-jquery-cach-chon-phan-tu-trung-khop-dau-tien-trong-jquery.html" target="_blank">:first</a></td>
+        <td>$("p:first")</td>
+        <td>- Chọn phần tử &lt;p&gt; đầu tiên</td>
+    </tr>
+    <tr>
+        <td>:last</td>
+        <td>$("p:last")</td>
+        <td>- Chọn phần tử &lt;p&gt; cuối cùng</td>
+    </tr>
+    <tr>
+        <td>:even</td>
+        <td>$("p:even")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; có chỉ số chẵn</td>
+    </tr>
+    <tr>
+        <td>:odd</td>
+        <td>$("p:odd")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; có chỉ số lẻ</td>
+    </tr>
+    <tr>
+        <td>:first-child</td>
+        <td>$("p:first-child")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con đầu tiên của cha nó</td>
+    </tr>
+    <tr>
+        <td>:first-of-type</td>
+        <td>$("p:first-of-type")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con có kiểu &lt;p&gt; đầu tiên của cha nó</td>
+    </tr>
+    <tr>
+        <td>:last-child</td>
+        <td>$("p:last-child")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con cuối cùng của cha nó</td>
+    </tr>
+    <tr>
+        <td>:last-of-type</td>
+        <td>$("p:last-of-type")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con có kiểu &lt;p&gt; cuối cùng của cha nó</td>
+    </tr>
+    <tr>
+        <td>:nth-child(n)</td>
+        <td>$("p:nth-child(3)")</td>
+        <td>- Chọn tất cả các phần tử &ltp&gt; là phần tử con thứ ba của cha nó <i>(theo thứ tự từ trên xuống)</i></td>
+    </tr>
+    <tr>
+        <td>:nth-last-child(n)</td>
+        <td>$("p:nth-last-child(3)")</td>
+        <td>- Chọn tất cả các phần tử &ltp&gt; là phần tử con thứ ba của cha nó <i>(theo thứ tự từ dưới lên)</i></td>
+    </tr>
+    <tr>
+        <td>:nth-of-type(n)</td>
+        <td>$("p:nth-of-type(3)")</td>
+        <td>- Chọn tất cả các phần tử &ltp&gt; là phần tử con có kiểu &lt;p&gt; thứ ba của cha nó <i>(theo thứ tự từ trên xuống)</i></td>
+    </tr>
+    <tr>
+        <td>:nth-last-of-type(n)</td>
+        <td>$("p:nth-last-of-type(3)")</td>
+        <td>- Chọn tất cả các phần tử &ltp&gt; là phần tử con có kiểu &lt;p&gt; thứ ba của cha nó <i>(theo thứ tự từ dưới lên)</i></td>
+    </tr>
+    <tr>
+        <td>:only-child</td>
+        <td>$("p:only-child")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con duy nhất của cha nó</td>
+    </tr>
+    <tr>
+        <td>:only-of-type</td>
+        <td>$("p:only-child")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con có kiểu &lt;p&gt;  duy nhất của cha nó</td>
+    </tr>
+    <tr>
+        <td>parent &gt; child</td>
+        <td>$(".info &gt; p")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử con của phần tử có lớp info</td>
+    </tr>
+    <tr>
+        <td>parent descendant</td>
+        <td>$(".info p")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; là phần tử hậu duệ <i>(nằm bên trong)</i> của phần tử có lớp info</td>
+    </tr>
+    <tr>
+        <td>element + next</td>
+        <td>$(".info + p")</td>
+        <td>- Chọn phần tử &lt;p&gt; là em liền kề <i>(cùng cấp nằm ngay phía sau)</i> của phần tử có lớp info</td>
+    </tr>
+    <tr>
+        <td>element ~ siblings</td>
+        <td>$(".info ~ p")</td>
+        <td>- Chọn phần tử &lt;p&gt; là em của phần tử có lớp info</td>
+    </tr>
+    <tr>
+        <td>:eq(index)</td>
+        <td>$("p:eq(3)")</td>
+        <td>- Chọn phần tử &lt;p&gt; có chỉ số là 3</td>
+    </tr>
+    <tr>
+        <td>:gt(index)</td>
+        <td>$("p:gt(3)")</td>
+        <td>- Chọn các phần tử &lt;p&gt; có chỉ số lớn hơn 3</td>
+    </tr>
+    <tr>
+        <td>:lt(index)</td>
+        <td>$("p:lt(3)")</td>
+        <td>- Chọn các phần tử &lt;p&gt; có chỉ số nhỏ hơn 3</td>
+    </tr>
+    <tr>
+        <td>:not(selector)</td>
+        <td>$("not(.info)")</td>
+        <td>- Chọn tất cả các phần tử không phải là phần tử có lớp info</td>
+    </tr>
+    <tr>
+        <td>:header</td>
+        <td>$(":header")</td>
+        <td>- Chọn tất cả các phần tử &lt;h1&gt; ... &lt;h6&gt;</td>
+    </tr>
+    <tr>
+        <td>:animated</td>
+        <td>$(":animated")</td>
+        <td>- Chọn tất cả các phần tử đang có hiệu ứng chuyển động</td>
+    </tr>
+    <tr>
+        <td>:focus</td>
+        <td>$(":focus")</td>
+        <td>- Chọn tất cả các phần tử đang được truy nhập</td>
+    </tr>
+    <tr>
+        <td>:contains(text)</td>
+        <td>$("p:contains('hello')")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; mà nội dung của nó có chứa hello</td>
+    </tr>
+    <tr>
+        <td>:has(selector)</td>
+        <td>$("div:has(p)")</td>
+        <td>- Chọn tất cả các phần tử &lt;div&gt; có chứa phần tử &lt;p&gt;</td>
+    </tr>
+    <tr>
+        <td>:empty</td>
+        <td>$(":empty")</td>
+        <td>- Chọn tất cả các phần tử có nội dung rỗng</td>
+    </tr>
+    <tr>
+        <td>:parent</td>
+        <td>$("div:parent")</td>
+        <td>- Chọn tất cả các phần tử &lt;div&gt; mà nội dung của nó không phải rỗng</td>
+    </tr>
+    <tr>
+        <td>:hidden</td>
+        <td>$("p:hidden")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; bị ẩn</td>
+    </tr>
+    <tr>
+        <td>:visible</td>
+        <td>$("p:visible")</td>
+        <td>- Chọn tất cả các phần tử &lt;p&gt; không bị ẩn</td>
+    </tr>
+    <tr>
+        <td>:root</td>
+        <td>$(":root")</td>
+        <td>- Chọn phần tử gốc trong trang web</td>
+    </tr>
+    <tr>
+        <td>[attribute]</td>
+        <td>$("[src]")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính src</td>
+    </tr>
+    <tr>
+        <td>[attribute=value]</td>
+        <td>$("[src='banana.png']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính src với giá trị là banana.png</td>
+    </tr>
+    <tr>
+        <td>[attribute!=value]</td>
+        <td>$("[src!='banana.png']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính src với giá trị khác banana.png</td>
+    </tr>
+    <tr>
+        <td>[attribute$=value]</td>
+        <td>$("[src$='na.png']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính src với giá trị kết thúc bởi na.png</td>
+    </tr>
+    <tr>
+        <td>[attribute|=value]</td>
+        <td>$("[title|='firstName']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính title với giá trị là firstName hoặc được bắt đầu bởi firstName và theo theo là một dấu gạch nối</td>
+    </tr>
+    <tr>
+        <td>[attribute^=value]</td>
+        <td>$("[title^='firstName']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính title với giá trị bắt đầu bởi firstName</td>
+    </tr>
+    <tr>
+        <td>[attribute~=value]</td>
+        <td>$("[title~='firstName']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính title với giá trị có chứa từ firstName</td>
+    </tr>
+    <tr>
+        <td>[attribute*=value]</td>
+        <td>$("[title*='firstName']")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính title với giá trị có chứa firstName</td>
+    </tr>
+    <tr>
+        <td>:input</td>
+        <td>$(":input")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt;</td>
+    </tr>
+    <tr>
+        <td>:text</td>
+        <td>$(":text")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là text</td>
+    </tr>
+    <tr>
+        <td>:password</td>
+        <td>$(":password")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là password</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-radio-trong-jquery.html" target="_blank">:radio</a></td>
+        <td>$(":radio")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là radio</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-checkbox-trong-jquery.html" target="_blank">:checkbox</a></td>
+        <td>$(":checkbox")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là checkbox</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-submit-trong-jquery.html" target="_blank">:submit</a></td>
+        <td>$(":submit")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là submit</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-reset-trong-jquery.html" target="_blank">:reset</a></td>
+        <td>$(":reset")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là reset</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-button-trong-jquery.html" target="_blank">:button</a></td>
+        <td>$(":button")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là button</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-image-trong-jquery.html" target="_blank">:image</a></td>
+        <td>$(":image")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là image</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-file-trong-jquery.html" target="_blank">:file</a></td>
+        <td>$(":file")</td>
+        <td>- Chọn tất cả các phần tử &lt;input&gt; được thiết lập thuộc tính type với giá trị là file</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-disabled-trong-jquery.html" target="_blank">:disabled</a></td>
+        <td>$(":disabled")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính disabled</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-enabled-trong-jquery.html" target="_blank">:enabled</a></td>
+        <td>$(":enabled")</td>
+        <td>- Chọn tất cả các phần tử không được thiết lập thuộc tính enabled</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-selected-trong-jquery.html" target="_blank">:selected</a></td>
+        <td>$(":selected")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính selected</td>
+    </tr>
+    <tr>
+        <td><a href="bo-chon-checked-trong-jquery.html" target="_blank">:checked</a></td>
+        <td>$(":checked")</td>
+        <td>- Chọn tất cả các phần tử được thiết lập thuộc tính checked</td>
+    </tr>
+</table><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="tat-ca-su-kien-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/tat-ca-bo-chon-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:01 GMT -->
+</html>

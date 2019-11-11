@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3628 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:27 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:80px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        height:60px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #test{
+           margin-top:-180px;
+           margin-left:190px;
+           width:400px;
+           height:250px;
+           background-color:black;
+           opacity:<span id="layvitri1" style="font-size:20px;color:red">1</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;../image/father.jpg&quot; style=&quot;width:400px&quot;&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom">
+                <table style="width:100%;font-size:22px;height:100%" id="ksnjb23">
+                    <tr>
+                        <td style="text-align:center"><input type="range" value="100" min="0" max="100" style="width:98%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = '<style>#test{position:absolute;top:100px;left:200px;width:400px;height:250px;background-color:black;opacity:1;}</style><img src="../image/father.jpg" style="width:400px"><div id="test"></div>';
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).on('input', '#ksnjb23 input', function() {
+            var opacity = ($(this).val() / 100);
+            opacity = opacity.toFixed(2);
+            if(opacity==0){
+                $('#layvitri1').html("0");
+            }else if(opacity==1){
+                $('#layvitri1').html("1");
+            }else{
+                $('#layvitri1').html(opacity);
+            }
+            var text = '<style>#test{position:absolute;top:100px;left:200px;width:400px;height:250px;background-color:black;opacity:'+opacity+';}</style><img src="../image/father.jpg" style="width:400px"><div id="test"></div>';
+            view_result(text);
+        });
+    </script>
+    <style type="text/css">
+        #ksnjb23, #ksnjb23 td{border:1px solid #b3b2b2;border-collapse:collapse;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3628 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:27 GMT -->
+</html>﻿

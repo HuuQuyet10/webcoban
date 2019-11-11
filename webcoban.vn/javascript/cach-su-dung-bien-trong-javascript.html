@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-bien-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:29 GMT -->
+<head>
+<title>Cách sử dụng biến trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Cách sử dụng biến trong JavaScript,cach su dung bien trong JavaScript">
+<meta name="description" content="Cách sử dụng biến trong JavaScript, cach su dung bien trong JavaScript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" class='active'>- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách sử dụng biến trong JavaScript">Cách sử dụng biến (Variable) trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Biến là gì?</h2>
+<p>- Biến cũng giống như là <span class="form_new_28">một cái thùng chứa</span> dùng để lưu trữ <span class="form_new_28">một giá trị dữ liệu</span></p>
+<p>- Ví dụ, kịch bản bên dưới có một biến tên là name và nó lưu trữ giá trị Nguyễn Thành Nhân.</p>
+<div class="form_new_26">
+    <pre>&lt;script&gt;
+    var name = &quot;Nguyễn Thành Nhân&quot;;
+&lt;/script&gt;</pre>
+</div>
+<p>- Biến giúp người lập trình viên đơn giản hóa việc sử dụng một giá trị nhiều lần bằng cách gọi tên biến.</p>
+<p>- Điển hình là hai kịch bản bên dưới có chức năng giống nhau. Nhưng kịch bản thứ hai lại ngắn gọn hơn vì thay vì phải gõ <i>"Nguyễn Thành Nhân"</i> ba lần thì ta chỉ cần gõ một lần để gán cho biến rồi sau đó gọi tên biến ba lần.</p>
+<table style="width:100%;margin-bottom:15px">
+<tr>
+<td>
+<div class="form_new_26" style="margin:-15px 0px">
+    <pre>&lt;script&gt;
+    document.write(&quot;Họ tên là &quot; + &quot;Nguyễn Thành Nhân&quot;);
+    document.write(&quot;Giới tính của &quot; + &quot;Nguyễn Thành Nhân&quot; + &quot; là nam&quot;);
+    document.write(&quot;Năm sinh của &quot; + &quot;Nguyễn Thành Nhân&quot; + &quot; là 1993&quot;);
+&lt;/script&gt;</pre>
+</div>
+</td>
+<td style="padding-left:10px">
+<div class="form_new_22"><a href="demoe77b.html?file=1676" target="_blank">Xem ví dụ</a></div>
+</td>
+</tr>
+<tr>
+<td style="padding-top:20px">
+<div class="form_new_26" style="margin:-15px 0px">
+    <pre>&lt;script&gt;
+    var name = &quot;Nguyễn Thành Nhân&quot;;
+    document.write(&quot;Họ tên: &quot; + name);
+    document.write(&quot;Giới tính của &quot; + name + &quot; là nam&quot;);
+    document.write(&quot;Năm sinh của &quot; + name + &quot; là 1993&quot;);
+&lt;/script&gt;</pre>
+</div>
+</td>
+<td style="padding-left:10px;padding-top:20px">
+<div class="form_new_22"><a href="demo65df.html?file=1675" target="_blank">Xem ví dụ</a></div>
+</td>
+</tr>
+</table>
+<p>- Ở ví dụ trên, <i>"Nguyễn Thành Nhân"</i> chỉ là một giá trị đơn giản, sau này bạn sẽ gặp những giá trị phức tạp hơn lên đến hàng trăm ký tự.
+ Việc sử dụng biến lại càng trở nên hữu ích.</p>
+<h2>2) Cách khai báo một biến</h2>
+<h3>2.1) Khai báo một biến</h3>
+<p>- Để khai báo một biến <i>(hay còn gọi là tạo một biến)</i>, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_18"><span style="color:#006393">var</span> tên biến;</div>
+<p>- Ví dụ, khai báo một biến có tên là <i>hoten</i></p>
+<div class="form_new_18"><span style="color:#006393">var</span> hoten;</div>
+<h3>2.2) Gán giá trị cho biến</h3>
+<p>- Sau khi khai báo, nếu biến vẫn chưa được gán giá trị thì mặc định nó sẽ có giá trị là undefined (<a href="demodc49.html?file=1677" target="_blank" style="color:black;text-decoration:underline;font-style:italic">Xem ví dụ</a>)</p>
+<p>- Để gán giá trị cho một biến, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_18">tên biến = giá trị;</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Gán giá trị cho biến hoten là Lữ Bố</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var hoten;
+    hoten = &quot;Lữ Bố&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demofaf2.html?file=1678" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.3) Cập nhật giá trị của biến</h3>
+<p>- Sau khi một biến đã được gán giá trị, nếu muốn cập nhật cho nó một giá trị mới thì ta sử dụng cú pháp như sau:</p>
+<div class="form_new_18">tên biến = giá trị mới;</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Cập nhật lại giá trị của biến hoten thành Điêu Thuyền</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var hoten;
+    hoten = &quot;Lữ Bố&quot;;
+    hoten = &quot;Điêu Thuyền&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo96cd.html?file=1679" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.4) Khai báo biến và gán giá trị đồng thời</h3>
+<p>- Thay vì phải chia thành hai bước: (1) khai báo biến (2) gán giá trị thì ta có thể gôm chung thành một bước khai báo biến rồi gán giá trị luôn.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var hoten = &quot;Lữ Bố&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo72da.html?file=1680" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Khai báo nhiều biến đồng thời</h2>
+<p>- Ta có thể khai báo nhiều biến một lượt bằng cách dùng dấu phẩy ngăn giữa các tên biến, rồi sau đó gán giá trị cho từng biến.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a, b, c;
+    a = &quot;Nguyễn Thành Nhân&quot;;
+    b = 1993;
+    c= &quot;Nam&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo2b22.html?file=1681" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ta cũng có thể vừa khai báo vừa gán giá trị cho biến <i>(Tuy nhiên, không bắt buộc phải gán giá trị cho tất cả các biến cùng một lượt)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Nguyễn Thành Nhân&quot;, b, c = 1993;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo0a00.html?file=1682" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Quy tắc đặt tên biến</h2>
+<p>- Tên biến là một tập hợp gồm <i><u>một hoặc nhiều</u></i> ký tự.</p>
+<p>- Tên biến có thể chứa các ký tự trong danh sách bên dưới:</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Các chữ cái in hoa</td>
+        <td>A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z</td>
+    </tr>
+    <tr>
+        <td>Các chữ cái thường</td>
+        <td>a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z</td>
+    </tr>
+    <tr>
+        <td>Các chữ số</td>
+        <td>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</td>
+    </tr>
+    <tr>
+        <td>Dấu gạch dưới</td>
+        <td>_</td>
+    </tr>
+    <tr>
+        <td>Dấu đô la</td>
+        <td>$ <i>(khuyến khích KHÔNG NÊN sử dụng dấu đô la trong việc đặt tên biến)</i></td>
+    </tr>
+</table>
+<p>- Tên biến tuyệt đối không được phép chứa các ký tự đặt biệt <i>(Ví dụ như: @, #, !, %, ^, &, ....)</i></p>
+<p>- Tên biến không được bắt đầu bằng một chữ số.</p>
+<table class="table table-bordered table-striped form_new_12">
+<tr style="background-color:#f9f9f9">
+        <td style="width:50%">Một số ví dụ đặt tên biến đúng quy tắc</td>
+        <td style="width:50%">Một số ví dụ đặt tên biến sai quy tắc</td>
+    </tr>
+    <tr>
+        <td>
+w<br>
+webcoban<br>
+Webcoban<br>
+webCobAn<br>
+we9co3an<br>
+_webc_oban
+</td>
+        <td>
+9webcoban <i>(sai vì bắt đầu bằng chữ số)</i><br>
+web%^coban <i>(sai vì chứa ký tự đặc biệt)</i>
+</td>
+    </tr>
+</table>
+<div class="form_new_01"><p>- Tên biến có phân biệt trường hợp chữ in hoa và chữ thường <i>(Ví dụ, webcoban và Webcoban là hai biến khác nhau)</i></p>
+<p>- Tên biến phải duy nhất <i>(không được khai báo một biến có tên trùng với tên của một biến đã được khai báo trước đó)</i></p>
+<p>- Không được đặt tên biến trùng với các <a href="../xem/lienket/551.html" target="_blank">từ dành riêng trong JavaScript</a></p>
+</div>
+<h2>5) Giá trị của biến</h2>
+<p>- Giá trị của biến rất đa dạng, có thể là: <i>một chuỗi ký tự, một số, một biến khác, một biểu thức, undefined, ....</i></p>
+<h3>5.1) Giá trị của biến là một chuỗi ký tự</h3>
+<p>- Nếu giá trị của biến là một chuỗi ký tự thì ta phải đặt chuỗi ký tự đó bên trong cặp dấu nháy kép <b style="color:#555"><i>" "</i></b> hoặc cặp dấu nháy đơn <b style="color:#555"><i>' '</i></b></p>
+<div class="form_new_18"><span style="color:#006393">var</span> hoten = <span style="color:#AA5500">"Nguyễn Thành Nhân"</span>;<br>
+<span style="color:#006393">var</span> thanhpho = <span style="color:#AA5500">'Cần Thơ'</span>;
+</div>
+<h3>5.2) Giá trị của biến là một số</h3>
+<p>- Nếu giá trị của biến là một số thì ta cứ để nguyên.</p>
+<div class="form_new_18"><span style="color:#006393">var</span> namsinh = 1993;
+</div>
+<p>- Nếu giá trị của biến là một số mà ta lại đặt bên trong cặp dấu nháy kép hoặc nháy đơn thì nó sẽ bị ép sang kiểu chuỗi ký tự (<a href="demo3386.html?file=1683" target="_blank" style="color:black;text-decoration:underline;font-style:italic">Xem ví dụ</a>)</p>
+<h3>5.3) Giá trị của biến là một biến khác</h3>
+<p>- Giá trị của biến có thể là một biến khác.</p>
+<p>- Khi đó, giá trị thực của biến sẽ là giá trị của biến mà nó lưu trữ.</p>
+<div class="form_new_18"><span style="color:#006393">var</span> hoten = <span style="color:#AA5500">"Nguyễn Thành Nhân"</span>;<br>
+<span style="color:#006393">var</span> name = hoten; <span style="color:gray;font-style:italic">//biến name sẽ có giá trị là Nguyễn Thành Nhân</span>
+</div>
+<h3>5.4) Giá trị của biến là một biểu thức</h3>
+<p>- Giá trị của biến có thể là một biểu thức.</p>
+<p>- Khi đó, giá trị thực của biến sẽ là kết quả của biểu thức <i>(sau khi đã được tính toán xong)</i>.</p>
+<div class="form_new_18"><span style="color:#006393">var</span> a = 100;<br>
+<span style="color:#006393">var</span> b =  50;<br>
+<span style="color:#006393">var</span> c =  <span style="color:#AA5500">"Thành Nhân"</span>;<br>
+<span style="color:#006393">var</span> result_1 =  (35 + 10)*2; <span style="color:gray;font-style:italic">//biến result_1 có giá trị là 90</span><br>
+<span style="color:#006393">var</span> result_2 =  a + b - 30; <span style="color:gray;font-style:italic">//biến result_2 có giá trị là 120</span><br>
+<span style="color:#006393">var</span> result_3 =  c + <span style="color:#AA5500">" Cần Thơ"</span>; <span style="color:gray;font-style:italic">//biến result_3 có giá trị là Thành Nhân Cần Thơ</span>
+</div>
+<h3>5.5) Giá trị của biến là undefined</h3>
+<p>- Khi một biến được khai báo mà chưa được gán giá trị thì biến đó sẽ nhận giá trị là undefined <i>(không xác định)</i>.</p>
+<div class="form_new_18"><span style="color:#006393">var</span> a; <span style="color:gray;font-style:italic">//Khi này biến a sẽ có giá trị là undefined</span>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-bien-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:31 GMT -->
+</html>

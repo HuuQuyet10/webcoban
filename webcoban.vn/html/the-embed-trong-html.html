@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-embed-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:50 GMT -->
+<head>
+<title>Thẻ &lt;embed&gt; trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ embed,thẻ embed trong html,thẻ embed là gì,thẻ embed dùng để làm gì">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ embed trong HTML để nhúng một tài liệu nào đó vào trang web hiện tại của bạn">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;embed&gt; trong HTML">Thẻ &lt;embed&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Thẻ &lt;embed&gt; trong HTML</h2>
+<p>- Thẻ <strong>&lt;embed&gt;</strong> dùng để nhúng một <i>"tài liệu"</i> nào đó vào trang web.</p>
+<p>- Tài liệu ở đây rất đa dạng, có thể là:</p>
+<ul style="list-style-type:circle;font-style:italic">
+<li>Một tập tin audio</li>
+<li style="margin-top:6px;margin-bottom:6px">Một tập tin video</li>
+<li>Một trang web</li>
+<li style="margin-top:6px;margin-bottom:6px">Một tập tin pdf</li>
+<li>Một tập tin flash</li>
+<li style="margin-top:6px;">....</li>
+</ul>
+<p>- Tuy nhiên, thông thường thì thẻ <strong>&lt;embed&gt;</strong> không dùng để nhúng các tập tin audio, video, trang web.</p>
+<p><i>(Vì để nhúng những loại tập tin đó, ta đã có các thẻ chuyên dụng như &lt;audio&gt;, &lt;video&gt;, &lt;iframe&gt;)</i></p>
+<p>- <i><u>Ví dụ</u>:</i> Dưới đây là một tập tin flash được nhúng vào trang web bằng thẻ <strong>&lt;embed&gt;</strong></p>
+<p><embed src="../file/lamviec.html" width="700" height="356"></p>
+<p>- <i><u>Ví dụ</u>:</i> Dưới đây là một tập tin pdf được nhúng vào trang web bằng thẻ <strong>&lt;embed&gt;</strong></p>
+<p><embed src="../file/ban-khai-nhan-khau.pdf" width="720" height="305"></p>
+<p>- <i><u>Lưu ý</u>:</i> Thẻ &lt;embed&gt; không có thẻ đóng.</p>
+<h2>2) Các thuộc tính của thẻ &lt;embed&gt;</h2>
+<p>- Thẻ &lt;embed&gt; có ba thuộc tính cơ bản.</p>
+<p>- Dưới đây là bảng mô tả sơ lược về ba thuộc tính đó:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <td>src</td>
+        <td>Xác định đường dẫn đến tài liệu mà bạn muốn nhúng vào trang web</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>Xác định chiều rộng của phần tử &lt;embed&gt;</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>Xác định chiều cao của phần tử &lt;embed&gt;</td>
+    </tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h3>2.1) Thuộc tính src</h3>
+<p>- Thuộc tính src dùng để xác định đường dẫn đến tài liệu mà bạn muốn nhúng vào trang web.</p>
+<p><i>(Đường dẫn ở đây có thể là đường dẫn tương đối hoặc đường dẫn tuyệt đối)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;embed src=&quot;../file/ban-khai-nhan-khau.pdf&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demofbcc.html?file=1360" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.2) Thuộc tính width</h3>
+<p>- Thuộc tính width dùng để xác định chiều rộng của phần tử &lt;embed&gt;</p>
+<p>- Giá trị của thuộc tính width có thể được xác định theo một trong hai loại đơn vị:</p>
+<ul style="list-style-type:circle">
+<li>px <i>(pixel)</i></li>
+<li style="margin-top:6px">% <i>(tỷ lệ phần trăm chiều rộng phần nội dung của phần tử cha của nó)</i></li>
+</ul>
+<p>- Tuy nhiên, mặc định thì giá trị của thuộc tính width sẽ được xác định theo đơn vị px.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;embed src=&quot;../file/ban-khai-nhan-khau.pdf&quot; width=&quot;100&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo786e.html?file=1361" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.3) Thuộc tính height</h3>
+<p>- Thuộc tính height dùng để xác định chiều cao của phần tử &lt;embed&gt;</p>
+<p>- Giá trị của thuộc tính height có thể được xác định theo một trong hai loại đơn vị:</p>
+<ul style="list-style-type:circle">
+<li>px <i>(pixel)</i></li>
+<li style="margin-top:6px">% <i>(tỷ lệ phần trăm chiều cao phần nội dung của phần tử cha của nó)</i></li>
+<div>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28;top:17px"></span>
+<p>Nếu xác định chiều cao của phần tử &lt;embed&gt; dựa theo đơn vị % thì bắt buộc phần tử cha của nó phải có một chiều cao được xác định.</p>
+</div>
+</div>
+</ul>
+<p>- Tuy nhiên, mặc định thì giá trị của thuộc tính height sẽ được xác định theo đơn vị px.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;embed src=&quot;../file/ban-khai-nhan-khau.pdf&quot; height=&quot;100&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo0c47.html?file=2230" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Định dạng CSS mặc định</h2>
+<p>- Hầu hết các trình duyệt sẽ hiển thị phần tử <strong>&lt;embed&gt;</strong> với định dạng CSS như sau:</p>
+<div class="form_new_26">
+    <pre>embed:focus { 
+    outline: none;
+}</pre>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-embed-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:51 GMT -->
+</html>

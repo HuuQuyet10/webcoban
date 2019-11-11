@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/phuong-thuc-height-trong-jquery-xac-dinh-chieu-cao-cua-phan-tu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:14 GMT -->
+<head>
+<title>Phương thức height() trong jQuery | Xác định chiều cao của phần tử</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="phương thức height trong jQuery,phuong thuc height trong jQuery,xác định chiều cao của phần tử,xac dinh chieu cao cua phan tu">
+<meta name="description" content="Cách sử dụng phương thức height() trong jQuery để xác định hoặc thiết lập chiều cao phần nội dung của phần tử HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Phương thức height() trong jQuery | Xác định chiều cao của phần tử">Phương thức height() trong jQuery</h1>
+<div class="breadcrumb">
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+<h2>1) Nhắc lại <i>"các thành phần của một phần tử"</i></h2>
+<p>- Thông thường, cấu trúc của một phần tử HTML sẽ bao gồm bốn thành phần:</p>
+<ul style="list-style-type:circle;font-style:italic;">
+<li>margin (phần lề nằm giữa đường viền của phần tử với các phần tử xung quanh)</li>
+<li style="margin-top:6px;margin-bottom:6px">border (đường viền của phần tử)</li>
+<li>padding (vùng đệm nằm giữa đường viền của phần tử với nội dung của phần tử)</li>
+<li style="margin-top:6px">content (nội dung của phần tử)</li>
+</ul>
+<p>- Dưới đây là hình ảnh minh họa về cấu trúc của một phần tử HTML.</p>
+<div style="margin-top:15px;margin-bottom:15px;border:1px dashed #b7adad;padding:50px;position:relative;font-size:18px;">
+    <div style="position:absolute;top:12px;left:15px;">margin</div>
+    <div style="border:1px solid #b7adad;padding:50px;background-color:#ccc">
+        <div style="position:absolute;top:65px;left:68px;">border</div>
+        <div style="border:1px solid #b7adad;padding:50px;background-color:white;">
+            <div style="position:absolute;top:115px;left:118px;">padding</div>
+            <div style="border:1px dashed #b7adad;padding:50px;">content</div>
+        </div>
+    </div>
+</div>
+<h2>2) Phương thức height() trong jQuery</h2>
+<p>- Phương thức <strong>height()</strong> được dùng để:</p>
+<ul style="list-style-type:circle">
+<li>Trả về chiều cao phần content của phần tử.</li>
+<li style="margin-top:6px">Hoặc thiết lập lại chiều cao cho phần content của phần tử.</li>
+</ul>
+<div class="form_new_21">
+<p>- Để lấy chiều cao phần content + padding thì dùng phương thức <a href="phuong-thuc-innerheight-trong-jquery-lay-chieu-cao-cua-phan-tu.html" target="_blank" style="color:black;text-decoration:underline">innerHeight()</a></p>
+<p>- Để lấy chiều cao phần content + padding + border thì dùng phương thức <a href="phuong-thuc-outerheight-trong-jquery-lay-chieu-cao-phan-tu.html" target="_blank" style="color:black;text-decoration:underline">outerHeight()</a></p>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách sử dụng phương thức height() trong jQuery</h2>
+<p>- Đối với phương thức <strong>height()</strong>, chúng ta có ba trường hợp sử dụng tương ứng với ba loại cú pháp:</p>
+<h3>3.1) Lấy chiều cao phần content của phần tử</h3>
+<p>- Dưới đây là cú pháp dùng để lấy chiều cao phần content của phần tử:</p>
+<div class="form_new_33">$(selector).height();</div>
+<p>- <i><u>Lưu ý</u>:</i> Nếu bộ chọn tìm được nhiều phần tử trùng khớp thì phương thức height() chỉ trả về chiều cao phần content của phần tử trùng khớp được tìm thấy đầu tiên.</p>
+<h3>3.2) Thiết lập lại chiều cao cho phần content của phần tử</h3>
+<p>- Dưới đây là cú pháp dùng để thiết lập lại chiều cao cho phần content của phần tử:</p>
+<p><i>(cú pháp này thường được sử dụng trong trường hợp bộ chọn chỉ tìm được một phần tử trùng khớp hoặc bạn muốn tất cả các phần tử trùng khớp đều được thiết lập chung một giá trị)</i></p>
+<div class="form_new_33">$(selector).height(value);</div>
+<p>- Dưới đây là bảng mô tả ý nghĩa &amp; cách sử dụng các tham số trong cú pháp trên:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>value</td>
+        <td><p>- Xác định chiều cao mà bạn muốn thiết lập cho phần content của phần tử.</p>
+<p style="margin-bottom:2px">- Chiều cao có thể được xác định theo đơn vị px, em, cm, pt, . . . . <i>(mặc định là px)</i></p>
+</td>
+    </tr>
+</table>
+<h3>3.3) Thiết lập lại chiều cao cho phần content của phần tử <i>(sử dụng hàm)</i></h3>
+<p>- Dưới đây là cú pháp dùng để thiết lập lại chiều cao cho phần content của phần tử bằng hàm:</p>
+<p><i>(cú pháp này thường được sử dụng trong trường hợp bộ chọn tìm được nhiều phần tử trùng khớp và bạn muốn mỗi phần tử trùng khớp được thiết lập một giá trị riêng)</i></p>
+<div class="form_new_33">$(selector).height(function(index,currentheight){
+    return value;
+});</div>
+<p>- Dưới đây là bảng mô tả ý nghĩa & cách sử dụng các tham số trong cú pháp trên:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>function(index,currentheight){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return value;<br>
+}</td>
+        <td><p>- Chỉ định một hàm trả về giá trị dùng để thiết lập lại chiều cao phần content của phần tử được chọn.</p>
+<p>- <i><u>Trong đó</u>:</i></p>
+<ul style="list-style-type:circle;margin-bottom:2px">
+<li>Tham số <i>"index"</i> trả về chỉ số của phần tử được chọn trong danh sách các phần tử trùng khớp được tìm thấy.</li>
+<li style="margin-top:6px;margin-bottom:6px">Tham số <i>"currentheight"</i> trả về chiều cao hiện tại của phần tử được chọn.</li>
+<li><i>"value"</i> là giá trị dùng để thiết lập lại chiều cao cho phần content của phần tử được chọn.</li>
+</ul>
+</p></td>
+    </tr>
+</table>
+<h2>4) Một số ví dụ</h2>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Lấy chiều cao phần nội dung của phần tử có lớp là info</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;button&quot;).click(function(){
+            var chieucao = $(&quot;.info&quot;).height();
+            alert(chieucao);
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demofc56.html?file=2926" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Thiết lập chiều cao cho phần nội dung của phần tử có lớp info là 50px</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;button&quot;).click(function(){
+            $(&quot;.info&quot;).height("50px");
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8349.html?file=2927" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Thiết lập chiều cao cho phần nội dung của phần tử &lt;p&gt; <i>(sử dụng hàm)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;button&quot;).click(function(){
+            $(&quot;p&quot;).height(function(a,b){
+                if(a==0){return b + 20;}
+                if(a==1){return b + 150;}
+                if(a==2){return 35;}
+            });
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demod764.html?file=2928" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Lấy chiều cao phần nội dung của phần tử window và document</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;button&quot;).click(function(){
+            $(&quot;#demo1&quot;).html($(window).height());
+            $(&quot;#demo2&quot;).html($(document).height());
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoe082.html?file=2929" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/phuong-thuc-height-trong-jquery-xac-dinh-chieu-cao-cua-phan-tu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:16 GMT -->
+</html>

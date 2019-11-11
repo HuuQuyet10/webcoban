@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-lenh-switch-case-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:31 GMT -->
+<head>
+<title>Cách sử dụng lệnh Switch Case trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Cách sử dụng lệnh Switch Case trong JavaScript,cach su dung lenh switch case trong javascript">
+<meta name="description" content="Cách sử dụng lệnh Switch Case trong JavaScript, cach su dung lenh switch case trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" class='active'>- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách sử dụng lệnh Switch Case trong JavaScript">Lệnh switch case trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Khái niệm lệnh <em>"switch case"</em> trong JavaScript</h2>
+<p>- Lệnh <strong>switch case</strong> dùng để xác định một danh sách các trường hợp và trong mỗi trường hợp sẽ có một đoạn mã, khi giá trị của bạn trùng khớp với trường hợp nào thì đoạn mã của trường hợp đó sẽ được thực thi.</p>
+<p>- Để giúp các bạn dễ hình dung hơn về khái niệm trên thì tôi có một ví dụ minh họa như sau:</p>
+<div style="background-color:#eee;padding:15px;padding-bottom:5px;margin-bottom:15px;margin-top:20px">
+<p>- Giả sử khi đến một quán nước, ở đó có một cái menu giống như bên dưới và trong tay bạn chỉ có đúng mười nghìn.</p>
+<!-- MENU -->
+<div style="background-color:skyblue;width:550px;border-radius:10px;padding:10px;margin:15px auto;margin-top:16px;">
+<div style="text-align:center;font-size:25px;font-weight:bold;font-family:cursive;">MENU</div>
+<div style="background-color:white;font-size:20px;font-style:italic;font-family:cursive;margin:20px;margin-top:10px;padding:20px;">
+    <div>
+        <div style="float:left">Cà phê sữa</div>
+        <div style="float:right;width:80px;text-align:right;">12.000<sup>đ</sup></div>
+        <div style="float:right;">............................................</div>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+        <div style="float:left">Cà phê đá</div>
+        <div style="float:right;width:80px;text-align:right;">10.000<sup>đ</sup></div>
+        <div style="float:right;">............................................</div>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+        <div style="float:left">Sting dâu</div>
+        <div style="float:right;width:80px;text-align:right;">8.000<sup>đ</sup></div>
+        <div style="float:right;">............................................</div>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+        <div style="float:left">Trà đá</div>
+        <div style="float:right;width:80px;text-align:right;">2.000<sup>đ</sup></div>
+        <div style="float:right;">............................................</div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+</div>
+<!-- KẾT THÚC MENU -->
+<p>- <i><u>Câu hỏi</u>:</i> Nếu yêu cầu bạn chọn một món nước uống có giá <span class="form_new_24">bằng đúng</span> với số tiền mà bạn đang có, thì món nước uống đó là món gì !?</p>
+<p>- <i><u>Trả lời</u>:</i> Cà phê đá.</p>
+</div>
+<p>- Phía trên là một ví dụ mô tả gần giống với lệnh <strong>switch case</strong>, trong đó:</p>
+<ul style="list-style-type:circle">
+<li>Số tiền mà bạn đang có chính là giá trị <i>(tạm gọi như vậy)</i></li>
+<li style="margin-top:7px;margin-bottom:7px">Giá tiền của từng loại nước uống trong menu chính là trường hợp</li>
+<li>Món nước uống chính là đoạn mã được thực thi.</li>
+</ul>
+<p>- Nếu ta chuyển ví dụ trên về dạng mã lệnh trong JavaScript thì nó sẽ có dạng như sau:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var money = 10000;
+    switch (money){
+        case 2000:
+            document.write(&quot;Trà đá&quot;);
+            break;
+        case 8000:
+            document.write(&quot;Sting dâu&quot;);
+            break;
+        case 10000:
+            document.write(&quot;Cà phê đá&quot;);
+            break;
+        case 12000:
+            document.write(&quot;Cà phê sữa&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6008.html?file=1853" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Cách sử dụng lệnh <em>"switch case"</em> trong JavaScript</h2>
+<p>- Trong JavaScript, lệnh <strong>switch case</strong> được sử dụng với cú pháp như sau:</p>
+<div class="form_new_33"><span style="color:#006393">switch</span> (<i>giá trị</i>){
+    <span style="color:#006393">case</span> <i>trường hợp 1</i>:
+        <span style="color:gray">//đoạn mã này sẽ được thực thi khi giá trị trùng khớp với trường hợp 1</span>
+        <span style="color:brown">break</span>;
+    <span style="color:#006393">case</span> <i>trường hợp 2</i>:
+        <span style="color:gray">//đoạn mã này sẽ được thực thi khi giá trị trùng khớp với trường hợp 2</span>
+        <span style="color:brown">break</span>;
+    <span style="color:#006393">case</span> <i>trường hợp 3</i>:
+        <span style="color:gray">//đoạn mã này sẽ được thực thi khi giá trị trùng khớp với trường hợp 3</span>
+        <span style="color:brown">break</span>;
+    ...
+    ...
+    ...
+    <span style="color:#006393">default</span>:
+        <span style="color:gray">//đoạn mã này sẽ được thực thi khi giá trị KHÔNG trùng khớp trường hợp nào cả</span>
+        <span style="color:brown">break</span>;
+}</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 1</div>
+    <div class="noithem"><p>Hiển thị tên của loại nước uống có giá trị bằng đúng với số tiền mà bạn đang có.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var money = 10000;
+    switch (money){
+        case 2000:
+            document.write(&quot;Trà đá&quot;);
+            break;
+        case 8000:
+            document.write(&quot;Sting dâu&quot;);
+            break;
+        case 10000:
+            document.write(&quot;Cà phê đá&quot;);
+            break;
+        case 12000:
+            document.write(&quot;Cà phê sữa&quot;);
+            break;
+        default:
+            document.write(&quot;Không món nào có giá bằng đúng với số tiền của bạn&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo51e1.html?file=1854" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 2</div>
+    <div class="noithem"><p>Hôm nay là thứ mấy !?</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var day = new Date().getDay();
+    switch (day){
+        case 0:
+            document.write(&quot;Chủ Nhật&quot;);
+            break;
+        case 1:
+            document.write(&quot;Thứ hai&quot;);
+            break;
+        case 2:
+            document.write(&quot;Thứ ba&quot;);
+            break;
+        case 3:
+            document.write(&quot;Thứ tư&quot;);
+            break;
+        case 4:
+            document.write(&quot;Thứ năm&quot;);
+            break;
+        case 5:
+            document.write(&quot;Thứ sáu&quot;);
+            break;
+        case 6:
+            document.write(&quot;Thứ bảy&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo27be.html?file=1855" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Tầm quan trọng của lệnh <i>"break"</i></h2>
+<p>- Trong danh sách các trường hợp của lệnh <strong>switch case</strong>, khi giá trị của bạn trùng khớp với trường hợp nào thì đoạn mã của trường hợp đó sẽ được thực, ngoài ra các đoạn mã của những trường hợp nằm bên dưới trường hợp trùng khớp cũng sẽ được thực thi luôn.</p>
+<p>- Từ đây, lệnh <strong>break</strong> giúp ta ngăn chặn việc thực thi các đoạn mã của những trường hợp nằm bên dưới trường hợp trùng khớp.</p>
+<table class="table table-bordered form_new_12">
+    <tbody><tr>
+        <td style="width:50%">Ví dụ, lệnh switch case không sử dụng break</td>
+        <td style="width:50%">Ví dụ, lệnh switch case có sử dụng break</td>
+    </tr>
+    <tr>
+        <td style="padding:0px;vertical-align:top;">
+<div class="form_new_26">
+    <pre style="border:0px;margin:0px">&lt;script&gt;
+    var season = &quot;ha&quot;;
+    switch (season){
+        case &quot;xuan&quot;:
+            document.write(&quot;Mùa Xuân&quot;);
+        case &quot;ha&quot;:
+            document.write(&quot;Mùa Hạ&quot;);
+        case &quot;thu&quot;:
+            document.write(&quot;Mùa Thu&quot;);
+        case &quot;dong&quot;:
+            document.write(&quot;Mùa Đông&quot;);
+    }
+&lt;/script&gt;</pre>
+</div>
+        </td>
+        <td style="padding:0px;vertical-align:top;">
+<div class="form_new_26">
+    <pre style="border:0px;margin:0px">&lt;script&gt;
+    var season = &quot;ha&quot;;
+    switch (season){
+        case &quot;xuan&quot;:
+            document.write(&quot;Mùa Xuân&quot;);
+            break;
+        case &quot;ha&quot;:
+            document.write(&quot;Mùa Hạ&quot;);
+            break;
+        case &quot;thu&quot;:
+            document.write(&quot;Mùa Thu&quot;);
+            break;
+        case &quot;dong&quot;:
+            document.write(&quot;Mùa Đông&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+</div>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding:5px;"><div class="form_new_22" style="margin:0px"><a href="demoe593.html?file=1856" target="_blank" style="margin:0px;">Xem ví dụ</a></div></td>
+        <td style="padding:5px;"><div class="form_new_22" style="margin:0px"><a href="democ1d8.html?file=1857" target="_blank" style="margin:0px;">Xem ví dụ</a></div></td>
+    </tr>
+</table>
+<h2>4) Công dụng của lệnh <i>"default"</i></h2>
+<p>- Lệnh <strong>default</strong> dùng để xác định một đoạn mã mặc định sẽ được thực thi khi  giá trị của bạn không trùng khớp với bất kỳ trường hợp nào.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var season = &quot;abc&quot;;
+    switch (season){
+        case &quot;xuan&quot;:
+            document.write(&quot;Mùa Xuân&quot;);
+            break;
+        case &quot;ha&quot;:
+            document.write(&quot;gt;Mùa Hạ&quot;);
+            break;
+        case &quot;thu&quot;:
+            document.write(&quot;Mùa Thu&quot;);
+            break;
+        case &quot;dong&quot;:
+            document.write(&quot;Mùa Đông&quot;);
+            break;
+        default:
+            document.write(&quot;KHÔNG XÁC ĐỊNH&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo9bb9.html?file=1858" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Nhóm các trường hợp lại với nhau</h2>
+<p>- Nếu trong danh sách các trường hợp của lệnh <strong>switch case</strong> có những trường hợp mà bạn muốn cùng thực thi một đoạn mã thì ta hãy nhóm các trường hợp đó lại với nhau.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var month = 5;
+    switch (month){
+        case 1:
+        case 2:
+        case 3:
+            document.write(&quot;Mùa Xuân&quot;);
+            break;
+        case 4:
+        case 5:
+        case 6:
+            document.write(&quot;Mùa Hạ&quot;);
+            break;
+        case 7:
+        case 8:
+        case 9:
+            document.write(&quot;Mùa Thu&quot;);
+            break;
+        case 10:
+        case 11:
+        case 12:
+            document.write(&quot;Mùa Đông&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo12ac.html?file=1859" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>6) Lệnh <em>"switch case lồng nhau"</em></h2>
+<p>- Thật ra, lệnh switch case lồng nhau chỉ là cách sử dụng nâng cao của lệnh switch case thông thường, nó giúp ta mở rộng phạm vi xét duyệt các trường hợp. Từ đó, chọn được đoạn mã thích hợp nhất để thực thi.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var season = &quot;Thu&quot;;
+    var month = 8;
+    switch(season){
+        case &quot;Xuân&quot;:
+            switch(month){
+                case 1:
+                    document.write(&quot;Mùa Xuân - Tháng 1&quot;);
+                    break;
+                case 2:
+                    document.write(&quot;Mùa Xuân - Tháng 2&quot;);
+                    break;
+                case 3:
+                    document.write(&quot;Mùa Xuân - Tháng 3&quot;);
+                    break;
+                default:
+                    document.write(&quot;Mùa &quot; + season + &quot; không có tháng&quot; + month);
+                    break;
+            }
+            break;
+        case &quot;Hạ&quot;:
+            switch(month){
+                case 4:
+                    document.write(&quot;Mùa Hạ - Tháng 4&quot;);
+                    break;
+                case 5:
+                    document.write(&quot;Mùa Hạ - Tháng 5&quot;);
+                    break;
+                case 6:
+                    document.write(&quot;Mùa Hạ - Tháng 6&quot;);
+                    break;
+                default:
+                    document.write(&quot;Mùa &quot; + season + &quot; không có tháng&quot; + month);
+                    break;
+            }
+            break;
+        case &quot;Thu&quot;:
+            switch(month){
+                case 7:
+                    document.write(&quot;Mùa Thu - Tháng 7&quot;);
+                    break;
+                case 8:
+                    document.write(&quot;Mùa Thu - Tháng 8&quot;);
+                    break;
+                case 9:
+                    document.write(&quot;Mùa Thu - Tháng 9&quot;);
+                    break;
+                default:
+                    document.write(&quot;Mùa &quot; + season + &quot; không có tháng&quot; + month);
+                    break;
+            }
+            break;
+        case &quot;Đông&quot;:
+            switch(month){
+                case 10:
+                    document.write(&quot;Mùa Đông - Tháng 10&quot;);
+                    break;
+                case 11:
+                    document.write(&quot;Mùa Đông - Tháng 11&quot;);
+                    break;
+                case 12:
+                    document.write(&quot;Mùa Đông - Tháng 12&quot;);
+                    break;
+                default:
+                    document.write(&quot;Mùa &quot; + season + &quot; không có tháng&quot; + month);
+                    break;
+            }
+            break;    
+        default:
+            document.write(&quot;KHÔNG XÁC ĐỊNH&quot;);
+            break;
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo406c.html?file=1860" target="_blank">Xem ví dụ</a></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-lenh-switch-case-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:33 GMT -->
+</html>

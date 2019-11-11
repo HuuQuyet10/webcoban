@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+  
+<!-- Mirrored from webcoban.vn/php/demo?file=1989 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:35 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+    <link href="../home/css/demo.css" rel="stylesheet">
+    <link href="../home/image/favicon.png" rel="icon">
+    <script src="../home/js/codecl.js"></script>
+  </head>
+<body>
+  <script type="text/javascript">
+        function view_result() {
+            var text = document.getElementById("textareaCode2").value;
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("iframewrapper").innerHTML = "";
+            document.getElementById("iframewrapper").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+    </script>
+    <div id="container">
+        <div id="ads"><div></div></div>
+        <div id="menu">
+            <div class="f1"><h1>Bạn không thể chỉnh sửa code bên dưới:</h1></div>
+            <div class="f2">
+                <button class="xemketqua" onclick="view_result()"><div>Xem kết quả</div></button>
+            </div>
+            <div class="f3">
+                <div style="padding-left:5px"><input type="range" value="525" min="0" max="1050" style="width:100%;margin-top:15px" id="scroll_resize"></div>
+            </div>
+            <div class="f4"><div id="showSize"></div></div>
+        </div>
+        <div id="content">
+            <div class="left">
+                <div id="textarea">
+                    <div id="textareawrapper">
+                        <div id="codecolor"></div>
+                        <textarea id="textareaCode2" style="display:none;"><p>1</p><p>2</p><p>3</p><p>4</p><p>5</p><p>6</p><p>7</p><p>8</p><p>9</p><p>10</p><p>11</p><p>12</p><p>13</p><p>14</p><p>15</p><p>16</p><p>17</p><p>18</p><p>19</p><p>20</p><p>21</p><p>22</p><p>23</p><p>24</p><p>25</p><p>26</p><p>27</p><p>28</p><p>29</p><p>30</p><p>31</p><p>32</p><p>33</p><p>34</p><p>35</p><p>36</p><p>37</p><p>38</p><p>39</p><p>40</p><p>41</p><p>42</p><p>43</p><p>44</p><p>45</p><p>46</p><p>47</p><p>48</p><p>49</p><p>50</p></textarea>
+                        <textarea id="textareaCode" autocomplete="off" wrap="logical" spellcheck="false" disabled="">&lt;?php
+
+    $number = 1;
+
+    for($i = 0; $i &lt; 10; $i++){
+        for($j = 0; $j &lt; 5; $j++){
+            echo &quot;&lt;p&gt;&quot; . $number . &quot;&lt;/p&gt;&quot;;
+            $number++;
+        }
+    }
+    
+?&gt;</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="iframe">
+                    <div id="iframewrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        showsize()
+        $(document).on('input', '#scroll_resize', function() {
+            var nth2_size = $(this).val() - 525;
+            if(nth2_size >= 0){
+                var nth2_textarea = 640 + nth2_size + "px"; 
+                var nth2_iframe = 640 - nth2_size + "px";
+            }else{
+                var nth2_textarea = 640 + nth2_size + "px"; 
+                var nth2_iframe = 640 - nth2_size + "px";
+            }
+            $("#container #content .left").css("width",nth2_textarea);
+            $("#container #content .right").css("width",nth2_iframe);
+            showsize()
+        });
+        function showsize(){
+            var iframewidth = $('#iframe').width();
+            var iframeheight = $('#iframe').height();
+            var showSize = "[" + iframewidth + "x" + iframeheight + "]";
+            $("#showSize").html(showSize);
+        }
+        if (window.addEventListener) {              
+            window.addEventListener("resize", showsize);
+        } else if (window.attachEvent) {                 
+            window.attachEvent("onresize", showsize);
+        }
+    </script>
+    <script>
+    if (navigator.userAgent.indexOf("WebKit") > -1 && navigator.userAgent.indexOf("Edge") == -1) {
+        document.getElementById("codecolor").className += " codecolorCC";
+        document.getElementById("textareaCode").className += " textareaCC";
+        removetabs();
+        colorcoding();
+        if (document.getElementById("textareaCode").addEventListener) {              
+            document.getElementById("textareaCode").addEventListener("input", removetabs);
+            document.getElementById("textareaCode").addEventListener("input", colorcoding);
+            document.getElementById("textareaCode").addEventListener("scroll", syncscroll);
+        } else if (document.getElementById("textareaCode").attachEvent) {                 
+            document.getElementById("textareaCode").attachEvent("oninput", removetabs);
+            document.getElementById("textareaCode").attachEvent("oninput", colorcoding);
+            document.getElementById("textareaCode").attachEvent("onscroll", syncscroll);
+        }
+    }
+    function removetabs() {
+        var text = document.getElementById("textareaCode").value;
+        text = text.replace(/\t/g, " ");
+        document.getElementById("textareaCode").value = text;
+    }
+    function colorcoding() {
+        var text = document.getElementById("textareaCode").value;
+        text = text.replace(/&/g, "&amp;");
+        text = text.replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");   
+        text = text.replace(/  /g, " &nbsp;");  
+        text = text.replace(/</g, "&lt;");
+        text = text.replace(/>/g, "&gt;");
+        text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        text = text.replace(/<br> /g, "<br>&nbsp;");  
+        text = CodeColorize(text);
+        document.getElementById("codecolor").innerHTML = text + "<br>";
+    }
+    function syncscroll() {
+        document.getElementById("codecolor").scrollTop = document.getElementById("textareaCode").scrollTop;
+    }
+    </script>
+    <script>view_result()</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+    <script src="../home/js/analytics.js"></script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/demo?file=1989 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:35 GMT -->
+</html>﻿

@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:11 GMT -->
+<head>
+<title>Cách lấy mã màu của một màu sắc (color) trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách lấy mã màu trong css">
+<meta name="description" content="Trong bài học này, tôi sẽ hướng dẫn các bạn cách xác định giá trị mã màu của một màu sắc color trong CSS điển hình như tên các màu trong CSS, giá trị mã màu HEX, giá trị mã màu RGB, giá trị mã màu RGBA">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.9997.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" class='active'>- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách lấy mã màu của một màu sắc (color) trong CSS">Cách xác định giá trị của một màu sắc trong CSS</h1>
+<div class="breadcrumb">
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Trong CSS, <u>màu sắc</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<div class="hozi2f">
+<table>
+<tr>
+<td class="sss-td-1">
+<table class="ja5xgh">
+<tr><td>(1) Tên màu</td></tr>
+<tr><td>(2) Giá trị RGB</td></tr>
+<tr><td>(3) Giá trị HEX</td></tr>
+<tr><td>(4) Giá trị RGBA</td></tr>
+<tr><td>(5) Giá trị HSL</td></tr>
+<tr><td>(6) Giá trị HSLA</td></tr>
+</table>
+</td>
+<td>
+<div class="i-note-style-2 i-note-2">
+<span class="fa fa-file-text-o fa-lg"></span>
+<p>- Tuy nhiên, trong số sáu loại giá trị dùng để xác định màu sắc thì thông thường các lập trình viên chỉ sử dụng chủ yếu bốn loại:</p>
+<ul>
+<li>Tên màu</li>
+<li>Giá trị RGB</li>
+<li>Giá trị HEX</li>
+<li>Giá trị RGBA</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Nếu muốn thiết lập chữ <u>màu đỏ</u> cho một phần tử nào đó thì thuộc tính color của phần tử đó phải nhận một trong các giá trị như sau:</p>
+<table class="table table-bordered">
+<tr>
+<td>red</td>
+<td>- Xác định dựa theo tên màu</td>
+</tr>
+<tr>
+<td>rgb(255,0,0)</td>
+<td>- Xác định dựa theo giá trị RGB</td>
+</tr>
+<tr>
+<td>#ff0000</td>
+<td>- Xác định dựa theo giá trị HEX</td>
+</tr>
+<tr>
+<td>rgba(255,0,0,1)</td>
+<td>- Xác định dựa theo giá trị RGBA</td>
+</tr>
+<tr>
+<td>hsl(0,100%,50%)</td>
+<td>- Xác định dựa theo giá trị HSL</td>
+</tr>
+<tr>
+<td>hsla(0,100%,50%,1)</td>
+<td>- Xác định dựa theo giá trị HSLA</td>
+</tr>
+</table>
+<div><a href="demoa290.html?file=3209" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>1) TÊN MÀU</h2>
+<p>- Dưới đây là danh sách các &quot;tên màu&quot; được hỗ trợ trong CSS:</p>
+<div class="li9hz">
+<table class="table table-bordered">
+<tr>
+<td></td>
+<td>AliceBlue</td>
+<td>rgb(240,248,255)</td>
+<td>#F0F8FF</td>
+</tr>
+<tr>
+<td></td>
+<td>AntiqueWhite</td>
+<td>rgb(250,235,215)</td>
+<td>#FAEBD7</td>
+</tr>
+<tr>
+<td></td>
+<td>Aqua</td>
+<td>rgb(0,255,255)</td>
+<td>#00FFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>Aquamarine</td>
+<td>rgb(127,255,212)</td>
+<td>#7FFFD4</td>
+</tr>
+<tr>
+<td></td>
+<td>Azure</td>
+<td>rgb(240,255,255)</td>
+<td>#F0FFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>Beige</td>
+<td>rgb(245,245,220)</td>
+<td>#F5F5DC</td>
+</tr>
+<tr>
+<td></td>
+<td>Bisque</td>
+<td>rgb(255,228,196)</td>
+<td>#FFE4C4</td>
+</tr>
+<tr>
+<td></td>
+<td>Black</td>
+<td>rgb(0,0,0)</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td></td>
+<td>BlanchedAlmond</td>
+<td>rgb(255,235,205)</td>
+<td>#FFEBCD</td>
+</tr>
+<tr>
+<td></td>
+<td>Blue</td>
+<td>rgb(0,0,255)</td>
+<td>#0000FF</td>
+</tr>
+<tr>
+<td></td>
+<td>BlueViolet</td>
+<td>rgb(138,43,226)</td>
+<td>#8A2BE2</td>
+</tr>
+<tr>
+<td></td>
+<td>Brown</td>
+<td>rgb(165,42,42)</td>
+<td>#A52A2A</td>
+</tr>
+<tr>
+<td></td>
+<td>BurlyWood</td>
+<td>rgb(222,184,135)</td>
+<td>#DEB887</td>
+</tr>
+<tr>
+<td></td>
+<td>CadetBlue</td>
+<td>rgb(95,158,160)</td>
+<td>#5F9EA0</td>
+</tr>
+<tr>
+<td></td>
+<td>Chartreuse</td>
+<td>rgb(127,255,0)</td>
+<td>#7FFF00</td>
+</tr>
+<tr>
+<td></td>
+<td>Chocolate</td>
+<td>rgb(210,105,30)</td>
+<td>#D2691E</td>
+</tr>
+<tr>
+<td></td>
+<td>Coral</td>
+<td>rgb(255,127,80)</td>
+<td>#FF7F50</td>
+</tr>
+<tr>
+<td></td>
+<td>CornflowerBlue</td>
+<td>rgb(100,149,137)</td>
+<td>#6495ED</td>
+</tr>
+<tr>
+<td></td>
+<td>Cornsilk</td>
+<td>rgb(255,248,220)</td>
+<td>#FFF8DC</td>
+</tr>
+<tr>
+<td></td>
+<td>Crimson</td>
+<td>rgb(220,20,60)</td>
+<td>#DC143C</td>
+</tr>
+<tr>
+<td></td>
+<td>Cyan</td>
+<td>rgb(0,255,255)</td>
+<td>#00FFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkBlue</td>
+<td>rgb(0,0,139)</td>
+<td>#00008B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkCyan</td>
+<td>rgb(0,139,139)</td>
+<td>#008B8B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkGoldenRod</td>
+<td>rgb(184,134,11)</td>
+<td>#B8860B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkGray</td>
+<td>rgb(169,169,169)</td>
+<td>#A9A9A9</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkGreen</td>
+<td>rgb(0,100,0)</td>
+<td>#006400</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkGrey</td>
+<td>rgb(169,169,169)</td>
+<td>#A9A9A9</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkKhaki</td>
+<td>rgb(189,183,107)</td>
+<td>#BDB76B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkMagenta</td>
+<td>rgb(139,0,139)</td>
+<td>#8B008B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkOliveGreen</td>
+<td>rgb(85,107,47)</td>
+<td>#556B2F</td>
+</tr>
+<tr>
+<td></td>
+<td>Darkorange</td>
+<td>rgb(255,140,0)</td>
+<td>#FF8C00</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkOrchid</td>
+<td>rgb(153,50,204)</td>
+<td>#9932CC</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkRed</td>
+<td>rgb(139,0,0)</td>
+<td>#8B0000</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkSalmon</td>
+<td>rgb(233,150,122)</td>
+<td>#E9967A</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkSeaGreen</td>
+<td>rgb(143,188,143)</td>
+<td>#8FBC8F</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkSlateBlue</td>
+<td>rgb(72,61,139)</td>
+<td>#483D8B</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkSlateGray</td>
+<td>rgb(47,79,79)</td>
+<td>#2F4F4F</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkSlateGrey</td>
+<td>rgb(47,79,79)</td>
+<td>#2F4F4F</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkTurquoise</td>
+<td>rgb(0,206,209)</td>
+<td>#00CED1</td>
+</tr>
+<tr>
+<td></td>
+<td>DarkViolet</td>
+<td>rgb(248,0,211)</td>
+<td>#9400D3</td>
+</tr>
+<tr>
+<td></td>
+<td>DeepPink</td>
+<td>rgb(255,20,147)</td>
+<td>#FF1493</td>
+</tr>
+<tr>
+<td></td>
+<td>DeepSkyBlue</td>
+<td>rgb(0,191,255)</td>
+<td>#00BFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>DimGray</td>
+<td>rgb(105,105,105)</td>
+<td>#696969</td>
+</tr>
+<tr>
+<td></td>
+<td>DimGrey</td>
+<td>rgb(105,105,105)</td>
+<td>#696969</td>
+</tr>
+<tr>
+<td></td>
+<td>DodgerBlue</td>
+<td>rgb(30,144,255)</td>
+<td>#1E90FF</td>
+</tr>
+<tr>
+<td></td>
+<td>FireBrick</td>
+<td>rgb(178,34,34)</td>
+<td>#B22222</td>
+</tr>
+<tr>
+<td></td>
+<td>FloralWhite</td>
+<td>rgb(255,250,240)</td>
+<td>#FFFAF0</td>
+</tr>
+<tr>
+<td></td>
+<td>ForestGreen</td>
+<td>rgb(34,139,34)</td>
+<td>#228B22</td>
+</tr>
+<tr>
+<td></td>
+<td>Fuchsia</td>
+<td>rgb(255,0,255)</td>
+<td>#FF00FF</td>
+</tr>
+<tr>
+<td></td>
+<td>Gainsboro</td>
+<td>rgb(220,220,220)</td>
+<td>#DCDCDC</td>
+</tr>
+<tr>
+<td></td>
+<td>GhostWhite</td>
+<td>rgb(248,248,255)</td>
+<td>#F8F8FF</td>
+</tr>
+<tr>
+<td></td>
+<td>Gold</td>
+<td>rgb(255,215,0)</td>
+<td>#FFD700</td>
+</tr>
+<tr>
+<td></td>
+<td>GoldenRod</td>
+<td>rgb(218,165,32)</td>
+<td>#DAA520</td>
+</tr>
+<tr>
+<td></td>
+<td>Gray</td>
+<td>rgb(218,218,218)</td>
+<td>#808080</td>
+</tr>
+<tr>
+<td></td>
+<td>Green</td>
+<td>rgb(0,218,0)</td>
+<td>#008000</td>
+</tr>
+<tr>
+<td></td>
+<td>Grey</td>
+<td>rgb(218,218,218)</td>
+<td>#808080</td>
+</tr>
+<tr>
+<td></td>
+<td>GreenYellow</td>
+<td>rgb(173,255,47)</td>
+<td>#ADFF2F</td>
+</tr>
+<tr>
+<td></td>
+<td>HoneyDew</td>
+<td>rgb(240,255,240)</td>
+<td>#F0FFF0</td>
+</tr>
+<tr>
+<td></td>
+<td>HotPink</td>
+<td>rgb(255,105,180)</td>
+<td>#FF69B4</td>
+</tr>
+<tr>
+<td></td>
+<td>IndianRed</td>
+<td>rgb(205,90,90)</td>
+<td>#CD5C5C</td>
+</tr>
+<tr>
+<td></td>
+<td>Indigo</td>
+<td>rgb(75,0,130)</td>
+<td>#4B0082</td>
+</tr>
+<tr>
+<td></td>
+<td>Ivory</td>
+<td>rgb(255,255,240)</td>
+<td>#FFFFF0</td>
+</tr>
+<tr>
+<td></td>
+<td>Khaki</td>
+<td>rgb(240,230,140)</td>
+<td>#F0E68C</td>
+</tr>
+<tr>
+<td></td>
+<td>Lavender</td>
+<td>rgb(230,230,230)</td>
+<td>#E6E6FA</td>
+</tr>
+<tr>
+<td></td>
+<td>LavenderBlush</td>
+<td>rgb(255,240,245)</td>
+<td>#FFF0F5</td>
+</tr>
+<tr>
+<td></td>
+<td>LawnGreen</td>
+<td>rgb(124,252,0)</td>
+<td>#7CFC00</td>
+</tr>
+<tr>
+<td></td>
+<td>LemonChiffon</td>
+<td>rgb(255,250,205)</td>
+<td>#FFFACD</td>
+</tr>
+<tr>
+<td></td>
+<td>LightBlue</td>
+<td>rgb(173,216,230)</td>
+<td>#ADD8E6</td>
+</tr>
+<tr>
+<td></td>
+<td>LightCoral</td>
+<td>rgb(240,128,128)</td>
+<td>#F08080</td>
+</tr>
+<tr>
+<td></td>
+<td>LightCyan</td>
+<td>rgb(224,255,255)</td>
+<td>#E0FFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>LightGoldenRodYellow</td>
+<td>rgb(250,250,210)</td>
+<td>#FAFAD2</td>
+</tr>
+<tr>
+<td></td>
+<td>LightGray</td>
+<td>rgb(211,211,211)</td>
+<td>#D3D3D3</td>
+</tr>
+<tr>
+<td></td>
+<td>LightGreen</td>
+<td>rgb(144,238,144)</td>
+<td>#90EE90</td>
+</tr>
+<tr>
+<td></td>
+<td>LightGrey</td>
+<td>rgb(211,211,211)</td>
+<td>#D3D3D3</td>
+</tr>
+<tr>
+<td></td>
+<td>LightPink</td>
+<td>rgb(255,182,193)</td>
+<td>#FFB6C1</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSalmon</td>
+<td>rgb(255,160,122)</td>
+<td>#FFA07A</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSeaGreen</td>
+<td>rgb(32,178,170)</td>
+<td>#20B2AA</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSkyBlue</td>
+<td>rgb(135,206,250)</td>
+<td>#87CEFA</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSlateGray</td>
+<td>rgb(119,136,153)</td>
+<td>#778899</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSlateGrey</td>
+<td>rgb(119,136,153)</td>
+<td>#778899</td>
+</tr>
+<tr>
+<td></td>
+<td>LightSteelBlue</td>
+<td>rgb(176,196,222)</td>
+<td>#B0C4DE</td>
+</tr>
+<tr>
+<td></td>
+<td>LightYellow</td>
+<td>rgb(255,255,224)</td>
+<td>#FFFFE0</td>
+</tr>
+<tr>
+<td></td>
+<td>Lime</td>
+<td>rgb(0,255,0)</td>
+<td>#00FF00</td>
+</tr>
+<tr>
+<td></td>
+<td>LimeGreen</td>
+<td>rgb(50,205,50)</td>
+<td>#32CD32</td>
+</tr>
+<tr>
+<td></td>
+<td>Linen</td>
+<td>rgb(250,240,230)</td>
+<td>#FAF0E6</td>
+</tr>
+<tr>
+<td></td>
+<td>Magenta</td>
+<td>rgb(255,0,255)</td>
+<td>#FF00FF</td>
+</tr>
+<tr>
+<td></td>
+<td>Maroon</td>
+<td>rgb(128,0,0)</td>
+<td>#800000</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumAquaMarine</td>
+<td>rgb(102,205,170)</td>
+<td>#66CDAA</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumBlue</td>
+<td>rgb(0,0,205)</td>
+<td>#0000CD</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumOrchid</td>
+<td>rgb(186,85,211)</td>
+<td>#BA55D3</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumPurple</td>
+<td>rgb(147,112,216)</td>
+<td>#9370D8</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumSeaGreen</td>
+<td>rgb(60,179,113)</td>
+<td>#3CB371</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumSlateBlue</td>
+<td>rgb(123,104,238)</td>
+<td>#7B68EE</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumSpringGreen</td>
+<td>rgb(0,250,154)</td>
+<td>#00FA9A</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumTurquoise</td>
+<td>rgb(72,209,204)</td>
+<td>#48D1CC</td>
+</tr>
+<tr>
+<td></td>
+<td>MediumVioletRed</td>
+<td>rgb(199,21,133)</td>
+<td>#C71585</td>
+</tr>
+<tr>
+<td></td>
+<td>MidnightBlue</td>
+<td>rgb(25,25,112)</td>
+<td>#191970</td>
+</tr>
+<tr>
+<td></td>
+<td>MintCream</td>
+<td>rgb(245,255,250)</td>
+<td>#F5FFFA</td>
+</tr>
+<tr>
+<td></td>
+<td>MistyRose</td>
+<td>rgb(255,228,225)</td>
+<td>#FFE4E1</td>
+</tr>
+<tr>
+<td></td>
+<td>Moccasin</td>
+<td>rgb(255,228,181)</td>
+<td>#FFE4B5</td>
+</tr>
+<tr>
+<td></td>
+<td>NavajoWhite</td>
+<td>rgb(255,222,173)</td>
+<td>#FFDEAD</td>
+</tr>
+<tr>
+<td></td>
+<td>Navy</td>
+<td>rgb(0,0,128)</td>
+<td>#000080</td>
+</tr>
+<tr>
+<td></td>
+<td>OldLace</td>
+<td>rgb(253,245,230)</td>
+<td>#FDF5E6</td>
+</tr>
+<tr>
+<td></td>
+<td>Olive</td>
+<td>rgb(128,128,0)</td>
+<td>#808000</td>
+</tr>
+<tr>
+<td></td>
+<td>OliveDrab</td>
+<td>rgb(107,142,35)</td>
+<td>#6B8E23</td>
+</tr>
+<tr>
+<td></td>
+<td>Orange</td>
+<td>rgb(255,165,0)</td>
+<td>#FFA500</td>
+</tr>
+<tr>
+<td></td>
+<td>OrangeRed</td>
+<td>rgb(255,69,0)</td>
+<td>#FF4500</td>
+</tr>
+<tr>
+<td></td>
+<td>Orchid</td>
+<td>rgb(218,112,214)</td>
+<td>#DA70D6</td>
+</tr>
+<tr>
+<td></td>
+<td>PaleGoldenRod</td>
+<td>rgb(238,232,170)</td>
+<td>#EEE8AA</td>
+</tr>
+<tr>
+<td></td>
+<td>PaleGreen</td>
+<td>rgb(152,251,152)</td>
+<td>#98FB98</td>
+</tr>
+<tr>
+<td></td>
+<td>PaleTurquoise</td>
+<td>rgb(175,238,238)</td>
+<td>#AFEEEE</td>
+</tr>
+<tr>
+<td></td>
+<td>PaleVioletRed</td>
+<td>rgb(216,112,147)</td>
+<td>#D87093</td>
+</tr>
+<tr>
+<td></td>
+<td>PapayaWhip</td>
+<td>rgb(255,239,213)</td>
+<td>#FFEFD5</td>
+</tr>
+<tr>
+<td></td>
+<td>PeachPuff</td>
+<td>rgb(255,218,185)</td>
+<td>#FFDAB9</td>
+</tr>
+<tr>
+<td></td>
+<td>Peru</td>
+<td>rgb(205,133,63)</td>
+<td>#CD853F</td>
+</tr>
+<tr>
+<td></td>
+<td>Pink</td>
+<td>rgb(255,192,203)</td>
+<td>#FFC0CB</td>
+</tr>
+<tr>
+<td></td>
+<td>Plum</td>
+<td>rgb(221,160,221)</td>
+<td>#DDA0DD</td>
+</tr>
+<tr>
+<td></td>
+<td>PowderBlue</td>
+<td>rgb(176,224,230)</td>
+<td>#B0E0E6</td>
+</tr>
+<tr>
+<td></td>
+<td>Purple</td>
+<td>rgb(128,0,128)</td>
+<td>#800080</td>
+</tr>
+<tr>
+<td></td>
+<td>Red</td>
+<td>rgb(255,0,0)</td>
+<td>#FF0000</td>
+</tr>
+<tr>
+<td></td>
+<td>RosyBrown</td>
+<td>rgb(188,143,143)</td>
+<td>#BC8F8F</td>
+</tr>
+<tr>
+<td></td>
+<td>RoyalBlue</td>
+<td>rgb(65,105,225)</td>
+<td>#4169E1</td>
+</tr>
+<tr>
+<td></td>
+<td>SaddleBrown</td>
+<td>rgb(139,69,19)</td>
+<td>#8B4513</td>
+</tr>
+<tr>
+<td></td>
+<td>Salmon</td>
+<td>rgb(250,128,114)</td>
+<td>#FA8072</td>
+</tr>
+<tr>
+<td></td>
+<td>SandyBrown</td>
+<td>rgb(244,164,96)</td>
+<td>#F4A460</td>
+</tr>
+<tr>
+<td></td>
+<td>SeaGreen</td>
+<td>rgb(46,139,87)</td>
+<td>#2E8B57</td>
+</tr>
+<tr>
+<td></td>
+<td>SeaShell</td>
+<td>rgb(255,245,238)</td>
+<td>#FFF5EE</td>
+</tr>
+<tr>
+<td></td>
+<td>Sienna</td>
+<td>rgb(160,82,45)</td>
+<td>#A0522D</td>
+</tr>
+<tr>
+<td></td>
+<td>Silver</td>
+<td>rgb(192,192,192)</td>
+<td>#C0C0C0</td>
+</tr>
+<tr>
+<td></td>
+<td>SkyBlue</td>
+<td>rgb(135,206,235)</td>
+<td>#87CEEB</td>
+</tr>
+<tr>
+<td></td>
+<td>SlateBlue</td>
+<td>rgb(106,90,255)</td>
+<td>#6A5ACD</td>
+</tr>
+<tr>
+<td></td>
+<td>SlateGray</td>
+<td>rgb(112,128,144)</td>
+<td>#708090</td>
+</tr>
+<tr>
+<td></td>
+<td>SlateGrey</td>
+<td>rgb(112,128,144)</td>
+<td>#708090</td>
+</tr>
+<tr>
+<td></td>
+<td>Snow</td>
+<td>rgb(255,250,250)</td>
+<td>#FFFAFA</td>
+</tr>
+<tr>
+<td></td>
+<td>SpringGreen</td>
+<td>rgb(0,255,127)</td>
+<td>#00FF7F</td>
+</tr>
+<tr>
+<td></td>
+<td>SteelBlue</td>
+<td>rgb(70,130,180)</td>
+<td>#4682B4</td>
+</tr>
+<tr>
+<td></td>
+<td>Tan</td>
+<td>rgb(210,180,140)</td>
+<td>#D2B48C</td>
+</tr>
+<tr>
+<td></td>
+<td>Teal</td>
+<td>rgb(0,128,128)</td>
+<td>#008080</td>
+</tr>
+<tr>
+<td></td>
+<td>Thistle</td>
+<td>rgb(216,191,216)</td>
+<td>#D8BFD8</td>
+</tr>
+<tr>
+<td></td>
+<td>Tomato</td>
+<td>rgb(255,99,71)</td>
+<td>#FF6347</td>
+</tr>
+<tr>
+<td></td>
+<td>Turquoise</td>
+<td>rgb(64,224,208)</td>
+<td>#40E0D0</td>
+</tr>
+<tr>
+<td></td>
+<td>Violet</td>
+<td>rgb(238,130,238)</td>
+<td>#EE82EE</td>
+</tr>
+<tr>
+<td></td>
+<td>Wheat</td>
+<td>rgb(245,222,179)</td>
+<td>#F5DEB3</td>
+</tr>
+<tr>
+<td></td>
+<td>White</td>
+<td>rgb(255,255,255)</td>
+<td>#FFFFFF</td>
+</tr>
+<tr>
+<td></td>
+<td>WhiteSmoke</td>
+<td>rgb(245,245,245)</td>
+<td>#F5F5F5</td>
+</tr>
+<tr>
+<td></td>
+<td>Yellow</td>
+<td>rgb(255,255,0)</td>
+<td>#FFFF00</td>
+</tr>
+<tr>
+<td></td>
+<td>YellowGreen</td>
+<td>rgb(145,205,50)</td>
+<td>#9ACD32</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Tên màu không phân biệt chữ in hoa hay chữ thường, ví dụ như ba giá trị GREEN Green green đều có chung một ý nghĩa.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) GIÁ TRỊ RGB</h2>
+<p>- Dưới đây là cú pháp dùng để xác định một giá trị RGB:</p>
+<div class="i-pre-not-color i-form-2">rgb(red,green,blue)</div>
+<p>- Trong đó, các tham số red - green - blue phải là một số nguyên trong đoạn từ 0 đến 255.</p>
+<table class="table m1ial">
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr>
+<td><input type="range" value="0" min="0" max="255"></td>
+<td><input type="range" value="0" min="0" max="255"></td>
+<td><input type="range" value="0" min="0" max="255"></td>
+</tr>
+<tr>
+<td colspan="3">
+<div id="ric0wj">rgb(0,0,0)</div>
+</td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Khi giá trị của các tham số red - green - blue càng lớn thì màu sắc sẽ càng trở nên sáng hơn, ví dụ như giá trị rgb(0,0,0) là màu đen thì giá trị rgb(255,255,255) chính là màu trắng.</p>
+<h2>3) GIÁ TRỊ HEX</h2>
+<p>- Dưới đây là cú pháp dùng để xác định một giá trị HEX:</p>
+<div class="i-pre-not-color i-form-2">#rrggbb</div>
+<p>- Gần giống với giá trị RGB, giá trị HEX được tạo nên bởi ba tham số red (rr), green (gg), blue (bb).</p>
+<p>- Tuy nhiên, điểm khác nhau chính là mỗi tham số của giá trị HEX phải được xác định bởi hai ký tự, mỗi ký tự phải là một chữ cái (a, b, c, d, e, f) hoặc một số nguyên (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</p>
+<table class="table table-bordered ejak2l">
+<tr>
+<td></td>
+<td>#008000</td>
+</tr>
+<tr>
+<td></td>
+<td>#0000fe</td>
+</tr>
+<tr>
+<td></td>
+<td>#ff0000</td>
+</tr>
+<tr>
+<td></td>
+<td>#ffa500</td>
+</tr>
+<tr>
+<td></td>
+<td>#000000</td>
+</tr>
+<tr>
+<td></td>
+<td>#00ffde</td>
+</tr>
+</table>
+<div class="i-note-style-2 i-note-1">
+<span class="fa fa-file-text-o fa-lg"></span>
+<p><u>MỘT SỐ ĐIỀU CẦN LƯU Ý</u>:</p>
+<p>- Đối với loại giá trị HEX, các ký tự không phân biệt trường hợp chữ in hoa hay chữ thường, ví dụ như hai giá trị #ff00de và #FF00DE đều có chúng một ý nghĩa.</p>
+<p>- Màu sắc sẽ sáng dần khi giá trị của các tham số tăng dần từ 00 lên FF.</p>
+<p>- Giá trị HEX cũng có thể được viết dưới dạng 3 ký tự (một ký tự sẽ đại diện cho cả hai), ví dụ:</p>
+<ul>
+<li>#000 tương đương với #000000</li>
+<li>#DDD tương đương với #DDDDDD</li>
+<li>#0DF tương đương với #00DDFF</li>
+<li>#DEF tương đương với #DDEEFF</li>
+</ul> 
+</div>
+<h2>4) GIÁ TRỊ RGBA</h2>
+<p>- Dưới đây là cú pháp dùng để xác định một giá trị RGBA:</p>
+<div class="i-pre-not-color i-form-2">rgba(red,green,blue,alpha)</div>
+<p>- Như chúng ta đã thấy, giá trị RGBA khá giống với giá trị RGB. Tuy nhiên, nó có thêm một tham số alpha (tham số alpha dùng để xác định mức độ trong suốt của màu sắc, nó phải nhận giá trị là một số trong đoạn 0 - 1, mức độ trong suốt sẽ tăng dần khi giá trị giảm dần từ 1 xuống 0)</p>
+<table class="table rz6ui">
+<tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
+<tr>
+<td><input type="range" value="0" min="0" max="255"></td>
+<td><input type="range" value="0" min="0" max="255"></td>
+<td><input type="range" value="0" min="0" max="255"></td>
+<td><input type="range" value="10" min="0" max="10"></td>
+</tr>
+<tr>
+<td colspan="4">
+<div id="tf3kai">rgba(0,0,0,1)</div>
+</td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>5) SỬ DỤNG CHROME ĐỂ XÁC ĐỊNH GIÁ TRỊ CỦA MỘT MÀU SẮC</h2>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><p>- Ví dụ như khi đang lướt web, các bạn thấy một phần tử nào đó có màu đẹp quá, các bạn muốn lấy giá trị của màu sắc đó để sử dụng (nhưng không biết phải làm như thế nào)</p>
+<p>- Thì ở trong phần này, tôi sẽ hướng dẫn các bạn cách sử dụng trình duyệt Chrome để xác định giá trị của một màu sắc được hiển thị trên trang web.</p></td>
+</tr>
+</table>
+<p>- <u>Bước 1</u>: Bấm phím <kbd>F12</kbd> hoặc tổ hợp phím <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> tại trang web chứa màu sắc mà các bạn muốn xác định, nhìn trên thanh menu chính chọn tab Elements, sau đó chọn tab Styles.</p>
+<p><img alt="cách xác định giá trị của một màu sắc color trong css" src="../image/mau-sac-color-trong-css.png" class="img-responsive"></p>
+<p>- <u>Bước 2</u>: Nhìn cụm bên phải, các bạn sẽ thấy ở đó có một số bộ định dạng.</p>
+<p><img alt="màu sắc trong css" src="../image/mau-sac-trong-css.png" class="img-responsive"></p>
+<p>- <u>Bước 3</u>: Di chuyển con trỏ vào góc phải phía dưới của một bộ định dạng bất kỳ thì các bạn sẽ thấy ở đó có một số tùy chọn (tại đây chọn Add color)</p>
+<p><img alt="color trong css" src="../image/color-trong-css.png" class="img-responsive"></p>
+<p>- <u>Bước 4</u>: Sau khi đã chọn Add color, nếu các bạn nhấp chuột trái vào bất kỳ một vị trí nào trên trang web thì giá trị của màu sắc nằm tại vị trí đó sẽ được hiển thị bên trong khung (khoanh màu đỏ)</p>
+<p><img alt="một số vấn đề về màu sắc color trong css" src="../image/mot-so-van-de-ve-mau-sac-color-trong-css.png" class="img-responsive"></p><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.1401.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:21 GMT -->
+</html>

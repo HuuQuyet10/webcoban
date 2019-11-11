@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/cach-su-dung-lenh-if-else-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:57 GMT -->
+<head>
+<title>Cách sử dụng lệnh if else trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách sử dụng lệnh if else trong php,cach su dung lenh if else trong php">
+<meta name="description" content="cách sử dụng lệnh if else trong php, cach su dung lenh if else trong php">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" class='active'>- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách sử dụng lệnh if else trong PHP">Lệnh điều kiện if ... else trong PHP</h1>
+<div class="breadcrumb">
+<a href="cach-ghi-chu-thich-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div style="background-color:#eee;padding:13px 15px 7px 15px;border-radius:10px;margin-top:10px;">
+<p style="font-weight:bold;font-style:italic;color:#333;font-size:18px;text-align:center">"Nếu bạn học tốt môn lập trình web thì bạn sẽ có thể thiết kế được website"</p>
+<p>- Câu trên được chia làm hai vế:</p>
+<ul style="list-style-type:circle">
+<li>Vế thứ nhất: <i>"Nếu bạn học tốt môn lập trình web"</i></li>
+<li style="margin-top:5px">Vế thứ hai: <i>"Bạn sẽ có thể thiết kế được website"</i></li>
+</ul>
+<p style="text-align:justify">- Trong cuộc sống, ta gọi vế thứ nhất là điều kiện, vế thứ hai là một điều gì đó sẽ đạt được khi thỏa điều kiện.</p>
+<p style="text-align:justify">- Trong PHP cũng có một dạng cú pháp tương tự như vậy, nó kiểm tra một điều kiện và nếu điều kiện đúng thì một đoạn mã xác định sẽ được thực thi. Đó được gọi là <em>"lệnh điều kiện"</em> và trong PHP thì lệnh điều kiện được chia làm ba loại cơ bản:</p>
+<ul style="list-style-type:circle">
+<li><em>Lệnh if</em></li>
+<li><em>Lệnh if ... else</em></li>
+<li><em>Lệnh if ... elseif ... else</em></li>
+</ul>
+</div>
+<h2>1) Khái niệm <em>"điều kiện"</em> trong PHP</h2>
+<p>- Trong PHP, điều kiện thường là một <span class="form_new_28">biểu thức so sánh hoặc logic</span> để đưa ra một giả thuyết.</p>
+<ul style="list-style-type:circle">
+<li>Nếu giả thuyết đúng, đồng nghĩa với việc điều kiện đúng và điều kiện sẽ nhận giá trị là true.</li>
+<li style="margin-top:5px">Nếu giả thuyết sai, đồng nghĩa với việc điều kiện sai và điều kiện sẽ nhận giá trị là false.</li>
+</ul>
+<p>- <i><u>Ví dụ</u>:</i></p>
+<table class="table table-bordered table-hover table-striped form_new_29">
+                <tr>
+			<th>Điều kiện</th>
+			<th>Mô tả</th>
+			<th>Giá trị</th>
+		</tr>
+		<tr>
+			<td>7 &gt; 4</td>
+			<td>Bảy lớn hơn bốn</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>7 &gt;= 4</td>
+			<td>Bảy lớn hơn hoặc bằng bốn</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>7 &lt; 4</td>
+			<td>Bảy nhỏ hơn bốn</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td>"webcoban"=="laptrinhweb"</td>
+			<td>Chuỗi "webcoban" giống với chuỗi "laptrinhweb"</td>
+			<td>false</td>
+		</tr>
+		<tr>
+			<td>"webcoban"!="laptrinhweb"</td>
+			<td>Chuỗi "webcoban" khác với chuỗi "laptrinhweb"</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>(5+7) &gt; 10</td>
+			<td>Tổng của năm và bảy lớn hơn mười</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>(5+7) &lt; 10</td>
+			<td>Tổng của năm và bảy nhỏ hơn mười</td>
+			<td>false</td>
+		</tr>
+</table>
+<h2>2) Lệnh điều kiện if trong PHP</h2>
+<p>- Lệnh if dùng để kiểm tra một điều kiện, nếu điều kiện đó là đúng thì một đoạn mã xác định sẽ được thực thi.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33"><span style="color:#006393">if</span>(<em>điều kiện</em>){
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu điều kiện là đúng</span>
+}</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Nếu điều kiện <i>"giá trị của biến number lớn hơn 50"</i> là đúng thì hiển thị ba câu:</p>
+<ul style="list-style-type:circle">
+<li>Tài liệu học HTML</li>
+<li style="margin-top:5px;margin-bottom:5px">Tài liệu học CSS</li>
+<li>Tài liệu học JavaScript</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;?php
+    $number = 75;
+    if($number &gt; 50){
+        echo &quot;&lt;p&gt;Tài liệu học HTML&lt;/p&gt;&quot;;
+        echo &quot;&lt;p&gt;Tài liệu học CSS&lt;/p&gt;&quot;;
+        echo &quot;&lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;&quot;;
+    }
+?&gt;</pre>
+    <div class="nutxem"><a href="demo92c5.html?file=2017" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Lệnh điều kiện if ... else trong PHP</h2>
+<p>- Lệnh if ... else dùng để kiểm tra một điều kiện, nếu điều kiện đó là đúng thì một đoạn mã xác định sẽ được thực thi, còn nếu điều kiện đó sai thì một đoạn mã xác định khác sẽ được thực thi.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33"><span style="color:#006393">if</span>(<em>điều kiện</em>){
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu điều kiện là đúng</span>
+}<span style="color:#006393">else</span>{
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu điều kiện là sai</span>
+}</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Nếu điều kiện <i>"giá trị của biến numberOne lớn hơn giá trị của biến numberTwo"</i> là đúng thì hiển thị ba câu:</p>
+<ul style="list-style-type:circle">
+<li>Tài liệu học HTML</li>
+<li style="margin-top:5px;margin-bottom:5px">Tài liệu học CSS</li>
+<li>Tài liệu học JavaScript</li>
+</ul>
+<p>Còn nếu điều kiện <i>"giá trị của biến numberOne lớn hơn giá trị của biến numberTwo"</i> là sai thì hiển thị hai câu:</p>
+<ul style="list-style-type:circle">
+<li style="margin-bottom:5px">Tài liệu học MySQL</li>
+<li>Tài liệu học PHP</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;?php
+    $numberOne = 15;
+    $numberTwo = 20;
+    if($numberOne &gt; $numberTwo){
+        echo &quot;&lt;p&gt;Tài liệu học HTML&lt;/p&gt;&quot;;
+        echo &quot;&lt;p&gt;Tài liệu học CSS&lt;/p&gt;&quot;;
+        echo &quot;&lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;&quot;;
+    }else{
+        echo &quot;&lt;p&gt;Tài liệu học MySQL&lt;/p&gt;&quot;;
+        echo &quot;&lt;p&gt;Tài liệu học PHP&lt;/p&gt;&quot;;
+    }
+?&gt;</pre>
+    <div class="nutxem"><a href="demo4c6d.html?file=2018" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Lệnh điều kiện if ... elseif ... else trong PHP</h2>
+<p>- Lệnh <em>if ... elseif ... else</em> là một dạng nâng cao của lệnh <em>if ... else</em></p>
+<p>- Lệnh <em>if ... elseif ... else</em> dùng để mở rộng phạm vi kiểm tra sang các điều kiện khác nếu tất cả những điều kiện phía trên là sai.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33"><span style="color:#006393">if</span>(<i>điều kiện 1</i>){
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu điều kiện 1 là đúng</span>
+}<span style="color:#006393">elseif</span>(<i>điều kiện 2</i>){
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu điều kiện 1 sai và điều kiện 2 là đúng</span>
+}<span style="color:#006393">else</span>{
+    <span style="color:gray">//đoạn mã này sẽ được thực thi nếu tất cả những điều kiện trên là sai</span>
+}</div>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $a = 15;
+    $b = 20;
+    if($a &gt; $b){
+        echo &quot;Giá trị biến a LỚN HƠN giá trị biến b&quot;;
+    }else if($a &lt; $b){
+        echo &quot;Giá trị biến a NHỎ HƠN giá trị biến b&quot;;
+    }else{
+        echo &quot;Giá trị biến a BẰNG giá trị biến b&quot;;
+    }
+?&gt;</pre>
+    <div class="nutxem"><a href="demoa799.html?file=2019" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Đối với lệnh <em>if ... elseif ... else</em> thì không giới hạn số lượng điều kiện.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $day = getdate()[&quot;wday&quot;];
+    if($day == 0){
+        echo &quot;Hôm nay là Chủ Nhật&quot;;
+    }elseif($day == 1){
+        echo &quot;Hôm nay là Thứ Hai&quot;;
+    }elseif($day == 2){
+        echo &quot;Hôm nay là Thứ Ba&quot;;
+    }elseif($day == 3){
+        echo &quot;Hôm nay là Thứ Tư&quot;;
+    }elseif($day == 4){
+        echo &quot;Hôm nay là Thứ Năm&quot;;
+    }elseif($day == 5){
+        echo &quot;Hôm nay là Thứ Sáu&quot;;
+    }else{
+        echo &quot;Hôm nay là Thứ Bảy&quot;;
+    }
+?&gt;</pre>
+    <div class="nutxem"><a href="demo401a.html?file=2020" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-ghi-chu-thich-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/cach-su-dung-lenh-if-else-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:58 GMT -->
+</html>

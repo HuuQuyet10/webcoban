@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/bieu-thuc-x-y-trong-javascript-regexp.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:18 GMT -->
+<head>
+<title>Biểu thức (word1|word2|...|wordN) trong JavaScript RegExp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Biểu thức (x|y) trong JavaScript RegExp trong JavaScript RegExp, tìm nhiều từ, nhiều ký tự, biểu thức chính quy">
+<meta name="description" content="Biểu thức (x|y) trong JavaScript RegExp, tìm nhiều từ, nhiều ký tự, biểu thức chính quy">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Biểu thức (word1|word2|...|wordN) trong JavaScript RegExp">Biểu thức (word1|word2|...|wordN) trong JavaScript RegExp</h1>
+<div class="breadcrumb">
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html"><span class="fa fa-sign-out"></span> JS RegExp (biểu thức chính quy)</a>
+</div>
+<h2>C&uacute; ph&aacute;p v&agrave; c&aacute;ch sử dụng</h2>
+
+<p><span style="color:crimson"><span style="background-color:#D3D3D3">Biểu thức (word1|word2|...|wordN)</span></span>&nbsp;được d&ugrave;ng để t&igrave;m&nbsp;c&aacute;c từ word1, word2, ..., wordN.</p>
+
+<p><u><em>C&uacute; ph&aacute;p:</em></u></p>
+
+<div class="divthehiencongthuc1" style="margin-bottom:9px">new RegExp(&quot;(word1|word2|...|wordN)&quot;,&quot;bổ nghĩa&quot;)</div>
+
+<div style="margin-top:10px">
+<p>hoặc</p>
+</div>
+
+<div class="divthehiencongthuc1" style="margin-bottom:9px">/(word1|word2|...|wordN)/bổ nghĩa</div>
+
+<p>Trong đ&oacute;:</p>
+
+<ul>
+	<li><span style="color:#0000CD">word1, word2,..., wordN</span>&nbsp;c&oacute; thể l&agrave; một k&yacute; tự hoặc cụm k&yacute; tự</li>
+	<li><span style="color:#0000CD">bổ nghĩa</span> c&oacute; thể l&agrave;:
+	<ul>
+		<li>g: lấy hết tất&nbsp;cả c&aacute;c kết quả được so thấy tr&ugrave;ng khớp</li>
+		<li>i: kh&ocirc;ng ph&acirc;n biệt trường hợp chữ HOA hay chữ thường</li>
+		<li>gi: lấy hết tất cả c&aacute;c kết quả được so thấy tr&ugrave;ng khớp v&agrave;&nbsp;kh&ocirc;ng ph&acirc;n biệt trường hợp chữ HOA hay chữ thường</li>
+	</ul>
+	</li>
+</ul>
+
+<div class="form_13">
+<div class="theh3">V&iacute; dụ 1</div>
+
+<div class="noithem">
+<p>T&igrave;m c&aacute;c từ <span style="color:#0000FF">web</span>, <span style="color:#0000FF">huong</span>, <span style="color:#0000FF">d</span>, <span style="color:#0000FF">20</span>&nbsp;trong chuỗi&nbsp;<span style="color:#0000FF">&quot;webcoban.vn huong dan hoc lap trinh web VA THIET KE WEB 2016&quot;</span><br />
+(Lấy hết tất cả c&aacute;c kết quả được so thấy tr&ugrave;ng khớp)</p>
+</div>
+
+<pre>
+var str = &quot;webcoban.vn huong dan hoc lap trinh web VA THIET KE WEB 2016&quot;;
+var patt = /(web|huong|d|20)/g;
+var result = str.match(patt);</pre>
+
+<div class="noithem2">
+<p>Những từ c&oacute;&nbsp;m&agrave;u đỏ tức l&agrave; được so thấy tr&ugrave;ng&nbsp;khớp</p>
+</div>
+
+<div class="form_thehiendemo"><span style="color:#FF0000">web</span>coban.vn <span style="color:#FF0000">huong</span> <span style="color:#FF0000">d</span>an hoc lap trinh <span style="color:#FF0000">web</span> VA THIET KE WEB <span style="color:#FF0000">20</span>16</div>
+
+<div class="nutxem"><a href="demo03d6.html?file=510" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+
+<div class="form_13">
+<div class="theh3">V&iacute; dụ 2</div>
+
+<div class="noithem">
+<p>T&igrave;m c&aacute;c từ <span style="color:#0000FF">web</span>, <span style="color:#0000FF">huong</span>, <span style="color:#0000FF">d</span>, <span style="color:#0000FF">20</span>&nbsp;trong chuỗi&nbsp;<span style="color:#0000FF">&quot;webcoban.vn huong dan hoc lap trinh web VA THIET KE WEB 2016&quot;</span><br />
+(Lấy hết tất cả c&aacute;c kết quả được so thấy tr&ugrave;ng khớp v&agrave; kh&ocirc;ng ph&acirc;n biệt trường hợp chữ HOA hay chữ thường)</p>
+</div>
+
+<pre>
+var str = &quot;webcoban.vn huong dan hoc lap trinh web VA THIET KE WEB 2016&quot;;
+var patt = /(web|huong|d|20)/gi;
+var result = str.match(patt);</pre>
+
+<div class="noithem2">
+<p>Những từ&nbsp;c&oacute;&nbsp;m&agrave;u đỏ tức l&agrave; được so thấy tr&ugrave;ng&nbsp;khớp</p>
+</div>
+
+<div class="form_thehiendemo"><span style="color:#FF0000">web</span>coban.vn <span style="color:#FF0000">huong</span> <span style="color:#FF0000">d</span>an hoc lap trinh <span style="color:#FF0000">web</span> VA THIET KE <span style="color:#FF0000">WEB</span> <span style="color:#FF0000">20</span>16</div>
+
+<div class="nutxem"><a href="demoe9f6.html?file=511" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+
+<p>Ch&uacute;ng ta cũng c&oacute; thể kết hợp với biểu thức [c&aacute;c k&yacute; tự cần t&igrave;m] v&agrave; [^c&aacute;c k&yacute; tự kh&ocirc;ng cần t&igrave;m]</p>
+
+<div class="form_13">
+<div class="theh3">V&iacute; dụ 3</div>
+
+<pre>
+var str = &quot;webcoban.vn huong dan hoc lap trinh web VA THIET KE WEB 2016&quot;;
+var patt = /(web|[abc])/g;
+var result = str.match(patt);</pre>
+
+<div class="noithem2">
+<p>Những từ&nbsp;c&oacute;&nbsp;m&agrave;u đỏ tức l&agrave; được so thấy tr&ugrave;ng&nbsp;khớp</p>
+</div>
+
+<div class="form_thehiendemo"><span style="color:#FF0000">webc</span>o<span style="color:#FF0000">ba</span>n.vn huong d<span style="color:#FF0000">a</span>n ho<span style="color:#FF0000">c</span> l<span style="color:#FF0000">a</span>p trinh <span style="color:#FF0000">web</span> VA THIET KE WEB 2016</div>
+
+<div class="nutxem"><a href="demoe5b9.html?file=512" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html"><span class="fa fa-sign-out"></span> JS RegExp (biểu thức chính quy)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/bieu-thuc-x-y-trong-javascript-regexp.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:19 GMT -->
+</html>

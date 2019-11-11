@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/mysql/cac-kieu-du-lieu-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:39 GMT -->
+<head>
+<title>Các kiểu dữ liệu trong MySQL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Các kiểu dữ liệu trong MySQL">
+<meta name="description" content="Các kiểu dữ liệu trong MySQL">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>MySQL</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về MySQL</a>
+<a href="huong-dan-cai-dat-xampp.html" >- Bài 02: Cài đặt XAMPP để học MySQL</a>
+<a href="cach-chay-lenh-mysql-tren-phpmyadmin.html" >- Bài 03: Chạy câu lệnh MySQL đầu tiên</a>
+<a href="mo-hinh-phan-cap-trong-mysql.html" >- Bài 04: Mô hình phân cấp trong MySQL</a>
+<a href="cau-lenh-tao-database-trong-mysql.html" >- Bài 05: CREATE DATABASE (Tạo database)</a>
+<a href="cac-kieu-du-lieu-trong-mysql.html" class='active'>- Bài 06: DATA TYPE (Các kiểu dữ liệu trong MySQL)</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html" >- Bài 07: CREATE TABLE (Tạo bảng)</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html" >- Bài 08: INSERT INTO (Thêm dữ liệu vào bảng)</a>
+<a href="cach-truy-xuat-du-lieu-trong-mysql.html" >- Bài 09: SELECT (Truy xuất dữ liệu)</a>
+<a href="truy-xuat-du-lieu-dua-theo-dieu-kien-trong-mysql.html" >- Bài 10: WHERE (Truy xuất dữ liệu dựa theo điều kiện)</a>
+<a href="truy-xuat-du-lieu-dua-theo-nhieu-dieu-kien-trong-mysql.html" >- Bài 11: AND &amp; OR (Truy xuất dữ liệu dựa theo nhiều điều kiện)</a>
+<a href="order-by-lay-ket-qua-theo-thu-tu-trong-mysql.html" >- Bài 12: ORDER BY (Lấy kết quả theo thứ tự)</a>
+<a href="distinct-truy-xuat-cac-du-lieu-khac-nhau-trong-mysql.html" >- Bài 13: DISTINCT (Lấy các kết quả không trùng nhau)</a>
+<a href="limit-gioi-han-so-luong-ket-qua-tra-ve-trong-mysql.html" >- Bài 14: LIMIT (Giới hạn số lượng kết quả trả về)</a>
+<a href="in-truy-xuat-du-lieu-khi-thoa-mot-trong-so-cac-gia-tri.html" >- Bài 15: IN (Truy xuất dữ liệu khi thỏa một trong số các giá trị)</a>
+<a href="between-truy-xuat-du-lieu-trong-mot-khoang-gia-tri-trong-mysql.html" >- Bài 16: BETWEEN (Truy xuất dữ liệu trong một khoảng giá trị)</a>
+<a href="like-truy-xuat-du-lieu-dua-theo-chuoi-trong-mysql.html" >- Bài 17: LIKE &amp; NOT LIKE (Truy xuất dự liệu dựa theo chuỗi ký tự)</a>
+<a href="delete-xoa-du-lieu-cua-bang-trong-mysql.html" >- Bài 18: DELETE (Xóa dữ liệu)</a>
+<a href="update-cap-nhat-du-lieu-trong-bang-trong-mysql.html" >- Bài 19: UPDATE (Cập nhật dữ liệu)</a>
+<a href="as-dat-lai-ten-cho-bang-cot-trong-mysql.html" >- Bài 20: AS (Đặt tên tạm thời cho bảng, cột)</a>
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html" >- Bài 21: INNER JOIN</a>
+<a href="ghep-bang-bang-menh-de-left-join-trong-mysql.html" >- Bài 22: LEFT JOIN</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html" >- Bài 23: RIGHT JOIN</a>
+<a href="ghep-bang-bang-menh-de-full-join-trong-mysql.html" >- Bài 24: FULL JOIN</a>
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html" >- Bài 25: ALTER (Sửa đổi cấu trúc bảng)</a>
+<a href="not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html" >- Bài 26: NOT NULL</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html" >- Bài 27: PRIMARY KEY (Tạo khóa chính cho bảng)</a>
+<a href="avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html" >- Bài 28: AVG() - Lấy giá trị trung bình cộng của cột</a>
+<a href="count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" >- Bài 29: COUNT() - Đếm số lượng mẫu tin trong bảng</a>
+<a href="ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html" >- Bài 30: MAX() - Lấy giá trị lớn nhất của cột</a>
+<a href="ham-min-lay-gia-tri-nho-nhat-cua-cot-trong-mysql.html" >- Bài 31: MIN() - Lấy giá trị nhỏ nhất của cột</a>
+<a href="ham-sum-lay-gia-tri-tong-cua-mot-cot-trong-mysql.html" >- Bài 31: SUM() - Lấy tổng của cột</a>
+<a href="ham-round-lam-tron-so-trong-mysql.html" >- Bài 33: ROUND() - Làm tròn số</a>
+<a href="ham-substring-lay-chuoi-con-trong-mysql.html" >- Bài 34: SUBSTRING() - Trích xuất chuỗi ký tự con</a>
+<a href="ham-upper-doi-chu-hoa-trong-mysql.html" >- Bài 35: UPPER() - Truy xuất dữ liệu ở dạng chữ HOA</a>
+<a href="ham-lower-doi-chu-thuong-trong-mysql.html" >- Bài 36: LOWER() - Truy xuất dữ liệu ở dạng chữ thường</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các kiểu dữ liệu trong MySQL">Các kiểu dữ liệu trong MySQL</h1>
+<div class="breadcrumb">
+<a href="cau-lenh-tao-database-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>Dữ liệu l&agrave; g&igrave;?</h2>
+
+<p>V&iacute; dụ, khi bạn l&ecirc;n Facebook để đăng k&yacute; t&agrave;i khoản. Hệ thống y&ecirc;u cầu cung cấp: Họ t&ecirc;n, ng&agrave;y sinh, giới t&iacute;nh, số điện thoại,&hellip;. Sau khi bấm n&uacute;t đăng k&yacute;, những th&ocirc;ng tin đ&oacute; được lưu v&agrave;o hệ thống (tức l&agrave; lưu v&agrave;o cơ sở dữ liệu), th&igrave; những th&ocirc;ng tin được lưu trong cơ sở dữ liệu đ&oacute; được gọi l&agrave; DỮ LIỆU.</p>
+
+<h2>Kiểu dữ liệu l&agrave; g&igrave;?</h2>
+
+<p>Kiểu dữ liệu tức l&agrave; <u><strong>KIỂU</strong></u> của <strong><u>DỮ LIỆU</u></strong> <img src="../home/image_icon/face1.html" /></p>
+
+<p>Nhắc lại v&iacute; dụ tr&ecirc;n, ch&uacute;ng ta c&oacute; một mẫu dữ liệu đăng k&yacute; t&agrave;i khoản như sau</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>HỌ T&Ecirc;N</th>
+			<th>NG&Agrave;Y SINH</th>
+			<th>GIỚI T&Iacute;NH</th>
+			<th>SỐ ĐIỆN THOẠI</th>
+		</tr>
+		<tr>
+			<td>Nguyễn Thanh Nh&acirc;n</td>
+			<td>11-11-1989</td>
+			<td>Nam</td>
+			<td>9999999999</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+	<li>Dữ liệu ở cột HỌ T&Ecirc;N c&oacute; dạng chuỗi k&yacute; tự, n&ecirc;n người ta gọi cột HỌ T&Ecirc;N c&oacute; kiểu dữ liệu l&agrave; <u><em>kiểu chuỗi</em></u></li>
+	<li>Dữ liệu ở cột NG&Agrave;Y SINH c&oacute; dạng ng&agrave;y th&aacute;ng, n&ecirc;n người ta gọi cột NG&Agrave;Y SINH c&oacute; kiểu dữ liệu l&agrave; <u><em>kiểu ng&agrave;y th&aacute;ng</em></u></li>
+	<li>Dữ liệu ở cột GIỚI T&Iacute;NH c&oacute; dạng chuỗi k&yacute; tự, n&ecirc;n người ta gọi cột GIỚI T&Iacute;NH c&oacute; kiểu dữ liệu l&agrave; <u><em>kiểu chuỗi</em></u></li>
+	<li>Dữ liệu ở cột SỐ ĐIỆN THOẠI c&oacute; dạng số nguy&ecirc;n, n&ecirc;n người ta gọi cột SỐ ĐIỆN THOẠI c&oacute; kiểu dữ liệu l&agrave; <u><em>kiểu số nguy&ecirc;n</em></u></li>
+</ul>
+
+<table class="tbbang_luuy">
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle; width:10px">
+			<div class="lamp"><img src="../home/image/lamp.png" style="margin:0px" /></div>
+			</td>
+			<td>
+			<div class="element">Trong MySQL, c&aacute;c kiểu dữ liệu được thay thế bởi một c&aacute;i t&ecirc;n tiếng Anh<br />
+			(V&iacute; dụ: Kiểu chuỗi th&igrave; gọi l&agrave; VARCHAR, kiểu ng&agrave;y th&aacute;ng th&igrave; gọi l&agrave; DATE, kiểu số nguy&ecirc;n th&igrave; gọi l&agrave; INT)</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>C&aacute;c kiểu dữ liệu trong MySQL</h2>
+
+<p>Trong MySQL, kiểu dữ liệu được chia l&agrave;m ba loại ch&iacute;nh: kiểu số, kiểu văn bản, kiểu ng&agrave;y th&aacute;ng</p>
+
+<h3><span style="color:#008000"><strong>Kiểu số</strong></span></h3>
+
+<table class="table table-bordered table-hover table-striped">
+	<tbody>
+		<tr>
+			<th>Kiểu dữ liệu</th>
+			<th>M&ocirc; tả</th>
+		</tr>
+		<tr>
+			<td>TINYINT(size)</td>
+			<td>Lưu trữ một số nguy&ecirc;n c&oacute; gi&aacute; trị từ -128 đến -127 hoặc 0 đến 255</td>
+		</tr>
+		<tr>
+			<td>SMALLINT(size)</td>
+			<td>Lưu trữ một số nguy&ecirc;n c&oacute; gi&aacute; trị từ -32768 đến 32767 hoặc 0 đến 65535</td>
+		</tr>
+		<tr>
+			<td>MEDIUMINT(size)</td>
+			<td>Lưu trữ một số nguy&ecirc;n c&oacute; gi&aacute; trị từ -8388608 đến 8388607 hoặc 0 đến 16777215</td>
+		</tr>
+		<tr>
+			<td>INT(size)</td>
+			<td>Lưu trữ một số nguy&ecirc;n c&oacute; gi&aacute; trị từ -2147483648 đến 2147483647 hoặc 0 đến 4294967295</td>
+		</tr>
+		<tr>
+			<td>BIGINT(size)</td>
+			<td>Lưu trữ một số nguy&ecirc;n c&oacute; gi&aacute; trị từ -9223372036854775808 đến 9223372036854775807 hoặc 0 đến 18446744073709551615.</td>
+		</tr>
+		<tr>
+			<td>FLOAT(size,d)</td>
+			<td>Lưu trữ một số thập ph&acirc;n loại nhỏ (V&iacute; dụ: 567.25). Tham số &ldquo;size&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần nguy&ecirc;n (nằm b&ecirc;n tr&aacute;i dấu chấm). Tham số &ldquo;d&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần thập ph&acirc;n (nằm b&ecirc;n phải dấu chấm).</td>
+		</tr>
+		<tr>
+			<td>DOUBLE(size,d)</td>
+			<td>Lưu trữ một số thập ph&acirc;n loại lớn. Tham số &ldquo;size&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần nguy&ecirc;n (nằm b&ecirc;n tr&aacute;i dấu chấm). Tham số &ldquo;d&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần thập ph&acirc;n (nằm b&ecirc;n phải dấu chấm).</td>
+		</tr>
+		<tr>
+			<td>DECIMAL(size,d)</td>
+			<td>Lưu trữ như một chuỗi, cho ph&eacute;p một dấu thập ph&acirc;n cố định. Tham số &ldquo;size&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần nguy&ecirc;n (nằm b&ecirc;n tr&aacute;i dấu chấm). Tham số &ldquo;d&rdquo; d&ugrave;ng để x&aacute;c định k&iacute;ch thước tối đa của phần thập ph&acirc;n (nằm b&ecirc;n phải dấu chấm).</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><span style="color:#008000"><strong>Kiểu văn bản</strong></span></h3>
+
+<table class="table table-bordered table-hover table-striped">
+	<tbody>
+		<tr>
+			<th>Kiểu dữ liệu</th>
+			<th>M&ocirc; tả</th>
+		</tr>
+		<tr>
+			<td>CHAR(size)</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 255 k&yacute; tự</td>
+		</tr>
+		<tr>
+			<td>VARCHAR(size)</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 255 k&yacute; tự. Nếu đặt &ldquo;size&rdquo; lớn hơn 255 th&igrave; n&oacute; sẽ chuyển sang kiểu TEXT</td>
+		</tr>
+		<tr>
+			<td>TINYTEXT</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 255 k&yacute; tự</td>
+		</tr>
+		<tr>
+			<td>TEXT</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 65,535 k&yacute; tự</td>
+		</tr>
+		<tr>
+			<td>BLOB</td>
+			<td>D&ugrave;ng để lưu trữ dữ liệu nhị ph&acirc;n tối đa l&agrave; 65,535 byte</td>
+		</tr>
+		<tr>
+			<td>MEDIUMTEXT</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 16,777,215 k&yacute; tự</td>
+		</tr>
+		<tr>
+			<td>MEDIUMBLOB</td>
+			<td>D&ugrave;ng để lưu trữ dữ liệu nhị ph&acirc;n tối đa l&agrave; 16,777,215 byte</td>
+		</tr>
+		<tr>
+			<td>LONGTEXT</td>
+			<td>D&ugrave;ng để lưu trữ một chuỗi k&yacute; tự c&oacute; chiều d&agrave;i tối đa l&agrave; 4,294,967,295 k&yacute; tự</td>
+		</tr>
+		<tr>
+			<td>LONGBLOB</td>
+			<td>D&ugrave;ng để lưu trữ dữ liệu nhị ph&acirc;n tối đa l&agrave; 4,294,967,295 byte</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3><span style="color:#008000"><strong>Kiểu ng&agrave;y th&aacute;ng</strong></span></h3>
+
+<table class="table table-bordered table-hover table-striped">
+	<tbody>
+		<tr>
+			<th style="width:15%">Kiểu dữ liệu</th>
+			<th>M&ocirc; tả</th>
+		</tr>
+		<tr>
+			<td>DATE()</td>
+			<td>Lưu trữ một ng&agrave;y theo định dạng YYYY-MM-DD (V&iacute; dụ: 2016-09-12 tức l&agrave; lưu ng&agrave;y 12 th&aacute;ng 9 năm 2016)</td>
+		</tr>
+		<tr>
+			<td>TIME()</td>
+			<td>Lưu trữ thời gian theo định dạng HH:MI:SS (V&iacute; dụ 17:25:36 tức l&agrave; lưu 17 giờ 25 ph&uacute;t 36 gi&acirc;y)</td>
+		</tr>
+		<tr>
+			<td>YEAR()</td>
+			<td>Lưu trữ một năm theo định dạng hai số hoặc bốn số</td>
+		</tr>
+		<tr>
+			<td>DATETIME()</td>
+			<td>Lưu trữ một ng&agrave;y c&ugrave;ng với thời gian theo định dạng YYYY-MM-DD HH:MI:SS (V&iacute; dụ: 2016-09-12 17:25:36 tức l&agrave; lưu ng&agrave;y 12 th&aacute;ng 9 năm 2016 l&uacute;c 17 giờ 25 ph&uacute;t 36 gi&acirc;y)</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cau-lenh-tao-database-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/mysql/cac-kieu-du-lieu-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:40 GMT -->
+</html>

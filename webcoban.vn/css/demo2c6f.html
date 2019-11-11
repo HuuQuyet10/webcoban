@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3533 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:130px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        /*border: 1px solid #b3b2b2;*/
+        height:110px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #test{
+            border:1px solid black;
+            background-color:pink;
+            position:relative;
+            top:<span id="layvitri1" style="color:red;font-size:20px">0px</span>;
+            left:<span id="layvitri2" style="color:red;font-size:20px">0px</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;1) Tài liệu hướng dẫn học HTML&lt;/h1&gt;
+    &lt;h1 id=&quot;test&quot;&gt;2) Tài liệu hướng dẫn học CSS&lt;/h1&gt;
+    &lt;h1&gt;3) Tài liệu hướng dẫn học JavaScript&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom">
+                <table style="width:100%;font-size:22px;height:100%" id="ksnjb23">
+                    <tr>
+                        <td style="padding:0px 10px;width:70px">top:</td>
+                        <td style="padding:0px 10px"><input type="range" name="top" value="0" min="-50" max="50" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 10px">left:</td>
+                        <td style="padding:0px 10px"><input type="range" name="left" value="0" min="-50" max="50" style="width:100%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<h1>1) Tài liệu hướng dẫn học HTML</h1><h1 style='border:1px solid black;background-color:pink;position:relative;top:0px;left:0px;'>2) Tài liệu hướng dẫn học CSS</h1><h1>3) Tài liệu hướng dẫn học JavaScript</h1>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).on('input', "[name='top'],[name='left']", function(){
+            var top = $("[name='top']").val() + "px";
+            var left = $("[name='left']").val() + "px";
+            $("#layvitri1").html(top);
+            $("#layvitri2").html(left);
+        var text = "<h1>1) Tài liệu hướng dẫn học HTML</h1><h1 style='border:1px solid black;background-color:pink;position:relative;top:"+top+";left:"+left+";'>2) Tài liệu hướng dẫn học CSS</h1><h1>3) Tài liệu hướng dẫn học JavaScript</h1>";
+            view_result(text);
+        })
+    </script>
+    <style type="text/css">
+        #ksnjb23, #ksnjb23 td{border:1px solid #b3b2b2;border-collapse:collapse;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3533 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+</html>﻿

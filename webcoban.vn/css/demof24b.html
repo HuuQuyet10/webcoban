@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3540 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+        font-family:"Roboto Slab",Arial,sans-serif;
+        text-align:justify;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left #top pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 300px;
+        left:10px;
+        right:5px;
+        font-family:Consolas,"courier new",monospace;
+        font-size:16px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #left #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        right:5px;
+        height:280px;
+    }
+    #container #left #bottom #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #content{
+        position: absolute;
+        top:10px;
+        bottom:10px;
+        left:5px;
+        right:10px;
+        border:1px solid #b3b2b2;
+        background-color: white;
+        box-sizing:border-box;
+        overflow: auto;
+        padding:1px 15px;
+    }
+    #container #right #content p,li{
+        line-height: 30px;
+    }
+    #container #right #content li{
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    #container #right #content pre{
+        font-size:16px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="top">
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #test{
+            background-color:green;
+            width:50px;
+            height:50px;
+            position:relative;
+            top:0px;
+            left:0px;
+            animation-name:move;
+            animation-duration:10s;
+            animation-iteration-count:infinite;
+        }
+        @keyframes move{
+            0%{
+                top:0px;
+                left:0px;
+                background-color:blue;
+            }
+            10%{
+                top:0px;
+                left:400px;
+                background-color:red;
+            }
+            40%{
+                top:200px;
+                left:400px;
+                background-color:green;
+            }
+            100%{
+                top:0px;
+                left:0px;
+                background-color:blue;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;test&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <div id="right">
+            <div id="content">
+                <div style="font-size:25px;margin-top:15px;text-shadow:1px 1px 3px gray">1) Phân tích hiệu ứng chuyển động</div>
+                <p>- Trước khi tạo một cái @keyframes thì chúng ta cần phải hình thành ý tưởng, phân tích sơ qua coi cái &quot;hiệu ứng chuyển động&quot; mà mình muốn thiết lập cho phần tử sẽ diễn ra trông như thế nào.</p>
+                <div style="position:relative;height:350px;width:510px;top:10px;left:50px;">
+                    <div style="position:absolute;top:40px;background-color:blue;width:50px;height:50px;"></div>
+                    <div style="position:absolute;font-size:20px;left:-39px;">{trạng thái 1}</div>
+                    <div style="position:absolute;top:40px;left:400px;background-color:red;width:50px;height:50px;"></div>
+                    <div style="position:absolute;font-size:20px;left:362px;">{trạng thái 2}</div>
+                    <div style="position:absolute;top:240px;left:400px;background-color:green;width:50px;height:50px;"></div>
+                    <div style="position:absolute;font-size:20px;left:369px;top:303px">{trạng thái 3}</div>
+                    <div style="position:absolute;top:40px;background-color:blue;width:50px;height:50px;"></div>
+                    <div style="position:absolute;top:64px;left:59px;border-top:1px solid black;width:332px"></div>
+                    <div style="position:absolute;top:99px;left:425px;border-right:1px solid black;height:134px"></div>
+                    <div style="position:absolute;top:179px;left:42px;border-top:1px solid black;width:370px;-webkit-transform:rotate(207deg);-ms-transform:rotate(207deg);-moz-transform:rotate(207deg);-o-transform:rotate(207deg);transform: rotate(207deg);"></div>
+                    <div style="position:absolute;top:59px;left:381px;padding:4px;border-right:3px solid black;border-bottom:3px solid black;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform: rotate(-45deg);"></div>
+                    <div style="position:absolute;top:221px;left:420px;padding:4px;border-right:3px solid black;border-bottom:3px solid black;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform: rotate(45deg);"></div>
+                    <div style="position:absolute;top:91.7px;left:59px;padding:4px;border-left:3px solid black;border-top:3px solid black;-webkit-transform:rotate(-8deg);-ms-transform:rotate(-8deg);-moz-transform:rotate(-8deg);-o-transform:rotate(-8deg);transform: rotate(-8deg);"></div>
+                    <div style="position:absolute;top:27px;left:210px;font-size:20px">(1)</div>
+                    <div style="position:absolute;top:150px;left:440px;font-size:20px">(2)</div>
+                    <div style="position:absolute;top:148px;left:229px;-webkit-transform:rotate(28deg);-ms-transform:rotate(28deg);-moz-transform:rotate(28deg);-o-transform:rotate(28deg);transform: rotate(28deg);font-size:20px">(3)</div>
+                </div>
+                <p>- <u>Ví dụ</u>: Hình ảnh phía trên chính là sơ đồ minh họa về hiệu ứng chuyển động mà tôi muốn thiết lập cho phần tử.</p>
+                <ul style="list-style-type:circle;">
+                    <li>Tôi muốn ban đầu (trạng thái 1) phần tử sẽ có màu xanh dương, nằm ở vị trí top 0px, left 0px.</li>
+                    <li>Sau đó phần tử đổi thành màu đỏ, di chuyển dần dần sang bên phải đến vị trí top 0px, left 400px (trạng thái 2)</li>
+                    <p>=&gt; Từ (trạng thái 1) sang (trạng thái 2) sẽ chiếm <b style="color:blue">10%</b> thời lượng của hiệu ứng chuyển động.</p>
+                    <li>Tiếp theo phần tử sẽ đổi thành màu xanh lá cây, di chuyển dần dần xuống phía dưới đến vị trí top 200px, left 400px (trạng thái 3)</li>
+                    <p>=&gt; Từ (trạng thái 2) sang (trạng thái 3) sẽ chiếm <b style="color:blue">30%</b> thời lượng của hiệu ứng chuyển động.</p>
+                    <li>Cuối cùng phần tử đổi lại màu xanh dương, trở về (trạng thái 1) nằm ở vị trí top 0px, left 0px.</li>
+                    <p>=&gt; Từ (trạng thái 3) trở về (trạng thái 1) sẽ chiếm <b style="color:blue">60%</b> thời lượng của hiệu ứng chuyển động.</p>
+                </ul>
+                <div style="font-size:25px;margin-top:15px;text-shadow:1px 1px 3px gray">2) Tạo @keyframes</div>
+                <p>- Sau khi đã phân tích sơ qua &quot;hiệu ứng chuyển động&quot; thì công việc tiếp theo đó chính là dựa vào những gì đã phân tích được để viết ra một cái @keyframes.</p>
+                <p>- Trước tiên tôi tạo một cái @keyframes có tên là move.</p>
+                <pre style="border:1px solid #ddd;padding:15px;background-color:#f1f1f1">@keyframes move{
+
+}</pre>
+                <p>- Dựa vào những gì đã phân tích thì tôi xác định được 4 thời điểm:</p>
+                <p>&#9989; Thời điểm 0%, lúc này hiệu ứng chuyển động chưa diễn ra, phần tử ở trạng thái mặc định (trạng thái 1) có nền màu xanh dương, top 0px, left 0px.</p>
+                <pre style="border:1px solid #ddd;padding:15px;background-color:#f1f1f1">@keyframes move{
+    0%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+}</pre>
+                <p>&#9989; Thời điểm 10%, đây là khi phần tử đã chuyển sang (trạng thái 2), lúc này phần tử có nền màu đỏ, top 0px, left 400px.</p>
+                <pre style="border:1px solid #ddd;padding:15px;background-color:#f1f1f1">@keyframes move{
+    0%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+    10%{
+        top:0px;
+        left:400px;
+        background-color:red;
+    }
+}</pre>
+                <p>&#9989; Thời điểm 40%, đây là khi phần tử đã chuyển sang (trạng thái 3), lúc này phần tử có nền màu xanh lá cây, top 200px, left 400px.</p>
+                <p>&#10067;&#10067;&#10067; Lý do mà tôi xác định được 40% là bởi vì trước đó phần tử đang ở thời điểm 10%, từ (trạng thái 2) sang (trạng thái 3) lại chiếm thêm 30% thời lượng của hiệu ứng chuyển động.</p>
+                <pre style="border:1px solid #ddd;padding:15px;background-color:#f1f1f1">@keyframes move{
+    0%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+    10%{
+        top:0px;
+        left:400px;
+        background-color:red;
+    }
+    40%{
+        top:200px;
+        left:400px;
+        background-color:green;
+    }
+}</pre>
+                <p>&#9989; Thời điểm 100%, đây là khi phần tử quay trở về (trạng thái 1), có nền màu xanh dương, top 0px, left 0px.</p>
+                <p>&#10067;&#10067;&#10067; Lý do mà tôi xác định được 100% là bởi vì trước đó phần tử đang ở thời điểm 40%, từ (trạng thái 3) quay trở về (trạng thái 1) lại chiếm thêm 60% thời lượng của hiệu ứng chuyển động.</p>
+                <pre style="border:1px solid #ddd;padding:15px;background-color:#f1f1f1">@keyframes move{
+    0%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+    10%{
+        top:0px;
+        left:400px;
+        background-color:red;
+    }
+    40%{
+        top:200px;
+        left:400px;
+        background-color:green;
+    }
+    100%{
+        top:0px;
+        left:0px;
+        background-color:blue;
+    }
+}</pre>
+            </div>
+        </div>
+    </div>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("bottom").innerHTML = "";
+            document.getElementById("bottom").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<style>#djcjb2{background-color:green;width:50px;height:50px;position:relative;top:0px;left:0px;animation-name:move;animation-duration:10s;animation-iteration-count:infinite;}@keyframes move{0%{top:0px;left:0px;background-color:blue;}10%{top:0px;left:400px;background-color:red;}40%{top:200px;left:400px;background-color:green;}100%{top:0px;left:0px;background-color:blue;}}</style><div id='djcjb2'></div>";
+        view_result(text);
+    </script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3540 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+</html>﻿

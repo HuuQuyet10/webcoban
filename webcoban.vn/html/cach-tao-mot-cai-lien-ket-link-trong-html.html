@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/cach-tao-mot-cai-lien-ket-link-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:15 GMT -->
+<head>
+<title>Cách tạo một cái liên kết (Link) trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách tạo một cái liên kết trong html">
+<meta name="description" content="Hướng dẫn cách tạo một cái đường dẫn liên kết (link) trong trang web HTML, tìm hiểu cái niệm đường dẫn tương đối là gì, đường dẫn tuyệt đối là gì, cách xác định đường dẫn tương đối">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.8632.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" class='active'>- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách tạo một cái liên kết (Link) trong HTML">Cách tạo một cái liên kết (Link) trong HTML</h1>
+<div class="breadcrumb">
+<a href="cach-ghi-chu-thich-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Liên kết là gì !?</h2>
+<p>- Trong trang web, liên kết là những nội dung (thường được đại diện bởi văn bản hoặc hình ảnh) mà khi chúng ta nhấp vào nó thì chúng ta sẽ được chuyển đến một tài liệu khác.</p>
+<p>- Ví dụ:</p>
+<table class="hiwo2">
+<tr>
+<td><p>- Dòng chữ <u>Click here</u> chính là một cái liên kết, khi nhấp vào nó thì chúng ta sẽ được chuyển đến một tài liệu khác (một tấm hình)</p></td>
+<td><a href="../image/cat-2.jpg" target="_blank">Click here</a></td>
+</tr>
+<tr>
+<td><p>- Tấm hình bên phải chính là một cái liên kết, khi nhấp vào nó thì chúng ta sẽ được chuyển đến một tài liệu khác (trang fanpage của webcoban.vn)</p></td>
+<td><a href="https://www.facebook.com/webcoban.vn/" target="_blank"><img src="../image/sumo.jpg"></a></td>
+</tr>
+</table>
+<h2>2) Cách tạo một cái liên kết</h2>
+<p>- Để tạo một cái liên kết thì chúng ta dùng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">&lt;a href=&quot;URL&quot;&gt;nội dung đại diện cho cái liên kết&lt;/a&gt;</div>
+<p>- Trong đó:</p>
+<ul>
+<li>URL là đường dẫn đến tài liệu mà các bạn muốn người dùng sẽ được chuyển đến.</li>
+<li>Nội dung đại diện cho cái liên kết có thể là văn bản hoặc hình ảnh.</li>
+</ul>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Cách tạo liên kết trong html&lt;/title&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;http://webcoban.vn/image/hugo.jpg&quot;&gt;Click here&lt;/a&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;a href=&quot;https://www.facebook.com&quot;&gt;&lt;img src=&quot;http://webcoban.vn/image/sumo.jpg&quot;&gt;&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demofa94.html?file=3192" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Khi tạo một cái liên kết, nếu chúng ta bỏ trống URL thì mặc định URL sẽ là đường dẫn của trang web chứa liên kết (ví dụ như bạn đang ở trang http://webcoban.vn/css/default.html, bên trong trang đó có một cái liên kết được tạo ra từ cú pháp &lt;a href=&quot;&quot;&gt;Click here&lt;/a&gt; thì khi đó URL của cái liên kết chính là http://webcoban.vn/css/default.html)</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Phân loại đường dẫn đến tài liệu</h2>
+<p>- Thông thường thì &quot;đường dẫn đến tài liệu&quot; được chia ra làm hai loại chính:</p>
+<table class="table table-bordered">
+<tr>
+<td>Đường dẫn tuyệt đối</td>
+<td>
+<p>- Đường dẫn tuyệt đối là loại đường dẫn mà bên trong nó sẽ có chứa đầy đủ các thành phần như:</p>
+<ul>
+<li>(1) Giao thức, ví dụ: <span>http:</span> <span>https:</span></li>
+<li>(2) Máy chủ, ví dụ: <span>webcoban.vn</span> <span>google.com</span> <span>facebook.com</span></li>
+<li>(3) Đường dẫn, ví dụ: <span>javascript/default.html</span> <span>default.html</span></li>
+</ul>
+<p>- <u>Lưu ý</u>: Giao thức &amp; máy chủ là hai thành phần bắt buộc phải có.</p>
+</td>
+</tr>
+<tr>
+<td>Đường dẫn tương đối</td>
+<td><p>- Đường dẫn tương đối là loại đường dẫn mà bên trong nó chỉ có chứa duy nhất một thành phần:</p>
+<ul>
+<li>(3) Đường dẫn, ví dụ: <span>javascript/default.html</span> <span>default.html</span></li>
+</ul></td>
+</tr>
+</table>
+<p>- Bên dưới là một số ví dụ về đường dẫn tuyệt đối &amp; đường dẫn tương đối.</p>
+<table class="table table-bordered">
+<tr>
+<td rowspan="3">Đường dẫn tuyệt đối</td>
+<td>http://webcoban.vn</td>
+</tr>
+<tr>
+<td>http://webcoban.vn/css/default.html</td>
+</tr>
+<tr>
+<td>http://webcoban.vn/css/nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html</td>
+</tr>
+<tr>
+<td rowspan="3">Đường dẫn tương đối</td>
+<td>default.html</td>
+</tr>
+<tr>
+<td>php/cach-su-dung-lenh-switch-case.html</td>
+</tr>
+<tr>
+<td>css/mau-sac-colors-trong-css.html</td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more">
+<p>- Cả hai cái liên kết bên dưới đều chuyển đến trang tài liệu học HTML.</p>
+<p>- Tuy nhiên:</p>
+<ul>
+<li>Liên kết thứ nhất thì sử dụng đường dẫn tuyệt đối.</li>
+<li>Liên kết thứ hai thì sử dụng đường dẫn tương đối.</li>
+</ul>
+</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;http://webcoban.vn/html/default.html&quot;&gt;Đường dẫn tuyệt đối&lt;/a&gt;
+    &lt;a href=&quot;default.html&quot;&gt;Đường dẫn tương đối&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo129f.html?file=3630" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Cách xác định đường dẫn tương đối</h2>
+<p>- Giữa đường dẫn tương đối &amp; đường dẫn tuyệt đối thì việc xác định đường dẫn tuyệt đối khá là đơn giản, chúng ta chỉ cần sao chép địa chỉ nằm trên thanh địa chỉ của trình duyệt. Còn về việc xác định đường dẫn tương đối thì phức tạp hơn rất nhiều, các bạn vui lòng tham khảo một số ví dụ bên dưới để tìm hiểu cách xác định đường dẫn tương đối.</p>
+<p>- Trước tiên, vào ổ đĩa <span class="mark2">D:/</span> tạo một cây thư mục với các tập tin như sau:</p>
+<div class="ijwl1">
+<p><span class="fa fa-folder-open-o fa-lg"></span> Developer</p>
+<p><span class="fa fa-file-o"></span> index.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> AngularJS</p>
+<p><span class="fa fa-file-o"></span> filters.html</p>
+<p><span class="fa fa-file-o"></span> validation.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> Document</p>
+<p><span class="fa fa-file-o"></span> databinding.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> Example1</p>
+<p><span class="fa fa-file-o"></span> objects.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> Example2</p>
+<p><span class="fa fa-file-o"></span> expressions.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> JavaScript</p>
+<p><span class="fa fa-file-o"></span> comments.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> Tutorial</p>
+<p><span class="fa fa-file-o"></span> performance.html</p>
+<p><span class="fa fa-folder-open-o fa-lg"></span> Functions</p>
+<p><span class="fa fa-file-o"></span> constructor.html</p>
+</div>
+<div>
+<table>
+<tr>
+<td>
+<div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>index.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>filters.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi vào thư mục <span>AngularJS</span></li>
+<li>Đi vào trang <span>filters.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">AngularJS/filters.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>index.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>expressions.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi vào thư mục <span>AngularJS</span></li>
+<li>Đi vào thư mục <span>Document</span></li>
+<li>Đi vào thư mục <span>Example2</span></li>
+<li>Đi vào trang <span>expressions.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">AngularJS/Document/Example2/expressions.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>databinding.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>validation.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi ra khỏi thư mục cha <span>..</span></li>
+<li>Đi vào trang <span>validation.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">../validation.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>databinding.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>constructor.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi ra khỏi thư mục cha <span>..</span></li>
+<li>Đi ra khỏi thư mục cha <span>..</span></li>
+<li>Đi vào thư mục <span>JavaScript</span></li>
+<li>Đi vào thư mục <span>Tutorial</span></li>
+<li>Đi vào thư mục <span>Functions</span></li>
+<li>Đi vào trang <span>constructor.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">../../JavaScript/Tutorial/Functions/constructor.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>objects.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>expressions.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi ra khỏi thư mục cha <span>..</span></li>
+<li>Đi vào thư mục <span>Example2</span></li>
+<li>Đi vào trang <span>expressions.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">../Example2/expressions.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>comments.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>databinding.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi ra khỏi thư mục cha <span>..</span></li>
+<li>Đi vào thư mục <span>AngularJS</span></li>
+<li>Đi vào thư mục <span>Document</span></li>
+<li>Đi vào trang <span>databinding.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">../AngularJS/Document/databinding.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>index.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>constructor.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi vào thư mục <span>JavaScript</span></li>
+<li>Đi vào thư mục <span>Tutorial</span></li>
+<li>Đi vào thư mục <span>Functions</span></li>
+<li>Đi vào trang <span>constructor.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">JavaScript/Tutorial/Functions/constructor.html</div>
+</div>
+<div>
+<p>- <u><b>Câu hỏi</b></u>: Nếu đang nằm ở trang <span>filters.html</span>, tôi muốn tạo một cái liên kết để chuyển đến trang <span>validation.html</span> thì đường dẫn tương đối trong trường hợp này sẽ được xác định như thế nào !?</p>
+<p>- <u><b>Trả lời</b></u>: Đường dẫn tương đối sẽ được xác định bởi hướng đi như sau:</p>
+<ul>
+<li>Đi vào trang <span>validation.html</span></li>
+</ul>
+<p>- <u><b>Kết luận</b></u>: Bên dưới là đường dẫn tương đối mà tôi cần.</p>
+<div class="i-pre-not-color i-form-2">validation.html</div>
+</div>
+</div>
+</td>
+<td>
+<div class="jdi1at">Ví dụ <span>1</span></div>
+<div>Ví dụ <span>2</span></div>
+<div>Ví dụ <span>3</span></div>
+<div>Ví dụ <span>4</span></div>
+<div>Ví dụ <span>5</span></div>
+<div>Ví dụ <span>6</span></div>
+<div>Ví dụ <span>7</span></div>
+<div>Ví dụ <span>8</span></div>
+</td>
+</tr>
+</table>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>5) Ưu điểm &amp; nhược điểm của hai loại đường dẫn</h2>
+<table class="table table-bordered">
+<tr>
+<td>Đường dẫn tuyệt đối</td>
+<td>
+<p>- <u>Ưu điểm</u>: Cách xác định đường dẫn rất đơn giản.</p>
+<p>- <u>Nhược điểm</u>: Mã nguồn chỉ có thể sử dụng trên một máy chủ, nếu chúng ta sử dụng mã nguồn trên các máy chủ khác nhau thì sẽ tốn nhiều công sức cho việc cập nhật lại các đường dẫn.</p>
+<div class="i-note-style-1 i-note-1">
+<p><u>VÍ DỤ</u>:</p>
+<p>- Hiện tại tôi đang lưu hàng trăm bài viết trên máy chủ <u>webcoban.vn</u>, bên trong mỗi bài viết có rất nhiều liên kết được xác định bởi đường dẫn tuyệt đối dưới dạng <span>http://webcoban.vn/đường-dẫn</span></p>
+<p>- Nếu sau này vì một lý do gì đó mà tôi phải chuyển toàn bộ bài viết lên một máy chủ khác (chẳng hạn như <u>webcoban.com</u>) thì khi đó tôi phải cập nhật lại toàn bộ đường dẫn của tất cả các liên kết bên trong các bài viết từ dạng <span>http://webcoban.vn/đường-dẫn</span> thành <span>http://webcoban.com/đường-dẫn</span></p>
+</div>
+</td>
+</tr>
+<tr>
+<td>Đường dẫn tương đối</td>
+<td>
+<p>- <u>Ưu điểm</u>: Mã nguồn có thể sử dụng trên nhiều máy chủ khác nhau.</p>
+<p>- <u>Nhược điểm</u>: Cách xác định đường dẫn rất phức tạp.</p>
+</td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Với những ưu điểm &amp; nhược điểm được nêu ở phía trên thì chúng tôi khuyến khích các bạn nên tập thói quen sử dụng đường dẫn tương đối. Lúc đầu còn mới nên sẽ rất khó khăn, tuy nhiên khi đã thành thạo rồi thì nó sẽ đem lại cho các bạn nhiều tiện nghi hơn.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>6) Tùy chỉnh nơi mở tài liệu</h2>
+<p>- Mặc định thì nơi mở tài liệu của một cái liên kết là bên trong khung hiện tại. Các bạn vui lòng nhấp vào hình tờ giấy bên phải để tìm hiểu khái niệm &quot;khung là gì !?&quot; <span class="fa fa-file-text-o fa-lg"></span></p>
+<p>- Tuy nhiên, chúng ta có thể thêm thuộc tính target vào bên trong thẻ &lt;a&gt; để tùy chỉnh lại nơi mở tài liệu của cái liên kết, cú pháp như sau:</p>
+<pre class="i-form-2">&lt;a href=&quot;URL&quot; target=&quot;nơi mở tài liệu&quot;&gt;nội dung đại diện cho cái liên kết&lt;/a&gt;</pre>
+<p>- Trong đó, nơi mở tài liệu có thể được xác định dựa theo một trong bốn giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>_self</td>
+<td><p>- Tài liệu sẽ được mở bên trong khung hiện tại (mặc định)</p></td>
+<td rowspan="4"><a href="demo0d23.html?file=3631" target="_blank" class="btn-view-demo">Xem Ví dụ</a></td>
+</tr>
+<tr>
+<td>_top</td>
+<td><p>- Tài liệu sẽ được mở bên trong tab hiện tại.</p></td>
+</tr>
+<tr>
+<td>_blank</td>
+<td><p>- Tài liệu sẽ được mở bên trong một tab mới.</p></td>
+</tr>
+<tr>
+<td>_parent</td>
+<td><p>- Tài liệu sẽ được mở bên trong khung cha của khung hiện tại (nếu không có khung cha thì nó sẽ mở bên trong Tab hiện tại)</p></td>
+</tr>
+</table>
+<h2>7) Download tài liệu khi người dùng nhấp vào liên kết</h2>
+<p>- Nếu các bạn muốn thiết lập việc tài liệu sẽ được tải xuống khi người dùng nhấp vào liên kết thì các bạn thêm thuộc tính download vào bên trong thẻ &lt;a&gt;.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tải tập tin&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;../file/hello.txt&quot; download&gt;Click here&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="democ85c.html?file=3194" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="zzz-big-form">
+<div>
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khung là nơi dùng để mở &amp; thao tác với trang web.</p>
+<p>- Khung được chia ra làm hai loại:</p>
+<ul>
+<li>Khung chính (Tab trên trình duyệt)</li>
+<li>Khung phụ (khung được nhúng vào bên trong trang web, nó được tạo ra từ thẻ iframe)</li>
+</ul>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><p>- <u>Lưu ý</u>: Thông thường thì người ta không gọi khung chính &amp; khung phụ, mà người ta sẽ gọi là:</p>
+<ul>
+<li>Khung chính = tab</li>
+<li>Khung phụ = khung</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>- <u>Ví dụ</u>: Bên dưới là một cái khung.</p>
+<iframe src="../index.html"></iframe>
+<p>- <u>Lưu ý</u>: Các bạn sẽ được tìm hiểu chi tiết cách tạo một cái khung trong các bài hướng dẫn tiếp theo.</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-ghi-chu-thich-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.6363.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/cach-tao-mot-cai-lien-ket-link-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:21 GMT -->
+</html>

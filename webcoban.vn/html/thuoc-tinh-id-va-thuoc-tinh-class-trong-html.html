@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:27 GMT -->
+<head>
+<title>Thuộc tính ID và Thuộc tính CLASS trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Thuộc tính ID và CLASS trong HTML, cách sử dụng thuộc tính id và thuộc tính class trong HTML CSS">
+<meta name="description" content="Thuộc tính ID và CLASS trong HTML, cách sử dụng thuộc tính id và thuộc tính class trong HTML CSS">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.2368.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" class='active'>- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thuộc tính ID và Thuộc tính CLASS trong HTML">Tìm hiểu thuộc tính id, thuộc tính class trong HTML</h1>
+<div class="breadcrumb">
+<a href="thuoc-tinh-style-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Trong ngôn ngữ HTML, thuộc tính id &amp; thuộc tính class được sử dụng để đặt tên (phân loại) các phần tử, mục đích là để tiện cho việc quản lý, định dạng các phần tử sau này.</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Trang web của tôi có 100 phần tử, trong đó có 50 phần tử tôi muốn thiết lập chữ màu đỏ. Nếu dựa vào phương pháp thông thường thì chúng ta phải đến lần lượt 50 phần tử rồi thiết lập cho nó thuộc tính style với giá trị <u>color:red</u></p>
+<pre class="i-form-1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 01&lt;/p&gt;
+    &lt;p style=&quot;color:red&quot;&gt;Cách sử dụng thuộc tính class 02&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 03&lt;/p&gt;
+    &lt;p style=&quot;color:red&quot;&gt;Cách sử dụng thuộc tính class 04&lt;/p&gt;
+    &lt;p style=&quot;color:red&quot;&gt;Cách sử dụng thuộc tính class 05&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 06&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 07&lt;/p&gt;
+    &lt;p style=&quot;color:red&quot;&gt;Cách sử dụng thuộc tính class 08&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 09&lt;/p&gt;
+    &lt;p style=&quot;color:red&quot;&gt;Cách sử dụng thuộc tính class 10&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Tuy nhiên, nếu sau này chúng ta muốn sửa lại thành một màu khác, chẳng lẽ chúng ta phải đi đến 50 phần tử đó để chỉnh lại !? Chưa kể đến ví dụ trên chỉ có 50 phần tử, còn trường hợp hàng trăm, hàng nghìn phần tử thì sao !?</p>
+<p>- Từ đây, thuộc tính id &amp; thuộc tính class được sử dụng để quản lý những trường hợp như thế này, chúng ta chỉ cần phân loại các phần tử một lần duy nhất. Sau đó, nếu muốn định dạng cho phần tử thì chỉ cần định dạng cho một phần tử, các phần tử còn lại sẽ được áp dụng theo.</p>
+<pre class="i-form-1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .hello{color:red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 01&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Cách sử dụng thuộc tính class 02&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 03&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Cách sử dụng thuộc tính class 04&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Cách sử dụng thuộc tính class 05&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 06&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 07&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Cách sử dụng thuộc tính class 08&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class 09&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Cách sử dụng thuộc tính class 10&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo26ea.html?file=3453" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>1) Tìm hiểu &quot;thuộc tính id&quot; trong HTML</h2>
+<p>- Thuộc tính id dùng để đặt tên cho phần tử, tên này phải là duy nhất, không có trường hợp tên id của các phần tử bị trùng nhau (nếu so sánh một phần tử trong trang web giống như một người công dân Việt Nam thì tên id cũng giống như số CMND, nó dùng để xác định danh tính của phần tử)</p>
+<p>- Để khai báo id cho một phần tử thì chúng ta đặt thuộc tính id vào bên trong thẻ mở của phần tử đó với cú pháp <u>id=&quot;tên id&quot;</u>. Sau khi đã khai báo, nếu muốn định dạng cho phần tử thì chúng ta chỉ cần gọi thẳng tên id của nó với cú pháp <u>#tên id</u></p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #step{color:red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Chức năng của thuộc tính id&lt;/p&gt;
+    &lt;p id=&quot;step&quot;&gt;Cách sử dụng thuộc tính id&lt;/p&gt;
+    &lt;p&gt;Tầm quan trọng của thuộc tính id&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demob81f.html?file=3454" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Tìm hiểu &quot;thuộc tính class&quot; trong HTML</h2>
+<p>- Thật ra thì chức năng của thuộc tính class cũng gần giống với thuộc tính id, đó chính là dùng để đặt tên cho phần tử. Tuy nhiên, việc đặt <u>tên class</u> khác với <u>tên id</u> ở chỗ là với cùng một <u>tên class</u> thì chúng ta có thể dùng để đặt cho nhiều phần tử khác nhau (nếu so sánh một phần tử trong trang web giống như một người công dân Việt Nam thì tên class cũng giống như một cái biệt danh, mà biệt danh thì có thể dùng để đặt cho nhiều người khác nhau)</p>
+<p>- Để khai báo class cho một phần tử thì chúng ta đặt thuộc tính class vào bên trong thẻ mở của phần tử với cú pháp <u>class=&quot;tên class&quot;</u>. Sau khi đã khai báo class, nếu muốn định dạng cho phần tử thì chúng ta chỉ cần gọi thẳng tên class của nó với cú pháp <u>.tên class</u></p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .hello{color:red;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Chức năng của thuộc tính class&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Tầm quan trọng của thuộc tính class&lt;/p&gt;
+    &lt;p&gt;Cách sử dụng thuộc tính class&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Tìm hiểu cách đặt tên cho class&lt;/p&gt;
+    &lt;p class=&quot;hello&quot;&gt;Thuộc tính class là gì&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo168f.html?file=3455" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Một người có thể có nhiều cái biệt danh thì phần tử cũng tương tự như vậy, một phần tử có thể có nhiều tên class (nhớ thêm một dấu &quot;khoảng trắng&quot; nằm ngăn cách giữa các tên class)</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more">
+<p>- Phần tử &lt;p&gt; thứ nhất có 1 class là: nguyen</p>
+<p>- Phần tử &lt;p&gt; thứ hai có 2 class là: nguyen, thanh</p>
+<p>- Phần tử &lt;p&gt; thứ ba có 3 class là: nguyen, thanh, nhan</p>
+</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem Ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .nguyen{color:blue;}
+        .thanh{font-size:30px;}
+        .nhan{background-color:yellow;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;nguyen&quot;&gt;Tài liệu học Lập Trình Web 01&lt;/p&gt;
+    &lt;p class=&quot;nguyen thanh&quot;&gt;Tài liệu học Lập Trình Web 02&lt;/p&gt;
+    &lt;p class=&quot;nguyen thanh nhan&quot;&gt;Tài liệu học Lập Trình Web 03&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demoffec.html?file=3456" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Quy tắc đặt tên id và tên class</h2>
+<p>- Quy tắc đặt <u>tên id</u> và <u>tên class</u> hoàn toàn giống nhau, chúng chỉ được phép chứa các ký tự như sau:</p>
+<ul>
+<li>Các ký tự là chữ cái viết thường: [a . . z]</li>
+<li>Các ký tự là chữ cái viết hoa: [A . . Z]</li>
+<li>Các ký tự là chữ số: [0 . . 9]</li>
+<li>Dấu gạch dưới: _</li>
+<li>Dấu gạch nối: -</li>
+</ul>
+<p>- <u>Lưu ý</u>: Tên id và tên class tuyệt đối không được chứa các ký tự đặc biệt (ví dụ như ! @ # $ % ^ &) và cũng không được bắt đầu bằng một ký tự là chữ số [0 . . 9]</p>
+<p>- Dưới đây là một số ví dụ về việc đặt <u>tên id</u> và <u>tên class</u>:</p>
+<table class="table table-bordered">
+<tr>
+<td rowspan="7">ĐÚNG</td>
+<td>w</td>
+</tr>
+<tr><td>webcoban</td></tr>
+<tr><td>Webcoban</td></tr>
+<tr><td>webCobAn</td></tr>
+<tr><td>we9co3an</td></tr>
+<tr><td>_webc_oban</td></tr>
+<tr><td>web-Cob-An</td></tr>
+<tr>
+<td rowspan="2">SAI</td>
+<td>9webcoban (sai vì bắt đầu bằng chữ số)</td>
+<tr><td>web%^coban (sai vì có chứa các ký tự đặc biệt)</td></tr>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Tên id và tên class có phân biệt chữ in hoa và chữ thường, ví dụ như <span class="mark1">webcoban</span> và <span class="mark1">webCoban</span> là hai cái tên hoàn toàn khác nhau.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Điểm khác nhau giữa &quot;thuộc tính id&quot; &amp; &quot;thuộc tính class&quot;</h2>
+<p>- Dưới đây là bảng tóm tắt một số điểm khác nhau giữa thuộc tính id &amp; thuộc tính class.</p>
+<table class="table table-bordered">
+<tr>
+<td>Thuộc tính id</td>
+<td>
+<p>- Một phần tử chỉ nên nhận một id.</p>
+<p>- Một tên id chỉ có thể dùng để đặt cho một phần tử duy nhất.</p>
+<p>- Khi muốn chọn một phần tử dựa theo id thì ta dùng cú pháp <u>#tên id</u></p>
+</td>
+</tr>
+<tr>
+<td>Thuộc tính class</td>
+<td>
+<p>- Một phần tử có thể nhận một hoặc nhiều class.</p>
+<p>- Một tên class có thể dùng để đặt cho nhiều phần tử khác nhau.</p>
+<p>- Khi muốn chọn một phần tử dựa theo class thì ta dùng cú pháp <u>.tên class</u></p>
+</td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Bởi vì &quot;thuộc tính id&quot; &amp; &quot;thuộc tính class&quot; là hai thuộc tính riêng biệt, cho nên với cùng một cái tên thì chúng ta vẫn có thể dùng nó để đặt cho id &amp; class.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #hello{background-color:yellow;}
+        .hello{font-size:40px;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id=&quot;hello&quot; class=&quot;hello&quot;&gt;Tài liệu học Lập Trình Web&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demoab4b.html?file=3457" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="thuoc-tinh-style-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:29 GMT -->
+</html>

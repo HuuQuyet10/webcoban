@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:47 GMT -->
+<head>
+<title>Cách thiết lập hình nền (Background Image) cho phần tử trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách thiết lập hình nền cho phần tử trong css">
+<meta name="description" content="Trong bài học này, tôi sẽ hướng dẫn các bạn cách sử dụng thuộc tính background-image trong CSS để thiết lập hình nền cho một phần tử HTML, xác định phạm vi được thiết lập hình nền, chỉnh vị trí và kích thước của hình nền, tùy chỉnh chế độ lặp lại của hình nền.">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.7704.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" class='active'>- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách thiết lập hình nền (Background Image) cho phần tử trong CSS">Cách thiết lập hình nền cho một phần tử HTML</h1>
+<div class="breadcrumb">
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div class="il1ji1">
+<p>Hình nền là gì !?</p>
+<p>- Hình nền là hình nằm bên dưới phần tử (dùng để làm nền cho phần tử)</p>
+<p>- Các nội dung của phần tử sẽ hiển thị đè lên hình nền.</p>
+<p>- Ví dụ như phần tử này có hình nền là hai bố con nhà mèo đang ôm nhau ngủ.</p>
+</div>
+<h2>1) Cách thiết lập hình nền cho phần tử</h2>
+<p>- Để thiết lập <u>hình nền</u> cho một phần tử thì chúng ta cần phải thiết lập thuộc tính <strong>background-image</strong> cho phần tử đó với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">background-image: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>none</td>
+<td><p>- Không thiết lập hình nền cho phần tử.</p></td>
+<td><a href="demo1cc0.html?file=3066" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>url()</td>
+<td>
+<p>- Chỉ định một tập tin hình ảnh dùng làm hình nền cho phần tử.</p>
+<p>(đường dẫn đến tập tin hình ảnh phải được đặt bên trong cặp dấu ngoặc)</p>
+</td>
+<td><a href="demo3fe8.html?file=3065" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính background-image có giá trị là none)</p></td>
+<td><a href="demo20cf.html?file=3067" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính background-image từ phần tử cha của nó.</p></td>
+<td><a href="demo42e2.html?file=3068" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Chúng ta có thể gán nhiều giá trị url() cho thuộc tính <strong>background-image</strong> để hòa trộn nhiều tập tin hình ảnh lại với nhau <a href="demo515f.html?file=3069" target="_blank">(Xem ví dụ)</a></p>
+<p>- Tuy nhiên, việc sử dụng nhiều tấm hình để thiết lập hình nền cho phần tử chỉ thích hợp khi các tấm hình đó có định dạng là GIF hoặc PNG (loại hình ảnh có một số vị trí trong suốt). Nếu sử dụng loại hình không có phần trong suốt thì nó sẽ nằm &quot;đè hoàn toàn&quot; lên tấm hình bên dưới, khiến tấm hình bên dưới không được hiển thị <a href="demob9d3.html?file=3070" target="_blank">(Xem ví dụ)</a></p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Điều chỉnh phạm vi được thiết lập hình nền</h2>
+<p>- Trong các bài học trước thì tôi đã có giới thiệu sơ qua với các bạn về cấu trúc của một phần tử HTML rồi, nó bao gồm bốn thành phần chính: <span class="mark2">margin</span> <span class="mark2">border</span> <span class="mark2">padding</span> <span class="mark2">content</span></p>
+<div class="t1ilfy"><div>margin</div><div><div>border</div><div><div>padding</div><div>content</div></div></div></div>
+<p>- Khi chúng ta sử dụng thuộc tính <strong>background-image</strong> để thiết lập hình nền cho phần tử thì mặc định phạm vi được thiết lập hình nền sẽ bắt đầu từ phần <u>border</u> cho đến hết phần <u>content</u></p>
+<div><div>margin</div><div><div>border</div><div><div>padding</div><div>content</div></div></div></div>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>background-clip</strong> thì chúng ta có thể điều chỉnh lại phạm vi được thiết lập hình nền của phần tử.</p>
+<div class="i-pre-not-color i-form-2">background-clip: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>border-box</td>
+<td>
+<p>- Phạm vi được thiết lập hình nền sẽ bao gồm ba phần:</p>
+<ul>
+<li>border</li>
+<li>padding</li>
+<li>content</li>
+</ul>
+</td>
+<td rowspan="5"><a href="demo5839.html?file=3081" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>padding-box</td>
+<td>
+<p>- Phạm vi được thiết lập hình nền sẽ bao gồm hai phần:</p>
+<ul>
+<li>padding</li>
+<li>content</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>content-box</td>
+<td><p>- Phạm vi được thiết lập hình nền chỉ bao gồm phần: content</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính background-clip có giá trị là border-box)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính background-clip từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Tùy chỉnh cách thức &quot;lặp lại&quot; của hình nền</h2>
+<p>- Khi chúng ta thiết lập hình nền cho một phần tử, nếu tấm hình được dùng làm hình nền có kích thước nhỏ hơn kích thước của phần tử thì mặc định tấm hình sẽ &quot;tự động lặp lại&quot; để lấp đầy phần tử.</p>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>background-repeat</strong> thì chúng ta có thể tùy chỉnh việc lặp lại của hình nền (chẳng hạn như chỉ lặp lại theo chiều ngang, chiều dọc, hoặc không lặp lại, . . . .)</p>
+<div class="i-pre-not-color i-form-2">background-repeat: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>repeat</td>
+<td><p>- Tấm hình lặp lại theo chiều ngang lẫn chiều dọc.</p></td>
+<td rowspan="6"><a href="demo5c9a.html?file=3071" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td><p>- Tấm hình chỉ lặp lại theo chiều ngang.</p></td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td><p>- Tấm hình chỉ lặp lại theo chiều dọc.</p></td>
+</tr>
+<tr>
+<td>no-repeat</td>
+<td><p>- Tấm hình không lặp lại.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính background-repeat có giá trị là repeat)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính background-repeat từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Thay đổi &quot;vị trí gốc&quot; trong việc thiết lập hình nền</h2>
+<p>- Vị trí gốc là vị trí xuất hiện của <span class="mark2">tấm hình gốc</span> (tấm hình gốc là tấm hình được dùng làm <u>tâm điểm</u> trong việc lặp lại của hình nền, nó cũng chính là hình nền khi chúng ta chỉnh chế độ không lặp lại)</p>
+<p>- Mặc định thì <span class="mark2">vị trí gốc</span> sẽ nằm ở ngay góc phía trên bên trái của phần padding, tuy nhiên chúng ta có thể thay đổi bằng cách sử dụng thuộc tính <strong>background-origin</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">background-origin: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong năm loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>border-box</td>
+<td><p>- Vị trí gốc sẽ nằm ở góc phía trên bên trái của phần border.</p></td>
+<td rowspan="5"><a href="demod217.html?file=3459" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>padding-box</td>
+<td><p>- Vị trí gốc sẽ nằm ở góc phía trên bên trái của phần padding.</p></td>
+</tr>
+<tr>
+<td>content-box</td>
+<td><p>- Vị trí gốc sẽ nằm ở góc phía trên bên trái của phần content.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì background-origin có giá trị là padding-box)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính background-origin từ phần tử cha của nó</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>5) Thiết lập vị trí của hình nền</h2>
+<p>- Khi chúng ta thiết lập hình nền cho một phần tử, mặc định hình nền sẽ nằm ở ngay vị trí gốc. Nếu muốn thiết lập lại vị trí cho hình nền thì chúng ta cần phải sử dụng thuộc tính <strong>background-position</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">background-position: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một các loại giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>X Y</td>
+<td><p>- <span class="mark2">X</span> là vị trí của hình nền &quot;xét theo chiều ngang&quot;, nó có thể được xác định dựa theo một trong các loại giá trị như sau:</p>
+<table class="jl1ifg">
+<tr>
+<td>Tên vị trí</td>
+<td>:</td>
+<td><p><span class="mark2">left</span> <span class="mark2">center</span> <span class="mark2">right</span></p>
+<tr>
+<td><span class="mark2">N</span>px</td>
+<td>:</td>
+<td><p>Hình nền nằm cách vị trí gốc một khoảng <span class="mark2">N</span> pixel.</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>%</td>
+<td>:</td>
+<td><p>Hình nền nằm cách vị trí gốc một khoảng <span class="mark2">N</span> %.</p></td>
+</tr>
+</table>
+<p>- <span class="mark2">Y</span> là vị trí của hình nền &quot;xét theo chiều dọc&quot;, nó có thể được xác định dựa theo một trong các loại giá trị như sau:</p>
+<table class="jl1ifg">
+<tr>
+<td>Tên vị trí</td>
+<td>:</td>
+<td><p><span class="mark2">top</span> <span class="mark2">center</span> <span class="mark2">bottom</span></p>
+<tr>
+<td><span class="mark2">N</span>px</td>
+<td>:</td>
+<td><p>Hình nền nằm cách vị trí gốc một khoảng <span class="mark2">N</span> pixel.</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>%</td>
+<td>:</td>
+<td><p>Hình nền nằm cách vị trí gốc một khoảng <span class="mark2">N</span> %.</p></td>
+</tr>
+</table>
+<div class="i-note-style-1 i-note-5"><p>- <u>Lưu ý</u>: Đối với loại giá trị X Y, nếu chúng ta chỉ xác định một tham số thì tham số đó chính là X, tham số Y sẽ mặc định là center.</p></div>
+</td>
+<td rowspan="3"><a href="demo49ee.html?file=3461" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính background-position từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>6) Chỉnh kích thước của hình nền</h2>
+<p>- Khi chúng ta thiết lập hình nền cho một phần tử thì mặc định hình nền sẽ có kích thước bằng với kích thước của tấm hình được dùng làm hình nền <a href="demo0993.html?file=3465" target="_blank">(Xem ví dụ)</a>. Nếu muốn thiết lập lại kích thước cho hình nền thì chúng ta cần phải sử dụng thuộc tính <strong>background-size</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">background-size: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một các loại giá trị bên dưới:</p>
+<table class="table table-bordered">
+<tr>
+<td>width height</td>
+<td>
+<p>- <span class="mark2">width</span> là chiều rộng của hình nền, nó có thể được xác định dựa theo một trong các loại giá trị như sau:</p>
+<table class="ki1lj">
+<tr>
+<td>auto</td>
+<td>:</td>
+<td><p>- Chiều rộng của hình nền sẽ tự động được xác định dựa theo chiều cao của hình nền (với điều kiện là tỷ lệ chiều rộng/cao của hình nền phải bằng với tỷ lệ chiều rộng/cao của tấm hình được sử dụng làm hình nền)</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>px</td>
+<td>:</td>
+<td><p>- Hình nền sẽ có chiều rộng là <span class="mark2">N</span> pixel.</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>%</td>
+<td>:</td>
+<td><p>- Hình nền sẽ có chiều rộng bằng <span class="mark2">N</span> % chiều rộng của vùng được dùng để thiết lập vị trí gốc.</p></td>
+</tr>
+</table>
+<p>- <span class="mark2">height</span> là chiều cao của hình nền, nó có thể được xác định dựa theo một trong các loại giá trị như sau:</p>
+<table class="ki1lj">
+<tr>
+<td>auto</td>
+<td>:</td>
+<td><p>- Chiều cao của hình nền sẽ tự động được xác định dựa theo chiều rộng của hình nền (với điều kiện là tỷ lệ chiều rộng/cao của hình nền phải bằng với tỷ lệ chiều rộng/cao của tấm hình được sử dụng làm hình nền)</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>px</td>
+<td>:</td>
+<td><p>- Hình nền sẽ có chiều cao là <span class="mark2">N</span> pixel.</p></td>
+</tr>
+<tr>
+<td><span class="mark2">N</span>%</td>
+<td>:</td>
+<td><p>- Hình nền sẽ có chiều cao bằng <span class="mark2">N</span> % chiều cao của vùng được dùng để thiết lập vị trí gốc.</p></td>
+</tr>
+</table>
+<div class="i-note-style-1 i-note-5"><p>- <u>Lưu ý</u>: Đối với loại giá trị width height, nếu chúng ta chỉ xác định một tham số thì tham số đó chính là width, tham số height sẽ mặc định là auto.</p></div>
+</td>
+<td><a href="demo33e7.html?file=3462" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+ <tr>
+<td>cover</td>
+<td><p>- Hình nền sẽ tự động được phóng to ra hoặc thu nhỏ lại để lấp đầy <span class="mark1">vùng được dùng để thiết lập vị trí gốc</span>. Tuy nhiên, nếu gặp phải trường hợp tỷ lệ chiều rộng/cao của phần tử khác với tỷ lệ chiều rộng/cao của tấm hình được dùng làm hình nền thì sẽ xảy ra tình trạng hình nền bị tràn ra khỏi <span class="mark1">vùng được dùng để thiết lập vị trí gốc</span>, dẫn đến việc hình nền hiển thị không trọn vẹn (nó sẽ bị cắt xén phía dưới hoặc bên phải)</p></td>
+<td><a href="demob9c9.html?file=3463" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>contain</td>
+<td><p>- Hình nền sẽ tự động phóng to ra hoặc thu nhỏ lại sao cho nó được hiển thị trọn vẹn (không bị cắt xén) với kích thước lớn nhất có thể bên trong <span class="mark1">vùng được dùng để thiết lập vị trí gốc</span>.</p></td>
+<td><a href="demo30c5.html?file=3464" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td colspan="2">
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính background-size có giá trị là auto)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td colspan="2"><p>- Kế thừa giá trị thuộc tính background-size từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>7) Tùy chỉnh cách thức hiển thị của hình nền</h2>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></div></td>
+<td><p>- Thông thường thì hình nền có hai cách thức hiển thị cơ bản:</p>
+<ul>
+<li><u>Cách 1</u>: Nó sẽ bị cuốn đi khi người dùng kéo thanh scroll <a href="demoea0b.html?file=3216" target="_blank">(Xem ví dụ)</a></li>
+<li><u>Cách 2</u>: Nó sẽ nằm ở một vị trí cố định trên màn hình trình duyệt <a href="demo12c0.html?file=3217" target="_blank">(Xem ví dụ)</a></li>
+</ul></td>
+</tr>
+</table>
+<p>- Mặc định thì hình nền sẽ bị cuốn đi khi người dùng kéo thanh scroll, nếu muốn thiết lập lại cách thức hiển thị của hình nền thì chúng ta phải sử dụng thuộc tính <strong>background-attachment</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">background-attachment: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong năm loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td rowspan="2">scroll</td>
+<td><p>- Hình nền sẽ bị cuốn đi khi người dùng kéo thanh scroll.</p></td>
+<td><a href="demob61e.html?file=3218" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td><p>- Tuy nhiên, nếu hình nền được thiết lập cho một phần tử nằm ở bên trong &lt;body&gt; và phần tử đó có chứa thanh scroll thì hình nền sẽ nằm ở một vị trí cố định bên trong phần tử đó.</p></td>
+<td><a href="demo23eb.html?file=3219" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>local</td>
+<td><p>- Hình nền sẽ bị cuốn đi khi người dùng kéo thanh scroll.</p></td>
+<td><a href="demo301a.html?file=3220" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>
+<p>- Hình nền sẽ nằm ở một vị trí cố định trên màn hình trình duyệt.</p>
+<p>- <u>Lưu ý</u>: Mặc định thì nó sẽ nằm ở góc phía trên bên trái của phần tử &lt;body&gt;, nếu các bạn muốn thiết lập lại vị trí cho hình nền thì các bạn cần phải sử dụng kết hợp với thuộc tính <strong>background-position</strong>.</p>
+</td>
+<td><a href="demo05ab.html?file=3466" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td colspan="2">
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính background-attachment có giá trị là scroll)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td colspan="2"><p>- Kế thừa giá trị thuộc tính background-attachment từ phần tử cha của nó.</p></td>
+</tr>
+</table><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:56 GMT -->
+</html>

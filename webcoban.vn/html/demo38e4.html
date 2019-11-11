@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from webcoban.vn/html/demo?file=1299 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:49:01 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Xem ví dụ Web cơ bản (webcoban.vn)</title>
+  <link rel="shortcut icon" href="../home/image/favicon.png">
+  <script src="../home/js/jquery.js"></script>
+  <style type="text/css">
+    body{
+      margin:0px;
+    }
+    #container_left{
+      background-color:#f1f1f1;
+      position:fixed;
+      width:50%;
+      top:0px;
+      bottom:0px;
+    }
+    #container_right{
+      background-color:#f1f1f1;
+      position:fixed;
+      width:50%;
+      left:50%;
+      top:0px;
+      bottom:0px;
+    }
+    .khung_left{
+      border:1px solid #C0C0C0;
+      background-color: #ffffff;
+      position:absolute;
+      top:10px;
+      bottom:10px;
+      left: 10px;
+      right: 10px;
+      overflow:auto;
+      padding:10px;
+    }
+    .khung_right_top{
+      position:absolute;
+      height:60%;
+      left:0px;
+      right:0px;
+    }
+    .khung_right_bottom{
+      position:absolute;
+      top:60%;
+      left:0px;
+      right:0px;
+    }
+    .khung_right_top .content{
+      border:1px solid #C0C0C0;
+      background-color: #ffffff;
+      position:absolute;
+      top:10px;
+      bottom:10px;
+      left:10px;
+      right:10px;
+      padding:10px;
+      overflow:auto;
+    }
+    .khung_right_bottom .content{
+      border:1px solid #C0C0C0;
+      background-color: #ffffff;
+      position:absolute;
+      top:10px;
+      left:10px;
+      right:10px;
+      padding:10px;
+    }
+    .khung_left pre{
+      margin:0px;
+      font-size:16px;
+    }
+  </style>
+</head>
+<body>
+    <div id="container_left">
+        <div class="khung_left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;table frame=&quot;<span style="font-size:25px;font-weight:bold;" id="layvitri">void</span>&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Họ tên&lt;/th&gt;
+            &lt;th&gt;Giới tính&lt;/th&gt;
+            &lt;th&gt;Năm sinh&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Trần Văn A&lt;/td&gt;
+            &lt;td&gt;Nam&lt;/td&gt;
+            &lt;td&gt;1993&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Lê Thị B&lt;/td&gt;
+            &lt;td&gt;Nữ&lt;/td&gt;
+            &lt;td&gt;1994&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+    </div>
+    <div id="container_right">
+        <div class="khung_right_top">
+          <div class="content">
+                        <table frame="void">
+                            <tr>
+                                <th>Họ tên</th>
+                                <th>Giới tính</th>
+                                <th>Năm sinh</th>
+                            </tr>
+                            <tr>
+                                <td>Trần Văn A</td>
+                                <td>Nam</td>
+                                <td>1993</td>
+                            </tr>
+                            <tr>
+                                <td>Lê Thị B</td>
+                                <td>Nữ</td>
+                                <td>1994</td>
+                            </tr>
+                        </table>
+          </div>
+        </div>
+        <div class="khung_right_bottom">
+          <div class="content">
+
+<div style="font-size:20px;">
+<table border="0px solid black">
+    <tr>
+      <td><input name="xemkieu" value='void' type="radio" checked=""> void</td>
+      <td><input name="xemkieu" value='above' type="radio"> above</td>
+      <td><input name="xemkieu" value='rhs' type="radio"> rhs</td>
+      <td><input name="xemkieu" value='below' type="radio"> below</td>
+      <td><input name="xemkieu" value='lhs' type="radio"> lhs</td>
+      <td><input name="xemkieu" value='vsides' type="radio"> vsides</td>
+      <td><input name="xemkieu" value='hsides' type="radio"> hsides</td>
+      <td><input name="xemkieu" value='box' type="radio"> box</td>
+      <td><input name="xemkieu" value='border' type="radio"> border</td>
+    </tr>
+</table>
+</div>
+
+          </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[name="xemkieu"]').change(function(){
+          $('#layvitri').html($(this).val());
+          var chuoi = "<table frame='"+$(this).val()+"'><tr><th>Họ tên</th><th>Giới tính</th><th>Năm sinh</th></tr><tr><td>Trần Văn A</td><td>Nam</td><td>1993</td></tr><tr><td>Lê Thị B</td><td>Nữ</td><td>1994</td></tr></table>";
+          $('.khung_right_top .content').html(chuoi);
+        })
+    })
+</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/demo?file=1299 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:49:01 GMT -->
+</html>﻿

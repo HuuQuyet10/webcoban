@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/substr-trong-javascript-trich-xuat-chuoi-con-voi-so-luong-ky-tu-xac-dinh.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:08 GMT -->
+<head>
+<title>substr() trong JavaScript | Trích xuất chuỗi con với số lượng ký tự xác định</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="substr(),phương thức substr(),phuong thuc substr(),substr() trong substr(),cách sử dụng substr(),trích xuất chuỗi con với số lượng ký tự xác định">
+<meta name="description" content="Cách trích xuất một chuỗi ký tự con bên trong chuỗi cha với chiều dài số lượng ký tự được xác định bằng phương thức substr() trong JavaScript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="substr() trong JavaScript | Trích xuất chuỗi con với số lượng ký tự xác định">Phương thức substr() trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html"><span class="fa fa-sign-out"></span> JS String (Các phương thức xử lý chuỗi)</a>
+</div>
+<p style="margin-top:10px">Phương thức <strong>substr()</strong> được dùng để:</p>
+<div style="color:#555;font-weight:bold;">
+<p><em>Trích xuất một chuỗi ký tự con bên trong chuỗi cha</em></p>
+<p><em>(Chuỗi con sẽ bắt đầu được trích xuất tại một vị trí xác định với số lượng ký tự được chỉ định)</em></p>
+</div>
+
+<p><i><u>Cú pháp</u>:</i></p>
+<div class="divthehiencongthuc1" style="margin-bottom:10px"><span style="color:#B00058">string</span>.<span style="color:#008000">substr</span>(<span style="color:#B00058">start</span>, <span style="color:#B00058">length</span>)</div>
+<p>Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>start là chỉ số của ký tự mà bạn muốn bắt đầu trích xuất.</li>
+<li>length là số lượng ký tự mà bạn muốn trích xuất.</li>
+</ul>
+<table class="tbbang_luuy">
+    <tbody>
+        <tr>
+            <td style="vertical-align:middle; width:10px">
+            <div class="lamp"><img src="../home/image/lamp.png" style="margin:0px" /></div>
+            </td>
+            <td><div class="element"><p>1) Giá trị trả về của phương thức substr() là một chuỗi.</p>
+<p>Dưới đây là một ví dụ minh họa để giúp bạn dễ hình dung ra chuỗi được trích xuất trong chuỗi gốc là phần nào:  <span style="color:#555;font-weight:bold;font-style:italic">"Tài liệu học HTML".substr(4,3)</span></p>
+<style>
+table#ntn_phuongthucsubstring1,
+table#ntn_phuongthucsubstring1 tr,
+table#ntn_phuongthucsubstring1 th,
+table#ntn_phuongthucsubstring1 td{
+border:1px solid #ddd;
+}
+table#ntn_phuongthucsubstring1 th{
+width:70px;
+text-align:center;
+font-weight:normal;
+}
+table#ntn_phuongthucsubstring1 td{
+width:38px;
+text-align:center;
+}
+</style>
+<table id="ntn_phuongthucsubstring1" style="margin-bottom:10px">
+<tr>
+<th>Chỉ số</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td style="background-color:red">4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+</tr>
+<tr>
+<th>Chuỗi</th>
+<td>T</td>
+<td>à</td>
+<td>i</td>
+<td></td>
+<td style="background-color:#4CAF50">l</td>
+<td style="background-color:#4CAF50">i</td>
+<td style="background-color:#4CAF50">ệ</td>
+<td>u</td>
+<td></td>
+<td>h</td>
+<td>ọ</td>
+<td>c</td>
+<td></td>
+<td>H</td>
+<td>T</td>
+<td>M</td>
+<td>L</td>
+</tr>
+</table>
+<p>2) Phương thức substr() không làm thay đổi chuỗi gốc.</p>
+</div></td>
+        </tr>
+    </tbody>
+</table>
+<div class="form_6">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Tài liệu học HTML&quot;;
+    var b = a.substr(4,3);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="democ2c8.html?file=1508" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>Một số trường hợp cần lưu ý khi sử dụng phương thứ substr():</p>
+<ul style="list-style-type:circle">
+<li><i><u>Trường hợp 1</u>:</i> Nếu giá trị của tham số start lớn hơn hoặc bằng chiều dài của chuỗi gốc thì giá trị trả về của phương thức substr() sẽ là một chuỗi rỗng.</li>
+<li><i><u>Trường hợp 2</u>:</i> Nếu phương thức substr() chỉ có một tham số duy nhất thì chuỗi được trích xuất sẽ bắt đầu từ ký tự ở tham số đó đến hết chuỗi gốc.</li>
+<li><i><u>Trường hợp 3</u>:</i> Nếu giá trị của tham số start là một số âm thì chỉ số của các ký tự trong chuỗi sẽ được xác định theo chiều từ phải sáng trái và bắt đầu ở chỉ số một.</li>
+<div>Dưới đây là một ví dụ minh họa giúp bạn dễ hình dung: <span style="color:#555;font-weight:bold;font-style:italic">"Tài liệu học HTML".substr(-4,3)</span></div>
+<table id="ntn_phuongthucsubstring1" style="margin-bottom:15px;margin-top:10px">
+<tr>
+<th>Chỉ số</th>
+<td>17</td>
+<td>16</td>
+<td>15</td>
+<td>14</td>
+<td>13</td>
+<td>12</td>
+<td>11</td>
+<td>10</td>
+<td>9</td>
+<td>8</td>
+<td>7</td>
+<td>6</td>
+<td>5</td>
+<td style="background-color:red">4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<th>Chuỗi</th>
+<td>T</td>
+<td>à</td>
+<td>i</td>
+<td></td>
+<td>l</td>
+<td>i</td>
+<td>ệ</td>
+<td>u</td>
+<td></td>
+<td>h</td>
+<td>ọ</td>
+<td>c</td>
+<td></td>
+<td style="background-color:#4CAF50">H</td>
+<td style="background-color:#4CAF50">T</td>
+<td style="background-color:#4CAF50">M</td>
+<td>L</td>
+</tr>
+</table>
+</ul>
+<div class="form_6">
+    <div class="theh3">Ví dụ trường hợp 1</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Tài liệu học HTML&quot;;
+    var b = a.substr(25,3);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8fb7.html?file=1509" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_6">
+    <div class="theh3">Ví dụ trường hợp 2</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Tài liệu học HTML&quot;;
+    var b = a.substr(4);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo0925.html?file=1510" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_6">
+    <div class="theh3">Ví dụ trường hợp 3</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Tài liệu học HTML&quot;;
+    var b = a.substr(-4,3);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo030c.html?file=1511" target="_blank">Xem ví dụ</a></div>
+</div>
+
+
+
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html"><span class="fa fa-sign-out"></span> JS String (Các phương thức xử lý chuỗi)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/substr-trong-javascript-trich-xuat-chuoi-con-voi-so-luong-ky-tu-xac-dinh.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:09 GMT -->
+</html>

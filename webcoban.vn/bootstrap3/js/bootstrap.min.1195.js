@@ -1,0 +1,1 @@
+﻿$(document).ready(function(){ $("[name='qi1lf']").click(function(){ var test_checked = document.getElementById("qi1lf").checked; if(test_checked==true){ $(".i1ljf img").css("box-shadow","5px 5px 20px #555"); }else{ $(".i1ljf img").css("box-shadow","none"); } });});

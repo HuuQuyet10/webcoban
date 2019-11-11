@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3571 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:31 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+        font-family:"Roboto Slab",Arial;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left #top pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 250px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #left #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        right:5px;
+        height:230px;
+    }
+    #container #left #bottom #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #content{
+        position: absolute;
+        top:10px;
+        bottom:10px;
+        left:5px;
+        right:10px;
+        border:1px solid #b3b2b2;
+        background-color: white;
+        box-sizing:border-box;
+        overflow: auto;
+        padding:1px 15px;
+    }
+    #container #right #content p, #container #right #content li{
+        line-height: 30px;
+    }
+    #container #right #content li{
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    #container #right #content pre{
+        font-size:16px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="top">
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style&gt;
+        #pink{
+            width:55%;
+            height:50px;
+            background-color:pink;
+        }
+        #red{
+            width:30%;
+            height:50px;
+            background-color:red;
+            float:left;
+        }
+        #green{
+            width:40%;
+            height:50px;
+            background-color:green;
+            float:right;
+        }
+        #blue{
+            width:20%;
+            height:50px;
+            background-color:blue;
+            float:left;
+        }
+        #black{
+            width:40%;
+            height:50px;
+            background-color:black;
+            float:left;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;pink&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;red&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;green&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;blue&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;black&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <div id="right">
+            <div id="content">
+                <div style="font-size:25px;margin-top:15px;text-shadow:1px 1px 3px gray"><u>GIẢI THÍCH</u></div>
+                <p>- Phần tử #pink chỉ là một phần tử khối bình thường.</p>
+                <div style="position:relative;width:575px;height:363px">
+                    <div style="position:absolute;width:520px;height:240px;top:94px;left:24px">
+                        <div style="width:55%;height:50px;background-color:pink;"></div>
+                    </div>
+                    <img src="../image/page.png" style="width:575px;height:363px">
+                </div>
+                <p>- Phần tử #red được thiết lập thuộc tính float với giá trị left, chiều rộng 30%.</p>
+                <p>- Tuy nhiên, phần tử #red không được trôi lên hàng trên bởi vì phần tử phía trước nó không được thiết lập thuộc tính float với giá trị left hoặc right.</p>
+                <div style="position:relative;width:575px;height:363px">
+                    <div style="position:absolute;width:520px;height:240px;top:94px;left:24px">
+                        <div style="width:55%;height:50px;background-color:pink;"></div>
+                        <div style="width:30%;height:50px;background-color:red;float:left;"></div>
+                    </div>
+                    <img src="../image/page.png" style="width:575px;height:363px">
+                </div>
+                <p>- Phần tử #green được thiết lập thuộc tính float với giá trị right, chiều rộng 40%. Hàng trên còn dư 70% nên nó được trôi lên và nằm bên phải.</p>
+                <div style="position:relative;width:575px;height:363px">
+                    <div style="position:absolute;width:520px;height:240px;top:94px;left:24px">
+                        <div style="width:55%;height:50px;background-color:pink;"></div>
+                        <div style="width:30%;height:50px;background-color:red;float:left;"></div>
+                        <div style="width:40%;height:50px;background-color:green;float:right;"></div>
+                    </div>
+                    <img src="../image/page.png" style="width:575px;height:363px">
+                </div>
+                <p>- Phần tử #blue được thiết lập thuộc tính float với giá trị left, chiều rộng 20%. Hàng trên còn dư 30% nên nó được trôi lên và nằm bên trái.</p>
+                <div style="position:relative;width:575px;height:363px">
+                    <div style="position:absolute;width:520px;height:240px;top:94px;left:24px">
+                        <div style="width:55%;height:50px;background-color:pink;"></div>
+                        <div style="width:30%;height:50px;background-color:red;float:left;"></div>
+                        <div style="width:40%;height:50px;background-color:green;float:right;"></div>
+                        <div style="width:20%;height:50px;background-color:blue;float:left;"></div>
+                    </div>
+                    <img src="../image/page.png" style="width:575px;height:363px">
+                </div>
+                <p>- Phần tử #black được thiết lập thuộc tính float với giá trị left, chiều rộng 40%. Tuy nhiên, hàng phía trên chỉ còn dư 10% (không đủ để chứa nó), nên phần tử #black không được trôi lên hàng phía trên.</p>
+                <div style="position:relative;width:575px;height:363px">
+                    <div style="position:absolute;width:520px;height:240px;top:94px;left:24px">
+                        <div style="width:55%;height:50px;background-color:pink;"></div>
+                        <div style="width:30%;height:50px;background-color:red;float:left;"></div>
+                        <div style="width:40%;height:50px;background-color:green;float:right;"></div>
+                        <div style="width:20%;height:50px;background-color:blue;float:left;"></div>
+                        <div style="width:40%;height:50px;background-color:black;float:left;"></div>
+                    </div>
+                    <img src="../image/page.png" style="width:575px;height:363px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("bottom").innerHTML = "";
+            document.getElementById("bottom").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div id='pink'></div><div id='red'></div><div id='green'></div><div id='blue'></div><div id='black'></div><style>#pink{width:55%;height:50px;background-color:pink;}#red{width:30%;height:50px;background-color:red;float:left;}#green{width:40%;height:50px;background-color:green;float:right;}#blue{width:20%;height:50px;background-color:blue;float:left;}#black{width:40%;height:50px;background-color:black;float:left;}</style>";
+        view_result(text);
+    </script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3571 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:31 GMT -->
+</html>﻿

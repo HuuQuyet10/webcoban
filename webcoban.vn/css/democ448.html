@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3099 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:16 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:226px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        height:205px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+           width:<span id="layvitri2" style="color:red;font-weight:bold;font-size:20px;">150px</span>;
+           height:<span id="layvitri3" style="color:red;font-weight:bold;font-size:20px;">150px</span>;
+           border:50px solid transparent;
+           border-image-source:url(../image/matrix.png);
+           border-image-slice:50 50 50 50;
+           border-image-repeat:<span id="layvitri1" style="color:red;font-weight:bold;font-size:20px;">stretch</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;../image/matrix.png&quot; target=&quot;_blank&quot;&gt;Xem ảnh gốc&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;">
+                <table class="ssss-table" style="width:100%;height:100%">
+                    <tr>
+                        <td style="width:175px">border-image-repeat:</td>
+                        <td>
+                            <p><input name="border_image_repeat" value="stretch" type="radio" checked> stretch
+                            &nbsp;&nbsp;&nbsp;<input name="border_image_repeat" value="round" type="radio"> round
+                            &nbsp;&nbsp;&nbsp;<input name="border_image_repeat" value="repeat" type="radio"> repeat
+                            &nbsp;&nbsp;&nbsp;<input name="border_image_repeat" value="space" type="radio"> space</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>width:</td>
+                        <td><input type="range" name="width" value="150" min="50" max="500" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td>height:</td>
+                        <td><input type="range" name="height" value="150" min="50" max="500" style="width:100%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='width:150px;height:150px;border:50px solid transparent;border-image-source:url(../image/matrix.png);border-image-slice:50 50 50 50;border-image-repeat:stretch;'><a href='../image/matrix.png' target='_blank'>Xem ảnh gốc</a></div>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='border_image_repeat']").change(function(){
+                var border_image_repeat = $(this).val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='width:"+width+";height:"+height+";border:50px solid transparent;border-image-source:url(../image/matrix.png);border-image-slice:50 50 50 50;border-image-repeat:"+border_image_repeat+";'><a href='../image/matrix.png' target='_blank'>Xem ảnh gốc</a></div>";
+                $("#layvitri1").html(border_image_repeat);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='width']",function(){
+                var border_image_repeat = $("input[name='border_image_repeat']:checked").val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='width:"+width+";height:"+height+";border:50px solid transparent;border-image-source:url(../image/matrix.png);border-image-slice:50 50 50 50;border-image-repeat:"+border_image_repeat+";'><a href='../image/matrix.png' target='_blank'>Xem ảnh gốc</a></div>";
+                $("#layvitri1").html(border_image_repeat);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='height']",function(){
+                var border_image_repeat = $("input[name='border_image_repeat']:checked").val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='width:"+width+";height:"+height+";border:50px solid transparent;border-image-source:url(../image/matrix.png);border-image-slice:50 50 50 50;border-image-repeat:"+border_image_repeat+";'><a href='../image/matrix.png' target='_blank'>Xem ảnh gốc</a></div>";
+                $("#layvitri1").html(border_image_repeat);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+        })
+    </script>
+    <style type="text/css">
+        table.ssss-table,
+        table.ssss-table td{
+            border:1px solid #c0bebe;
+            border-collapse:collapse;
+        }
+        table.ssss-table td{padding:15px 10px;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3099 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:16 GMT -->
+</html>﻿

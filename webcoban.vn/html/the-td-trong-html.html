@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-td-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:32 GMT -->
+<head>
+<title>Thẻ &lt;td&gt; trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ td,thẻ td trong html,các thuộc tính của thẻ td">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ td trong HTML để tạo một ô trong bảng và các thuộc tính của thẻ td">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;td&gt; trong HTML">Thẻ &lt;td&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Giới thiệu <em>"các thành phần cơ bản của một cái bảng"</em></h2>
+<p>- Thông thường, bảng là một phần tử gồm có các hàng và các ô.</p>
+<p><i>(một bảng sẽ có nhiều hàng và một hàng thì sẽ có nhiều ô)</i></p>
+<p>- <i><u>Ví dụ</u></i>: Bảng bên dưới có bốn hàng, mỗi hàng có bốn ô.</p>
+<iframe srcdoc='<table border="1"><tr><th>Họ và tên</th><th>Năm sinh</th><th>Giới tính</th><th>Quê quán</th></tr><tr>
+<td>Nguyễn Thành A</td><td>1993</td><td>Nam</td><td>Cần Thơ</td></tr><tr><td>Trần Văn B</td><td>1985</td><td>Nam</td>
+<td>Vĩnh Long</td></tr><tr><td>Lê Thị C</td><td>1990</td><td>Nữ</td><td>Sóc Trăng</td></tr></table>' style="width:100%;height:120px;border:0px;"></iframe>
+<p>- Để tạo một bảng thì chúng ta phải sử dụng kết hợp các thẻ: <em>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</em></p>
+<p>- <i><u>Trong đó</u>:</i></p>
+<ul style="list-style-type:circle">
+<li>Thẻ &lt;table&gt; xác định phần tử là một cái bảng.</li>
+<li style="margin-top:6px;margin-bottom:6px">Thẻ &lt;tr&gt; xác định phần tử là một hàng trong bảng.</li>
+<li>Thẻ &lt;td&gt; xác định phần tử là một ô trong hàng.</li>
+<li style="margin-top:6px;margin-bottom:6px">Thẻ &lt;th&gt; xác định phần tử là một ô tiêu đề trong hàng.</li>
+<div><i>(ô tiêu đề là ô chữ được tô đậm nổi bật giống như: Họ và tên, ngày sinh, giới tính, quê quán)</i></div>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Đoạn mã phía dưới dùng để tạo một cái bảng giống như ví dụ phía trên</p>
+</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Họ và tên&lt;/th&gt;
+        &lt;th&gt;Năm sinh&lt;/th&gt;
+        &lt;th&gt;Giới tính&lt;/th&gt;
+        &lt;th&gt;Quê quán&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Nguyễn Thành A&lt;/td&gt;
+        &lt;td&gt;1993&lt;/td&gt;
+        &lt;td&gt;Nam&lt;/td&gt;
+        &lt;td&gt;Cần Thơ&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Trần Văn B&lt;/td&gt;
+        &lt;td&gt;1985&lt;/td&gt;
+        &lt;td&gt;Nam&lt;/td&gt;
+        &lt;td&gt;Vĩnh Long&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lê Thị C&lt;/td&gt;
+        &lt;td&gt;1990&lt;/td&gt;
+        &lt;td&gt;Nữ&lt;/td&gt;
+        &lt;td&gt;Sóc Trăng&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo1cbd.html?file=2170" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Các thuộc tính được sử dụng trong thẻ &lt;td&gt;</h2>
+<p>- Thẻ &lt;td&gt; có tám thuộc tính thường hay được sử dụng nhất.</p>
+<p>- Dưới đây là bảng mô tả sơ lượt về tám thuộc tính của thẻ &lt;td&gt; :</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <td>align</td>
+        <td>Canh lề nội dung của ô theo chiều ngang</td>
+    </tr>
+    <tr>
+        <td>valign</td>
+        <td>Canh lề nội dung của ô theo chiều dọc</td>
+    </tr>
+    <tr>
+        <td>colspan</td>
+        <td>Xác định số lượng ô <i>(theo chiều ngang)</i> mà bạn muốn gộp chung lại với nhau</td>
+    </tr>
+    <tr>
+        <td>rowspan</td>
+        <td>Xác định số lượng ô <i>(theo chiều dọc)</i> mà bạn muốn gộp chung lại với nhau</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>Xác định chiều rộng của ô</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>Xác định chiều cao của ô</td>
+    </tr>
+    <tr>
+        <td>bgcolor</td>
+        <td>Xác định màu nền của ô</td>
+    </tr>
+    <tr>
+        <td>nowrap</td>
+        <td>Xác định việc nội dung của ô sẽ được hiển thị trên cùng một dòng</td>
+    </tr>
+</table>
+<h3>2.1) Thuộc tính align</h3>
+<p>- Thuộc tính align dùng để canh lề nội dung của ô theo chiều ngang.</p>
+<p>- Thuộc tính align có bốn giá trị cơ bản:</p>
+<table class="table table-bordered form_new_29">
+    <tr>
+        <td>left</td>
+        <td>Nội dung của ô sẽ được canh nằm phía bên trái</td>
+        <td style="width:50px"><div class="xem"><a href="demo1525.html?file=2191" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>right</td>
+        <td>Nội dung của ô sẽ được canh nằm phía bên phải</td>
+        <td><div class="xem"><a href="demofd54.html?file=2192" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>center</td>
+        <td>Nội dung của ô sẽ được canh nằm ở giữa</td>
+        <td><div class="xem"><a href="demo1649.html?file=2193" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>justify</td>
+        <td>Nội dung của ô sẽ được canh đều hai bên trái phải</td>
+        <td><div class="xem"><a href="demobb8b-2.html?file=2194" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+</table>
+<p>- <i><u>Lưu ý</u>:</i> Thay vì sử dụng thuộc tính align của thẻ &lt;td&gt; thì ta cũng có thể sử dụng thuộc tính text-align trong CSS để thay thế.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+        &lt;td style=&quot;text-align:right&quot;&gt;1991&lt;/td&gt;
+        &lt;td&gt;1992&lt;/td&gt;
+        &lt;td&gt;1993&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo0f7a.html?file=2195" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h3>2.2) Thuộc tính valign</h3>
+<p>- Thuộc tính valign dùng để canh lề nội dung của ô theo chiều dọc.</p>
+<p>- Thuộc tính valign có ba giá trị cơ bản:</p>
+<table class="table table-bordered form_new_29">
+    <tr>
+        <td>top</td>
+        <td>Nội dung của ô sẽ được canh nằm phía trên</td>
+        <td style="width:50px"><div class="xem"><a href="demo4dca.html?file=2201" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>bottom</td>
+        <td>Nội dung của ô sẽ được canh nằm phía dưới</td>
+        <td><div class="xem"><a href="demo590b.html?file=2202" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>middle</td>
+        <td>Nội dung của ô sẽ được canh nằm ở giữa</td>
+        <td><div class="xem"><a href="demo7c0f.html?file=2203" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+</table>
+<p>- <i><u>Lưu ý</u>:</i> Thay vì sử dụng thuộc tính valign của thẻ &lt;td&gt; thì ta cũng có thể sử dụng thuộc tính vertical-align trong CSS để thay thế.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot;&gt;
+    &lt;tr style=&quot;height:200px&quot;&gt;
+        &lt;td&gt;Nguyễn Thành A&lt;/td&gt;
+        &lt;td style=&quot;vertical-align:top&quot;&gt;1993&lt;/td&gt;
+        &lt;td&gt;Nam&lt;/td&gt;
+        &lt;td&gt;Cần Thơ&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo6a4d.html?file=2204" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.3) Thuộc tính colspan</h3>
+<p>- Thuộc tính colspan xác định số lượng ô <i>(theo chiều ngang)</i> mà bạn muốn gộp chung lại với nhau.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td colspan=&quot;3&quot;&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&quot;center&quot;&gt;
+        &lt;td colspan=&quot;5&quot;&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo01a9.html?file=2197" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.4) Thuộc tính rowspan</h3>
+<p>- Thuộc tính rowspan xác định số lượng ô <i>(theo chiều dọc)</i> mà bạn muốn gộp chung lại với nhau.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+        &lt;td rowspan=&quot;3&quot;&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td rowspan=&quot;2&quot;&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo8c61.html?file=2200" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.5) Thuộc tính width</h3>
+<p>- Thuộc tính width dùng để xác định chiều rộng của ô.</p>
+<p>- Giá trị của thuộc tính width có thể xác định theo một trong hai loại đơn vị:</p>
+<ul style="list-style-type:circle">
+<li>px <i>(pixel)</i></li>
+<li style="margin-top:6px">% <i>(tỷ lệ phần trăm chiều rộng phần nội dung của phần tử cha của nó)</i></i>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+        &lt;td width=&quot;50%&quot;&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+        &lt;td width=&quot;15px&quot;&gt;X&lt;/td&gt;
+        &lt;td&gt;X&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo103e.html?file=2205" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Tất cả ô trong cùng cột sẽ có chiều rộng bằng với chiều rộng của ô có chiều rộng lớn nhất.</p>
+<h3>2.6) Thuộc tính height</h3>
+<p>- Thuộc tính height dùng để xác định chiều cao của ô.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td height=&quot;200px&quot;&gt;Nguyễn Thành A&lt;/td&gt;
+        &lt;td&gt;1993&lt;/td&gt;
+        &lt;td&gt;Nam&lt;/td&gt;
+        &lt;td&gt;Cần Thơ&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Trần Văn B&lt;/td&gt;
+        &lt;td&gt;1985&lt;/td&gt;
+        &lt;td&gt;Nam&lt;/td&gt;
+        &lt;td&gt;Vĩnh Long&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Lê Thị C&lt;/td&gt;
+        &lt;td&gt;1990&lt;/td&gt;
+        &lt;td&gt;Nữ&lt;/td&gt;
+        &lt;td&gt;Sóc Trăng&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo09d4.html?file=2198" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Tất cả ô trong cùng một hàng sẽ có chiều cao bằng với chiều cao của ô có chiều cao lớn nhất.</p>
+<h3>2.7) Thuộc tính bgcolor</h3>
+<p>- Thuộc tính bgcolor dùng để thiết lập màu nền của ô.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot; width=&quot;100%&quot;&gt;
+    &lt;tr&gt;
+        &lt;td bgcolor=&quot;yellow&quot;&gt;1991&lt;/td&gt;
+        &lt;td&gt;1992&lt;/td&gt;
+        &lt;td&gt;1993&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo66c9.html?file=2196" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.8) Thuộc tính nowrap</h3>
+<p>- Thuộc tính nowrap xác định nội dung của ô sẽ được hiển thị trên cùng một dòng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Nội dung của ô đầu tiên sẽ được hiển thị trên cùng một dòng</p>
+</div>
+    <hr>
+    <pre>&lt;table border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;td nowrap&gt;Có thể bạn không phải là một lập trình viên nhưng lại rất thích làm website. Bạn muốn học làm, nhưng không biết phải bắt đầu từ đâu và liệu mình có thể học được hay không !?&lt;/td&gt;
+        &lt;td&gt;Có thể bạn không phải là một lập trình viên nhưng lại rất thích làm website. Bạn muốn học làm, nhưng không biết phải bắt đầu từ đâu và liệu mình có thể học được hay không !?&lt;/td&gt;
+        &lt;td&gt;Có thể bạn không phải là một lập trình viên nhưng lại rất thích làm website. Bạn muốn học làm, nhưng không biết phải bắt đầu từ đâu và liệu mình có thể học được hay không !?&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demo6155.html?file=2199" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Định dạng CSS mặc định</h2>
+<p>- Hầu hết các trình duyệt sẽ hiển thị phần tử <strong>&lt;td&gt;</strong> với định dạng CSS như sau:</p>
+<div class="form_new_26">
+    <pre>td {
+    display: table-cell;
+    vertical-align: inherit;
+}</pre>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-td-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:36 GMT -->
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/cach-chen-mot-doan-phim-video-vao-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:47 GMT -->
+<head>
+<title>Cách chèn một đoạn phim (video) vào trang web</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách chèn một đoạn video vào trang web">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ &lt;video&gt; để chèn một đoạn phim, một đoạn video, một đoạn clip vào bên trong trang web HTML, hướng dẫn cách tạo một bản phụ đề cho đoạn video">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.5660.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" class='active'>- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách chèn một đoạn phim (video) vào trang web">Cách chèn một đoạn video vào trang web</h1>
+<div class="breadcrumb">
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div class="ityz1l">
+<video controls>
+<source src="../file/bunny.mp4">
+<track src="../file/phude_vi.html" label="TIẾNG VIỆT" default>
+<track src="../file/phude_en.html" label="TIẾNG ANH">
+</video>
+</div>
+<h2>1) Cách chèn một đoạn video vào trang web</h2>
+<p>- Để chèn một đoạn video vào trang web thì chúng ta sử dụng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">&lt;video controls&gt;
+    &lt;source src=&quot;đường dẫn đến tập tin video&quot;&gt;
+&lt;/video&gt;</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;video controls&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+&lt;/video&gt;</pre>
+<div><a href="demo3087.html?file=3382" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Chúng ta nên sử dụng nhiều thẻ &lt;source&gt; để xác định nhiều tập tin video dự phòng (đề phòng trường hợp đường dẫn đến tập tin video này không tồn tại thì trình xem phim sẽ chuyển sang sử dụng đường dẫn đến một tập tin video khác)</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more"><p>- Mặc định thì trình xem phim sẽ sử dụng tập tin <span>hdun2.mp4</span>, nếu tập tin <span>hdun2.mp4</span> không tồn tại thì trình xem phim sẽ sử dụng tập tin <span>cjbsj.mp4</span>, nếu tập tin <span>cjbsj.mp4</span> không tồn tại thì trình xem phim sẽ chuyển sang sử dụng tập tin <span>bunny.mp4</span>, . . . .</p></div>
+<hr>
+<pre>&lt;video controls&gt;
+    &lt;source src=&quot;../file/hdun2.mp4&quot;&gt;
+    &lt;source src=&quot;../file/cjbsj.mp4&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+&lt;/video&gt;</pre>
+<div><a href="demod4f0.html?file=3641" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Các thuộc tính được sử dụng bên trong thẻ &lt;video&gt;</h2>
+<p>- Dưới đây là danh sách những thuộc tính thường được sử dụng bên trong thẻ &lt;video&gt;</p>
+<p>(các bạn vui lòng tấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để tìm hiểu chi tiết chức năng và cách sử dụng của từng thuộc tính)</p>
+<table class="table table-bordered mjk2o">
+<tr>
+<td>controls</td>
+<td>
+<p>- Thiết lập việc hiển thị thanh công cụ điều khiển đoạn video.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-controls</div></span></div>
+</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>
+<p>- Thiết lập việc đoạn video sẽ tự động được phát ngay sau khi trang tải xong.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-autoplay</div></span></div>
+</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>
+<p>- Chỉnh chế độ tự động phát lại sau mỗi lần đoạn video kết thúc.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-loop</div></span></div>
+</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>
+<p>- Tùy chỉnh việc đoạn video có được tải xuống trong quá trình tải trang hay không.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-preload</div></span></div>
+</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>
+<p>- Chỉnh chế độ mặc định tắt âm thanh của đoạn video.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-muted</div></span></div>
+</td>
+</tr>
+<tr>
+<td>poster</td>
+<td>
+<p>- Xác định một tấm hình dùng làm ảnh đại diện cho đoạn video trước khi nó được phát.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-poster</div></span></div>
+</td>
+</tr>
+<tr>
+<td>width</td>
+<td>
+<p>- Thiết lập chiều rộng của trình phát video.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-width</div></span></div>
+</td>
+</tr>
+<tr>
+<td>height</td>
+<td>
+<p>- Thiết lập chiều cao của trình phát video.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-height</div></span></div>
+</td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách tạo một bản phụ đề cho đoạn video</h2>
+<p><img alt="cách tạo phụ đề cho một đoạn video" src="../image/phude.jpg" class="img-responsive"></p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td>
+<p>- Để tạo một bản phụ đề cho đoạn video thì chúng ta thực hiện lần lượt các bước như sau:</p>
+<ul>
+<li><u>Bước 1</u>: Tạo một tập tin phụ đề.</li>
+<li><u>Bước 2</u>: Viết nội dung cho tập tin phụ đề.</li>
+<li><u>Bước 3</u>: Chèn tập tin phụ đề vào đoạn video.</li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>3.1) Tạo một tập tin phụ đề</h3>
+<p>- Cách tạo một tập tin phụ đề cũng tương tự như cách tạo một tập tin HTML, chỉ khác ở chỗ là phần đuôi thì đổi lại thành <span class="mark2">.vtt</span></p>
+<p><img alt="Cách tạo một tập tin phụ đề vtt" src="../image/cach-tao-mot-tap-tin-phu-de-vtt.png" class="img-responsive"></p>
+<h3>3.2) Viết nội dung cho tập tin phụ đề</h3>
+<p>- Nội dung của một tập tin phụ đề (có đuôi .vtt) phải được tắt đầu bằng cụm từ <span class="mark2">WEBVTT</span></p>
+<p>- Việc xác định phụ đề &amp; thời điểm hiển thị khá đơn giản, các bạn xem ví dụ bên dưới là hiểu ngay.</p>
+<div class="i-pre-not-color i-form-1">WEBVTT
+
+00:00:00.500 --&gt; 00:00:02.000
+HẢ !?
+
+00:00:02.000 --&gt; 00:00:05.500
+CON BƯƠM BƯỚM KÌA !
+
+00:00:06.000 --&gt; 00:00:08.000
+NÓ THẬT ĐẸP =))
+
+00:00:09.000 --&gt; 00:00:10.000
+ÔI VÃI @_@</div>
+<p>- Chúng ta có thể kết hợp với một vài thẻ định dạng văn bản để trang trí cho phụ đề nổi bật hơn.</p>
+<div class="i-pre-not-color i-form-1">WEBVTT
+
+00:00:00.500 --&gt; 00:00:02.000
+HẢ !?
+
+00:00:02.000 --&gt; 00:00:05.500
+CON &lt;i&gt;&lt;b&gt;&lt;u&gt;BƯƠM BƯỚM&lt;/u&gt;&lt;/b&gt;&lt;/i&gt; KÌA !
+
+00:00:06.000 --&gt; 00:00:08.000
+&lt;u&gt;NÓ THẬT ĐẸP =))&lt;/u&gt;
+
+00:00:09.000 --&gt; 00:00:10.000
+ÔI VÃI @_@</div>
+<h3>3.3) Chèn tập tin phụ đề vào đoạn video</h3>
+<p>- Để chèn một tập tin phụ đề vào đoạn video thì chúng ta đặt thẻ &lt;track&gt; nằm ngay bên dưới thẻ &lt;source&gt; của đoạn video với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">&lt;video controls&gt;
+    &lt;source src=&quot;đường dẫn đến tập tin video&quot;&gt;
+    &lt;track src=&quot;đường dẫn đến tập tin phụ đề&quot; label=&quot;tên phiên bản&quot; default&gt;
+&lt;/video&gt;</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;video controls&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude.vtt&quot; label=&quot;TIẾNG VIỆT&quot; default&gt;
+&lt;/video&gt;</pre>
+<div><a href="demo0df8.html?file=3390" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Tạo nhiều phiên bản phụ đề cho đoạn video</h2>
+<p>- Để tạo nhiều phiên bản phụ đề cho đoạn video thì trước tiên chúng ta cần phải tạo nhiều tập tin phụ đề, sau đó sử dụng các thẻ &lt;track&gt; để nhúng từng tập tin phụ đề tương ứng vào đoạn video.</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<div><img src="../image/phude2.jpg" class="img-responsive"></div>
+<p>- Để tạo hai phiên bản phụ đề TIẾNG VIỆT &amp; TIẾNG ANH cho đoạn video giống như cái ví dụ nằm ở đầu bài hướng dẫn thì chúng ta thực hiện các bước như sau:</p>
+<p>- <u>Bước 1</u>: Tạo hai tập tin phụ đề <span class="mark2">phude_vi.vtt (bản TIẾNG VIỆT)</span> và <span class="mark2">phude_en.vtt (bản TIẾNG ANH)</span></p>
+<div class="i-pre-not-color i-form-1">WEBVTT
+
+00:00:00.500 --&gt; 00:00:02.000
+HẢ !?
+
+00:00:02.000 --&gt; 00:00:05.500
+CON BƯƠM BƯỚM KÌA !
+
+00:00:06.000 --&gt; 00:00:08.000
+NÓ THẬT ĐẸP =))
+
+00:00:09.000 --&gt; 00:00:10.000
+ÔI VÃI @_@</div>
+<div class="i-pre-not-color i-form-1">WEBVTT
+
+00:00:00.500 --&gt; 00:00:02.000
+WHAT !?
+
+00:00:02.000 --&gt; 00:00:05.500
+BUFFTERFLY !
+
+00:00:06.000 --&gt; 00:00:08.000
+IT IS BEAUTIFUL =))
+
+00:00:09.000 --&gt; 00:00:10.000
+F*CK @_@</div>
+<p>- <u>Bước 2</u>: Sử dụng hai thẻ &lt;track&gt; để chèn hai bản phụ đề TIẾNG VIỆT - TIẾNG ANH vào đoạn video.</p>
+<pre class="i-form-2">&lt;video controls width=&quot;100%&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; label=&quot;TIẾNG VIỆT&quot; default&gt;
+    &lt;track src=&quot;../file/phude_en.vtt&quot; label=&quot;TIẾNG ANH&quot;&gt;
+&lt;/video&gt;</pre>
+<div><a href="demo594e.html?file=3391" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Thuộc tính default dùng để chỉ định phiên bản phụ đề được áp dụng mặc định cho đoạn video.</p>
+<div class="zzz-big-form">
+<div class="ttt-controls">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính controls dùng để thiết lập việc hiển thị <u>thanh công cụ điều khiển đoạn video</u></p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;video<span> controls</span>&gt;
+        &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Hiển thị thanh công cụ điều khiển đoạn video</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-autoplay">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính autoplay dùng để thiết lập việc đoạn video sẽ tự động được phát ngay sau khi trang tải xong.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;video controls<span> autoplay</span>&gt;
+        &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tự động phát đoạn video ngay sau khi trang tải xong</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-loop">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính loop dùng để chỉnh chế độ tự động phát lại sau mỗi lần đoạn video kết thúc.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;video controls<span> loop</span>&gt;
+        &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tự động phát lại sau mỗi lần đoạn video kết thúc</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-preload">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- <u>VẤN ĐỀ</u>: Khi chúng ta chèn một đoạn video vào trang web thì mặc định đoạn video sẽ tự động được tải xuống trong quá trình tải trang, điều đó thật sự lãng phí (gây tốn băng thông, giảm tốc độ tải trang) nếu người dùng không có nhu cầu xem đoạn video.</p>
+<p>- Từ đây, thuộc tính preload cho phép chúng ta tùy chỉnh việc đoạn video có được tải xuống trong quá trình tải trang hay không.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">preload=&quot;value&quot;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định đựa theo một trong hai loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>auto</td>
+<td><p>- Đoạn video sẽ được tải xuống trong quá trình tải trang (mặc định)</p></td>
+<tr>
+<td>none</td>
+<td><p>- Đoạn video chỉ được tải xuống khi người dùng bấm vào nút phát (play) đoạn video.</p></td>
+</tr>
+</table>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;video controls preload=&quot;<span>none</span>&quot;&gt;
+        &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes"> Tự động tải video trong quá trình tải trang</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-muted">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính muted dùng để chỉnh chế độ mặc định tắt âm thanh của đoạn video.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;video controls<span> muted</span>&gt;
+        &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Chỉnh chế độ mặc định tắt âm thanh của đoạn video</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-poster">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính poster dùng để xác định một tấm hình dùng làm ảnh đại diện cho đoạn video trước khi nó được phát.</p>
+<div class="i-pre-not-color i-form-2">poster=&quot;đường dẫn đến tập tin hình ảnh&quot;</div>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;video controls<span> poster=&quot;../image/father.jpg&quot;</span>&gt;
+      &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+   &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tạo một tấm ảnh đại diện cho đoạn video</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-width">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính width dùng để thiết lập chiều rộng của trình phát video.</p>
+<p>- Để sử dụng thuộc tính width thì chúng ta thêm nó vào bên trong thẻ &lt;video&gt; với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">width=&quot;value&quot;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong hai loại đơn vị:</p>
+<table class="table table-bordered">
+<tr>
+<td>px</td>
+<td><p>- Chiều rộng của trình phát video sẽ được xác định dựa theo một giá trị pixel cụ thể.</p>
+<p>- Ví dụ, nếu tôi viết <span class="mark2">width=&quot;400&quot;</span> thì điều đó có nghĩa là trình phát video sẽ hiển thị với kích thước chiều rộng là 400 pixel <a href="demo8ee3.html?file=3637" target="_blank">(Xem ví dụ)</a></p>
+</td>
+</tr>
+<tr>
+<td>%</td>
+<td><p>- Chiều rộng của trình phát video sẽ được xác định dựa theo tỷ lệ phần trăm &quot;chiều rộng phần nội dung&quot; của phần tử cha của nó.</p>
+<p>- Ví dụ, nếu phần tử cha của trình phát video có chiều rộng 500 pixel, tôi viết <span class="mark2">width=&quot;60%&quot;</span> thì điều đó có nghĩa là trình phát video sẽ được hiển thị với kích thước chiều rộng là 300 pixel <a href="demo4cdb.html?file=3638" target="_blank">(Xem ví dụ)</a></p>
+</td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Nếu chúng ta chỉ sử dụng thuộc tính width để thiết lập chiều rộng cho trình phát video mà không sử dụng thuộc tính height để thiết lập chiều cao cho trình phát video thì mặc định chiều cao của trình phát video sẽ tự động tăng hoặc giảm sao cho tỷ lệ chiều rộng/chiều cao của trình phát video bằng với tỷ lệ chiều rộng/chiều cao của đoạn video.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+   &lt;style type=&quot;text/css&quot;&gt;
+       video{border:3px solid red;}
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;video controls width=&quot;400&quot;<span> height=&quot;250&quot;</span>&gt;
+      &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+   &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Thiết lập chiều cao cho trình phát video</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-height">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính height dùng để thiết lập chiều cao của trình phát video.</p>
+<p>- Để sử dụng thuộc tính height thì chúng ta thêm nó vào bên trong thẻ &lt;video&gt; với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">height=&quot;value&quot;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong hai loại đơn vị:</p>
+<table class="table table-bordered">
+<tr>
+<td>px</td>
+<td><p>- Chiều cao của trình phát video sẽ được xác định dựa theo một giá trị pixel cụ thể.</p>
+<p>- Ví dụ, nếu tôi viết <span class="mark2">height=&quot;300&quot;</span> thì điều đó có nghĩa là trình phát video sẽ hiển thị với kích thước chiều cao là 300 pixel <a href="demo8a96.html?file=3639" target="_blank">(Xem ví dụ)</a></p>
+</td>
+</tr>
+<tr>
+<td>%</td>
+<td><p>- Chiều cao của trình phát video sẽ được xác định dựa theo tỷ lệ phần trăm &quot;chiều cao phần nội dung&quot; của phần tử cha của nó.</p>
+<p>- Ví dụ, nếu phần tử cha của trình phát video có chiều cao 400 pixel, tôi viết <span class="mark2">height=&quot;60%&quot;</span> thì điều đó có nghĩa là trình phát video sẽ được hiển thị với kích thước chiều cao là 240 pixel <a href="demob9f3.html?file=3640" target="_blank">(Xem ví dụ)</a></p>
+</td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Nếu chúng ta chỉ sử dụng thuộc tính height để thiết lập chiều cao cho trình phát video mà không sử dụng thuộc tính width để thiết lập chiều rộng cho trình phát video thì mặc định chiều rộng của trình phát video sẽ tự động tăng hoặc giảm sao cho tỷ lệ chiều rộng/chiều cao của trình phát video bằng với tỷ lệ chiều rộng/chiều cao của đoạn video.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+   &lt;style type=&quot;text/css&quot;&gt;
+       video{border:3px solid red;}
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;video controls<span> width=&quot;400&quot;</span> height=&quot;250&quot;&gt;
+      &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+   &lt;/video&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Thiết lập chiều rộng cho trình phát video</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.7626.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/cach-chen-mot-doan-phim-video-vao-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:36:02 GMT -->
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/phuong-thuc-stop-trong-jquery-cach-dung-hieu-ung-chuyen-dong-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:06 GMT -->
+<head>
+<title>Phương thức stop() trong jQuery | Cách dừng hiệu ứng chuyển động trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="phương thức stop trong jQuery,phuong thuc stop trong jQuery,cách dừng hiệu ứng chuyển động trong jQuery,cach dung hieu ung chuyen dong trong jQuery">
+<meta name="description" content="Hướng dẫn cách dừng hiệu ứng chuyển động của một phần tử bằng cách sử dụng phương thức stop() trong jQuery">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Phương thức stop() trong jQuery | Cách dừng hiệu ứng chuyển động trong jQuery">Phương thức stop() trong jQuery</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+</div>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28;top:17px"></span>
+<p>Để dễ dàng tiếp thu bài hướng dẫn này thì trước tiên bạn cần xem qua:</p>
+<ul style="list-style-type:circle">
+<li>Phương thức <a href="phuong-thuc-animate-trong-jquery-cach-tao-hieu-ung-chuyen-dong-cho-phan-tu-trong-jquery.html" target="_blank" style="color:black;text-decoration:underline">animate()</a> trong jQuery</li>
+</ul>
+</div>
+<h2>1) Phương thức stop() trong jQuery</h2>
+<p>- Phương thức <strong>stop()</strong> dùng để dừng hiệu ứng chuyển động của phần tử.</p>
+<p>- <i><u>Ví dụ</u>:</i> Khi bạn bấm vào nút <button id="ndfbh_button1">Start</button> thì phần tử có nền màu xanh bên dưới sẽ chuyển động sang phía bên phải. Tuy nhiên, nếu hiệu ứng chưa kết thúc mà bạn bấm vào nút <button id="ndfbh_button2" style="margin-top:5px;margin-bottom:5px">Stop</button> thì hiệu ứng chuyển động sẽ bị dừng lại.</p>
+<div style="border:1px solid #ccc;width:802px;height:102px;position:relative;margin-top:15px">
+<div style="width:100px;height:100px;background-color:#27ada7;position:absolute;" id="ndfbh_vidu1"></div>
+</div>
+<script>
+$(document).ready(function(){
+$("#ndfbh_button1").click(function(){
+   $("#ndfbh_vidu1").animate({left:"700px"},10000);
+});
+$("#ndfbh_button2").click(function(){
+   $("#ndfbh_vidu1").stop();
+});
+})
+</script>
+<h2>2) Cách sử dụng phương thức stop() trong jQuery</h2>
+<p>- Để sử dụng phương thức <strong>stop()</strong>, ta dùng cú pháp như sau:</p>
+<div class="form_new_20"><div>$(selector).stop(<i>stopAll</i>,<i>goToEnd</i>);</div></div>
+<p>- Dưới đây là bảng mô tả ý nghĩa & cách sử dụng các tham số trong phương thức <strong>stop()</strong>:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <th style="width:100px">Tham số</th>
+        <th style="width:150px">Yêu cầu</th>
+        <th>Mô tả ý nghĩa &amp; cách sử dụng</th>
+    </tr>
+    <tr>
+        <td>stopAll</td>
+        <td style="vertical-align:middle">Không bắt buộc</td>
+        <td><p>- Tham số stopAll xác định việc nếu phần tử được thiết lập nhiều hiệu ứng chuyển động thì phương thức stop() sẽ chỉ dừng hiệu ứng chuyển động hiện tại hay là dừng hiệu ứng chuyển động hiện tại lẫn tất cả những hiệu ứng chuyển động còn lại.</p>
+<p>- Tham số stopAll có thể được xác định bởi một trong hai giá trị:</p>
+<ul style="list-style-type:circle">
+<li><i><u>true</u>:</i> dừng hiệu ứng chuyển động hiện tại lẫn tất cả những hiệu ứng chuyển động còn lại.</li>
+<li style="margin-top:6px"><i><u>false</u>:</i> chỉ dừng hiệu ứng chuyển động hiện tại.</li>
+</ul>
+<p>- <i><u>Lưu ý</u>:</i> Mặc định thì phương thức stop() chỉ dừng hiệu ứng chuyển động hiện tại, các hiệu ứng chuyển động còn lại vẫn được tiếp tục.</p>
+</td>
+    </tr>
+    <tr>
+        <td>goToEnd</td>
+        <td style="vertical-align:middle">Không bắt buộc</td>
+        <td><p>- Tham số goToEnd xác định việc khi hiệu ứng chuyển động hiện tại bị dừng lại thì giá trị thuộc tính của hiệu ứng chuyển động đó chỉ bằng ở điểm dừng lại hay được chuyển đến trạng thái cuối cùng.</p>
+<p>- Tham số goToEnd có thể được xác định bởi một trong hai giá trị:</p>
+<ul style="list-style-type:circle">
+<li><i><u>true</u>:</i> giá trị thuộc tính được chuyển đến trạng thái cuối cùng.</li>
+<li style="margin-top:6px"><i><u>false</u>:</i> giá trị thuộc tính chỉ bằng ở điểm dừng lại.</li>
+</ul>
+<p>- <i><u>Lưu ý</u>:</i> Mặc định, khi hiệu ứng chuyển động hiện tại bị dừng lại thì giá trị thuộc tính của hiệu ứng chuyển động đó chỉ bằng điểm dừng lại.</p></td>
+    </tr>
+</table>
+<h2>3) Một số ví dụ</h2>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 1</div>
+    <div class="noithem"><p>- Khi bấm nút Start, phần tử sẽ có một hiệu ứng chuyển động là di chuyển sang bên phải.</p>
+<p>- Khi bấm nút Stop thì hiệu ứng chuyển động sẽ dừng lại.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;#start&quot;).click(function(){
+            $(&quot;.child&quot;).animate({left:&quot;400px&quot;},5000);
+        });
+        $(&quot;#stop&quot;).click(function(){
+            $(&quot;.child&quot;).stop();
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo9734.html?file=2782" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 2</div>
+    <div class="noithem"><p>- Khi bấm nút Start, phần tử sẽ có bốn hiệu ứng chuyển động:</p>
+<ul style="list-style-type:circle">
+<li>Di chuyển sang bên phải</li>
+<li style="margin-top:6px;margin-bottom:6px">Di chuyển xuống dưới</li>
+<li>Di chuyển về bên trái</li>
+<li style="margin-top:6px;">Di chuyển ngược lên trên</li>
+</ul>
+<p>- Khi bấm nút Stop thì hiệu ứng chuyển động hiện tại sẽ dừng lại, các hiệu ứng chuyển động còn lại sẽ tiếp tục được thực thi.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;#start&quot;).click(function(){
+            $(&quot;.child&quot;).animate({left:&quot;400px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;200px&quot;},3000);
+            $(&quot;.child&quot;).animate({left:&quot;0px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;0px&quot;},3000);
+        });
+        $(&quot;#stop&quot;).click(function(){
+            $(&quot;.child&quot;).stop();
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoaedd.html?file=2783" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 3</div>
+    <div class="noithem"><p>- Khi bấm nút Start, phần tử sẽ có bốn hiệu ứng chuyển động:</p>
+<ul style="list-style-type:circle">
+<li>Di chuyển sang bên phải</li>
+<li style="margin-top:6px;margin-bottom:6px">Di chuyển xuống dưới</li>
+<li>Di chuyển về bên trái</li>
+<li style="margin-top:6px;">Di chuyển ngược lên trên</li>
+</ul>
+<p>- Khi bấm nút Stop thì hiệu ứng chuyển động hiện tại lẫn các hiệu ứng còn lại sẽ bị dừng.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;#start&quot;).click(function(){
+            $(&quot;.child&quot;).animate({left:&quot;400px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;200px&quot;},3000);
+            $(&quot;.child&quot;).animate({left:&quot;0px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;0px&quot;},3000);
+        });
+        $(&quot;#stop&quot;).click(function(){
+            $(&quot;.child&quot;).stop(true);
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo7f07.html?file=2784" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 4</div>
+    <div class="noithem"><p>- Khi bấm nút Start, phần tử sẽ có bốn hiệu ứng chuyển động:</p>
+<ul style="list-style-type:circle">
+<li>Di chuyển sang bên phải</li>
+<li style="margin-top:6px;margin-bottom:6px">Di chuyển xuống dưới</li>
+<li>Di chuyển về bên trái</li>
+<li style="margin-top:6px;">Di chuyển ngược lên trên</li>
+</ul>
+<p>- Khi bấm nút Stop thì hiệu ứng chuyển động hiện tại sẽ dừng lại và giá trị thuộc tính của hiệu ứng chuyển động đó sẽ đạt đến trạng thái cuối cùng, các hiệu ứng chuyển động còn lại sẽ tiếp tục được thực thi.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;#start&quot;).click(function(){
+            $(&quot;.child&quot;).animate({left:&quot;400px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;200px&quot;},3000);
+            $(&quot;.child&quot;).animate({left:&quot;0px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;0px&quot;},3000);
+        });
+        $(&quot;#stop&quot;).click(function(){
+            $(&quot;.child&quot;).stop(false,true);
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo180f.html?file=2785" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 5</div>
+    <div class="noithem"><p>- Khi bấm nút Start, phần tử sẽ có bốn hiệu ứng chuyển động:</p>
+<ul style="list-style-type:circle">
+<li>Di chuyển sang bên phải</li>
+<li style="margin-top:6px;margin-bottom:6px">Di chuyển xuống dưới</li>
+<li>Di chuyển về bên trái</li>
+<li style="margin-top:6px;">Di chuyển ngược lên trên</li>
+</ul>
+<p>- Khi bấm nút Stop thì hiệu ứng chuyển động hiện tại lẫn các hiệu ứng còn lại sẽ bị dừng, giá trị thuộc tính của hiệu ứng chuyển động hiện tại sẽ đạt đến trạng thái cuối cùng.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;#start&quot;).click(function(){
+            $(&quot;.child&quot;).animate({left:&quot;400px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;200px&quot;},3000);
+            $(&quot;.child&quot;).animate({left:&quot;0px&quot;},3000);
+            $(&quot;.child&quot;).animate({top:&quot;0px&quot;},3000);
+        });
+        $(&quot;#stop&quot;).click(function(){
+            $(&quot;.child&quot;).stop(true,true);
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6f0c.html?file=2786" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/phuong-thuc-stop-trong-jquery-cach-dung-hieu-ung-chuyen-dong-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:07 GMT -->
+</html>

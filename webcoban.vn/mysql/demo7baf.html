@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+    
+<!-- Mirrored from webcoban.vn/mysql/demo?file=38 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:32 GMT -->
+<head>
+        <title>Xem ví dụ</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+        <link href="../home/image/favicon.png" rel="icon">
+        <style type="text/css">
+            body{
+                padding:0px;
+                margin:0px;
+            }
+            body > div{
+                position:fixed;
+                top:0px;
+                bottom:0px;
+                left:0px;
+                right:0px;
+                padding:15px;
+            }
+            textarea{
+                width:100%;
+                height:100%;
+                font-family:serif;
+                font-size:18px;
+                padding:20px;
+                box-sizing:border-box;
+                border:1px solid #ccc;
+            }
+        </style>
+    </head>
+<body>
+	<div><textarea spellcheck="false">CREATE TABLE khachhang(
+ID_khachhang VARCHAR(10),
+NAME_khachhang VARCHAR(255)
+);
+CREATE TABLE hoadon(
+ID_hoadon INT,
+ID_khachhang VARCHAR(10),
+DATE_hoadon date
+);
+INSERT INTO khachhang VALUES (&quot;Kh001&quot;,&quot;Khach Hang 001&quot;);
+INSERT INTO khachhang VALUES (&quot;Kh002&quot;,&quot;Khach Hang 002&quot;);
+INSERT INTO khachhang VALUES (&quot;Kh003&quot;,&quot;Khach Hang 003&quot;);
+INSERT INTO khachhang VALUES (&quot;Kh004&quot;,&quot;Khach Hang 004&quot;);
+INSERT INTO khachhang VALUES (&quot;Kh005&quot;,&quot;Khach Hang 005&quot;);
+INSERT INTO hoadon (ID_hoadon,ID_khachhang, DATE_hoadon) VALUES (101,&quot;Kh005&quot;,&quot;2015-03-03&quot;);
+INSERT INTO hoadon (ID_hoadon,ID_khachhang, DATE_hoadon) VALUES (102,&quot;Kh002&quot;,&quot;2015-07-09&quot;);
+INSERT INTO hoadon (ID_hoadon,ID_khachhang, DATE_hoadon) VALUES (103,&quot;Kh003&quot;,&quot;2015-10-12&quot;);</textarea></div>
+</body>
+
+<!-- Mirrored from webcoban.vn/mysql/demo?file=38 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:32 GMT -->
+</html>﻿

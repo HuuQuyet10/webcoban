@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3105 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:16 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:206px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:185px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+           width:300px;
+           height:100px;
+           border:<span id="layvitri1" style="color:red;font-size:20px">20px</span> solid transparent;
+           border-image-source:url(../image/pattern4.png);
+           border-image-slice:50 50 50 50;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Lập Trình Web&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;padding-left:15px;">
+                <p style="margin-top:15px"><input type="radio" name="border_width" value="20px" checked> 20px</p>
+                <p><input type="radio" name="border_width" value="50px"> 50px</p>
+                <p><input type="radio" name="border_width" value="80px"> 80px</p>
+                <p><input type="radio" name="border_width" value="120px"> 120px</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='width:300px;height:100px;border:20px solid transparent;border-image-source:url(../image/pattern4.png);border-image-slice:50 50 50 50;'><h1>Lập Trình Web</h1></div>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='border_width']").change(function(){
+            	var border_width = $(this).val();
+            	var text = "<div style='width:300px;height:100px;border:"+border_width+" solid transparent;border-image-source:url(../image/pattern4.png);border-image-slice:50 50 50 50;'><h1>Lập Trình Web</h1></div>";
+         	    $("#layvitri1").html(border_width);
+        		view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3105 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:16 GMT -->
+</html>﻿

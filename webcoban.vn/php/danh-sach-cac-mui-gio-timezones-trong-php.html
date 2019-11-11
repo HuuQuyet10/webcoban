@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/danh-sach-cac-mui-gio-timezones-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:27 GMT -->
+<head>
+<title>Danh sách các múi giờ (time zone) trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="danh sách các múi giờ (time zone) trong php">
+<meta name="description" content="Trong bài viết này, tôi đã tổng hợp danh sách tất cả các múi giờ (time zone) được hỗ trợ trong PHP để tiện cho các bạn tham khảo">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" class='active'>- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Danh sách các múi giờ (time zone) trong PHP">Danh sách các múi giờ (time zone) trong PHP</h1>
+<div class="breadcrumb">
+<a href="cac-ham-toan-hoc-math-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Múi giờ (time zone) thường được sử dụng trong các hàm xử lý ngày tháng &amp; thời gian.</p>
+<p>- Dưới đây là danh sách tất cả các múi giờ được hỗ trợ trong PHP.</p>
+<h3>1) Africa</h3>
+<table class="table table-bordered">
+<tr>
+<td>Africa/Abidjan</td>
+<td>Africa/Accra</td>
+<td>Africa/Addis_Ababa</td>
+<td>Africa/Algiers</td>
+</tr>
+</tr>
+<td>Africa/Asmara</td>
+<td>Africa/Asmera</td>
+<td>Africa/Bamako</td>
+<td>Africa/Bangui</td>
+</tr>
+</tr>
+<td>Africa/Banjul</td>
+<td>Africa/Bissau</td>
+<td>Africa/Blantyre</td>
+<td>Africa/Brazzaville</td>
+</tr>
+</tr>
+<td>Africa/Bujumbura</td>
+<td>Africa/Cairo</td>
+<td>Africa/Casablanca</td>
+<td>Africa/Ceuta</td>
+</tr>
+</tr>
+<td>Africa/Conakry</td>
+<td>Africa/Dakar</td>
+<td>Africa/Dar_es_Salaam</td>
+<td>Africa/Djibouti</td>
+</tr>
+</tr>
+<td>Africa/Douala</td>
+<td>Africa/El_Aaiun</td>
+<td>Africa/Freetown</td>
+<td>Africa/Gaborone</td>
+</tr>
+</tr>
+<td>Africa/Harare</td>
+<td>Africa/Johannesburg</td>
+<td>Africa/Juba</td>
+<td>Africa/Kampala</td>
+</tr>
+</tr>
+<td>Africa/Khartoum</td>
+<td>Africa/Kigali</td>
+<td>Africa/Kinshasa</td>
+<td>Africa/Lagos</td>
+</tr>
+</tr>
+<td>Africa/Libreville</td>
+<td>Africa/Lome</td>
+<td>Africa/Luanda</td>
+<td>Africa/Lubumbashi</td>
+</tr>
+</tr>
+<td>Africa/Lusaka</td>
+<td>Africa/Malabo</td>
+<td>Africa/Maputo</td>
+<td>Africa/Maseru</td>
+</tr>
+</tr>
+<td>Africa/Mbabane</td>
+<td>Africa/Mogadishu</td>
+<td>Africa/Monrovia</td>
+<td>Africa/Nairobi</td>
+</tr>
+</tr>
+<td>Africa/Ndjamena</td>
+<td>Africa/Niamey</td>
+<td>Africa/Nouakchott</td>
+<td>Africa/Ouagadougou</td>
+</tr>
+</tr>
+<td>Africa/Porto-Novo</td>
+<td>Africa/Sao_Tome</td>
+<td>Africa/Timbuktu</td>
+<td>Africa/Tripoli</td>
+</tr>
+</tr>
+<td>Africa/Tunis</td>
+<td>Africa/Windhoek</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<h3>2) America</h3>
+<table class="table table-bordered">
+<tr>
+<td>America/Adak</td>
+<td>America/Anchorage</td>
+</tr>
+<tr>
+<td>America/Anguilla</td>
+<td>America/Antigua</td>
+</tr>
+<tr>
+<td>America/Araguaina</td>
+<td>America/Argentina/Buenos_Aires</td>
+</tr>
+<tr>
+<td>America/Argentina/Catamarca</td>
+<td>America/Argentina/ComodRivadavia</td>
+</tr>
+<tr>
+<td>America/Argentina/Cordoba</td>
+<td>America/Argentina/Jujuy</td>
+</tr>
+<tr>
+<td>America/Argentina/La_Rioja</td>
+<td>America/Argentina/Mendoza</td>
+</tr>
+<tr>
+<td>America/Argentina/Rio_Gallegos</td>
+<td>America/Argentina/Salta</td>
+</tr>
+<tr>
+<td>America/Argentina/San_Juan</td>
+<td>America/Argentina/San_Luis</td>
+</tr>
+<tr>
+<td>America/Argentina/Tucuman</td>
+<td>America/Argentina/Ushuaia</td>
+</tr>
+<tr>
+<td>America/Aruba</td>
+<td>America/Asuncion</td>
+</tr>
+<tr>
+<td>America/Atikokan</td>
+<td>America/Atka</td>
+</tr>
+<tr>
+<td>America/Bahia</td>
+<td>America/Bahia_Banderas</td>
+</tr>
+<tr>
+<td>America/Barbados</td>
+<td>America/Belem</td>
+</tr>
+<tr>
+<td>America/Belize</td>
+<td>America/Blanc-Sablon</td>
+</tr>
+<tr>
+<td>America/Boa_Vista</td>
+<td>America/Bogota</td>
+</tr>
+<tr>
+<td>America/Boise</td>
+<td>America/Buenos_Aires</td>
+</tr>
+<tr>
+<td>America/Cambridge_Bay</td>
+<td>America/Campo_Grande</td>
+</tr>
+<tr>
+<td>America/Cancun</td>
+<td>America/Caracas</td>
+</tr>
+<tr>
+<td>America/Catamarca</td>
+<td>America/Cayenne</td>
+</tr>
+<tr>
+<td>America/Cayman</td>
+<td>America/Chicago</td>
+</tr>
+<tr>
+<td>America/Chihuahua</td>
+<td>America/Coral_Harbour</td>
+</tr>
+<tr>
+<td>America/Cordoba</td>
+<td>America/Costa_Rica</td>
+</tr>
+<tr>
+<td>America/Creston</td>
+<td>America/Cuiaba</td>
+</tr>
+<tr>
+<td>America/Curacao</td>
+<td>America/Danmarkshavn</td>
+</tr>
+<tr>
+<td>America/Dawson</td>
+<td>America/Dawson_Creek</td>
+</tr>
+<tr>
+<td>America/Denver</td>
+<td>America/Detroit</td>
+</tr>
+<tr>
+<td>America/Dominica</td>
+<td>America/Edmonton</td>
+</tr>
+<tr>
+<td>America/Eirunepe</td>
+<td>America/El_Salvador</td>
+</tr>
+<tr>
+<td>America/Ensenada</td>
+<td>America/Fort_Wayne</td>
+</tr>
+<tr>
+<td>America/Fortaleza</td>
+<td>America/Glace_Bay</td>
+</tr>
+<tr>
+<td>America/Godthab</td>
+<td>America/Goose_Bay</td>
+</tr>
+<tr>
+<td>America/Grand_Turk</td>
+<td>America/Grenada</td>
+</tr>
+<tr>
+<td>America/Guadeloupe</td>
+<td>America/Guatemala</td>
+</tr>
+<tr>
+<td>America/Guayaquil</td>
+<td>America/Guyana</td>
+</tr>
+<tr>
+<td>America/Halifax</td>
+<td>America/Havana</td>
+</tr>
+<tr>
+<td>America/Hermosillo</td>
+<td>America/Indiana/Indianapolis</td>
+</tr>
+<tr>
+<td>America/Indiana/Knox</td>
+<td>America/Indiana/Marengo</td>
+</tr>
+<tr>
+<td>America/Indiana/Petersburg</td>
+<td>America/Indiana/Tell_City</td>
+</tr>
+<tr>
+<td>America/Indiana/Vevay</td>
+<td>America/Indiana/Vincennes</td>
+</tr>
+<tr>
+<td>America/Indiana/Winamac</td>
+<td>America/Indianapolis</td>
+</tr>
+<tr>
+<td>America/Inuvik</td>
+<td>America/Iqaluit</td>
+</tr>
+<tr>
+<td>America/Jamaica</td>
+<td>America/Jujuy</td>
+</tr>
+<tr>
+<td>America/Juneau</td>
+<td>America/Kentucky/Louisville</td>
+</tr>
+<tr>
+<td>America/Kentucky/Monticello</td>
+<td>America/Knox_IN</td>
+</tr>
+<tr>
+<td>America/Kralendijk</td>
+<td>America/La_Paz</td>
+</tr>
+<tr>
+<td>America/Lima</td>
+<td>America/Los_Angeles</td>
+</tr>
+<tr>
+<td>America/Louisville</td>
+<td>America/Lower_Princes</td>
+</tr>
+<tr>
+<td>America/Maceio</td>
+<td>America/Managua</td>
+</tr>
+<tr>
+<td>America/Manaus</td>
+<td>America/Marigot</td>
+</tr>
+<tr>
+<td>America/Martinique</td>
+<td>America/Matamoros</td>
+</tr>
+<tr>
+<td>America/Mazatlan</td>
+<td>America/Mendoza</td>
+</tr>
+<tr>
+<td>America/Menominee</td>
+<td>America/Merida</td>
+</tr>
+<tr>
+<td>America/Metlakatla</td>
+<td>America/Mexico_City</td>
+</tr>
+<tr>
+<td>America/Miquelon</td>
+<td>America/Moncton</td>
+</tr>
+<tr>
+<td>America/Monterrey</td>
+<td>America/Montevideo</td>
+</tr>
+<tr>
+<td>America/Montreal</td>
+<td>America/Montserrat</td>
+</tr>
+<tr>
+<td>America/Nassau</td>
+<td>America/New_York</td>
+</tr>
+<tr>
+<td>America/Nipigon</td>
+<td>America/Nome</td>
+</tr>
+<tr>
+<td>America/Noronha</td>
+<td>America/North_Dakota/Beulah</td>
+</tr>
+<tr>
+<td>America/North_Dakota/Center</td>
+<td>America/North_Dakota/New_Salem</td>
+</tr>
+<tr>
+<td>America/Ojinaga</td>
+<td>America/Panama</td>
+</tr>
+<tr>
+<td>America/Pangnirtung</td>
+<td>America/Paramaribo</td>
+</tr>
+<tr>
+<td>America/Phoenix</td>
+<td>America/Port-au-Prince</td>
+</tr>
+<tr>
+<td>America/Port_of_Spain</td>
+<td>America/Porto_Acre</td>
+</tr>
+<tr>
+<td>America/Porto_Velho</td>
+<td>America/Puerto_Rico</td>
+</tr>
+<tr>
+<td>America/Rainy_River</td>
+<td>America/Rankin_Inlet</td>
+</tr>
+<tr>
+<td>America/Recife</td>
+<td>America/Regina</td>
+</tr>
+<tr>
+<td>America/Resolute</td>
+<td>America/Rio_Branco</td>
+</tr>
+<tr>
+<td>America/Rosario</td>
+<td>America/Santa_Isabel</td>
+</tr>
+<tr>
+<td>America/Santarem</td>
+<td>America/Santiago</td>
+</tr>
+<tr>
+<td>America/Santo_Domingo</td>
+<td>America/Sao_Paulo</td>
+</tr>
+<tr>
+<td>America/Scoresbysund</td>
+<td>America/Shiprock</td>
+</tr>
+<tr>
+<td>America/Sitka</td>
+<td>America/St_Barthelemy</td>
+</tr>
+<tr>
+<td>America/St_Johns</td>
+<td>America/St_Kitts</td>
+</tr>
+<tr>
+<td>America/St_Lucia</td>
+<td>America/St_Thomas</td>
+</tr>
+<tr>
+<td>America/St_Vincent</td>
+<td>America/Swift_Current</td>
+</tr>
+<tr>
+<td>America/Tegucigalpa</td>
+<td>America/Thule</td>
+</tr>
+<tr>
+<td>America/Thunder_Bay</td>
+<td>America/Tijuana</td>
+</tr>
+<tr>
+<td>America/Toronto</td>
+<td>America/Tortola</td>
+</tr>
+<tr>
+<td>America/Vancouver</td>
+<td>America/Virgin</td>
+</tr>
+<tr>
+<td>America/Whitehorse</td>
+<td>America/Winnipeg</td>
+</tr>
+<tr>
+<td>America/Yakutat</td>
+<td>America/Yellowknife</td>
+</tr>
+</table>
+<h3>3) Antarctica</h3>
+<table class="table table-bordered">
+<tr>
+<td>Antarctica/Casey</td>
+<td>Antarctica/Davis</td>
+<td>Antarctica/DumontDUrville</td>
+<td>Antarctica/Macquarie</td>
+</tr>
+<tr>
+<td>Antarctica/Mawson</td>
+<td>Antarctica/McMurdo</td>
+<td>Antarctica/Palmer</td>
+<td>Antarctica/Rothera</td>
+</tr>
+<tr>
+<td>Antarctica/South_Pole</td>
+<td>Antarctica/Syowa</td>
+<td>Antarctica/Vostok</td>
+<td></td>
+</tr>
+</table>
+<h3>4) Arctic</h3>
+<table class="table table-bordered">
+<tr>
+<td>Arctic/Longyearbyen</td>
+</tr>
+</table>
+<h3>5) Asia</h3>
+<table class="table table-bordered">
+<tr>
+<td>Asia/Aden</td>
+<td>Asia/Almaty</td>
+<td>Asia/Amman</td>
+<td>Asia/Anadyr</td>
+</tr>
+<tr>
+<td>Asia/Aqtau</td>
+<td>Asia/Aqtobe</td>
+<td>Asia/Ashgabat</td>
+<td>Asia/Ashkhabad</td>
+</tr>
+<tr>
+<td>Asia/Baghdad</td>
+<td>Asia/Bahrain</td>
+<td>Asia/Baku</td>
+<td>Asia/Bangkok</td>
+</tr>
+<tr>
+<td>Asia/Beirut</td>
+<td>Asia/Bishkek</td>
+<td>Asia/Brunei</td>
+<td>Asia/Calcutta</td>
+</tr>
+<tr>
+<td>Asia/Choibalsan</td>
+<td>Asia/Chongqing</td>
+<td>Asia/Chungking</td>
+<td>Asia/Colombo</td>
+</tr>
+<tr>
+<td>Asia/Dacca</td>
+<td>Asia/Damascus</td>
+<td>Asia/Dhaka</td>
+<td>Asia/Dili</td>
+</tr>
+<tr>
+<td>Asia/Dubai</td>
+<td>Asia/Dushanbe</td>
+<td>Asia/Gaza</td>
+<td>Asia/Harbin</td>
+</tr>
+<tr>
+<td>Asia/Hebron</td>
+<td>Asia/Ho_Chi_Minh</td>
+<td>Asia/Hong_Kong</td>
+<td>Asia/Hovd</td>
+</tr>
+<tr>
+<td>Asia/Irkutsk</td>
+<td>Asia/Istanbul</td>
+<td>Asia/Jakarta</td>
+<td>Asia/Jayapura</td>
+</tr>
+<tr>
+<td>Asia/Jerusalem</td>
+<td>Asia/Kabul</td>
+<td>Asia/Kamchatka</td>
+<td>Asia/Karachi</td>
+</tr>
+<tr>
+<td>Asia/Kashgar</td>
+<td>Asia/Kathmandu</td>
+<td>Asia/Katmandu</td>
+<td>Asia/Khandyga</td>
+</tr>
+<tr>
+<td>Asia/Kolkata</td>
+<td>Asia/Krasnoyarsk</td>
+<td>Asia/Kuala_Lumpur</td>
+<td>Asia/Kuching</td>
+</tr>
+<tr>
+<td>Asia/Kuwait</td>
+<td>Asia/Macao</td>
+<td>Asia/Macau</td>
+<td>Asia/Magadan</td>
+</tr>
+<tr>
+<td>Asia/Makassar</td>
+<td>Asia/Manila</td>
+<td>Asia/Muscat</td>
+<td>Asia/Nicosia</td>
+</tr>
+<tr>
+<td>Asia/Novokuznetsk</td>
+<td>Asia/Novosibirsk</td>
+<td>Asia/Omsk</td>
+<td>Asia/Oral</td>
+</tr>
+<tr>
+<td>Asia/Phnom_Penh</td>
+<td>Asia/Pontianak</td>
+<td>Asia/Pyongyang</td>
+<td>Asia/Qatar</td>
+</tr>
+<tr>
+<td>Asia/Qyzylorda</td>
+<td>Asia/Rangoon</td>
+<td>Asia/Riyadh</td>
+<td>Asia/Saigon</td>
+</tr>
+<tr>
+<td>Asia/Sakhalin</td>
+<td>Asia/Samarkand</td>
+<td>Asia/Seoul</td>
+<td>Asia/Shanghai</td>
+</tr>
+<tr>
+<td>Asia/Singapore</td>
+<td>Asia/Taipei</td>
+<td>Asia/Tashkent</td>
+<td>Asia/Tbilisi</td>
+</tr>
+<tr>
+<td>Asia/Tehran</td>
+<td>Asia/Tel_Aviv</td>
+<td>Asia/Thimbu</td>
+<td>Asia/Thimphu</td>
+</tr>
+<tr>
+<td>Asia/Tokyo</td>
+<td>Asia/Ujung_Pandang</td>
+<td>Asia/Ulaanbaatar</td>
+<td>Asia/Ulan_Bator</td>
+</tr>
+<tr>
+<td>Asia/Urumqi</td>
+<td>Asia/Ust-Nera</td>
+<td>Asia/Vientiane</td>
+<td>Asia/Vladivostok</td>
+</tr>
+<tr>
+<td>Asia/Yakutsk</td>
+<td>Asia/Yekaterinburg</td>
+<td>Asia/Yerevan</td>
+<td></td>
+</tr>
+</table>
+<h3>6) Atlantic</h3>
+<table class="table table-bordered">
+<tr>
+<td>Atlantic/Azores</td>
+<td>Atlantic/Bermuda</td>
+<td>Atlantic/Canary</td>
+<td>Atlantic/Cape_Verde</td>
+</tr>
+<tr>
+<td>Atlantic/Faeroe</td>
+<td>Atlantic/Faroe</td>
+<td>Atlantic/Jan_Mayen</td>
+<td>Atlantic/Madeira</td>
+</tr>
+<tr>
+<td>Atlantic/Reykjavik</td>
+<td>Atlantic/South_Georgia</td>
+<td>Atlantic/St_Helena</td>
+<td>Atlantic/Stanley</td>
+</tr>
+</table>
+<h3>7) Australia</h3>
+<table class="table table-bordered">
+<tr>
+<td>Australia/ACT</td>
+<td>Australia/Adelaide</td>
+<td>Australia/Brisbane</td>
+<td>Australia/Broken_Hill</td>
+</tr>
+<tr>
+<td>Australia/Canberra</td>
+<td>Australia/Currie</td>
+<td>Australia/Darwin</td>
+<td>Australia/Eucla</td>
+</tr>
+<tr>
+<td>Australia/Hobart</td>
+<td>Australia/LHI</td>
+<td>Australia/Lindeman</td>
+<td>Australia/Lord_Howe</td>
+</tr>
+<tr>
+<td>Australia/Melbourne</td>
+<td>Australia/North</td>
+<td>Australia/NSW</td>
+<td>Australia/Perth</td>
+</tr>
+<tr>
+<td>Australia/Queensland</td>
+<td>Australia/South</td>
+<td>Australia/Sydney</td>
+<td>Australia/Tasmania</td>
+</tr>
+<tr>
+<td>Australia/Victoria</td>
+<td>Australia/West</td>
+<td>Australia/Yancowinna</td>
+<td></td>
+</tr>
+</table>
+<h3>8) Europe</h3>
+<table class="table table-bordered">
+<tr>
+<td>Europe/Amsterdam</td>
+<td>Europe/Andorra</td>
+<td>Europe/Athens</td>
+<td>Europe/Belfast</td>
+</tr>
+<tr>
+<td>Europe/Belgrade</td>
+<td>Europe/Berlin</td>
+<td>Europe/Bratislava</td>
+<td>Europe/Brussels</td>
+</tr>
+<tr>
+<td>Europe/Bucharest</td>
+<td>Europe/Budapest</td>
+<td>Europe/Busingen</td>
+<td>Europe/Chisinau</td>
+</tr>
+<tr>
+<td>Europe/Copenhagen</td>
+<td>Europe/Dublin</td>
+<td>Europe/Gibraltar</td>
+<td>Europe/Guernsey</td>
+</tr>
+<tr>
+<td>Europe/Helsinki</td>
+<td>Europe/Isle_of_Man</td>
+<td>Europe/Istanbul</td>
+<td>Europe/Jersey</td>
+</tr>
+<tr>
+<td>Europe/Kaliningrad</td>
+<td>Europe/Kiev</td>
+<td>Europe/Lisbon</td>
+<td>Europe/Ljubljana</td>
+</tr>
+<tr>
+<td>Europe/London</td>
+<td>Europe/Luxembourg</td>
+<td>Europe/Madrid</td>
+<td>Europe/Malta</td>
+</tr>
+<tr>
+<td>Europe/Mariehamn</td>
+<td>Europe/Minsk</td>
+<td>Europe/Monaco</td>
+<td>Europe/Moscow</td>
+</tr>
+<tr>
+<td>Europe/Nicosia</td>
+<td>Europe/Oslo</td>
+<td>Europe/Paris</td>
+<td>Europe/Podgorica</td>
+</tr>
+<tr>
+<td>Europe/Prague</td>
+<td>Europe/Riga</td>
+<td>Europe/Rome</td>
+<td>Europe/Samara</td>
+</tr>
+<tr>
+<td>Europe/San_Marino</td>
+<td>Europe/Sarajevo</td>
+<td>Europe/Simferopol</td>
+<td>Europe/Skopje</td>
+</tr>
+<tr>
+<td>Europe/Sofia</td>
+<td>Europe/Stockholm</td>
+<td>Europe/Tallinn</td>
+<td>Europe/Tirane</td>
+</tr>
+<tr>
+<td>Europe/Tiraspol</td>
+<td>Europe/Uzhgorod</td>
+<td>Europe/Vaduz</td>
+<td>Europe/Vatican</td>
+</tr>
+<tr>
+<td>Europe/Vienna</td>
+<td>Europe/Vilnius</td>
+<td>Europe/Volgograd</td>
+<td>Europe/Warsaw</td>
+</tr>
+<tr>
+<td>Europe/Zagreb</td>
+<td>Europe/Zaporozhye</td>
+<td>Europe/Zurich</td>
+<td></td>
+</tr>
+</table>
+<h3>9) Indian</h3>
+<table class="table table-bordered">
+<tr>
+<td>Indian/Antananarivo</td>
+<td>Indian/Chagos</td>
+<td>Indian/Christmas</td>
+<td>Indian/Cocos</td>
+</tr>
+<tr>
+<td>Indian/Comoro</td>
+<td>Indian/Kerguelen</td>
+<td>Indian/Mahe</td>
+<td>Indian/Maldives</td>
+</tr>
+<tr>
+<td>Indian/Mauritius</td>
+<td>Indian/Mayotte</td>
+<td>Indian/Reunion</td>
+<td></td>
+</tr>
+</table>
+<h3>10) Pacific</h3>
+<table class="table table-bordered">
+<tr>
+<td>Pacific/Apia</td>
+<td>Pacific/Auckland</td>
+<td>Pacific/Chatham</td>
+<td>Pacific/Chuuk</td>
+</tr>
+<tr>
+<td>Pacific/Easter</td>
+<td>Pacific/Efate</td>
+<td>Pacific/Enderbury</td>
+<td>Pacific/Fakaofo</td>
+</tr>
+<tr>
+<td>Pacific/Fiji</td>
+<td>Pacific/Funafuti</td>
+<td>Pacific/Galapagos</td>
+<td>Pacific/Gambier</td>
+</tr>
+<tr>
+<td>Pacific/Guadalcanal</td>
+<td>Pacific/Guam</td>
+<td>Pacific/Honolulu</td>
+<td>Pacific/Johnston</td>
+</tr>
+<tr>
+<td>Pacific/Kiritimati</td>
+<td>Pacific/Kosrae</td>
+<td>Pacific/Kwajalein</td>
+<td>Pacific/Majuro</td>
+</tr>
+<tr>
+<td>Pacific/Marquesas</td>
+<td>Pacific/Midway</td>
+<td>Pacific/Nauru</td>
+<td>Pacific/Niue</td>
+</tr>
+<tr>
+<td>Pacific/Norfolk</td>
+<td>Pacific/Noumea</td>
+<td>Pacific/Pago_Pago</td>
+<td>Pacific/Palau</td>
+</tr>
+<tr>
+<td>Pacific/Pitcairn</td>
+<td>Pacific/Pohnpei</td>
+<td>Pacific/Ponape</td>
+<td>Pacific/Port_Moresby</td>
+</tr>
+<tr>
+<td>Pacific/Rarotonga</td>
+<td>Pacific/Saipan</td>
+<td>Pacific/Samoa</td>
+<td>Pacific/Tahiti</td>
+</tr>
+<tr>
+<td>Pacific/Tarawa</td>
+<td>Pacific/Tongatapu</td>
+<td>Pacific/Truk</td>
+<td>Pacific/Wake</td>
+</tr>
+<tr>
+<td>Pacific/Wallis</td>
+<td>Pacific/Yap</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<style>
+.table-bordered td{padding:12px 8px !important;}
+</style><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-ham-toan-hoc-math-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/danh-sach-cac-mui-gio-timezones-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:27 GMT -->
+</html>

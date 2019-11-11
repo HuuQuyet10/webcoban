@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:01 GMT -->
+<head>
+<title>Cách định dạng cho một phần tử HTML bằng CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Cách định dạng cho một phần tử HTML bằng CSS">
+<meta name="description" content="Khi mới học CSS thì các bạn thường thắc mắc là làm thế nào để định dạng cho một phần tử. Cho nên trong bài học này, tôi sẽ hướng dẫn các bạn cách sử dụng CSS để định dạng cho một phần tử HTML trên trang web">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.5323.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" class='active'>- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách định dạng cho một phần tử HTML bằng CSS">Làm thế nào để định dạng cho một phần tử !?</h1>
+<div class="breadcrumb">
+<a href="default.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div class="i-note-style-1 i-note-1">
+<p>- Hiện nay có ba phương pháp sử dụng CSS để định dạng cho một phần tử trên trang web.</p>
+<ul>
+<li>Phương pháp 1: Inline CSS</li>
+<li>Phương pháp 2: Internal CSS</li>
+<li>Phương pháp 3: External CSS</li>
+</ul>
+<p>- Ba phương pháp này có cách sử dụng khác nhau, nhưng khi áp dụng để định dạng cho phần tử thì chúng đều có chung một nguyên lý hoạt động:</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td>
+<ul>
+<li>(1) Trước tiên là chọn phần tử là mình muốn định dạng.</li>
+<li>(2) Kế đến là thiết lập lại giá trị cho các thuộc tính CSS của phần tử đó.</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<p>- Tuy nhiên, trước khi đi vào tìm hiểu chi tiết cách sử dụng của ba phương pháp trên thì các bạn cần phải hiểu rõ năm khái niệm bên dưới:</p>
+<table class="table table-bordered sss-table-2">
+<tr>
+<td>Bộ chọn</td>
+<td>
+<p>- Bộ chọn (selector) dùng để xác định phần tử mà các bạn muốn định dạng.</p>
+<p>- Ví dụ, tôi có một đoạn mã như bên dưới:</p>
+<pre class="i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+   &lt;p id=&quot;part1&quot;&gt;Tài liệu học HTML&lt;/p&gt;
+   &lt;p class=&quot;part2&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+   &lt;div&gt;Tài liệu học JavaScript&lt;/div&gt;
+   &lt;div&gt;Tài liệu học MySQL&lt;/div&gt;
+   &lt;div&gt;Tài liệu học PHP&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<ul>
+<li>Để chọn phần tử có thuộc tính id với giá trị part1 thì bộ chọn là <span class="mark2">#part1</span></li>
+<li>Để chọn phần tử có thuộc tính class với giá trị part2 thì bộ chọn là <span class="mark2">.part2</span></li>
+<li>Để chọn tất cả các phần tử &lt;div&gt; thì bộ chọn là <span class="mark2">div</span></li>
+</ul>
+<div class="i-note-style-2 i-note-5 i-note-6">
+<span class="fa fa-warning fa-lg"></span>
+<p>- Trong phần này tôi chỉ giới thiệu sơ qua khái niệm &quot;bộ chọn&quot;, còn về cách xác định bộ chọn, cách viết như thế nào thì chúng ta sẽ được tìm hiểu chi tiết hơn trong các bài hướng dẫn tiếp theo.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>Thuộc tính</td>
+<td>
+<p>- Thuộc tính (property) là một đặc tính vốn có của phần tử, chẳng hạn như: chiều rộng, chiều cao, kích cỡ chữ, màu chữ, . . . .</p>
+<p>- Mỗi thuộc tính sẽ được đại diện bởi một từ khóa bằng tiếng anh, ví dụ:</p>
+<ul>
+<li>Thuộc tính <u>chiều rộng</u> được viết là width.</li>
+<li>Thuộc tính <u>chiều cao</u> được viết là height.</li>
+<li>Thuộc tính <u>kích cỡ chữ</u> được viết là font-size.</li>
+<li>Thuộc tính <u>màu chữ</u> được viết là color.</li>
+</ul>
+<div class="i-note-style-2 i-note-5 i-note-6">
+<span class="fa fa-warning fa-lg"></span>
+<p>- <u>Lưu ý</u>: Thuộc tính HTML &amp; Thuộc tính CSS là hai thứ riêng biệt, một số thuộc tính của chúng có thể sở hữu tên giống nhau, nhưng cách sử dụng thì lại hoàn toàn khác nhau.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>Giá trị</td>
+<td><p>- Mỗi thuộc tính CSS của phần tử thường nhận một giá trị (value), với giá trị khác nhau thì đặc tính thể hiện ra sẽ khác nhau.</p>
+<p>- Ví dụ, khi nói về thuộc tính color:</p>
+<ul>
+<li>Nếu phần tử nhận giá trị red thì văn bản sẽ có màu đỏ.</li>
+<li>Nếu phần tử nhận giá trị green thì văn bản sẽ có màu xanh.</li>
+<li>Nếu phần tử nhận giá trị yellow thì văn bản sẽ có màu vàng.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>Khai báo</td>
+<td><p>- Cứ mỗi một cặp <span class="mark2">property:value</span> thì được gọi là một khái báo, một khai báo được dùng để thiết lập lại giá trị của một thuộc tính CSS của phần tử.</p>
+<p>- Ví dụ, nếu tôi viết <span class="mark2">color:yellow</span> thì điều đó có nghĩa là tôi muốn thiết lập lại cho phần tử thuộc tính color với giá trị là yellow.</p>
+</td>
+</tr>
+<tr>
+<td>Bộ định dạng</td>
+<td>
+<p>- Bộ định dạng là một tập hợp gồm nhiều khai báo, nó dùng để thiết lập lại giá trị cho các thuộc tính CSS của phần tử.</p>
+<p>- Một bộ định dạng thường có cấu trúc cơ bản như sau:</p>
+<div class="i-pre-not-color i-form-2">selector{
+    property:value;
+    property:value;
+    property:value;
+    ....
+}</div>
+<p>- Ví dụ, bộ định dạng bên dưới dùng để thiết lập lại giá trị cho thuộc tính font-size và thuộc tính color của các phần tử &lt;h1&gt;.</p>
+<div class="i-pre-not-color i-form-2">h1{
+    font-size:50px;
+    color:red;
+}</div>
+</td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>1) Cách định dạng cho phần tử bằng phương pháp Inline CSS</h2>
+<p>- Đối với phương pháp Inline CSS, khi chúng ta muốn định dạng cho một phần tử HTML nào đó thì chúng ta chỉ cần viết các <u>khai báo</u> vào bên trong giá trị của thuộc tính style, sau đó đặt thuộc tính style vào bên trong thẻ mở của phần tử mà mình muốn định dạng.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more"><p>- Tôi thiết lập đoạn văn bản &quot;Tài liệu học CSS&quot; có kích cỡ chữ là 50 pixel</p></div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+   &lt;p&gt;Tài liệu học HTML&lt;/p&gt;
+   &lt;p style=&quot;font-size:50px&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+   &lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="democae8.html?file=3205" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Nếu giá trị của thuộc tính style chứa nhiều khai báo thì chúng ta cần phải thêm một dấu chấm phẩy nằm giữa các khai báo.</p>
+<div class="i-form-demo i-form-5 s3isf">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+   &lt;p&gt;Tài liệu học HTML&lt;/p&gt;
+   &lt;p style=&quot;font-size:50px;color:red;font-weight:bold&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+   &lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo6eb1.html?file=3206" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Cách định dạng cho phần tử bằng phương pháp Internal CSS</h2>
+<p>- Đối với phương pháp Internal CSS, khi chúng ta muốn định dạng cho một phần tử HTML nào đó thì chúng ta viết bộ định dạng của phần tử đó vào bên trong phần tử &lt;style&gt;.</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><p>- <u>Lưu ý</u>: Phần tử &lt;style&gt; có thể được đặt ở bất kỳ vị trí nào bên trong trang web, tuy nhiên nơi phù hợp nhất chính là nằm bên trong phần tử &lt;head&gt;.</p></td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .part2{
+            font-size:50px;
+            color:red;
+            font-weight:bold;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p id=&quot;part1&quot;&gt;Tài liệu học HTML&lt;/p&gt;
+   &lt;p class=&quot;part2&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+   &lt;div&gt;Tài liệu học JavaScript&lt;/div&gt;
+   &lt;div&gt;Tài liệu học MySQL&lt;/div&gt;
+   &lt;div&gt;Tài liệu học PHP&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo78a3.html?file=3207" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Phần tử &lt;style&gt; có thể chứa một hoặc nhiều bộ định dạng, hay nói cách khác là không giới hạn số lượng bộ định dạng nằm bên trong phần tử &lt;style&gt;.</p>
+<div class="i-form-demo i-form-5 sss-element-1">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .part2{
+            font-size:50px;
+            color:red;
+            font-weight:bold;
+        }
+        #part1{
+            font-size:30px;
+            color:green;
+        }
+        div{
+            color:blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p id=&quot;part1&quot;&gt;Tài liệu học HTML&lt;/p&gt;
+   &lt;p class=&quot;part2&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+   &lt;div&gt;Tài liệu học JavaScript&lt;/div&gt;
+   &lt;div&gt;Tài liệu học MySQL&lt;/div&gt;
+   &lt;div&gt;Tài liệu học PHP&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demof96e.html?file=3208" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách định dạng cho phần tử bằng phương pháp External CSS</h2>
+<p>- Đối với phương pháp External CSS, khi chúng ta muốn định dạng cho một phần tử HTML nào đó thì trước tiên chúng ta cần phải viết bộ định dạng của phần tử đó vào bên trong một tập tin CSS, kế đến là sử dụng thẻ &lt;link&gt; để nhúng tập tin CSS đó vào trang web chứa phần tử mà các bạn muốn định dạng.</p>
+<p>- Cú pháp như sau:</p>
+<pre class="i-form-2">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;đường dẫn đến tập tin CSS&quot;&gt;</pre>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một cây thư mục:</p>
+<div class="rio9s">
+<div><span class="fa fa-file-o"></span> laptrinhweb.html</div>
+<div><span class="fa fa-folder-open-o fa-lg"></span> file</div>
+<div><span class="fa fa-file-o"></span> dinhdangvanban.css</div>
+</div>
+<p>- Bên dưới là nội dung của tập tin dinhdangvanban.css</p>
+<pre class="i-form-1">.css{
+    font-size:40px;
+    color:green;
+    font-family:cursive;
+}
+.js{
+    font-size:25px;
+    color:red;
+    font-family:monospace;
+}</pre>
+<p>- Bên dưới là nội dung của tập tin laptrinhweb.html</p>
+<pre class="i-form-1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;file/dinhdangvanban.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;html&quot;&gt;Tài liệu học HTML&lt;/p&gt;
+    &lt;p class=&quot;css&quot;&gt;Tài liệu học CSS&lt;/p&gt;
+    &lt;p class=&quot;js&quot;&gt;Tài liệu học JavaScript&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Khi thực thi tập tin laptrinhweb.html thì màn hình trình duyệt sẽ hiển thị là:</p>
+<div class="sjjn3iksn2"></div>
+</div>
+<p>- <u>Lưu ý</u>:</p>
+<ul>
+<li>Bên trong một tập tin CSS có thể chứa nhiều bộ định dạng.</li>
+<li>Cách tạo một tập tin CSS cũng tương tự như <a href="../html/cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" target="_blank" style="color:blue">cách tạo một tập tin HTML</a>, chỉ khác ở chỗ là thay vì phần đuôi <span class="mark2">.html</span> thì bây giờ sửa lại thành <span class="mark2">.css</span></li>
+</ul>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Mức độ ưu tiên giữa các phương pháp sử dụng CSS</h2>
+<p>- Nếu một thuộc tính CSS nào đó của phần tử được thiết lập giá trị bởi nhiều phương pháp khác nhau thì thuộc tính đó sẽ nhận giá trị của phương pháp có mức độ ưu tiên cao nhất.</p>
+<p>- Dưới đây là bảng xếp hạng mức độ ưu tiên giữa các phương pháp:</p>
+<table class="table table-bordered cjd8k">
+<tr>
+<th>Mức độ</th>
+<th>Tên phương pháp</th>
+<th>Giải thích</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Inline CSS</td>
+<td><p>- Phương pháp Inline CSS có độ ưu tiên cao nhất.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Internal CSS</td>
+<td rowspan="2"><p>- Phương pháp Internal CSS &amp; External CSS có cùng một mức độ ưu tiên (bọn chúng đều có độ ưu tiên thấp hơn Inline CSS)</p>
+<p>- Vì hai phương pháp này có cùng một mức độ ưu tiên, cho nên phương pháp nào được gọi đến sau cùng thì phương pháp đó sẽ có độ ưu tiên cao hơn.</p></td>
+</tr>
+<tr>
+<td>2</td>
+<td>External CSS</td>
+</tr>
+</table>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một cây thư mục:</p>
+<div class="rio9s">
+<div><span class="fa fa-file-o"></span> laptrinhweb.html</div>
+<div><span class="fa fa-folder-open-o fa-lg"></span> file</div>
+<div><span class="fa fa-file-o"></span> dinhdangvanban.css</div>
+</div>
+<p>- Bên dưới là nội dung của tập tin dinhdangvanban.css</p>
+<pre class="i-form-1">h1{
+    color:blue;
+}</pre>
+<p>- Bên dưới là nội dung của tập tin laptrinhweb.html</p>
+<pre class="i-form-1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;file/dinhdangvanban.css&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        h1{
+            color:red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1 style=&quot;color:green&quot;&gt;Tài liệu học CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Như chúng ta đã thấy, giá trị thuộc tính color của phần tử &lt;h1&gt; được thiết lập bởi ba phương pháp sử dụng CSS. Trong đó, phương pháp Inline CSS có độ ưu tiên cao nhất, cho nên thuộc tính color của phần tử &lt;h1&gt; sẽ nhận giá trị là green.</p>
+<div class="jdxk3n9sl"></div>
+<p>- Nếu loại bỏ phương pháp Inline CSS thì thuộc tính color của phần tử &lt;h1&gt; sẽ nhận giá trị red, bởi vì phương pháp Internal CSS được gọi đến sau phương pháp External CSS.</p>
+<div class="jdxk3n9sl2"></div>
+</div>
+<p>- <u>Lưu ý</u>: Một thuộc tính CSS chỉ có thể nhận giá trị của một phương pháp sử dụng CSS. Tuy nhiên, nếu các phương pháp đó thiết lập giá trị cho các thuộc tính khác nhau thì chúng vẫn được chấp nhận.</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một cây thư mục:</p>
+<div class="rio9s">
+<div><span class="fa fa-file-o"></span> laptrinhweb.html</div>
+<div><span class="fa fa-folder-open-o fa-lg"></span> file</div>
+<div><span class="fa fa-file-o"></span> dinhdangvanban.css</div>
+</div>
+<p>- Bên dưới là nội dung của tập tin dinhdangvanban.css</p>
+<pre class="i-form-1">h1{
+    color:blue;
+    font-size:20px;
+    text-decoration:underline;
+}</pre>
+<p>- Bên dưới là nội dung của tập tin laptrinhweb.html</p>
+<pre class="i-form-1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;file/dinhdangvanban.css&quot;&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        h1{
+            color:red;
+            font-size:50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1 style=&quot;color:green&quot;&gt;Tài liệu học CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Qua đoạn mã trên, chúng ta thấy:</p>
+<ul>
+<li>Đối với thuộc tính color, phương pháp <span class="mark2">Inline CSS</span> có độ ưu tiên cao nhất, cho nên nó sẽ nhận giá trị là green.</li>
+<li>Đối với thuộc tính font-size, phương pháp <span class="mark2">Internal CSS</span> có độ ưu tiên cao hơn <span class="mark2">External CSS</span>, cho nên nó sẽ nhận giá trị là 50px.</li>
+<li>Đối với thuộc tính text-decoration, do chỉ có mỗi phương pháp <span class="mark2">External CSS</span> thiết lập, cho nên nó sẽ nhận giá trị là underline.</li>
+</ul>
+<div class="jdxk3n9sl3"></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="default.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.8903.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:05 GMT -->
+</html>

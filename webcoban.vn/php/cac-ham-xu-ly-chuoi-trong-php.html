@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/cac-ham-xu-ly-chuoi-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:10 GMT -->
+<head>
+<title>Danh sách các hàm dùng để xử lý chuỗi trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="danh sách các hàm dùng để xử lý chuỗi trong PHP">
+<meta name="description" content="Bài viết này tổng hợp một danh sách chứa tất cả các hàm dùng để xử lý, định dạng chuỗi (string) trong PHP">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" class='active'>- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Danh sách các hàm dùng để xử lý chuỗi trong PHP">Danh sách các hàm dùng để xử lý chuỗi trong PHP</h1>
+<div class="breadcrumb">
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<table class="table table-bordered juei1">
+<tr>
+<td><a href="ham-addcslashes-trong-php.html" target="_blank">addcslashes()</a></td>
+<td><p>- Thêm dấu gạch chéo ngược (\) phía trước các ký tự chỉ định.</p></td>
+</tr>
+<tr>
+<td><a href="ham-addslashes-trong-php.html" target="_blank">addslashes()</a></td>
+<td><p>- Thêm dấu gạch chéo ngược (\) phía trước các ký tự là dấu nháy đơn, dấu nháy kép, dấu gạch chéo ngược.</p></td>
+</tr>
+<tr>
+<td><a href="ham-bin2hex-trong-php.html" target="_blank">bin2hex()</a></td>
+<td><p>- Chuyển một chuỗi ký tự ASCII sang giá trị thập lục phân.</p></td>
+</tr>
+<tr>
+<td><a href="ham-chop-trong-php.html" target="_blank">chop()</a></td>
+<td><p>- Chức năng &amp; cách sử dụng giống với hàm rtrim().</p></td>
+</tr>
+<tr>
+<td><a href="ham-chr-trong-php.html" target="_blank">chr()</a></td>
+<td><p>- Trả về ký tự từ một giá trị ASCII chỉ định.</p></td>
+</tr>
+<tr>
+<td><a href="ham-chunk-split-trong-php.html" target="_blank">chunk_split()</a></td>
+<td><p>- Chia chuỗi thành một loạt các phần nhỏ hơn.</p></td>
+</tr>
+<tr>
+<td>convert_cyr_string()</td>
+<td><p>- Chuyển đổi chuỗi từ một bộ ký tự Cyrillic sang một bộ khác.</p></td>
+</tr>
+<tr>
+<td><a href="ham-convert-uudecode-trong-php.html" target="_blank">convert_uudecode()</a></td>
+<td><p>- Giải mã một chuỗi bị mã hóa bởi thuật toán uuencode.</p></td>
+</tr>
+<tr>
+<td><a href="ham-convert-uuencode-trong-php.html" target="_blank">convert_uuencode()</a></td>
+<td><p>- Mã hóa một chuỗi bằng thuật toán uuencode.</p></td>
+</tr>
+<tr>
+<td>count_chars()</td>
+<td><p>- Trả về thông tin các ký tự được sử dụng bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>echo()</td>
+<td><p>- Xuất ra một hoặc nhiều chuỗi.</p></td>
+</tr>
+<tr>
+<td><a href="ham-explode-trong-php-tach-chuoi-ra-thanh-mot-mang.html" target="_blank">explode</a></td>
+<td><p>- Tách chuỗi thành một mảng.</p></td>
+</tr>
+<tr>
+<td>fprintf()</td>
+<td><p>- Ghi một chuỗi đã được định dạng vào bên trong một đầu ra chỉ định.</p></td>
+</tr>
+<tr>
+<td>get_html_translation_table()</td>
+<td><p>- Trả về một mảng chứa các thông tin chuyển đổi ký tự thực thể được sử dụng bởi hàm htmlentities() và htmlspecialchars()</p></td>
+</tr>
+<tr>
+<td>hex2bin()</td>
+<td><p>- Chuyển đổi một chuỗi giá trị thập lục phân thành các ký tự ASCII.</p></td>
+</tr>
+<tr>
+<td>html_entity_decode()</td>
+<td><p>- Chuyển đổi các ký tự thực thể  HTML thành ký tự.</p></td>
+</tr>
+<tr>
+<td>htmlentities()</td>
+<td><p>- Chuyển đổi các ký tự thành ký tự thực thể HTML.</p></td>
+</tr>
+<tr>
+<td>htmlspecialchars_decode()</td>
+<td><p>- Chuyển đổi các ký tự thực thể HTML của dấu nháy kép (&quot), nháy đơn ('), nhỏ hơn (&lt), lớn hơn (&gt;), dấu và (&amp;) thành các ký tự &quot, ', &lt;, &gt;, &amp;</p></td>
+</tr>
+<tr>
+<td>htmlspecialchars()</td>
+<td><p>- Chuyển đổi các ký tự nháy kép (&quot), nháy đơn ('), nhỏ hơn (&lt), lớn hơn (&gt;), dấu và (&amp;) thành ký tự thực thể HTML.</p></td>
+</tr>
+<tr>
+<td>implode()</td>
+<td><p>- Trả về một chuỗi được ghép lại từ các phần tử mảng.</p></td>
+</tr>
+<tr>
+<td>join()</td>
+<td><p>- Chức năng &amp; cách sử dụng giống với hàm implode().</p></td>
+</tr>
+<tr>
+<td>lcfirst()</td>
+<td><p>- Chuyển đổi ký tự đầu tiên bên trong chuỗi sang dạng chữ thường.</p></td>
+</tr>
+<tr>
+<td>levenshtein()</td>
+<td><p>- Trả về khoảng cách Levenshtein giữa hai chuỗi.</p></td>
+</tr>
+<tr>
+<td>localeconv()</td>
+<td><p>- Trả về một mảng chứa các thông tin định dạng dãy số &amp; tiền tệ của một địa phương (quốc gia)</p></td>
+</tr>
+<tr>
+<td><a href="ham-ltrim-trong-php.html" target="_blank">ltrim()</a></td>
+<td><p>- Xóa khỏi vị trí <u>đầu chuỗi</u> những ký tự là dấu khoảng trắng hoặc trùng với một trong số các ký tự trong danh sách chi định.</p></td>
+</tr>
+<tr>
+<td>md5()</td>
+<td><p>- Băm một chuỗi bằng thuật toán tiêu hóa thông tin 5 (MD5)</p></td>
+</tr>
+<tr>
+<td>md5_file()</td>
+<td><p>- Băm một tập tin bằng thuật toán tiêu hóa thông tin 5 (MD5)</p></td>
+</tr>
+<tr>
+<td>money_format()</td>
+<td><p>- Định dạng một dãy số theo kiểu tiền tệ.</p></td>
+</tr>
+<tr>
+<td>nl2br()</td>
+<td><p>- Thay thế các ký tự newline (\n) bên trong chuỗi thành &lt;br&gt; hoặc &lt;br/&gt;</p></td>
+</tr>
+<tr>
+<td>number_format()</td>
+<td><p>- Định dạng chuỗi số với các nhóm đơn vị hàng nghìn.</p></td>
+</tr>
+<tr>
+<td>ord()</td>
+<td><p>- Trả về giá trị ASCII của ký tự đầu tiên bên trong chuỗi. </p></td>
+</tr>
+<tr>
+<td>parse_str()</td>
+<td><p>- Phân tích một chuỗi truy vấn thành các biến.</p></td>
+</tr>
+<tr>
+<td>print()</td>
+<td><p>- Xuất ra một hoặc nhiều chuỗi.</p></td>
+</tr>
+<tr>
+<td>printf()</td>
+<td><p>- Xuất ra một chuỗi được định dạng.</p></td>
+</tr>
+<tr>
+<td>quotemeta()</td>
+<td><p>- Thêm một dấu gạch chéo ngược phía trước các ký tự meta.</p></td>
+</tr>
+<tr>
+<td><a href="ham-rtrim-trong-php.html" target="_blank">rtrim()</a></td>
+<td><p>- Xóa khỏi vị trí <u>cuối chuỗi</u> những ký tự là dấu khoảng trắng hoặc trùng với một trong số các ký tự trong danh sách chi định.</p></td>
+</tr>
+<tr>
+<td>setlocale()</td>
+<td><p>- Thiết lập thông tin địa phương (quốc gia)</p></td>
+</tr>
+<tr>
+<td>sha1()</td>
+<td><p>- Băm một chuỗi bằng thuật toán băm an toàn 1 (SHA-1)</p></td>
+</tr>
+<tr>
+<td>sha1_file()</td>
+<td><p>- Băm một tập tin bằng thuật toán băm an toàn 1 (SHA-1)</p></td>
+</tr>
+<tr>
+<td>similar_text()</td>
+<td><p>- Trả về mức độ tương đồng giữa hai chuỗi.</p></td>
+</tr>
+<tr>
+<td>sprintf()</td>
+<td><p>- Ghi một chuỗi đã được định dạng vào biến.</p></td>
+</tr>
+<tr>
+<td>str_ireplace()</td>
+<td><p>- Thay thế một số ký tự (không phân biệt chữ hoa &amp; chữ thường) trong chuỗi bằng một số ký tự khác.</p></td>
+</tr>
+<tr>
+<td>str_pad()</td>
+<td><p>- Đệm thêm ký tự vào chuỗi (đến một độ dài mới được chỉ định)</p></td>
+</tr>
+<tr>
+<td>str_repeat()</td>
+<td><p>- Lặp lại một chuỗi với số lần chỉ định.</p></td>
+</tr>
+<tr>
+<td>str_replace()</td>
+<td><p>- Thay thế một số ký tự (có phân biệt chữ hoa &amp; chữ thường) bên trong chuỗi bằng một số ký tự khác.</p>
+</tr>
+<tr>
+<td>str_rot13()</td>
+<td><p>- Thực hiện mã hóa ROT13 trên một chuỗi.</p></td>
+</tr>
+<tr>
+<td>str_shuffle()</td>
+<td><p>- Xáo trộn ngẫu nhiên thứ tự các ký tự bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>str_split()</td>
+<td><p>- Tách chuỗi thành một mảng.</p></td>
+</tr>
+<tr>
+<td>str_word_count()</td>
+<td><p>- Đếm số lượng từ (word) bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>strcasecmp()</td>
+<td><p>- So sánh hai chuỗi (không phân biệt trường hợp chữ hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strchr()</td>
+<td><p>- Chức năng &amp; cách sử dụng giống với hàm strstr().</p></td>
+</tr>
+<tr>
+<td>strcmp()</td>
+<td><p>- So sánh hai chuỗi (có phân biệt trường hợp chữ hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strcspn()</td>
+<td style="padding-right:0px"><p>- Trả về số lượng ký tự nằm phía trước ký tự đầu tiên trùng khớp với một trong số các ký tự  chỉ định.</p></td>
+</tr>
+<tr>
+<td>strip_tags()</td>
+<td><p>- Loại bỏ các thẻ HTML, XML, PHP ra khỏi chuỗi.</p></td>
+</tr>
+<tr>
+<td>stripcslashes()</td>
+<td><p>- Loại bỏ các dấu gạch chéo ngược (\) được thêm vào bên trong chuỗi bởi hàm addcslashes().</p></td>
+</tr>
+<tr>
+<td>stripslashes()</td>
+<td><p>- Loại bỏ các dấu gạch chéo ngược (\) được thêm vào bên trong chuỗi bởi hàm addslashes().</p></td>
+</tr>
+<tr>
+<td>stripos()</td>
+<td><p>- Trả về vị trí xuất hiện lần đầu tiên của chuỗi bên trong một chuỗi khác (không phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>stristr()</td>
+<td style="padding-right:0px"><p>- Tìm kiếm sự xuất hiện lần đầu tiên của chuỗi bên trong một chuỗi khác (không phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td><a href="ham-strlen-trong-php-dem-so-luong-ky-tu-cua-mot-chuoi.html" target="_blank">strlen()</a></td>
+<td><p>- Trả về số lượng ký tự bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>strnatcasecmp()</td>
+<td><p>- So sánh hai chuỗi bằng thuật toán &quot;thứ tự tự nhiên&quot; (không phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strnatcmp()</td>
+<td><p>- So sánh hai chuỗi bằng thuật toán &quot;thứ tự tự nhiên&quot; (có phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strncasecmp()</td>
+<td><p>- So sánh n ký tự đầu tiên của hai chuỗi (không phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strncmp()</td>
+<td><p>- So sánh n ký tự đầu tiên của hai chuỗi (có phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strpbrk()</td>
+<td><p>- Trả về phần chuỗi còn lại (bắt đầu từ ký tự là ký tự đầu tiên trùng khớp với một trong số các ký tự chỉ định)</p></td>
+</tr>
+<tr>
+<td>strpos()</td>
+<td><p>- Trả về vị trí xuất hiện lần đầu tiên của chuỗi bên trong một chuỗi khác (có phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strrchr()</td>
+<td><p>- Tìm kiếm sự xuất hiện cuối cùng của chuỗi bên trong một chuỗi khác.</p></td>
+</tr>
+<tr>
+<td>strrev()</td>
+<td><p>- Đảo ngược thứ tự xuất hiện của các ký tự bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>strripos()</td>
+<td><p>- Trả về vị trí xuất hiện lần cuối cùng của chuỗi bên trong một chuỗi khác (không phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strrpos()</td>
+<td><p>- Trả về vị trí xuất hiện lần cuối cùng của chuỗi bên trong một chuỗi khác (có phân biệt trường hợp chữ in hoa &amp; chữ thường)</p></td>
+</tr>
+<tr>
+<td>strspn()</td>
+<td><p>- Trả về số lượng ký tự của chuỗi chỉ chứa những ký tự trong danh sách chỉ định.</p></td>
+</tr>
+<tr>
+<td>strstr()</td>
+<td><p>- Tìm kiếm sự xuất hiện đầu tiên của chuỗi bên trong một chuỗi khác.</p></td>
+</tr>
+<tr>
+<td>strtok()</td>
+<td><p>- Chia một chuỗi thành các chuỗi nhỏ hơn.</p></td>
+</tr>
+<tr>
+<td><a href="ham-strtolower-trong-php-chuyen-toan-bo-ky-tu-trong-chuoi-ve-dang-chu-thuong.html" target="_blank">strtolower()</a></td>
+<td><p>- Chuyển toàn bộ ký tự bên trong chuỗi sang dạng chữ thường.</p></td>
+</tr>
+<tr>
+<td><a href="ham-strtoupper-trong-php-chuyen-toan-bo-ky-tu-trong-chuoi-ve-dang-chu-in-hoa.html" target="_blank">strtoupper()</a></td>
+<td><p>- Chuyển toàn bộ ký tự bên trong chuỗi sang dạng chữ in hoa.</p></td>
+</tr>
+<tr>
+<td>strtr()</td>
+<td><p>- Thay thế một số ký tự bên trong chuỗi bởi một số ký tự mới.</p></td>
+</tr>
+<tr>
+<td>substr()</td>
+<td><p>- Trả về một phần bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>substr_compare()</td>
+<td><p>- Xác định sự trùng khớp của chuỗi so với một chuỗi khác.</p></td>
+</tr>
+<tr>
+<td>substr_count()</td>
+<td><p>- Trả về số lần chuỗi con xuất hiện bên trong chuỗi.</p></td>
+</tr>
+<tr>
+<td>substr_replace()</td>
+<td><p>- Thay thế một phần bên trong chuỗi bằng một chuỗi khác.</p></td>
+</tr>
+<tr>
+<td><a href="ham-trim-trong-php.html" target="_blank">trim()</a></td>
+<td><p>- Xóa khỏi vị trí <u>đầu chuỗi</u> &amp; <u>cuối chuỗi</u> những ký tự là dấu khoảng trắng hoặc trùng với một trong số các ký tự trong danh sách chỉ định.</p></td>
+</tr>
+<tr>
+<td>ucfirst()</td>
+<td><p>- Chuyển đổi ký tự đầu tiên bên trong chuỗi sang dạng chữ in hoa.</p></td>
+</tr>
+<tr>
+<td>ucwords()</td>
+<td><p>- Chuyển đổi ký tự đầu tiên của tất cả các từ bên trong chuỗi sang dạng chữ in hoa.</p></td>
+</tr>
+<tr>
+<td>vfprintf()</td>
+<td><p>- Ghi một chuỗi đã được định dạng vào bên trong một đầu ra chỉ định.</p></td>
+</tr>
+<tr>
+<td>vprintf()</td>
+<td><p>- Xuất ra một chuỗi đã được định dạng.</p></td>
+</tr>
+<tr>
+<td>vsprintf()</td>
+<td><p>- Ghi một chuỗi đã được định dạng vào biến.</p></td>
+</tr>
+<tr>
+<td>wordwrap()</td>
+<td><p>- Quấn các từ bên trong chuỗi với một số ký tự được chỉ định khi nó đạt đến một độ dài cụ thể.</p></td>
+</tr>
+</table>
+<style>
+.juei1 tr td:nth-child(1){width:1px;white-space:nowrap;}
+.juei1 tr td:nth-child(1) > a{color:black;text-decoration:underline;text-decoration-color:crimson;}
+.juei1 tr td:nth-child(2){padding-top:0px !important;padding-bottom:0px !important;}
+.juei1 tr td:nth-child(2) > p{margin-top:13px !important;margin-bottom:13px !important;}
+</style><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/cac-ham-xu-ly-chuoi-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:15 GMT -->
+</html>

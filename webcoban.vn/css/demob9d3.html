@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3070 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:201px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:180px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        body{
+            background-image: <span id="layvitri1">url(../image/pic1.jpg)</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Tài liệu học lập trình web&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;padding-left:12px;">
+                <p style="margin-top:15px"><input type="radio" name="background_image" value="url(../image/pic1.jpg)" checked> url(../image/pic1.jpg)</p>
+                <p><input type="radio" name="background_image" value="url(../image/pic2.jpg)"> url(../image/pic2.jpg)</p>
+                <p><input type="radio" name="background_image" value="url(../image/pic1.jpg), url(../image/pic2.jpg)"> url(../image/pic1.jpg), url(../image/pic2.jpg)</p>
+                <p><input type="radio" name="background_image" value="url(../image/pic2.jpg), url(../image/pic1.jpg)"> url(../image/pic2.jpg), url(../image/pic1.jpg)</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<style>body{background-image:url(../image/pic1.jpg);}</style><h1>Tài liệu học lập trình web</h1>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='background_image']").change(function(){
+                var background_image = $(this).val();
+                var text = "<style>body{background-image:"+background_image+";}</style><h1>Tài liệu học lập trình web</h1>";
+                $("#layvitri1").html(background_image);
+                view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3070 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+</html>﻿

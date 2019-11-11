@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3459 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:266px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:245px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+           margin:20px;
+           border:30px dotted brown;
+           padding:25px;
+           background-image:url(../image/smile-face.png);
+           background-repeat:<span id="layvitri1" style="color:red;font-weight:bold;font-size:20px;">no-repeat</span>;
+           background-origin:<span id="layvitri2" style="color:red;font-weight:bold;font-size:20px;">padding-box</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;">
+                <table style="width:100%;margin:0px">
+                    <tr>
+                        <td style="width:260px;padding-left: 15px">
+                            <p>background-repeat:</p>
+                            <div style="padding-left: 8px">
+                                <p><input name="background_repeat" value="repeat" type="radio"> repeat</p>
+                                <p><input name="background_repeat" value="repeat-x" type="radio"> repeat-x</p>
+                                <p><input name="background_repeat" value="repeat-y" type="radio"> repeat-y</p>
+                                <p><input name="background_repeat" value="no-repeat" type="radio" checked> no-repeat</p>
+                            </div>
+                        </td>
+                        <td>
+                            <p>background-origin:</p>
+                            <div style="padding-left: 8px">
+                                <p><input name="background_origin" value="border-box" type="radio"> border-box</p>
+                                <p><input name="background_origin" value="padding-box" type="radio" checked> padding-box</p>
+                                <p><input name="background_origin" value="content-box" type="radio"> content-box</p>
+                                <p><input name="background_origin" value="initial" type="radio"> initial</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='margin:20px;border:30px dotted brown;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:padding-box;'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C </div>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='background_repeat'],input[name='background_origin']").change(function(){
+                var background_repeat = $("input[name='background_repeat']:checked").val();
+                var background_origin = $("input[name='background_origin']:checked").val();
+                var text = "<div style='margin:20px;border:30px dotted brown;padding:25px;background-image:url(../image/smile-face.png);background-repeat:"+background_repeat+";background-origin:"+background_origin+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C </div>";
+                $("#layvitri1").html(background_repeat);
+                $("#layvitri2").html(background_origin);
+                view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3459 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+</html>﻿

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:14 GMT -->
+<head>
+<title>Các phương thức xử lý đối tượng ngày tháng DATE trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="các phương thức xử lý đối tượng ngày tháng date trong javascript,cac phuong thuc xu ly doi tuong ngay thang trong javascript">
+<meta name="description" content="các phương thức xử lý đối tượng ngày tháng date trong javascript, cac phuong thuc xu ly doi tuong ngay thang trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" class='active'>- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các phương thức xử lý đối tượng ngày tháng DATE trong JavaScript">Các phương thức xử lý ngày tháng trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p style="margin-top:10px">- Đối tượng ngày tháng là một tập hợp các thông tin về thời gian <i>(thứ, ngày, tháng, năm, giờ, phút, giây, mili giây, múi giờ)</i> của một thời điểm nào đó.</p>
+<p>- Các phương thức xử lý ngày tháng trong JavaScript giúp chúng ta có thể làm một số công việc với đối tượng ngày tháng như:</p>
+<ul style="list-style-type:circle;font-style:italic">
+<li>Lấy các thông tin về thời gian của đối tượng ngày tháng: ngày, tháng, năm, giờ, phút, giây, ....</li>
+<li>Thiết lập lại các thông tin về thời gian của đối tượng ngày tháng</li>
+</ul>
+<p>- Dưới đây là danh sách các phương thức dùng để lấy thông tin về thời gian của đối tượng ngày tháng theo giờ địa phương:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Phương thức</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td>getDay()</td>
+        <td>Trả về ngày trong tuần <i>(Thứ)</i> của đối tượng ngày tháng <i>(có giá trị từ 0 - 6)</i></td>
+    </tr>
+    <tr>
+        <td>getDate()</td>
+        <td>Trả về ngày trong tháng của đối tượng ngày tháng <i>(có giá trị từ 1 - 31)</i></td>
+    </tr>
+    <tr>
+        <td>getMonth()</td>
+        <td>Trả về tháng của đối tượng ngày tháng <i>(có giá trị từ 0 - 11)</i></td>
+    </tr>
+    <tr>
+        <td>getFullYear()</td>
+        <td>Trả về năm của đối tượng ngày tháng <i>(có giá trị từ 1000 - 9999)</i></td>
+    </tr>
+    <tr>
+        <td>getHours()</td>
+        <td>Trả về giờ của đối tượng ngày tháng <i>(có giá trị từ 0 - 23)</i></td>
+    </tr>
+    <tr>
+        <td>getMinutes()</td>
+        <td>Trả về phút của đối tượng ngày tháng <i>(có giá trị từ 0 - 59)</i></td>
+    </tr>
+    <tr>
+        <td>getSeconds()</td>
+        <td>Trả về giây của đối tượng ngày tháng <i>(có giá trị từ 0 - 59)</i></td>
+    </tr>
+    <tr>
+        <td>getMilliseconds()</td>
+        <td>Trả về mili giây của đối tượng ngày tháng <i>(có giá trị từ 0 - 999)</i></td>
+    </tr>
+    <tr>
+        <td>getTime()</td>
+        <td>Trả về tổng số mili giây từ thời điểm 01/01/1970 00:00:00 đến thời điểm của đối tượng ngày tháng <i>(tính theo giờ tiêu chuẩn UTC)</td>
+    </tr>
+</table>
+<p>- Dưới đây là danh sách các phương thức dùng để thiết lập lại thông tin về thời gian của đối tượng ngày tháng theo giờ địa phương:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Phương thức</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td>setDate()</td>
+        <td>Thiết lập lại ngày trong tháng của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setMonth()</td>
+        <td>Thiết lập lại tháng của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setFullYear()</td>
+        <td>Thiết lập lại năm của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setHours()</td>
+        <td>Thiết lập lại giờ của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setMinutes()</td>
+        <td>Thiết lập lại phút của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setSeconds()</td>
+        <td>Thiết lập lại giây của đối tượng ngày tháng</td>
+    </tr>
+    <tr>
+        <td>setMilliseconds()</td>
+        <td>Thiết lập lại mili giây của đối tượng ngày tháng</td>
+    </tr>
+</table>
+<h2>1) Phương thức getDay()</h2>
+<p>- Phương thức <strong>getDay()</strong> trả về ngày trong tuần <i>(hay còn gọi là Thứ)</i> của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 6:</p>
+<ul style="list-style-type:circle;">
+<li>Chủ Nhật có giá trị 0</li>
+<li>Thứ hai có giá trị 1</li>
+<li>Thứ ba có giá trị 2</li>
+<li>Thứ tư có giá trị 3</li>
+<li>Thứ năm có giá trị 4</li>
+<li>Thứ sáu có giá trị 5</li>
+<li>Thứ bảy có giá trị 6</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định ngày trong tuần của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getDay(); 
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo9334.html?file=1757" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Phương thức getDate()</h2>
+<p>- Phương thức <strong>getDate()</strong> trả về ngày trong tháng của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 1 đến 31.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định ngày trong tháng của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getDate();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4622.html?file=1755" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Phương thức getMonth()</h2>
+<p>- Phương thức <strong>getMonth()</strong> trả về tháng của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 11:</p>
+<ul style="list-style-type:circle;">
+<li>Tháng một có giá trị 0</li>
+<li>Tháng hai có giá trị 1</li>
+<li>Tháng ba có giá trị 2</li>
+<li>....</li>
+<li>Thứ mười hai có giá trị 11</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định tháng của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getMonth();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoe7c4.html?file=1766" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Phương thức getFullYear()</h2>
+<p>- Phương thức <strong>getFullYear()</strong> trả về năm của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 1000 đến 9999.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định năm của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getFullYear();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo02b7.html?file=1759" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Phương thức getHours()</h2>
+<p>- Phương thức <strong>getHours()</strong> trả về giờ của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 23.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định giờ của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getHours();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8ee9.html?file=1761" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>6) Phương thức getMinutes()</h2>
+<p>- Phương thức <strong>getMinutes()</strong> trả về phút của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 59.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định phút của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getMinutes();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo2169.html?file=1764" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>7) Phương thức getSeconds()</h2>
+<p>- Phương thức <strong>getSeconds()</strong> trả về giây của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 59.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định giây của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getSeconds();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6288.html?file=1768" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>8) Phương thức getMilliseconds()</h2>
+<p>- Phương thức <strong>getMilliseconds()</strong> trả về mili giây của đối tượng ngày tháng.</p>
+<p>- Kết quả trả về sẽ có giá trị nằm trong khoảng từ 0 đến 999.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định mili giây của thời điểm hiện tại</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getMilliseconds();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4e39.html?file=1763" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>9) Phương thức getTime()</h2>
+<p>- Phương thức <strong>getTime()</strong> trả về tổng số mili giây từ thời điểm 01/01/1970 00:00:00 đến thời điểm của đối tượng ngày tháng <i>(tính theo giờ tiêu chuẩn UTC)</i></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định tổng số mili giây từ thời điểm 01/01/1970 00:00:00 đến thời điểm hiện tại<br><i>(tính theo giờ tiêu chuẩn UTC)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    var result = date.getTime();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo62a6.html?file=1770" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>10) Phương thức setDate()</h2>
+<p>- Phương thức <strong>setDate()</strong> dùng để thiết lập lại ngày trong tháng của đối tượng ngày tháng.</p>
+<ul style="list-style-type:circle">
+<li>Muốn thiết lập lại thành ngày 1, nhập đối số có là giá trị 1</li>
+<li>Muốn thiết lập lại thành ngày 2, nhập đối số có là giá trị 2</li>
+<li>Muốn thiết lập lại thành ngày 3, nhập đối số có là giá trị 3</li>
+<li>....</li>
+<li>Muốn thiết lập lại thành ngày 31, nhập đối số có là giá trị 31</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại ngày trong tháng của thời điểm hiện tại thành ngày 15</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setDate(15);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo74ed.html?file=1776" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>11) Phương thức setMonth()</h2>
+<p>- Phương thức <strong>setMonth()</strong> dùng để thiết lập lại tháng của đối tượng ngày tháng.</p>
+<ul style="list-style-type:circle">
+<li>Muốn thiết lập lại thành tháng một, nhập đối số có là giá trị 0</li>
+<li>Muốn thiết lập lại thành tháng hai, nhập đối số có là giá trị 1</li>
+<li>Muốn thiết lập lại thành tháng ba, nhập đối số có là giá trị 2</li>
+<li>....</li>
+<li>Muốn thiết lập lại thành tháng mười hai, nhập đối số có là giá trị 11</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại tháng của thời điểm hiện tại thành tháng tám</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setMonth(7);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="democe71.html?file=1774" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>12) Phương thức setFullYear()</h2>
+<p>- Phương thức <strong>setFullYear()</strong> dùng để thiết lập lại năm của đối tượng ngày tháng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại năm của thời điểm hiện tại thành 1993</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setFullYear(1993);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo3faa.html?file=1772" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>13) Phương thức setHours()</h2>
+<p>- Phương thức <strong>setHours()</strong> dùng để thiết lập lại giờ của đối tượng ngày tháng.</p>
+<ul style="list-style-type:circle">
+<li>Muốn thiết lập lại thành 1 giờ, nhập đối số có là giá trị 1</li>
+<li>Muốn thiết lập lại thành 2 giờ, nhập đối số có là giá trị 2</li>
+<li>Muốn thiết lập lại thành 3 giờ, nhập đối số có là giá trị 3</li>
+<li>....</li>
+<li>Muốn thiết lập lại thành 24 giờ, nhập đối số có là giá trị 0</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại giờ của thời điểm hiện tại thành 5 giờ chiều</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setHours(17);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoe21e.html?file=1778" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>14) Phương thức setMinutes()</h2>
+<p>- Phương thức <strong>setMinutes()</strong> dùng để thiết lập lại phút của đối tượng ngày tháng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại phút của thời điểm hiện tại thành 35 phút</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setMinutes(35);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demof9a1.html?file=1780" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>15) Phương thức setSeconds()</h2>
+<p>- Phương thức <strong>setSeconds()</strong> dùng để thiết lập lại giây của đối tượng ngày tháng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại giây của thời điểm hiện tại thành 59 giây</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setSeconds(59);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo1f53.html?file=1797" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>16) Phương thức setMilliseconds()</h2>
+<p>- Phương thức <strong>setMilliseconds()</strong> dùng để thiết lập lại mili giây của đối tượng ngày tháng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thiết lập lại mili giây của thời điểm hiện tại thành 567 giây</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    date.setMilliseconds(567);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo7c3d.html?file=1798" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:18 GMT -->
+</html>

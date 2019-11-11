@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-map-va-area-trong-html-tao-mot-ban-do-hinh-anh.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:07 GMT -->
+<head>
+<title>Thẻ &lt;map&gt; và &lt;area&gt; trong HTML | Tạo một bản đồ hình ảnh</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ map,thẻ map trong html,thẻ area,thẻ area trong html,tạo một bản đồ hình ảnh">
+<meta name="description" content="Cách sử dụng thẻ map và thẻ area trong HTML để tạo một bản đồ hình ảnh">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;map&gt; và &lt;area&gt; trong HTML | Tạo một bản đồ hình ảnh">Thẻ &lt;map&gt; &amp; &lt;area&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Giới thiệu <em>"bản đồ ảnh"</em></h2>
+<p>- Bản đồ ảnh là một loại hình ảnh đặc biệt, trên tấm hình đó sẽ có các <i>"vùng được xác định"</i> và ta có thể nhấp vào các vùng đó.</p>
+<p>- <i><u>Ví dụ</u>:</i> Tấm hình bên dưới là một ví dụ minh họa về bản đồ ảnh, trên tấm hình đó có bốn vùng được xác định là: <i>mắt trái, mắt phải,
+ mũi, miệng (bạn hãy thử bấm vào các vùng đó để kiểm tra)</i></p>
+<map name="the-map-trong-html">
+<area shape="circle" coords="149,203,30" href="demod99e.html?file=2252" target="_blank" title="Con mắt bên trái">
+<area shape="circle" coords="250,203,30" href="democ5e5.html?file=2253" target="_blank" title="Con mắt bên phải">
+<area shape="rect" coords="169,245,228,286" href="demo86b3.html?file=2254" target="_blank" title="Cái mũi">
+<area shape="rect" coords="162,292,237,336" href="demo2f53.html?file=2255" target="_blank" title="Cái miệng">
+</map>
+<p style="margin-top:10px;"><img alt="face" src="../image/face.png" style="border:1px solid #ccc" usemap="#the-map-trong-html"></p>
+<h2>2) Nguyên lý tạo một bản đồ ảnh</h2>
+<p>- Để tạo một bản đồ ảnh thì chúng ta cần hai thành phần:</p>
+<ul style="list-style-type:circle">
+<li><i><u>Thứ nhất</u>:</i> Một tấm hình dùng để làm bản đồ ảnh.</li>
+<li style="margin-top:6px"><i><u>Thứ hai</u>:</i> Một bản đồ hệ thống tọa độ của các vùng.</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;img src=&quot;../image/face.png&quot; usemap=&quot;#mat-mui-mieng&quot;&gt;
+&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; href=&quot;demo?file=2258&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; href=&quot;demo?file=2259&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot; href=&quot;demo?file=2260&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot; href=&quot;demo?file=2261&quot;&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demob5ad.html?file=2257" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>=&gt; <i><u>GIẢI THÍCH VÍ DỤ TRÊN</u>:</i></p>
+<p>- Thẻ &lt;img&gt; chính là thành phần thứ nhất <i>(tấm hình dùng để làm bản đồ ảnh)</i></p>
+<p>- Phần tử &lt;map&gt; với các thẻ &lt;area&gt; là thành phần thứ hai <i>(bản đồ hệ thống tọa độ của các vùng)</i></p>
+<p>- Bản đồ hệ thống tọa độ của các vùng có tên là <i><u>mat-mui-mieng</u></i></p>
+<p>- Thẻ &lt;img&gt; sử dụng thuộc tính usemap để áp dụng hệ thống tọa độ của bản đồ <i><u>mat-mui-mieng</u></i> vào tấm hình, tạo thành một bản đồ ảnh.</p>
+<h2>3) Chức năng của thẻ &lt;map&gt; và thẻ &lt;area&gt; trong HTML</h2>
+<p>- Thẻ &lt;map&gt; dùng để xác định một bản đồ.</p>
+<p>- Thẻ &lt;map&gt; có một thuộc tính duy nhất là thuộc tính name, nó dùng để xác định tên của bản đồ.</p>
+<p>- Thẻ &lt;area&gt; dùng để xác định <em>"một vùng"</em> trong bản đồ.</p>
+<p>- Thẻ &lt;area&gt; phải được đặt bên trong phần tử &lt;map&gt;.</p>
+<p>- Thẻ &lt;area&gt; không có thẻ đóng.</p>
+<p>- <i><u>Ví dụ</u>:</i> Đoạn mã bên dưới dùng để tạo một bản đồ có tên là mat-mui-mieng, trong bản đồ đó có bốn vùng được xác định.</p>
+<div class="form_new_26">
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot;&gt;
+&lt;/map&gt;</pre>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Các thuộc tính của thẻ &lt;area&gt;</h2>
+<p>- Thẻ &lt;area&gt; có sáu thuộc tính mà chúng ta cần phải quan tâm.</p>
+<p>- Dưới đây là bảng mô tả sơ lược về sáu thuộc tính đó:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>href</td>
+        <td>Xác định đường dẫn đến tài liệu mà bạn muốn khi người dùng nhấp vào vùng thì sẽ được chuyển đến tài liệu đó</td>
+    </tr>
+    <tr>
+        <td>target</td>
+        <td>Xác định nơi mà tài liệu liên kết của vùng sẽ được mở</td>
+    </tr>
+    <tr>
+        <td>download</td>
+        <td>Xác định việc khi người dùng bấm vào vùng có chứa liên kết thì tài liệu của liên kết đó sẽ tự động được tải về</td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>Xác định một <i>"tiêu đề"</i> cho vùng, khi người dùng di chuyển chuột vào trong vùng thì tiêu đề sẽ được hiện lên.</td>
+    </tr>
+    <tr>
+        <td>shape</td>
+        <td>Xác định hình dạng của vùng</td>
+    </tr>
+    <tr>
+        <td>coords</td>
+        <td>Xác định một tập hợp các tọa độ của vùng<br>
+<i>(Các tọa độ này sẽ xác định nên vị trí của vùng)</i></td>
+    </tr>
+</table>
+<h3>4.1) Thuộc tính href</h3>
+<p>- Thuộc tính href dùng để xác định đường dẫn đến tài liệu mà bạn muốn khi người dùng nhấp vào vùng thì sẽ được chuyển đến tài liệu đó.</p>
+<p>- <i><u>Lưu ý</u>:</i> <i>"Đường dẫn đến tài liệu"</i> có thể là đường dẫn tương đối hoặc đường dẫn tuyệt đối.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem">
+<ul style="list-style-type:circle">
+<li>Khi người dùng nhấp vào mắt trái thì sẽ được chuyển sang trang học HTML.</li>
+<li style="margin-top:6px">Khi người dùng nhấp vào mắt phải thì sẽ được chuyển sang trang học CSS.</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; href=&quot;../html/default.html&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; href=&quot;http://webcoban.vn/css/default.html&quot;&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demo2e76.html?file=2262" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>4.2) Thuộc tính target</h3>
+<p>- Thuộc tính target dùng để xác định nơi mà tài liệu liên kết của vùng sẽ được mở.</p>
+<p>- Thuộc tính target có bốn giá trị cơ bản:</p>
+<table class="table table-bordered form_new_29">
+    <tr>
+        <td>_blank</td>
+        <td>Mở tài liệu trong một tab mới</td>
+    </tr>
+    <tr>
+        <td>_self</td>
+        <td>Mở tài liệu trong khung hiện tại</td>
+    </tr>
+    <tr>
+        <td>_parent</td>
+        <td>Mở tài liệu trong khung cha của khung hiện tại</td>
+    </tr>
+    <tr>
+        <td>_top</td>
+        <td>Mở tài liệu trong tab hiện tại</td>
+    </tr>
+</table>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+     &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; href=&quot;demo?file=2258&quot; target=&quot;_blank&quot;&gt;
+     &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; href=&quot;demo?file=2259&quot; target=&quot;_self&quot;&gt;
+     &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot; href=&quot;demo?file=2260&quot; target=&quot;_parent&quot;&gt;
+     &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot; href=&quot;demo?file=2261&quot; target=&quot;_top&quot;&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demo5b08.html?file=2266" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>4.3) Thuộc tính download</h3>
+<p>- Thuộc tính download xác định việc khi người dùng bấm vào vùng có chứa liên kết thì tài liệu của liên kết đó sẽ tự động được tải về.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; href=&quot;../image/left-eye.png&quot; download&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; href=&quot;../image/right-eye.png&quot; download&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot; href=&quot;../image/nose.png&quot; download&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot; href=&quot;../image/mouth.png&quot; download&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demo0fab.html?file=2263" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ta có thể thêm giá trị cho thuộc tính download để xác định tên của tập tin khi được lưu về máy tính.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; href=&quot;../image/left-eye.png&quot; download=&quot;con-mat-ben-trai&quot;&gt;
+    &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; href=&quot;../image/right-eye.png&quot; download=&quot;con-mat-ben-phai&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot; href=&quot;../image/nose.png&quot; download=&quot;cai-mui&quot;&gt;
+    &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot; href=&quot;../image/mouth.png&quot; download=&quot;cai-mieng&quot;&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demo859e.html?file=2264" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Ta không cần phải xác định phần đuôi của tập tin vì hệ thống sẽ tự động làm việc đó.</p>
+<h3>4.4) Thuộc tính title</h3>
+<p>- Thuộc tính title dùng để xác định một <i>"tiêu đề"</i> cho vùng, khi người dùng di chuyển chuột vào trong vùng thì tiêu đề sẽ được hiện lên.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;map name=&quot;mat-mui-mieng&quot;&gt;
+   &lt;area shape=&quot;circle&quot; coords=&quot;149,203,30&quot; title=&quot;CON MẮT BÊN TRÁI&quot;&gt;
+   &lt;area shape=&quot;circle&quot; coords=&quot;250,203,30&quot; title=&quot;CON MẮT BÊN PHẢI&quot;&gt;
+   &lt;area shape=&quot;rect&quot; coords=&quot;169,245,228,286&quot; title=&quot;CÁI MŨI&quot;&gt;
+   &lt;area shape=&quot;rect&quot; coords=&quot;162,292,237,336&quot; title=&quot;CÁI MIỆNG&quot;&gt;
+&lt;/map&gt;</pre>
+    <div class="nutxem"><a href="demodd03.html?file=2265" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>4.5) Thuộc tính shape</h3>
+<p>- Thuộc tính shape dùng để xác định hình dạng của vùng.</p>
+<p>- Thuộc tính shape có bốn giá trị cơ bản:</p>
+<table class="table table-bordered table-hover table-striped form_new_29">
+    <tr>
+        <td>default</td>
+        <td>Hình dạng của vùng sẽ là toàn bộ tấm hình</td>
+        <td><div class="xem"><a href="demod78c.html?file=2267" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>rect</td>
+        <td>Vùng sẽ có dạng hình chữ nhật <i>(hoặc vuông)</i></td>
+        <td><div class="xem"><a href="demoe00f.html?file=2268" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>circle</td>
+        <td>Vùng sẽ có dạng hình tròn</td>
+        <td><div class="xem"><a href="demo9aca.html?file=2269" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+    <tr>
+        <td>poly</td>
+        <td>Vùng sẽ có dạng hình đa giác</td>
+        <td><div class="xem"><a href="demof29c.html?file=2270" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+</table>
+<h3>4.6) Thuộc tính coords</h3>
+<p>- Thuộc tính coords dùng để xác định một tập hợp các tọa độ của vùng.</p>
+<p><i>(Các tọa độ này sẽ xác định nên vị trí của vùng)</i>
+<p>- Tùy vào hình dạng của vùng mà cách xác định tọa độ sẽ khác nhau.</p>
+<p><i class="fa fa-book fa-2x"></i> <u>Cách xác định giá trị của thuộc tính coords đối với vùng "hình chữ nhật"</u></p>
+<p>- Đối với vùng hình chữ nhật <i>(giá trị của thuộc tính shape là rect)</i> thì giá trị của thuộc tính coords phải gồm bốn số: <i>left, top, right, bottom</i></p>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>left là khoảng cách từ <i><u>cạnh bên trái</u></i> của vùng cho đến <i><u>cạnh bên trái</u></i> của tấm hình.</li>
+<li style="margin-top:6px;margin-bottom:6px">top là khoảng cách từ <i><u>cạnh trên</u></i> của vùng cho đến <i><u>cạnh trên</u></i> của tấm hình.</li>
+<li>right là khoảng cách từ <i><u>cạnh bên phải</u></i> của vùng cho đến <i><u>cạnh bên trái</u></i> của tấm hình.</li>
+<li style="margin-top:6px;">bottom là khoảng cách từ <i><u>cạnh dưới</u></i> của vùng cho đến <i><u>cạnh trên</u></i> của tấm hình.</li>
+</ul>
+<p>- Lưu ý: Giá trị của các số đều được tính theo đơn vị pixel.</p>
+<div style="background-color:#eee;padding:10px;border-radius:6px;padding-left:15px;margin-bottom:20px">
+<div style="font-size:18px;font-style:italic;margin:5px;"><u>Ví dụ</u>:</div>
+<table style="width:100%;margin-bottom:20px;">
+<tr>
+<td style="width:50%;padding-bottom:10px;vertical-align:top">- Tôi có một tấm hình với kích thước chiều rộng 200 pixel và chiều cao 200 pixel như bên dưới:</td>
+<td style="width:50%;padding-bottom:10px">- Nếu thuộc tính coords có giá trị là 50, 25, 150, 100 thì ta sẽ xác định được một vùng màu đen như bên dưới:</td>
+</tr>
+<tr>
+<td><img src="../image/square.png" class="img-responsive"></td>
+<td><img src="../image/square-4.png" class="img-responsive"></td>
+</tr>
+</table>
+<div class="form_new_22"><a href="demo7185.html?file=2271" target="_blank">Xem ví dụ</a></div>
+</div>
+<p><i class="fa fa-book fa-2x"></i> <u>Cách xác định giá trị của thuộc tính coords đối với vùng "hình tròn"</u></p>
+<p>- Đối với vùng hình tròn <i>(giá trị của thuộc tính shape là circle)</i> thì giá trị của thuộc tính coords phải gồm ba số: <i>x, y, circle</i></p>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>x &amp; y dùng để xác định vị trí tâm của hình tròn.</li>
+<ul style="list-style-type:square">
+<li style="margin-top:8px;margin-bottom:8px">x xác định vị trí từ tâm hình tròn đến cạnh bên trái của tấm hình.</li>
+<li>y xác định vị trí từ tâm hình tròn đến cạnh trên của tấm hình.</li>
+</ul>
+<li style="margin-top:8px;">circle dùng để xác định bán kính của hình tròn.</li>
+</ul>
+<p>- Lưu ý: Giá trị của các số đều được tính theo đơn vị pixel.</p>
+<div style="background-color:#eee;padding:10px;border-radius:6px;padding-left:15px;margin-bottom:20px">
+<div style="font-size:18px;font-style:italic;margin:5px;"><u>Ví dụ</u>:</div>
+<table style="width:100%;margin-bottom:20px;">
+<tr>
+<td style="width:50%;padding-bottom:10px;vertical-align:top">- Tôi có một tấm hình với kích thước chiều rộng 200 pixel và chiều cao 200 pixel như bên dưới:</td>
+<td style="width:50%;padding-bottom:10px">- Nếu thuộc tính coords có giá trị là 150, 100, 25 thì ta sẽ xác định được một vùng màu đen như bên dưới:</td>
+</tr>
+<tr>
+<td><img src="../image/square.png" class="img-responsive"></td>
+<td><img src="../image/square-5.png" class="img-responsive"></td>
+</tr>
+</table>
+<div class="form_new_22"><a href="demoae22.html?file=2272" target="_blank">Xem ví dụ</a></div>
+</div>
+<p><i class="fa fa-book fa-2x"></i> <u>Cách xác định giá trị của thuộc tính coords đối với vùng "hình đa giác"</u></p>
+<p>- Đối với vùng hình đa giác <i>(giá trị của thuộc tính shape là poly)</i> thì cách xác định giá trị của thuộc tính coords tương đối phức tạp, vì nó còn phụ thuộc vào số lượng đỉnh của đa giác.</p>
+<p>- Để xác định giá trị của thuộc tính coords đối với vùng hình đa giác thì chúng ta có bốn bước cơ bản:</p>
+<ul style="list-style-type:circle">
+<li><i><u>Bước 1</u>:</i> Xác định số đình của hình đa giác và vị trí của các đỉnh.</li>
+<li style="margin-top:7px;margin-bottom:7px"><i><u>Bước 2</u>:</i> Xác định hướng đi của các đỉnh để tạo thành một vùng khép kín.</li>
+<li><i><u>Bước 3</u>:</i> Xác định tọa độ của các đỉnh.</li>
+<li style="margin-top:7px;"><i><u>Bước 4</u>:</i> Ghép tọa độ của các đỉnh lại thành giá trị của thuộc tính coords.</li>
+</ul>
+<div style="background-color:#eee;padding:10px;border-radius:6px;padding-left:15px;margin-bottom:20px">
+<div style="font-size:18px;font-style:italic;margin:5px;"><u>Ví dụ</u>:</div>
+<p>- Tôi có một tấm hình với kích thước chiều rộng 400 pixel, chiều cao 400 pixel như sau:</p>
+<p><img src="../image/big-square.png" class="img-responsive"></p>
+<p>- Tôi muốn xác định một vùng như vùng màu đen bên dưới:</p>
+<p><img src="../image/big-square-2.png" class="img-responsive"></p>
+<p>- Thì tôi làm như sau:</p>
+<p>- <i><u>Bước 1</u>:</i> Xác định số đình của hình đa giác và vị trí của các đỉnh.</p>
+<p><img src="../image/big-square-3.png" class="img-responsive"></p>
+<p>- <i><u>Bước 2</u></i>: Xác định hướng đi của các đỉnh để tạo thành một vùng khép kín.</p>
+<p><img src="../image/big-square-5.png" class="img-responsive"></p>
+<p>- <i><u>Bước 3</u></i>: Xác định tọa độ của các đỉnh.</p>
+<p><img src="../image/big-square-6.png" class="img-responsive"></p>
+<p>- <i><u>Bước 4</u>:</i> Ghép tọa độ của các đỉnh lại thành giá trị của thuộc tính coords.</p>
+<p>- Thứ tự ghép các đỉnh là: đỉnh một =&gt; đỉnh hai =&gt; đỉnh ba =&gt; đỉnh bốn =&gt; đỉnh một</p>
+<p><i>(Đỉnh đầu và đỉnh cuối phải là cùng một đỉnh, như thế mới tạo thành vùng khép kín)</i></p>
+<p>- Vậy giá trị của thuộc tính coords sẽ là: 100,50,275,100,250,300,50,350,100,50</p>
+<div class="form_new_22"><a href="demo42f6.html?file=2273" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Định dạng CSS mặc định</h2>
+<p>- Hầu hết các trình duyệt sẽ hiển thị phần tử &lt;map&gt; với định dạng CSS như sau:</p>
+<div class="form_new_26">
+    <pre>map {
+    display: inline;
+}</pre>
+</div>
+<p>- Hầu hết các trình duyệt sẽ hiển thị phần tử &lt;area&gt; với định dạng CSS như sau:</p>
+<div class="form_new_26">
+    <pre>area { 
+    display: none;
+}</pre>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-map-va-area-trong-html-tao-mot-ban-do-hinh-anh.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:12 GMT -->
+</html>

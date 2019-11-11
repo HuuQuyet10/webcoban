@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:51 GMT -->
+<head>
+<title>Kết thúc hiệu ứng bằng phương thức Stop() trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Kết thúc hiệu ứng bằng phương thức Stop() trong jQuery, cách sử dụng phương thức stop() trong jquery, cách tạm dừng một hiệu ứng trong jquery, tạm ngưng một hiệu ứng jquery">
+<meta name="description" content="Kết thúc hiệu ứng bằng phương thức Stop() trong jQuery, cách sử dụng phương thức stop() trong jquery, cách tạm dừng một hiệu ứng trong jquery, tạm ngưng một hiệu ứng jquery">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" class='active'>- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Kết thúc hiệu ứng bằng phương thức Stop() trong jQuery">Kết thúc hiệu ứng bằng phương thức Stop() trong jQuery</h1>
+<div class="breadcrumb">
+<a href="hieu-ung-dong-animation-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h4>Phương thức <span style="color:crimson;background-color:#f1f1f1">stop()</span> dùng để <u><i>kết thúc</i></u> một hiệu ứng jQuery (hiện, ẩn, trượt, phai màu, chuyển động,....) trước khi hiệu ứng đó được thực thi hoàn thành.</h4>
+<p style="padding-left:15px"><input type="radio" name="vidudemo8432b34d_stop" value="hien"> Bắt đầu hiệu ứng</p>
+<p style="padding-left:15px"><input type="radio" name="vidudemo8432b34d_stop" value="an" checked> Kết thúc hiệu ứng</p>
+<div style="text-align:center;overflow:hidden;display:none" id="vidudemo8432b34d_stop"><img  src="../image/trollface.gif" height="300px"></div>
+<script>
+$(document).ready(function(){
+$("input[name='vidudemo8432b34d_stop']").change(function(){
+if($(this).val()=="hien"){
+$("#vidudemo8432b34d_stop").slideDown(12000);
+}else{
+$("#vidudemo8432b34d_stop").stop();
+}
+})
+})
+</script>
+<h2>Phương thức stop() <span style="color:red;">KHÔNG THAM SỐ</span></h2>
+<div class="form_6">
+    <div class="theh3">Cú pháp</div>
+    <hr>
+    <pre>$(selector).stop();</pre>
+</div>
+<div class="form_6">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>$("input[value='radio1']").click(function(){
+    $("#abc").slideDown(9000);
+})
+$("input[value='radio2']").click(function(){
+    $("#abc").stop();
+})</pre>
+    <div class="nutxem"><a href="demo921c.html?file=712" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>Phương thức stop() <span style="color:crimson;background-color:#f1f1f1">không tham số</span> chỉ dùng để kết thúc <u><i>hiệu ứng hiện tại</i></u>.</p>
+<p>Nếu một phần tử có nhiều hiệu ứng thì các hiệu ứng phía sau hiệu ứng hiện tại vẫn được thực thi.</p>
+</p>Ví dụ:</p>
+<ul type="square">
+<li>Khi bạn bấm vào nút BẮT ĐẦU bên dưới thì phần tử sẽ có bốn hiệu ứng liên tiếp (qua phải, lên, qua trái, xuống)</li>
+<li>Sau đó, bạn bấm vào nút KẾT THÚC thì hiệu ứng hiện tại sẽ kết thúc, nhưng các hiệu ứng phía sau sẽ tiếp tục được thực thi.</li>
+</ul>
+<p>
+<input type="radio" name="vidudemohbfhs432274ybfsfssdf_stop" value="hien"> BẮT ĐẦU
+&nbsp;&nbsp;&nbsp;
+<input type="radio" name="vidudemohbfhs432274ybfsfssdf_stop" value="an" checked> KẾT THÚC
+</p>
+<div style="background-color:brown;height:50px;width:50px;position:relative;" id="vidudemohbfhs432274ybfsfssdf_stop"></div>
+<script>
+$(document).ready(function(){
+$("input[name='vidudemohbfhs432274ybfsfssdf_stop']").change(function(){
+if($(this).val()=="hien"){
+$("#vidudemohbfhs432274ybfsfssdf_stop").animate({left:'500px'},5000);
+$("#vidudemohbfhs432274ybfsfssdf_stop").animate({bottom:'400px'},5000);
+$("#vidudemohbfhs432274ybfsfssdf_stop").animate({left:'0px'},5000);
+$("#vidudemohbfhs432274ybfsfssdf_stop").animate({bottom:'0px'},5000);
+}else{
+$("#vidudemohbfhs432274ybfsfssdf_stop").stop();
+}
+})
+})
+</script>
+<h2>Phương thức stop() <span style="color:red">MỘT THAM SỐ</span></h2>
+<p>Phương thức stop() <span style="color:crimson;background-color:#f1f1f1">một tham số</span> dùng để xác định việc kết thúc tất cả hiệu ứng của một phần tử.</p>
+<div class="form_6">
+    <div class="theh3">Cú pháp</div>
+    <hr>
+    <pre>$(selector).stop(true|false);</pre>
+</div>
+<p>Trong đó:</p>
+<ul type="circle">
+<li>Giá trị true - kết thúc tất cả các hiệu ứng của phần tử.</li>
+<li>Giá trị false - chỉ kết thúc hiệu ứng hiện tại của phần tử (giá trị này là mặc định).</li>
+</ul>
+<div class="form_6">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>$("input[value='radio1']").click(function(){
+    $("#abc").animate({left:'300px'},5000);
+    $("#abc").animate({top:'300px'},5000);
+    $("#abc").animate({left:'0px'},5000);
+    $("#abc").animate({top:'0px'},5000);
+})
+$("input[value='radio2']").click(function(){
+    $("#abc").stop(true);
+})</pre>
+    <div class="nutxem"><a href="demo64c3.html?file=713" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>Phương thức stop() <span style="color:red">HAI THAM SỐ</span></h2>
+<p>Phương thức stop() <span style="color:crimson;background-color:#f1f1f1">hai tham số</span> dùng để:</p>
+<ul type="circle">
+<li>Xác định việc kết thúc tất cả hiệu ứng của một phần tử.</li>
+<li>Xác định việc đạt đến <i><u>trạng thái cuối cùng</u></i> của hiệu ứng hiện tại.</li>
+</ul>
+<div class="form_6">
+    <div class="theh3">Cú pháp</div>
+    <hr>
+    <pre>$(selector).stop(true|false, true|false);</pre>
+</div>
+<p>Trong đó:</p>
+<ul type="square">
+<li>Tham số thứ nhất dùng để xác định việc kết thúc tất cả hiệu ứng của phần tử (cách sử dụng giống như trong phương thức stop() một tham số)</li>
+<li>Tham số thứ hai dùng để xác định việc đạt đến trạng thái cuối cùng của hiệu ứng hiện tại.</li>
+<ul type="circle">
+<li>Giá trị true - hiệu ứng hiện trạng sẽ đạt đến trạng thái cuối cùng</li>
+<li>Giá trị false - hiệu ứng hiện tại không đạt đến trạng thái cuối cùng (giá trị này là mặc định)</li>
+</ul>
+</ul>
+<div class="form_6">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>$("input[value='radio1']").click(function(){
+    $("#abc").animate({left:'450px'},5000);
+    $("#abc").animate({top:'300px'},5000);
+    $("#abc").animate({left:'0px'},5000);
+    $("#abc").animate({top:'0px'},5000);
+})
+$("input[value='radio2']").click(function(){
+    $("#abc").stop(false, true);
+})</pre>
+    <div class="nutxem"><a href="demo9fa7.html?file=714" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="hieu-ung-dong-animation-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:52 GMT -->
+</html>

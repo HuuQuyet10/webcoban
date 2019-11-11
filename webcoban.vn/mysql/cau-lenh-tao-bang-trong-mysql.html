@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/mysql/cau-lenh-tao-bang-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:40 GMT -->
+<head>
+<title>Câu lệnh tạo bảng trong MySQL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Câu lệnh tạo bảng trong MySQL">
+<meta name="description" content="Câu lệnh tạo bảng trong MySQL">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>MySQL</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về MySQL</a>
+<a href="huong-dan-cai-dat-xampp.html" >- Bài 02: Cài đặt XAMPP để học MySQL</a>
+<a href="cach-chay-lenh-mysql-tren-phpmyadmin.html" >- Bài 03: Chạy câu lệnh MySQL đầu tiên</a>
+<a href="mo-hinh-phan-cap-trong-mysql.html" >- Bài 04: Mô hình phân cấp trong MySQL</a>
+<a href="cau-lenh-tao-database-trong-mysql.html" >- Bài 05: CREATE DATABASE (Tạo database)</a>
+<a href="cac-kieu-du-lieu-trong-mysql.html" >- Bài 06: DATA TYPE (Các kiểu dữ liệu trong MySQL)</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html" class='active'>- Bài 07: CREATE TABLE (Tạo bảng)</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html" >- Bài 08: INSERT INTO (Thêm dữ liệu vào bảng)</a>
+<a href="cach-truy-xuat-du-lieu-trong-mysql.html" >- Bài 09: SELECT (Truy xuất dữ liệu)</a>
+<a href="truy-xuat-du-lieu-dua-theo-dieu-kien-trong-mysql.html" >- Bài 10: WHERE (Truy xuất dữ liệu dựa theo điều kiện)</a>
+<a href="truy-xuat-du-lieu-dua-theo-nhieu-dieu-kien-trong-mysql.html" >- Bài 11: AND &amp; OR (Truy xuất dữ liệu dựa theo nhiều điều kiện)</a>
+<a href="order-by-lay-ket-qua-theo-thu-tu-trong-mysql.html" >- Bài 12: ORDER BY (Lấy kết quả theo thứ tự)</a>
+<a href="distinct-truy-xuat-cac-du-lieu-khac-nhau-trong-mysql.html" >- Bài 13: DISTINCT (Lấy các kết quả không trùng nhau)</a>
+<a href="limit-gioi-han-so-luong-ket-qua-tra-ve-trong-mysql.html" >- Bài 14: LIMIT (Giới hạn số lượng kết quả trả về)</a>
+<a href="in-truy-xuat-du-lieu-khi-thoa-mot-trong-so-cac-gia-tri.html" >- Bài 15: IN (Truy xuất dữ liệu khi thỏa một trong số các giá trị)</a>
+<a href="between-truy-xuat-du-lieu-trong-mot-khoang-gia-tri-trong-mysql.html" >- Bài 16: BETWEEN (Truy xuất dữ liệu trong một khoảng giá trị)</a>
+<a href="like-truy-xuat-du-lieu-dua-theo-chuoi-trong-mysql.html" >- Bài 17: LIKE &amp; NOT LIKE (Truy xuất dự liệu dựa theo chuỗi ký tự)</a>
+<a href="delete-xoa-du-lieu-cua-bang-trong-mysql.html" >- Bài 18: DELETE (Xóa dữ liệu)</a>
+<a href="update-cap-nhat-du-lieu-trong-bang-trong-mysql.html" >- Bài 19: UPDATE (Cập nhật dữ liệu)</a>
+<a href="as-dat-lai-ten-cho-bang-cot-trong-mysql.html" >- Bài 20: AS (Đặt tên tạm thời cho bảng, cột)</a>
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html" >- Bài 21: INNER JOIN</a>
+<a href="ghep-bang-bang-menh-de-left-join-trong-mysql.html" >- Bài 22: LEFT JOIN</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html" >- Bài 23: RIGHT JOIN</a>
+<a href="ghep-bang-bang-menh-de-full-join-trong-mysql.html" >- Bài 24: FULL JOIN</a>
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html" >- Bài 25: ALTER (Sửa đổi cấu trúc bảng)</a>
+<a href="not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html" >- Bài 26: NOT NULL</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html" >- Bài 27: PRIMARY KEY (Tạo khóa chính cho bảng)</a>
+<a href="avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html" >- Bài 28: AVG() - Lấy giá trị trung bình cộng của cột</a>
+<a href="count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" >- Bài 29: COUNT() - Đếm số lượng mẫu tin trong bảng</a>
+<a href="ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html" >- Bài 30: MAX() - Lấy giá trị lớn nhất của cột</a>
+<a href="ham-min-lay-gia-tri-nho-nhat-cua-cot-trong-mysql.html" >- Bài 31: MIN() - Lấy giá trị nhỏ nhất của cột</a>
+<a href="ham-sum-lay-gia-tri-tong-cua-mot-cot-trong-mysql.html" >- Bài 31: SUM() - Lấy tổng của cột</a>
+<a href="ham-round-lam-tron-so-trong-mysql.html" >- Bài 33: ROUND() - Làm tròn số</a>
+<a href="ham-substring-lay-chuoi-con-trong-mysql.html" >- Bài 34: SUBSTRING() - Trích xuất chuỗi ký tự con</a>
+<a href="ham-upper-doi-chu-hoa-trong-mysql.html" >- Bài 35: UPPER() - Truy xuất dữ liệu ở dạng chữ HOA</a>
+<a href="ham-lower-doi-chu-thuong-trong-mysql.html" >- Bài 36: LOWER() - Truy xuất dữ liệu ở dạng chữ thường</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Câu lệnh tạo bảng trong MySQL">Câu lệnh tạo bảng trong MySQL</h1>
+<div class="breadcrumb">
+<a href="cac-kieu-du-lieu-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>Bảng (TABLE) l&agrave; g&igrave;?</h2>
+
+<p>TABLE l&agrave; <u>một c&aacute;i bảng</u> d&ugrave;ng để <u>lưu trữ dữ liệu</u> cho một <strong>LOẠI ĐỐI TƯỢNG</strong> cụ thể.</p>
+
+<p>TABLE gồm <u>nhiều cột</u>, v&agrave; <u>nhiều h&agrave;ng</u>. Trong đ&oacute;:</p>
+
+<ul>
+	<li><strong>Mỗi h&agrave;ng</strong> lưu trữ th&ocirc;ng tin của <strong>một đối tượng</strong>.</li>
+	<li><strong>Mỗi cột</strong> l&agrave; một<strong> thuộc t&iacute;nh</strong> của loại đối tượng đ&oacute;.</li>
+</ul>
+
+<p>Dưới đ&acirc;y l&agrave; một bảng sinh_vien:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>Full_name</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>Nguyen Thanh Nhan</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Pham Thu Huong</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Vinh Long</td>
+		</tr>
+		<tr>
+			<td>Nguyen Nhu Ngoc</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td>Bui Thanh Bao</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td>Le My Nhan</td>
+			<td>Nu</td>
+			<td>22</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Tan Thuc Bao</td>
+			<td>Nam</td>
+			<td>35</td>
+			<td>An Giang</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Bảng tr&ecirc;n c&oacute; 4 cột tương ứng với 4 thuộc t&iacute;nh: Full_name, Gender, Age, City.</p>
+
+<p>Mỗi h&agrave;ng lưu trữ th&ocirc;ng tin của một đối tượng. (V&iacute; dụ: h&agrave;ng thứ 4 lưu trữ th&ocirc;ng tin của đối tượng Nguyen Nhu Ngoc)</p>
+
+<h2>C&uacute; ph&aacute;p tạo bảng</h2>
+
+<h4>Để tạo một bảng trong MySQL, ch&uacute;ng ta sử dụng c&uacute; ph&aacute;p dưới đ&acirc;y</h4>
+
+<pre>
+CREATE TABLE table_name
+(
+&nbsp; &nbsp; column_name1 data_type(size),
+&nbsp; &nbsp; column_name2 data_type(size),
+&nbsp; &nbsp; column_name3 data_type(size),
+&nbsp; &nbsp; ....
+);
+</pre>
+
+<p>Trong đ&oacute;:</p>
+
+<ul>
+	<li>table_name l&agrave; t&ecirc;n của bảng m&agrave; bạn muốn tạo.</li>
+	<li>column_name1 l&agrave; t&ecirc;n cột thứ nhất của bảng. (Tương tự: column_name2&nbsp;v&agrave; column_name3&nbsp;lần lượt l&agrave; t&ecirc;n cột thứ hai v&agrave; cột thứ ba).</li>
+	<li>data_type l&agrave; kiểu dữ liệu của cột.</li>
+	<li>size l&agrave; <u>k&iacute;ch thước tối đa</u> của kiểu dữ liệu của cột.</li>
+</ul>
+
+<h2>V&iacute; dụ tạo một bảng&nbsp;sinh_vien</h2>
+
+<p>Để tạo một bảng sinh_vien&nbsp;gồm 4 cột: Full_name, Gender, Age, City giống v&iacute; dụ ph&iacute;a tr&ecirc;n, ch&uacute;ng ta d&ugrave;ng c&acirc;u lệnh sau:</p>
+
+<pre>
+CREATE TABLE sinh_vien
+(
+&nbsp; &nbsp; Full_name VARCHAR(150),
+&nbsp; &nbsp; Gender VARCHAR(3),
+&nbsp; &nbsp; Age INT,
+&nbsp; &nbsp; City VARCHAR(50)
+);
+</pre>
+
+<table class="tbbang_luuy">
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle; width:10px">
+			<div class="lamp"><img src="../home/image/lamp.png" style="margin:0px" /></div>
+			</td>
+			<td>
+			<div class="element">Kh&ocirc;ng đặt dấu phẩy (,) ở c&acirc;u lệnh tạo cột cuối c&ugrave;ng (V&iacute; dụ: cuối c&acirc;u lệnh City VARCHAR(50) kh&ocirc;ng c&oacute; dấu phẩy như 3 c&acirc;u tr&ecirc;n). Nếu kh&ocirc;ng khi chạy lệnh sẽ bị lỗi.</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Giải th&iacute;ch c&aacute;ch tạo bảng tr&ecirc;n</h2>
+
+<table class="table table-bordered table-hover table-striped">
+	<tbody>
+		<tr>
+			<th>name_column</th>
+			<th>data_type</th>
+			<th>size</th>
+		</tr>
+		<tr>
+			<td>Full_name</td>
+			<td>Full_name (V&iacute; dụ: Nguyen Thanh Nhan). Kiểu dữ liệu của n&oacute; l&agrave; chuỗi, n&ecirc;n ta chọn VARCHAR</td>
+			<td>150 tức l&agrave; bạn muốn họ t&ecirc;n của một sinh vi&ecirc;n được nhập v&agrave;o c&oacute; chiều d&agrave;i tối đa l&agrave; 150 k&yacute; tự.</td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>Gender (V&iacute; dụ: Nam, Nu). Kiểu dữ liệu của n&oacute; l&agrave; chuỗi, n&ecirc;n ta chọn VARCHAR</td>
+			<td>Gender l&agrave; &ldquo;Nam&rdquo; hoặc &ldquo;Nu&rdquo;, ở đ&acirc;y &ldquo;Nam&rdquo; l&agrave; d&agrave;i nhất gồm 3 k&yacute; tự, n&ecirc;n ta chọn size l&agrave; 3</td>
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td>Age (V&iacute; dụ: 18, 25). Kiểu dữ liệu của n&oacute; l&agrave; số nguy&ecirc;n, n&ecirc;n ta chọn INT</td>
+			<td>INT c&oacute; độ d&agrave;i mặc định l&agrave; 11, n&ecirc;n kh&ocirc;ng cần điền Size</td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td>City (V&iacute; dụ: Can Tho, Vinh Long). Kiểu dữ liệu của n&oacute; l&agrave; chuỗi, n&ecirc;n ta chọn VARCHAR</td>
+			<td>50 tức l&agrave; bạn muốn th&agrave;nh phố được nhập v&agrave;o c&oacute; chiều d&agrave;i tối đa l&agrave; 50 k&yacute; tự.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong><span style="font-size:18px">Lưu &yacute;</span></strong></p>
+
+<p>Khi một bảng mới được tạo, n&oacute; l&agrave; bảng rỗng (v&igrave; chưa được th&ecirc;m dữ liệu v&agrave;o).</p>
+
+<p>Để biết c&aacute;ch th&ecirc;m dữ liệu v&agrave;o bảng, mời bạn xem tiếp b&agrave;i <strong><a href="cach-them-du-lieu-vao-bang-trong-mysql.html" style="color:brown">C&Aacute;CH TH&Ecirc;M DỮ LIỆU V&Agrave;O BẢNG TRONG MYSQL</a></strong></p>
+
+<p>Ngo&agrave;i ra bạn c&oacute; thể tham khảo th&ecirc;m c&aacute;c kiểu dữ liệu trong MySQL <strong><a href="cac-kieu-du-lieu-trong-mysql.html" style="color:brown">TẠI Đ&Acirc;Y</a></strong></p>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-kieu-du-lieu-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/mysql/cau-lenh-tao-bang-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:40 GMT -->
+</html>

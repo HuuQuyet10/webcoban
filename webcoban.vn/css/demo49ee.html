@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3461 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:334px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:313px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            margin:20px;
+            border:30px dotted black;
+            padding:25px;
+            background-image:url(../image/smile-face.png);
+            background-repeat:no-repeat;
+            background-origin:<span id="layvitri1" style="color:red;font-weight:bold;font-size:20px;">padding-box</span>;
+            background-position:<span id="layvitri2" style="color:red;font-weight:bold;font-size:20px;">left</span> <span id="layvitri3" style="color:red;font-weight:bold;font-size:20px;">top</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;">
+                <table style="width:100%;margin:0px">
+                    <tr>
+                        <td style="width:180px;padding-left:15px;vertical-align:top">
+                            <p>background-origin:</p>
+                            <div style="padding-left: 8px">
+                                <p><input name="background_origin" value="border-box" type="radio"> border-box</p>
+                                <p><input name="background_origin" value="padding-box" type="radio" checked=""> padding-box</p>
+                                <p><input name="background_origin" value="content-box" type="radio"> content-box</p>
+                            </div>
+                        </td>
+                        <td style="vertical-align:top;padding-right:10px">
+                            <p>background-position:</p>
+                            <table class="ssss-table" style="width:100%">
+                                <tr>
+                                    <td style="width:1px;" rowspan="3">X</td>
+                                    <td id="sss_x_name" class="sss_active" style="width:75px;">tên vị trí</td>
+                                    <td>
+                                        <input type="radio" name="x_name" value="left" checked> left
+                                        &nbsp;
+                                        <input type="radio" name="x_name" value="center"> center
+                                        &nbsp;
+                                        <input type="radio" name="x_name" value="right"> right
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="sss_x_px">px</td>
+                                    <td><input type="range" name="x_px" value="0" min="-65" max="450" style="width:100%"></td>
+                                </tr>
+                                <tr>
+                                    <td id="sss_x_percent">%</td>
+                                    <td><input type="range" name="x_percent" value="0" min="-15" max="100" style="width:100%"></td>
+                                </tr>
+                                <tr>
+                                    <td style="width:1px" rowspan="3">Y</td>
+                                    <td id="sss_y_name" class="sss_active" style="width:75px">tên vị trí</td>
+                                    <td>
+                                        <input type="radio" name="y_name" value="top" checked> top
+                                        &nbsp;
+                                        <input type="radio" name="y_name" value="center"> center
+                                        &nbsp;
+                                        <input type="radio" name="y_name" value="bottom"> bottom
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="sss_y_px">px</td>
+                                    <td><input type="range" name="y_px" value="0" min="-65" max="195" style="width:100%"></td>
+                                </tr>
+                                <tr>
+                                    <td id="sss_y_percent">%</td>
+                                    <td><input type="range" name="y_percent" value="0" min="-15" max="100" style="width:100%"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:padding-box;background-position:left top;'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var style_x = "x_name";
+            var style_y = "y_name";
+            $("input[name='background_origin']").change(function(){
+                var background_origin = $(this).val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            /*************************************************************************************/
+            $("input[name='x_name']").change(function(){
+                style_x = "x_name";
+                $("#sss_x_name, #sss_x_px, #sss_x_percent").removeClass("sss_active");
+                $("#sss_x_name").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            $(document).on('input',"[name='x_px']",function(){
+                style_x = "x_px";
+                $("#sss_x_name, #sss_x_px, #sss_x_percent").removeClass("sss_active");
+                $("#sss_x_px").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            $(document).on('input',"[name='x_percent']",function(){
+                style_x = "x_percent";
+                $("#sss_x_name, #sss_x_px, #sss_x_percent").removeClass("sss_active");
+                $("#sss_x_percent").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            /*************************************************************************************/
+            $("input[name='y_name']").change(function(){
+                style_y = "y_name";
+                $("#sss_y_name, #sss_y_px, #sss_y_percent").removeClass("sss_active");
+                $("#sss_y_name").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            $(document).on('input',"[name='y_px']",function(){
+                style_y = "y_px";
+                $("#sss_y_name, #sss_y_px, #sss_y_percent").removeClass("sss_active");
+                $("#sss_y_px").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+            $(document).on('input',"[name='y_percent']",function(){
+                style_y = "y_percent";
+                $("#sss_y_name, #sss_y_px, #sss_y_percent").removeClass("sss_active");
+                $("#sss_y_percent").addClass("sss_active");
+                var background_origin = $("input[name='background_origin']:checked").val();
+                if(style_x=="x_name"){
+                    var x = $("input[name='x_name']:checked").val();
+                }
+                if(style_x=="x_px"){
+                    var x = $("input[name='x_px']").val() + "px";
+                }
+                if(style_x=="x_percent"){
+                    var x = $("input[name='x_percent']").val() + "%";
+                }
+                if(style_y=="y_name"){
+                    var y = $("input[name='y_name']:checked").val();
+                }
+                if(style_y=="y_px"){
+                    var y = $("input[name='y_px']").val() + "px";
+                }
+                if(style_y=="y_percent"){
+                    var y = $("input[name='y_percent']").val() + "%";
+                }
+                var text = "<div style='margin:20px 20px 0px 20px;border:30px dotted black;padding:25px;background-image:url(../image/smile-face.png);background-repeat:no-repeat;background-origin:"+background_origin+";background-position:"+x+" "+y+";'>C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C C</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(x);
+                $("#layvitri3").html(y);
+                view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style type="text/css">
+        table.ssss-table,
+        table.ssss-table td{
+            border:1px solid #ccc;
+            border-collapse:collapse;
+        }
+        table.ssss-table td{padding:7px 10px;}
+        .sss_active{background-color:pink;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3461 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+</html>﻿

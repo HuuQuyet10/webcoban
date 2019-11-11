@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/mysql/not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:46 GMT -->
+<head>
+<title>(NOT NULL) Không cho phép nhận giá trị NULL trong MySQL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="NOT NULL,Không cho phép nhận giá trị NULL trong MySQL">
+<meta name="description" content="NOT NULL Không cho phép nhận giá trị NULL trong MySQL">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>MySQL</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về MySQL</a>
+<a href="huong-dan-cai-dat-xampp.html" >- Bài 02: Cài đặt XAMPP để học MySQL</a>
+<a href="cach-chay-lenh-mysql-tren-phpmyadmin.html" >- Bài 03: Chạy câu lệnh MySQL đầu tiên</a>
+<a href="mo-hinh-phan-cap-trong-mysql.html" >- Bài 04: Mô hình phân cấp trong MySQL</a>
+<a href="cau-lenh-tao-database-trong-mysql.html" >- Bài 05: CREATE DATABASE (Tạo database)</a>
+<a href="cac-kieu-du-lieu-trong-mysql.html" >- Bài 06: DATA TYPE (Các kiểu dữ liệu trong MySQL)</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html" >- Bài 07: CREATE TABLE (Tạo bảng)</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html" >- Bài 08: INSERT INTO (Thêm dữ liệu vào bảng)</a>
+<a href="cach-truy-xuat-du-lieu-trong-mysql.html" >- Bài 09: SELECT (Truy xuất dữ liệu)</a>
+<a href="truy-xuat-du-lieu-dua-theo-dieu-kien-trong-mysql.html" >- Bài 10: WHERE (Truy xuất dữ liệu dựa theo điều kiện)</a>
+<a href="truy-xuat-du-lieu-dua-theo-nhieu-dieu-kien-trong-mysql.html" >- Bài 11: AND &amp; OR (Truy xuất dữ liệu dựa theo nhiều điều kiện)</a>
+<a href="order-by-lay-ket-qua-theo-thu-tu-trong-mysql.html" >- Bài 12: ORDER BY (Lấy kết quả theo thứ tự)</a>
+<a href="distinct-truy-xuat-cac-du-lieu-khac-nhau-trong-mysql.html" >- Bài 13: DISTINCT (Lấy các kết quả không trùng nhau)</a>
+<a href="limit-gioi-han-so-luong-ket-qua-tra-ve-trong-mysql.html" >- Bài 14: LIMIT (Giới hạn số lượng kết quả trả về)</a>
+<a href="in-truy-xuat-du-lieu-khi-thoa-mot-trong-so-cac-gia-tri.html" >- Bài 15: IN (Truy xuất dữ liệu khi thỏa một trong số các giá trị)</a>
+<a href="between-truy-xuat-du-lieu-trong-mot-khoang-gia-tri-trong-mysql.html" >- Bài 16: BETWEEN (Truy xuất dữ liệu trong một khoảng giá trị)</a>
+<a href="like-truy-xuat-du-lieu-dua-theo-chuoi-trong-mysql.html" >- Bài 17: LIKE &amp; NOT LIKE (Truy xuất dự liệu dựa theo chuỗi ký tự)</a>
+<a href="delete-xoa-du-lieu-cua-bang-trong-mysql.html" >- Bài 18: DELETE (Xóa dữ liệu)</a>
+<a href="update-cap-nhat-du-lieu-trong-bang-trong-mysql.html" >- Bài 19: UPDATE (Cập nhật dữ liệu)</a>
+<a href="as-dat-lai-ten-cho-bang-cot-trong-mysql.html" >- Bài 20: AS (Đặt tên tạm thời cho bảng, cột)</a>
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html" >- Bài 21: INNER JOIN</a>
+<a href="ghep-bang-bang-menh-de-left-join-trong-mysql.html" >- Bài 22: LEFT JOIN</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html" >- Bài 23: RIGHT JOIN</a>
+<a href="ghep-bang-bang-menh-de-full-join-trong-mysql.html" >- Bài 24: FULL JOIN</a>
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html" >- Bài 25: ALTER (Sửa đổi cấu trúc bảng)</a>
+<a href="not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html" class='active'>- Bài 26: NOT NULL</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html" >- Bài 27: PRIMARY KEY (Tạo khóa chính cho bảng)</a>
+<a href="avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html" >- Bài 28: AVG() - Lấy giá trị trung bình cộng của cột</a>
+<a href="count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" >- Bài 29: COUNT() - Đếm số lượng mẫu tin trong bảng</a>
+<a href="ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html" >- Bài 30: MAX() - Lấy giá trị lớn nhất của cột</a>
+<a href="ham-min-lay-gia-tri-nho-nhat-cua-cot-trong-mysql.html" >- Bài 31: MIN() - Lấy giá trị nhỏ nhất của cột</a>
+<a href="ham-sum-lay-gia-tri-tong-cua-mot-cot-trong-mysql.html" >- Bài 31: SUM() - Lấy tổng của cột</a>
+<a href="ham-round-lam-tron-so-trong-mysql.html" >- Bài 33: ROUND() - Làm tròn số</a>
+<a href="ham-substring-lay-chuoi-con-trong-mysql.html" >- Bài 34: SUBSTRING() - Trích xuất chuỗi ký tự con</a>
+<a href="ham-upper-doi-chu-hoa-trong-mysql.html" >- Bài 35: UPPER() - Truy xuất dữ liệu ở dạng chữ HOA</a>
+<a href="ham-lower-doi-chu-thuong-trong-mysql.html" >- Bài 36: LOWER() - Truy xuất dữ liệu ở dạng chữ thường</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="(NOT NULL) Không cho phép nhận giá trị NULL trong MySQL">(NOT NULL) Không cho phép nhận giá trị NULL trong MySQL</h1>
+<div class="breadcrumb">
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h4>NOT NULL được d&ugrave;ng để thiết lập cột <em><u>kh&ocirc;ng được nhận gi&aacute; trị NULL</u></em>.</h4>
+
+<p>Đối với cột đ&atilde; thiết lập NOT NULL, khi INSERT dữ liệu v&agrave;o bảng th&igrave; cột được thiết lập NOT NULL kh&ocirc;ng được nhận gi&aacute; trị NULL, nếu kh&ocirc;ng khi chạy lệnh sẽ bị lỗi.</p>
+
+<h2>Gi&aacute; trị NULL l&agrave; g&igrave;?</h2>
+
+<p>V&iacute; dụ, ch&uacute;ng ta c&oacute; một bảng sinh_vien, bảng c&oacute; 4 cột t&ecirc;n l&agrave; column1, column2, column3, column4.</p>
+
+<p>Th&ecirc;m một mẫu tin v&agrave;o bảng bằng c&acirc;u lệnh sau:</p>
+
+<pre>
+INSERT INTO sinh_vien (column1, column3) VALUES (&quot;abc&quot;,&quot;def&quot;);
+</pre>
+
+<p>Nhận thấy ở c&acirc;u lệnh tr&ecirc;n thiếu tham số column2 v&agrave; column4, vậy tức l&agrave; khi mẫu tin được th&ecirc;m v&agrave;o bảng th&igrave; cột column2 v&agrave; column4 nhận gi&aacute; trị NULL</p>
+
+<h2>V&iacute; dụ &nbsp;KH&Ocirc;NG sử dụng NOT NULL</h2>
+
+<p>D&ugrave;ng c&acirc;u lệnh b&ecirc;n dưới để tạo bảng sinh_vien</p>
+
+<pre>
+CREATE TABLE sinh_vien(
+&nbsp; &nbsp; Full_name VARCHAR(150),
+&nbsp; &nbsp; Gender VARCHAR(3),
+&nbsp; &nbsp; Age INT(11),
+&nbsp; &nbsp; City VARCHAR(50)
+);
+</pre>
+
+<p>Th&ecirc;m v&agrave;o bảng bốn mẫu tin</p>
+
+<pre>
+INSERT INTO sinh_vien VALUES (&#39;Nguyen Thanh Nhan&#39;, &#39;Nam&#39;, 19, &#39;Can Tho&#39;);
+INSERT INTO sinh_vien (Full_name, Gender, Age, City) VALUES (&#39;Pham Thu Huong&#39;, &#39;Nu&#39;, 20, &#39;Vinh Long&#39;);
+INSERT INTO sinh_vien (Full_name, City) VALUES (&#39;Nguyen Nhu Ngoc&#39;, &#39;Soc Trang&#39;);
+INSERT INTO sinh_vien (Gender) VALUES (&#39;Nam&#39;);
+</pre>
+
+<p>Sau khi thực thi hai c&acirc;u lệnh tr&ecirc;n, ch&uacute;ng ta c&oacute; một bản sinh_vien như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>Full_name</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>Nguyen Thanh Nhan</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Pham Thu Huong</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Vinh Long</td>
+		</tr>
+		<tr>
+			<td>Nguyen Nhu Ngoc</td>
+			<td><em>NULL</em></td>
+			<td><em>NULL</em></td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td><em>NULL</em></td>
+			<td>Nam</td>
+			<td><em>NULL</em></td>
+			<td><em>NULL</em></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><u><em>Nhận thấy:</em></u> Ở c&acirc;u lệnh INSERT thứ 3 (thiếu 2 tham số Gender, Age), ở c&acirc;u lệnh INSERT thứ 4 (thiếu 3 tham số Full_name, Age, City). Do đ&oacute; ch&uacute;ng nhận gi&aacute; trị NULL.</p>
+
+<table class="tbbang_luuy">
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle; width:10px">
+			<div class="lamp"><img src="../home/image/lamp.png" style="margin:0px" /></div>
+			</td>
+			<td>
+			<div class="element">Đối với cột kh&ocirc;ng thiết lập NOT NULL, khi INSERT dữ liệu v&agrave;o bảng nếu tham số của cột đ&oacute; bị bỏ trống th&igrave; những cột đ&oacute;&nbsp;sẽ nhận gi&aacute; trị NULL</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>V&iacute; dụ C&Oacute; sử dụng NOT NULL</h2>
+
+<p>D&ugrave;ng c&acirc;u lệnh b&ecirc;n dưới để tạo bảng sinh_vien</p>
+
+<pre>
+CREATE TABLE sinh_vien(
+&nbsp; &nbsp; Full_name VARCHAR(150) NOT NULL,
+&nbsp; &nbsp; Gender VARCHAR(3) NOT NULL,
+&nbsp; &nbsp; Age INT(11) NOT NULL,
+&nbsp; &nbsp; City VARCHAR(50) NOT NULL
+);
+</pre>
+
+<p>Th&ecirc;m v&agrave;o bảng bốn mẫu tin</p>
+
+<pre>
+INSERT INTO sinh_vien VALUES (&#39;Nguyen Thanh Nhan&#39;, &#39;Nam&#39;, 19, &#39;Can Tho&#39;);
+INSERT INTO sinh_vien (Full_name, Gender, Age, City) VALUES (&#39;Pham Thu Huong&#39;, &#39;Nu&#39;, 20, &#39;Vinh Long&#39;);
+INSERT INTO sinh_vien (Full_name, City) VALUES (&#39;Nguyen Nhu Ngoc&#39;, &#39;Soc Trang&#39;);
+INSERT INTO sinh_vien (Gender) VALUES (&#39;Nam&#39;);
+</pre>
+
+<p>Sau khi thực thi hai c&acirc;u lệnh tr&ecirc;n, ch&uacute;ng ta c&oacute; một bản sinh_vien như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>Full_name</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>Nguyen Thanh Nhan</td>
+			<td>Nam</td>
+			<td>19</td>
+			<td>Can Tho</td>
+		</tr>
+		<tr>
+			<td>Pham Thu Huong</td>
+			<td>Nu</td>
+			<td>20</td>
+			<td>Vinh Long</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><u><em>Nhận thấy:</em></u> C&acirc;u lệnh 1, 2 được thực thi trước v&agrave; tham số đầy đủ n&ecirc;n th&ecirc;m th&agrave;nh c&ocirc;ng. C&ograve;n c&acirc;u lệnh 3,4 thiếu tham số n&ecirc;n th&ecirc;m thất bại.</p>
+
+<h2>Lưu &yacute;</h2>
+
+<p>Ở một số phi&ecirc;n bản MySQL mới. Đối với những cột &aacute;p dụng NOT NULL m&agrave; khi INSERT bị bỏ trống, th&igrave; n&oacute; sẽ <u><em>g&aacute;n gi&aacute; trị mặc định</em></u> cho những cột đ&oacute;.</p>
+
+<p>V&iacute; dụ (ch&uacute;ng ta sử dụng lại bảng ở <strong>V&iacute; dụ về C&Oacute; sử dụng NOT NULL)</strong></p>
+
+<p>Th&ecirc;m v&agrave;o bảng hai mẫu tin</p>
+
+<pre>
+INSERT INTO sinh_vien (Full_name, City) VALUES (&#39;Nguyen Nhu Ngoc&#39;, &#39;Soc Trang&#39;);
+INSERT INTO sinh_vien (Gender) VALUES (&#39;Nam&#39;);
+</pre>
+
+<p>Hai mẫu tin mới th&ecirc;m sẽ tr&ocirc;ng như thế n&agrave;y</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+	<tbody>
+		<tr>
+			<th>Full_name</th>
+			<th>Gender</th>
+			<th>Age</th>
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>Nguyen Nhu Ngoc</td>
+			<td>&nbsp;</td>
+			<td>0</td>
+			<td>Soc Trang</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Nam</td>
+			<td>0</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/mysql/not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:46 GMT -->
+</html>

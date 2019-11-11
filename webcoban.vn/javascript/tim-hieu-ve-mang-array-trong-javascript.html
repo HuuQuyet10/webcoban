@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/tim-hieu-ve-mang-array-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:18 GMT -->
+<head>
+<title>Tìm hiểu về mảng (Array) trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tìm hiểu về mảng array trong javascript,tim hieu ve mang array trong javascript,mảng array là gì,mang array la gi,cách sử dụng mảng array trong javascript,cach su dung mang array trong javascript">
+<meta name="description" content="tìm hiểu về mảng array trong javascript, tim hieu ve mang array trong javascript, mảng array là gì, mang array la gi, cách sử dụng mảng array trong javascript, cach su dung mang array trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" class='active'>- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Tìm hiểu về mảng (Array) trong JavaScript">Tìm hiểu về mảng (Array) trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2 id="mang_la_gi_01">1) Mảng là gì !?</h2>
+<p>- Mảng là một loại biến đặc biệt, nó có thể lưu trữ nhiều giá trị đồng thời.</p>
+<p>- Ví dụ, câu lệnh bên dưới dùng để tạo một mảng có tên là mobile và mảng đó chứa năm giá trị:</p>
+<ul style="list-style-type:circle;font-style:italic;">
+<li>HTC</li>
+<li style="margin-top:5px;margin-bottom:5px">Nokia</li>
+<li>SamSung</li>
+<li style="margin-top:5px;margin-bottom:5px">LG</li>
+<li>Apple</li>
+</ul>
+<div class="form_new_33"><span style="color:#006393">var</span> mobile = [<span style="color:#AA5500">"HTC"</span>, <span style="color:#AA5500">"Nokia"</span>, <span style="color:#AA5500">"SamSung"</span>, <span style="color:#AA5500">"LG"</span>, <span style="color:#AA5500">"Apple"</span>];</div>
+<p>- <i><u>Lưu ý</u>:</i> Mỗi giá trị của mảng được gọi là một <em>"phần tử mảng"</em> và mỗi phần tử mảng thì được xác định bởi một chỉ số. Phần tử mảng đầu tiên sẽ có chỉ số là 0, chỉ số của các phần tử mảng sẽ tăng dần theo thứ tự được khai báo.</p>
+<p>- Dưới đây là ví dụ minh họa về chỉ số của các phần tử trong mảng mobile.</p>
+<table class="table table-bordered" style="width:auto">
+    <tr>
+        <th style="color:#555"><em>Phần tử mảng</em></th>
+        <td style="width:100px;text-align:center">HTC</td>
+        <td style="width:100px;text-align:center">Nokia</td>
+        <td style="width:100px;text-align:center">SamSung</td>
+        <td style="width:100px;text-align:center">LG</td>
+        <td style="width:100px;text-align:center">Apple</td>
+    </tr>
+    <tr>
+        <th style="color:#555"><em>Chỉ số của phần tử mảng</em></th>
+        <td style="text-align:center">0</td>
+        <td style="text-align:center">1</td>
+        <td style="text-align:center">2</td>
+        <td style="text-align:center">3</td>
+        <td style="text-align:center">4</td>
+    </tr>
+</table>
+<h2>2) Trường hợp sử dụng mảng</h2>
+<p>- Trường hợp sử dụng mảng thì <i><u>rất đa dạng</u></i>.</p>
+<p>- Tuy nhiên, trong đó chỉ có hai trường hợp là chủ yếu:</p>
+<ul style="list-style-type:circle">
+<li><i>(1)</i> Sử dụng mảng để lưu trữ các giá trị thuộc cùng một thể loại.</li>
+<div>=&gt; Ví dụ <div class="form_new_33" style="display:inline-block;margin-top:7px">var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];</div>
+<li style="margin-top:10px"><i>(2)</i> Sử dụng mảng để lưu trữ các giá trị liên quan đến một đối tượng.</li>
+<div>=&gt; Ví dụ <div class="form_new_33" style="display:inline-block;margin-top:7px">var SinhVien = [&quot;Nguyễn Thành Nhân&quot;, &quot;Nam&quot;, 1993, &quot;Cần Thơ&quot;];</div></div>
+</ul>
+<h2>3) Cách khai báo <i>(khởi tạo)</i> một mảng</h2>
+<p>- Để khai báo một mảng, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33"><span style="color:#006393">var</span> tên mảng = [<i>phần tử thứ nhất, phần tử thứ hai, phần tử thứ ba, ...., phần tử thứ N</i>];</div>
+<p>- Hoặc bạn cũng có thể viết các phần tử xuống dòng giống cú pháp bên dưới:</p>
+<div class="form_new_33"><span style="color:#006393">var</span> tên mảng = [<i>
+    phần tử thứ nhất,
+    phần tử thứ hai,
+    phần tử thứ ba,
+    ....,
+    phần tử thứ N</i>
+];</div>
+<p>- <i><u>Lưu ý</u>:</i> Giá trị của các phần tử mảng có thể là: <i>chuỗi, số, biến, ....</i></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Đoạn mã bên dưới dùng để tạo một mảng có tên là SinhVien, mảng SinhVien có bốn phần tử:</p>
+<ul style="list-style-type:circle">
+<li>Phần tử thứ nhất có giá trị là chuỗi Nguyễn Thành Nhân</li>
+<li style="margin-top:5px">Phần tử thứ hai có giá trị là chuỗi Nam</li>
+<li style="margin-top:5px;margin-bottom:5px">Phần tử thứ ba có giá trị là số 1993</li>
+<li>Phần tử thứ tư có giá trị bằng với giá trị của biến city</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var SinhVien = [
+        &quot;Nguyễn Thành Nhân&quot;,
+        'Nam',
+        1993,
+        city
+    ];
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6ee5.html?file=1889" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Cách truy cập vào phần tử mảng</h2>
+<p>- Thông thường, chúng ta truy cập vào phần tử mảng để:</p>
+<ul style="list-style-type:circle">
+<li><i>(1)</i> Lấy giá trị của phần tử mảng.</li>
+<li style="margin-top:7px"><i>(2)</i> Hoặc cập nhật giá trị cho phần tử mảng.</li>
+</ul>
+<p>- Để truy cập vào phần tử mảng thì ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33">tên mảng[<em>chỉ số của phần tử mảng</em>]</div>
+<p>- <i><u>Lưu ý</u>:</i>Cách xác định chỉ số của phần tử mảng đã được đề cập trong phần <a href="#mang_la_gi_01" style="font-weight:bold;text-decoration:underline">1) Mảng là gì !?</a></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Hiển thị giá trị phần tử thứ ba của mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    document.write(&quot;Giá trị của phần tử thứ ba là: &quot; + mobile[2]);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo0833.html?file=1890" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Cập nhật giá trị phần tử thứ tư của mảng mobile thành Lenovo</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile[3] = "Lenovo";
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo7eb7.html?file=1891" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Để hiển thị toàn bộ giá trị của các phần tử trong mảng thì ta chỉ cần gọi tên mảng.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    document.write(&quot;Mảng mobile là: &quot; + mobile);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo47ac.html?file=1892" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) <em>"Mảng kết hợp"</em> là gì !?</h2>
+<p>- Mảng kết hợp là loại mảng mà các phần tử của nó không được xác định bởi chỉ số, mà được xác định bằng một cái tên <i>(tên này do chúng ta tự đặt)</i>.</p>
+<p>- Để khai báo một mảng kết hợp thì trước tiên ta phải khai báo một mảng rỗng, sau đó thêm từng phần tử vào mảng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Đoạn mã bên dưới dùng để tạo một mảng có tên là SinhVien, mảng SinhVien có ba phần tử:</p>
+<ul style="list-style-type:circle">
+<li>Phần tử có tên name với giá trị là chuỗi Nguyễn Thành Nhân</li>
+<li style="margin-top:5px;margin-bottom:5px">Phần tử có tên year với giá trị là số 1993</li>
+<li>Phần tử có tên city với giá trị là chuỗi Cần Thơ</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var SinhVien = [];
+    SinhVien[&quot;name&quot;] = &quot;Nguyễn Thành Nhân&quot;;
+    SinhVien[&quot;year&quot;] = 1993;
+    SinhVien[&quot;city&quot;] = &quot;Cần Thơ&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo5a92.html?file=1893" target="_blank">Xem ví dụ</a></div>
+</div>
+<p><div>- Để truy cập vào phần tử của mảng kết hợp thì ta dùng cú pháp <div class="form_new_33" style="display:inline">tên mảng["tên phần tử"]</div></div></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Hiển thị giá trị phần tử có tên là city của mảng SinhVien</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var SinhVien = [];
+    SinhVien[&quot;name&quot;] = &quot;Nguyễn Thành Nhân&quot;;
+    SinhVien[&quot;year&quot;] = 1993;
+    SinhVien[&quot;city&quot;] = &quot;Cần Thơ&quot;;
+    document.write(&quot;Giá trị phần tử có tên city là: &quot; + SinhVien[&quot;city&quot;]);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo5c0b.html?file=1894" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28;top:17px"></span>
+<p>- Mảng kết hợp hầu như không được hỗ trợ trong JavaScript.</p>
+<p>- Do đó, ta không thể hiển thị một loạt các phần tử mảng bằng cách gọi tên mảng.</p>
+</div>
+<h2>6) Mảng hai chiều & mảng đa chiều</h2>
+<p>- Như chúng ta đã biết, giá trị của các phần tử mảng có thể là: <i>chuỗi, số, biến, ....</i></p>
+<p>- Tuy nhiên, nó còn có thể là một mảng khác.</p>
+<p>- <i><u>Ví dụ 1</u>:</i> Đoạn mã bên dưới dùng để tạo một mảng có tên là motorbike và mảng motorbike có năm phần tử. Trong đó, phần tử thứ hai của mảng motorbike là một mảng gồm bốn phần tử.</p>
+<div class="form_new_33">var motorbike = [
+    &quot;Honda&quot;,
+    [&quot;Jupiter&quot;, &quot;Exciter&quot;, &quot;Sirius&quot;, &quot;Nouvo&quot;],
+    &quot;Suzuki&quot;,
+    &quot;SYM&quot;,
+    &quot;Piaggio&quot;
+];</div>
+<p>- <i><u>Ví dụ 2</u>:</i> Đoạn mã bên dưới dùng để tạo một mảng có tên là motorbike và mảng motorbike có năm phần tử. Trong đó, phần tử thứ hai của mảng motorbike là một mảng gồm bốn phần tử, và phần tử thứ ba của phần tử thứ hai của mảng motorbike lại tiếp tục là một mảng gồm hai phần tử.</p>
+<div class="form_new_33">var motorbike = [
+    &quot;Honda&quot;,
+    [
+        &quot;Jupiter&quot;,
+        &quot;Exciter&quot;,
+        [&quot;Sirius phanh cơ&quot;, &quot;Sirius phanh đĩa&quot;],
+        &quot;Nouvo&quot;
+    ],
+    &quot;Suzuki&quot;,
+    &quot;SYM&quot;,
+    &quot;Piaggio&quot;
+];</div>
+<div class="form_new_05">
+<span class="fa fa-file-text-o fa-lg"></span>
+<p>- Mảng mà không chứa phần tử nào là mảng thì được gọi là mảng một chiều <i>(một cấp)</i>.</p>
+<p><i>(Số chiều sẽ tăng lên dựa vào độ sâu của mảng)</i></p>
+<p>- Mảng motorbike trong ví dụ 1 có độ sâu là hai nên được gọi là mảng hai chiều.</p>
+<p>- Mảng motorbike trong ví dụ 2 có độ sâu là ba nên được gọi là mảng ba chiều.</p>
+</div>
+<p>- Để truy cập vào phần tử của mảng hai chiều, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_20"><div>tên mảng[<i>chỉ số của phần tử mảng cấp một</i>][<i>chỉ số của phần tử mảng cấp hai</i>];</div></div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Hiển thị giá trị của <i><u>phần tử thứ tư</u></i> của <i><u>phần tử thứ hai</u></i> của mảng motorbike</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var motorbike = [
+        &quot;Honda&quot;,
+        [&quot;Jupiter&quot;, &quot;Exciter&quot;, &quot;Sirius&quot;, &quot;Nouvo&quot;],
+        &quot;Suzuki&quot;,
+        &quot;SYM&quot;,
+        &quot;Piaggio&quot;
+    ];
+    document.write(motorbike[1][3]);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoef87.html?file=1895" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Để truy cập vào phần tử của mảng n chiều, ta sử dụng cú pháp như sau:</p>
+<p><i>(Lưu ý: Cụm từ <span style="color:#333">"chỉ số của phần tử mảng cấp"</span> tôi sẽ viết tắt là cscptmc)</i></p>
+<div class="form_new_20"><div>tên mảng[<i>cscptmc 1</i>][<i>cscptmc 2</i>][<i>cscptmc 3</i>]...[<i>cscptmc n - 2</i>][<i>cscptmc n - 1</i>][<i>cscptmc n</i>];</div></div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Hiển thị giá trị của <i><u>phần tử thứ nhất</u></i> của <i><u>phần tử thứ ba</u></i> của <i><u>phần tử thứ hai</u></i> của mảng motorbike</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var motorbike = [
+        &quot;Honda&quot;,
+        [
+            &quot;Jupiter&quot;,
+            &quot;Exciter&quot;,
+            [&quot;Sirius phanh cơ&quot;, &quot;Sirius phanh đĩa&quot;],
+            &quot;Nouvo&quot;
+        ],
+        &quot;Suzuki&quot;,
+        &quot;SYM&quot;,
+        &quot;Piaggio&quot;
+    ];
+    document.write(motorbike[1][2][0]);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6ee7.html?file=1896" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>7) Cách lặp qua một lần các phần tử mảng</h2>
+<p>- Chúng ta có thể sử dụng vòng lặp for để lặp qua một lần các phần tử mảng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Sử dụng một vòng lặp for để lặp qua một lần mảng một chiều</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var motorbike = [
+        &quot;Honda&quot;,
+        &quot;Yamaha&quot;,
+        &quot;Suzuki&quot;,
+        &quot;SYM&quot;,
+        &quot;Piaggio&quot;
+    ];
+    for(var i = 0; i &lt; motorbike.length; i++){
+        document.write(&quot;- &quot; + motorbike[i] + &quot;&lt;br&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demof68d.html?file=1897" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Sử dụng hai vòng lặp for để lặp qua một lần mảng hai chiều</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var data = [
+        [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;],
+        [&quot;Honda&quot;, &quot;Suzuki&quot;, &quot;Yamaha&quot;],
+        [&quot;Nguyễn Thành Nhân&quot;, &quot;Nam&quot;, 1993, &quot;Cần Thơ&quot;]
+    ];
+    for(var i = 0; i &lt; data.length; i++){
+        for(var j = 0; j &lt; data[i].length; j++){
+            document.write(&quot;- &quot; + data[i][j] + &quot;&lt;br&gt;&quot;);
+        }
+        document.write(&quot;&lt;hr&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoeaca.html?file=1898" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Cú pháp <span class="form_new_28">tên mảng.length</span> dùng để trả về số lượng phần tử của mảng.</p><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/tim-hieu-ve-mang-array-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:21 GMT -->
+</html>

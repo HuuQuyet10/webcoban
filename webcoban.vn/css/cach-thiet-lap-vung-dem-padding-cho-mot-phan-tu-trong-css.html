@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:35 GMT -->
+<head>
+<title>Cách thiết lập vùng đệm (padding) cho phần tử trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách thiết lập vùng đệm padding cho phần tử trong css">
+<meta name="description" content="Trong bài học này, các bạn sẽ được tìm hiểu khái niệm vùng đệm là gì, cách sử dụng thuộc tính padding trong CSS để thiết lập vùng đệm cho một phần tử HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.6345.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" class='active'>- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách thiết lập vùng đệm (padding) cho phần tử trong CSS">Cách thiết lập vùng đệm cho một phần tử HTML</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Vùng đệm là gì !?</h2>
+<p>- Trong <a href="cau-truc-cua-mot-phan-tu-html.html" target="_blank" class="ifl1i">Bài 06</a> thì tôi đã có giới thiệu sơ qua cho các bạn biết vùng đệm là gì rồi !</p>
+<p>- Vùng đệm (padding) là khoảng cách nằm giữa đường viền của phần tử &amp; nội dung của phần tử.</p>
+<div class="sij1l">
+<div class="jfe1i"></div>
+<div><input type="range" value="20" min="0" max="80"></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Cách thiết lập vùng đệm cho phần tử</h2>
+<p>- Để thiết lập vùng đệm cho một phần tử HTML thì chúng ta cần phải thiết lập thuộc tính <strong class="mark2">padding</strong> cho phần tử đó với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">padding: value;</div>
+<p>- Trong đó, <u>value</u> là khoảng cách vùng đệm từ đường viền đến nội dung của phần tử, nó có thể được xác định dựa theo một trong ba loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>length</td>
+<td><p>- Chỉ định khoảng cách vùng đệm dựa theo một giá trị cụ thể, giá trị này có thể được xác định dựa theo các loại đơn vị như: px, em, cm, . . . .</p></td>
+<td><a href="demo3364.html?file=3492" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>%</td>
+<td>
+<p>- Chỉ định khoảng cách vùng đệm dựa theo tỷ lệ phần trăm <span>chiều rộng phần nội dung của phần tử cha của nó</span>.</p>
+<p>- <u>Ví dụ</u>: Chúng ta có phần tử A là cha của phần tử B, chiều rộng phần nội dung của phần tử A là 200px.</p>
+<ul>
+<li>Nếu ta thiết lập thuộc tính padding cho phần tử B với giá trị 50% thì vùng đệm của phần tử B sẽ có khoảng cách là 100px.</li>
+<li>Nếu ta thiết lập thuộc tính padding cho phần tử B với giá trị 20% thì vùng đệm của phần tử B sẽ có khoảng cách là 40px.</li>
+<li>. . . .</li>
+</ul>
+</td>
+<td><a href="demo69ac.html?file=3493" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính padding từ phần tử cha của nó.</p></td>
+<td><a href="demodab7.html?file=3494" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách thiết lập vùng đệm ở riêng từng phía</h2>
+<p>- Sau khi tìm hiểu xong phần hướng dẫn ở trên thì chắc các bạn cũng đã thấy: <i>&quot;khi chúng ta thiết lập thuộc tính padding cho một phần tử HTML thì mặc định vùng đệm nằm ở cả bốn phía của phần tử sẽ có chung một khoảng cách&quot;</i></p>
+<div class="ei1l1">
+<table>
+<tr>
+<td><p>- Tuy nhiên, không phải lúc nào chúng ta cũng muốn như thế, mà đôi khi lại muốn vùng đệm ở mỗi phía của phần tử sẽ có một khoảng cách khác nhau, điển hình như phần tử bên phải có:</p>
+<ul>
+<li>Vùng đệm phía trên là 50 pixel.</li>
+<li>Vùng đệm bên phải là 80 pixel.</li>
+<li>Vùng đệm phía dưới là 250 pixel.</li>
+<li>Vùng đệm bên trái là 25 pixel.</li>
+</ul>
+<p>- Và để làm được điều đó thì chúng ta có hai cách cơ bản như sau:</p>
+<ul>
+<li><u>Cách 1</u>: Thiết lập nhiều giá trị cho thuộc tính padding.</li>
+<li><u>Cách 2</u>: Thêm &quot;tên vị trí&quot; vào phía sau thuộc tính padding.</li>
+</ul>
+</td>
+<td><div>LẬP TRÌNH WEB</div></td>
+</tr>
+</table>
+</div>
+<p>- Tuy nhiên, trước khi đi vào tìm hiểu chi tiết hai cách trên thì các bạn cần phải nắm rõ tên từng vị trí của vùng đệm (bên dưới là ảnh minh họa từng vị trí của vùng đệm &amp; tên của chúng)</p>
+<div class="o1ils"><div><div>top</div><div>bottom</div><div>left</div><div>right</div></div></div>
+<h3>3.1) Thiết lập nhiều giá trị cho thuộc tính padding</h3>
+<div class="i-form-free">
+<div><u>Cú pháp 1</u>:</div>
+<div class="i-pre-not-color i-form-1">padding: value1 value2 value3 value4;</div>
+<p>- Vùng đệm phía trên (top) sẽ có khoảng cách là value1.</p>
+<p>- Vùng đệm bên phải (right) sẽ có khoảng cách là value2.</p>
+<p>- Vùng đệm phía dưới (bottom) sẽ có khoảng cách là value3.</p>
+<p>- Vùng đệm bên trái (left) sẽ có khoảng cách là value4.</p>
+<div><a href="demoe0b0.html?file=3495" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="i-form-free">
+<div><u>Cú pháp 2</u>:</div>
+<div class="i-pre-not-color i-form-1">padding: value1 value2 value3;</div>
+<p>- Vùng đệm phía trên (top) sẽ có khoảng cách là value1.</p>
+<p>- Vùng đệm bên trái (left) &amp; bên phải (right) sẽ có khoảng cách là value2.</p>
+<p>- Vùng đệm phía dưới (bottom) sẽ có khoảng cách là value3.</p>
+<div><a href="demo8526.html?file=3496" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="i-form-free">
+<div><u>Cú pháp 3</u>:</div>
+<div class="i-pre-not-color i-form-1">padding: value1 value2;</div>
+<p>- Vùng đệm phía trên (top) &amp; phía dưới (bottom) sẽ có khoảng cách là value1.</p>
+<p>- Vùng đệm bên trái (left) &amp; bên phải (right) sẽ có khoảng cách là value2.</p>
+<div><a href="demo05a1.html?file=3497" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<h3>3.2) Thêm &quot;tên vị trí&quot; vào phía sau thuộc tính padding</h3>
+<p>- Để thiết lập vùng đệm ở riêng từng phía cho phần tử bằng cách thêm tên vị trí vào phía sau thuộc tính padding thì chúng ta sử dụng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">padding-tênvịtrí: value;</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+           display:inline-block;
+           border:5px solid green;
+           padding-top:25px;
+           padding-right:300px;
+           padding-bottom:100px;
+           padding-left:50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;LẬP TRÌNH WEB&lt;/div&gt;
+    &lt;p&gt;- Vùng đệm phía trên là 25 pixel&lt;/p&gt;
+    &lt;p&gt;- Vùng đệm bên phải là 300 pixel&lt;/p&gt;
+    &lt;p&gt;- Vùng đệm phía dưới là 100 pixel&lt;/p&gt;
+    &lt;p&gt;- Vùng đệm bên trái là 50 pixel&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo560d.html?file=3498" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.2773.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:39 GMT -->
+</html>

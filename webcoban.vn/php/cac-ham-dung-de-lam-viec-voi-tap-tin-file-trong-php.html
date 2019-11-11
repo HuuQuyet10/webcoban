@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:15 GMT -->
+<head>
+<title>Các hàm dùng để làm việc với tập tin (file) trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="các hàm dùng để làm việc với tập tin (file) trong php">
+<meta name="description" content="Các hàm dùng để làm việc với tập tin (file) trong PHP">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" class='active'>- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các hàm dùng để làm việc với tập tin (file) trong PHP">Các hàm dùng để làm việc với tập tin (file) trong PHP</h1>
+<div class="breadcrumb">
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<table class="table table-bordered juei1">
+<tr>
+<td><a href="ham-basename-trong-php-lay-ten-tap-tin-file-tu-mot-duong-dan.html">base_name()</a></td>
+<td><p>- Trả về thành phần &quot;tên tập tin&quot; của một đường dẫn.</p></td>
+</tr>
+<tr>
+<td><a href="ham-chgrp-trong-php.html">chgrp()</a></td>
+<td><p>- Thay đổi nhóm người dùng trên tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-chmod-trong-php-thiet-lap-quyen-tren-tap-tin.html">chmod()</a></td>
+<td><p>- Thay đổi các quyền hạn của nhóm người dùng trên tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-chown-trong-php-thay-doi-chu-so-huu-cua-tap-tin.html">chown()</a></td>
+<td><p>- Thay đổi chủ sở hữu của tập tin.</p></td>
+</tr>
+<tr>
+<td>clearstatcache()</td>
+<td><p>- Xóa bộ đệm trạng thái của tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-copy-trong-php-sao-chep-mot-tap-tin-file.html">copy()</a></td>
+<td><p>- Sao chép một tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-dirname-trong-php.html">dirname()</a></td>
+<td><p>- Trả về thành phần &quot;tên thư mục&quot; của một đường dẫn.</p></td>
+</tr>
+<tr>
+<td>disk_free_space()</td>
+<td><p>- Trả về phần bộ nhớ còn trống của thự mục (ổ đĩa)</p></td>
+</tr>
+<tr>
+<td>disk_total_space()</td>
+<td><p>- Trả về tổng bộ nhớ của thư mục (ổ đĩa)</p></td>
+</tr>
+<tr>
+<td><a href="ham-fclose-trong-php-dong-tap-tin-file.html">fclose()</a></td>
+<td><p>- Đóng một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td><a href="ham-feof-trong-php.html">feof()</a></td>
+<td><p>- Kiểm tra coi đã đi đến điểm kết thúc của tập tin (end-of-file) hay chưa.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fgetc-trong-php.html">fgetc()</a></td>
+<td><p>- Trả về một ký tự từ một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fgets-trong-php.html">fgets()</a></td>
+<td><p>- Trả về một dòng từ một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>fgetss()</td>
+<td><p>- Trả về một dòng (đã lược bỏ các thẻ HTML) từ một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>file()</td>
+<td><p>- Trả về nội dung của tập tin dưới dạng một mảng.</p></td>
+</tr>
+<tr>
+<td><a href="ham-file-exists-trong-php-kiem-tra-xem-tap-tin-hoac-thu-muc-co-ton-tai-hay-khong.html">file_exists()</a></td>
+<td><p>- Kiểm tra tập tin, thư mục có tồn tại hay không.</p></td>
+</tr>
+<tr>
+<td><a href="ham-file-get-contents-trong-php-lay-noi-dung-cua-tap-tin-file.html">file_get_contents()</a></td>
+<td><p>- Trả về nội dung của tập tin dưới dạng một chuỗi.</p></td>
+</tr>
+<tr>
+<td>file_put_contents()</td>
+<td><p>- Ghi nội dung vào một tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fileatime-trong-php.html">fileatime()</a></td>
+<td><p>- Trả về thời điểm lần cuối cùng tập tin được truy cập.</p></td>
+</tr>
+<tr>
+<td><a href="ham-filectime-trong-php.html">filectime()</a></td>
+<td><p>- Trả về thời điểm lần cuối cùng tập tin được chỉnh sửa (quyền hạn, chủ sở hữu, nhóm người dùng, . . . .)</p></td>
+</tr>
+<tr>
+<td>filegroup()</td>
+<td><p>- Trả về ID nhóm của tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-filemtime-trong-php.html">filemtime()</a></td>
+<td><p>- Trả về thời điểm lần cuối cùng nội dung bên trong tập tin được chỉnh sửa.</p></td>
+</tr>
+<tr>
+<td>fileowner()</td>
+<td><p>- Trả về user ID (chủ sở hữu) của tập tin.</p></td>
+</tr>
+<tr>
+<td>fileperms()</td>
+<td><p>- Trả về các quyền của một tập tin, thư mục.</p></td>
+</tr>
+<tr>
+<td><a href="ham-filesize-trong-php-lay-kich-thuoc-cua-mot-tap-tin-file.html">filesize()</a></td>
+<td><p>- Trả về kích thước của tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-filetype-trong-php.html">filetype()</a></td>
+<td><p>- Trả về kiểu của tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fopen-trong-php-mo-mot-tap-tin-file.html">fopen()</a></td>
+<td><p>- Mở một tập tin.</p></td>
+</tr>
+<tr>
+<td>fpassthru()</td>
+<td><p>- Xuất nội dung của một tập tin đang mở ra màn hình.</p></td>
+</tr>
+<tr>
+<td>fputs()</td>
+<td><p>- Chức năng &amp; cách sử dụng giống với hàm fwrite()</p></td>
+</tr>
+<tr>
+<td><a href="ham-fread-trong-php.html">fread()</a></td>
+<td><p>- Đọc nội dung từ một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fseek-trong-php.html">fseek()</a></td>
+<td><p>- Di chuyển con trỏ đến một vị trí chỉ định bên trong tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>fstat()</td>
+<td><p>- Trả về một mảng chứa các thông tin về một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td><a href="ham-ftell-trong-php.html">ftell()</a></td>
+<td><p>- Trả về vị trí hiện tại của con trỏ bên trong tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>ftruncate()</td>
+<td><p>- Cắt xén nội dung của một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td><a href="ham-fwrite-trong-php-viet-noi-dung-vao-tap-tin-file.html">fwrite()</a></td>
+<td><p>- Ghi nội dung vào một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>glob()</td>
+<td><p>- Trả về một mảng các tập tin &amp; thư mục trùng khớp với mẫu cần tìm.</p></td>
+</tr>
+<tr>
+<td><a href="ham-is-dir-trong-php.html">is_dir()</a></td>
+<td><p>- Kiểm tra tập tin chỉ định có phải là một thư mục hay không.</p></td>
+</tr>
+<tr>
+<td><a href="ham-is-executable-trong-php.html">is_executable()</a></td>
+<td><p>- Kiểm tra tập tin chỉ định có phải là một tập tin thực thi hay không.</p></td>
+</tr>
+<tr>
+<td><a href="ham-is-file-trong-php.html">is_file()</a></td>
+<td><p>- Kiểm tra tập tin chỉ định có phải là một tập tin thông thường hay không.</p></td>
+</tr>
+<tr>
+<td><a href="ham-is-readable-trong-php.html">is_readable()</a></td>
+<td><p>- Kiểm tra tập tin chỉ định có phải là một tập tin có thể đọc hay không.</p></td>
+</tr>
+<tr>
+<td>is_uploaded_file()</td>
+<td><p>- Kiểm tra tập tin chỉ định có phải được tải qua HTTP POST hay không.</p></td>
+</tr>
+<tr>
+<td><a href="ham-is-writable-trong-php.html">is_writable()</a></td>
+<td><p>- Kiểm tra tập tin chỉ định có phải là một tập tin có thể ghi được hay không.</p></td>
+</tr>
+<tr>
+<td>is_writeable()</td>
+<td><p>- Chức năng &amp; cách sử dụng giống với hàm is_writeable()</p></td>
+</tr>
+<tr>
+<td><a href="ham-mkdir-trong-php-tao-mot-thu-muc.html">mkdir()</a></td>
+<td><p>- Tạo một cái thư mục.</p></td>
+</tr>
+<tr>
+<td><a href="ham-move-uploaded-file-trong-php.html">move_uploaded_file()</a></td>
+<td><p>- Di chuyển tập tin vừa được tải lên đến một vị trí lưu trữ chỉ định.</p></td>
+</tr>
+<tr>
+<td>parse_ini_file()</td>
+<td><p>- Trả về thông tin cài đặt của một tập tin cấu hình (ini)</p></td>
+</tr>
+<tr>
+<td>pathinfo()</td>
+<td><p>- Trả về các thông tin liên quan đến đường dẫn tập tin.</p></td>
+</tr>
+<tr>
+<td>readfile()</td>
+<td><p>- Xuất nội dung của một tập tin ra màn hình.</p></td>
+</tr>
+<tr>
+<td>realpath()</td>
+<td><p>- Trả về đường dẫn tuyệt đối của một tập tin, thư mục.</p></td>
+</tr>
+<tr>
+<td><a href="ham-rename-trong-php-sua-ten-tap-tin-thu-muc.html">rename()</a></td>
+<td><p>- Chỉnh sửa tên của một tập tin, thư mục.</p></td>
+</tr>
+<tr>
+<td><a href="ham-rewind-trong-php.html">rewind()</a></td>
+<td><p>- Di chuyển con trỏ về đầu tập tin.</p></td>
+</tr>
+<tr>
+<td><a href="ham-rmdir-trong-php-xoa-mot-thu-muc-rong.html">rmdir()</a></td>
+<td><p>- Xóa một thư mục rỗng.</p></td>
+</tr>
+<tr>
+<td>set_file_buffer()</td>
+<td><p>- Thiết lập kích thước bộ đệm cho một tập tin đang mở.</p></td>
+</tr>
+<tr>
+<td>stat()</td>
+<td><p>- Trả về một mảng chứa các thông tin về một tập tin.</p></td>
+</tr>
+<tr>
+<td>touch()</td>
+<td><p>- Thiết lập thời gian truy cập &amp; sửa đổi của tập tin được chỉ định.</p></td>
+</tr>
+<tr>
+<td><a href="ham-unlink-trong-php-xoa-mot-tap-tin-file.html">unlink()</a></td>
+<td><p>- Xóa một tập tin.</p></td>
+</tr>
+</table>
+<style>
+.juei1 tr td:nth-child(1){width:1px;white-space:nowrap;}
+.juei1 tr td:nth-child(1) > a{color:black;text-decoration:underline;text-decoration-color:crimson;}
+.juei1 tr td:nth-child(2){padding-top:0px !important;padding-bottom:0px !important;padding-right:0px;}
+.juei1 tr td:nth-child(2) > p{margin-top:13px !important;margin-bottom:13px !important;}
+</style><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:27 GMT -->
+</html>

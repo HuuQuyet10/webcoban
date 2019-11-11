@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:52 GMT -->
+<head>
+<title>Các phương thức lấy nội dung và thuộc tính trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Các phương thức lấy nội dung và thuộc tính trong jQuery">
+<meta name="description" content="Các phương thức lấy nội dung và thuộc tính trong jQuery">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" class='active'>- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các phương thức lấy nội dung và thuộc tính trong jQuery">Các phương thức lấy nội dung và thuộc tính trong jQuery</h1>
+<div class="breadcrumb">
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="xoa-phan-tu-html-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>Trong jQuery c&oacute; 4 phương thức ch&iacute;nh để lấy nội dung v&agrave; thuộc t&iacute;nh&nbsp;của một phần tử HTML.</p>
+
+<ul>
+	<li><strong>text()</strong> - lấy nội dung của một&nbsp;phần tử HTML (kh&ocirc;ng bao gồm c&aacute;c&nbsp;thẻ HTML)</li>
+	<li><strong>html()</strong> - lấy nội dung của một phần tử HTML (bao gồm c&aacute;c thẻ HTML)</li>
+	<li><strong>val()</strong> - lấy gi&aacute; trị của một trường input</li>
+	<li><strong>attr(&quot;t&ecirc;n thuộc t&iacute;nh&quot;)</strong> - lấy gi&aacute; trị thuộc t&iacute;nh của một phần tử HTML</li>
+</ul>
+
+<div class="form_6">
+<div class="theh3">V&iacute; dụ</div>
+
+<div class="noithem">
+<p>Đoạn m&atilde; dưới đ&acirc;y lấy nội dung của phần tử &lt;div&gt; bằng hai phương thức&nbsp;kh&aacute;c nhau.&nbsp;</p>
+</div>
+
+<hr />
+<pre>
+$(&quot;#button1&quot;).click(function(){
+&nbsp; &nbsp; alert($(&quot;div&quot;).text());
+})
+$(&quot;#button2&quot;).click(function(){
+&nbsp; &nbsp; alert($(&quot;div&quot;).html());
+})</pre>
+
+<div class="nutxem"><a href="demofbcd.html?file=258" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+
+<div class="form_6">
+<div class="theh3">V&iacute; dụ</div>
+
+<div class="noithem">
+<p>Đoạn m&atilde; dưới đ&acirc;y sẽ lấy gi&aacute; trị của trường input</p>
+</div>
+
+<hr />
+<pre>
+$(&quot;button&quot;).click(function(){
+&nbsp; &nbsp; alert($(&quot;input&quot;).val());
+})</pre>
+
+<div class="nutxem"><a href="demo7467.html?file=259" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+
+<div class="form_6">
+<div class="theh3">V&iacute; dụ</div>
+
+<div class="noithem">
+<p>Đoạn m&atilde; dưới đ&acirc;y sẽ lấy gi&aacute; trị của thuộc t&iacute;nh target của ph&acirc;n tử &lt;a&gt;</p>
+</div>
+
+<hr />
+<pre>
+$(&quot;button&quot;).click(function(){
+&nbsp; &nbsp; alert($(&quot;a&quot;).attr(&quot;target&quot;));
+})</pre>
+
+<div class="nutxem"><a href="demo8b29.html?file=260" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="xoa-phan-tu-html-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:53 GMT -->
+</html>

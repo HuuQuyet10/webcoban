@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/su-kien-keypress-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:40 GMT -->
+<head>
+<title>Sự kiện keypress() trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="sự kiện keypress trong jQuery,su kien keypress trong jQuery,sự kiện keypress là gì,su kien keypress la gi">
+<meta name="description" content="Sự kiện keypress() trong jQuery, su kien keypress() trong jQuery, sự kiện keypress() là gì, su kien keypress() la gi">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" >- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Sự kiện keypress() trong jQuery">Sự kiện keypress() trong jQuery</h1>
+<div class="breadcrumb">
+<a href="tat-ca-su-kien-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery Event (tất cả sự kiện trong jQuery)</a>
+</div>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28;top:17px"></span>
+<p>Để dễ dàng tiếp thu bài hướng dẫn này thì trước tiên bạn cần xem qua:</p>
+<ul style="list-style-type:circle">
+<li>Sự kiện <a href="su-kien-keydown-trong-jquery.html" target="_blank" style="color:black;text-decoration:underline">keydown()</a> trong jQuery</li>
+<li style="margin-top:6px">Sự kiện <a href="su-kien-keyup-trong-jquery.html" target="_blank" style="color:black;text-decoration:underline">keyup()</a> trong jQuery</li>
+</ul>
+</div>
+<h2>1) Sự kiện keypress() trong jQuery</h2>
+<p>- Sự kiện <strong>keypress()</strong> xảy ra khi một phím được nhấn xuống.</p>
+<p>- <i><u>Ví dụ</u>:</i> Bạn hãy thử nhập một nội dung gì đó vào phần tử &lt;textarea&gt; bên dưới.</p>
+<table style="margin-top:20px;margin-bottom:15px">
+<tr>
+<td><textarea cols="30" rows="5" id="kdna_vd1" placeholder="gõ văn bản vào đây...."></textarea></td>
+<td style="padding-left:25px"><div style="width:480px;border:2px dotted #828080;padding:20px;text-align:center;font-size:20px" id="kdna_vd2"></div></td>
+</tr>
+</table>
+<script>
+$(document).ready(function(){
+$("#kdna_vd1").keypress(function(){
+$("#kdna_vd2").html("<span style='color:#0aad1e'>Sự kiện keypress() vừa mới xảy ra!</span>");
+$(this).css("background-color","#16e226");
+});
+$("#kdna_vd1").keyup(function(){
+$("#kdna_vd2").html("<span style='color:#ec3232'>Sự kiện keyup() vừa mới xảy ra!</span>");
+$(this).css("background-color","#ec3232");
+});
+})
+</script>
+<div class="form_new_21"><p>- <i><u>Lưu ý</u>:</i> Nếu một phím được nhấn xuống và giữ nguyên <i>(không nhả ra)</i> thì trong khi đó sẽ xảy ra vô số sự kiện keypress().</p></div>
+<p>- <i><u>Ví dụ</u>:</i> Bạn hãy thử nhấn một phím nào đó vào phần tử &lt;textarea&gt; bên dưới và giữ nguyên.</p>
+<table style="margin-top:20px;margin-bottom:15px">
+<tr>
+<td><textarea cols="30" rows="5" id="kdna_vd3" placeholder="gõ văn bản vào đây...."></textarea></td>
+<td style="padding-left:25px"><div style="width:480px;border:2px dotted #828080;padding:20px;text-align:center;font-size:20px">Số sự kiện keypress() đã xảy ra: <span id="kdna_vd4">0</span></div></td>
+</tr>
+</table>
+<script>
+var kdfnjn = 0;
+$(document).ready(function(){
+$("#kdna_vd3").keypress(function(){
+kdfnjn += 1;
+$("#kdna_vd4").html(kdfnjn);
+});
+})
+</script>
+<h2>2) Điểm <i><u>giống nhau</u></i> &amp; <i><u>khác nhau</u></i> giữa keypress() &amp; keydown()</h2>
+<p>- <i><u>Điểm giống</u>:</i> Cả hai sự kiện này đều xảy ra khi một phím được nhấn xuống.</p>
+<p>- <i><u>Điểm khác</u>:</i></p>
+<ul style="list-style-type:circle">
+<li>Sự kiện keydown() xảy ra với hầu hết tất cả các phím bấm.</li>
+<li style="margin-top:8px;margin-bottom:8px;">Sự kiện keypress() <span style="margin-bottom:6px;display:inline-block">không</span> xảy ra với hầu hết tất cả các phím bấm, điển hình là khi bạn bấm vào các phím như <kbd style="font-size:18px;margin-bottom:4px;display:inline-block;">tab</kbd> <kbd style="font-size:18px">caps lock</kbd> <kbd style="font-size:18px">shift</kbd> <kbd style="font-size:18px">ctrl</kbd> <kbd style="font-size:18px">alt</kbd> <kbd style="font-size:18px">esc</kbd> <kbd style="font-size:18px">backspace</kbd> <kbd style="font-size:18px"><span class="fa fa-arrow-left"></span></kbd> <kbd style="font-size:18px"><span class="fa fa-arrow-down"></span></kbd> <kbd style="font-size:18px"><span class="fa fa-arrow-right"></span></kbd> <kbd style="font-size:18px"><span class="fa fa-arrow-up"></span></kbd> thì sẽ không xảy ra sự kiện keypress().</li>
+<li>Một điểm khác biệt nữa là khi phần tử được thiết lập sự kiện keypress() lẫn keydown(), nếu ta bấm các phím mà cả hai sự kiện đều xảy ra thì sự kiện keypress() sẽ được ưu tiên hơn.</li>
+</ul>
+<p>- <i><u>Ví dụ</u>:</i> Phần tử &lt;textarea&gt; bên dưới được thiết lập cả sự kiện keypress() lẫn keydown(). Nếu sự kiện keypress() xảy ra thì nền của nó sẽ chuyển sang màu xanh, nếu sự kiện keydown() xảy ra thì nền của nó sẽ chuyển sang màu đỏ.</p>
+<table style="margin-top:20px;margin-bottom:15px">
+<p>- <i><u>Gợi ý</u>:</i> Khi bấm các phím thông thường thì sự kiện keypress() sẽ được ưu tiên hơn, vì vậy nền của textarea sẽ được chuyển sang màu xanh. Bạn hãy thử bấm vào textarea bên dưới các phím thông thường rồi sau đó bấm các phím mà sự kiện keypress() không xảy ra, để thấy được sự khác biệt giữa hai sự kiện này.</p>
+<tr>
+<td><textarea cols="30" rows="8" id="kdna_vd5" placeholder="gõ văn bản vào đây...."></textarea></td>
+<td style="padding-left:25px">
+<div style="margin-bottom:20px;width:480px;border:2px dotted #828080;padding:20px;text-align:center;font-size:20px" id="kdna_vd6"><span style='visibility:hidden'>keypress</span></div>
+<div style="width:480px;border:2px dotted #828080;padding:20px;text-align:center;font-size:20px" id="kdna_vd7"><span style='visibility:hidden'>keypress</span></div>
+</td>
+</tr>
+</table>
+<script>
+$(document).ready(function(){
+$("#kdna_vd5").keypress(function(){
+$("#kdna_vd6").html("<span style='color:#0aad1e'>Sự kiện keypress() vừa mới xảy ra!</span>");
+$(this).css("background-color","#16e226");
+});
+$("#kdna_vd5").keydown(function(){
+$("#kdna_vd7").html("<span style='color:#ec3232'>Sự kiện keydown() vừa mới xảy ra!</span>");
+$(this).css("background-color","#ec3232");
+});
+$("#kdna_vd5").keyup(function(){
+$("#kdna_vd6").html("<span style='visibility:hidden'>keypress</span>");
+$("#kdna_vd7").html("<span style='visibility:hidden'>keypress</span>");
+$(this).css("background-color","white");
+});
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>3) Cách sử dụng sự kiện keypress() trong jQuery</h2>
+<p>- Có hai trường hợp sử dụng sự kiện keypress():</p>
+<p>- <i><u>Trường hợp 1</u>:</i> Khi sự kiện keypress() xảy ra thì một chức năng sẽ được thực thi:</p>
+<div style="margin-top:15px;margin-bottom:15px"><div class="form_new_33">$(selector).keypress(function(){
+    //đoạn mã sẽ được thực thi khi sự kiện keypress() xảy ra
+})</div></div>
+<p>- <i><u>Trường hợp 2</u>:</i> Kích hoạt sự kiện keypress() cho một phần tử:</p>
+<div style="margin-top:15px;"><div class="form_new_33">$(selector).keypress();</div></div>
+<h2>4) Một số ví dụ</h2>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Khi phần tử &lt;textarea&gt; xảy ra sự kiện keypress() thì nền của phần tử &lt;textarea&gt; đó sẽ được chuyển sang màu vàng.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;textarea&quot;).keypress(function(){
+            $(this).css(&quot;background-color&quot;,&quot;yellow&quot;);
+        });
+   });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo50a2.html?file=2828" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Khi phần tử &lt;button&gt; xảy ra sự kiện click() thì phần tử &lt;textarea&gt; sẽ được kích hoạt sự kiện keypress()</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    $(document).ready(function(){
+        $(&quot;button&quot;).click(function(){
+            $(&quot;textarea&quot;).keypress();
+        });
+    });
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo3aeb.html?file=2829" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="tat-ca-su-kien-trong-jquery.html"><span class="fa fa-sign-out"></span> jQuery Event (tất cả sự kiện trong jQuery)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/su-kien-keypress-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:47:41 GMT -->
+</html>

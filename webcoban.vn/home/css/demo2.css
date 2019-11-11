@@ -1,0 +1,149 @@
+﻿* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin:0px;
+}
+#container {
+  background-color:#f1f1f1;
+  width:100%;
+  overflow:auto;
+  position:absolute;
+  top:50px;
+  bottom:0px;
+  height:auto;
+}
+#textareacontainer, #iframecontainer {
+  height:50%;
+  width:100%;
+}
+#textarea{
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:0px;
+  padding-left:10px;
+  padding-right:10px;
+}
+#textareawrapper {
+  width:100%;
+  height:100%;
+  position: relative;
+}
+#textareaCode {
+  background-color: #ffffff;
+  font-family: consolas,"courier new",monospace;
+  font-size:15px;
+  height:100%;
+  width:100%;
+  resize: none;
+  border:1px solid #C0C0C0;
+  padding-top:7px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:7px;
+  color: #000 !important; 
+  word-wrap: break-word;
+  line-height: normal;   
+}
+#iframe {
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:0px;
+  padding-left:10px;
+  padding-right:10px; 
+}
+#iframewrapper {
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  border:1px solid #C0C0C0;
+}
+#iframeResult{
+    background-color: #ffffff;
+    height:100%;
+    width:100%;
+}
+#container_menu{
+  height:50px;
+  position:absolute;
+  width: 100%;
+  background-color: #f1f1f1; 
+}
+#container_menu > #left{
+  position: absolute;
+  width: 50%;
+  top:0px;
+  bottom: 0px;
+  left:0px;
+  right:50%;
+  background-color: #f1f1f1; 
+}
+#container_menu > #right{
+  position: absolute;
+  width: 50%;
+  top:0px;
+  bottom: 0px;
+  left:50%;
+  right:0px;
+  background-color: #f1f1f1;
+}
+#container_menu > #left > h1{
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+  padding-left:10px;
+  padding-top:10px;
+  font-family: Arial, Helvetica, sans-Serif;
+}
+#container_menu > #right button.xemketqua{
+  margin-top:7px;
+  margin-left: 6px;
+  font-size: 18px;
+  color:white;
+  background-color: #555555;
+  border-top:1px solid black;
+  border-left:1px solid black;
+  border-right:3px solid black;
+  border-bottom:3px solid black;
+  padding: 5px 10px;
+}
+#container_menu > #right button.xemketqua:hover{
+  color:black;
+  background-color: white;
+  cursor: pointer;
+}
+#container_menu > #right button.xemketqua:active{
+  background-color: #555555;
+  cursor: default;
+}
+.codecolorCC {
+  background-color: #ffffff;
+  position:absolute;
+  font-family: consolas,"courier new",monospace;
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  border:1px solid #C0C0C0;
+  padding-top:7px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:7px;
+  resize: none;
+  border: none;
+  z-index: 1;
+  overflow-y:auto;
+  word-wrap: break-word;
+  line-height:normal;    
+}
+textarea.textareaCC {
+  background-color:transparent !important;
+  z-index:2;
+  position:relative;
+  -webkit-text-fill-color: transparent;
+  line-height:normal;    
+}

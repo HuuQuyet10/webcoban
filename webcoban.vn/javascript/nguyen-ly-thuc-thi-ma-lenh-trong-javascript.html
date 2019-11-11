@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:26 GMT -->
+<head>
+<title>Nguyên lý thực thi mã lệnh trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Nguyên lý thực thi mã lệnh trong JavaScript,nguyen ly thuc thi ma lenh trong javascript">
+<meta name="description" content="Nguyên lý thực thi mã lệnh trong JavaScript, nguyen ly thuc thi ma lenh trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" class='active'>- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Nguyên lý thực thi mã lệnh trong JavaScript">Nguyên lý thực thi mã lệnh trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p style="margin-top:10px">- Trước tiên, để tiện cho việc xưng hô thì tất cả những câu lệnh trong cặp thẻ <i>&lt;script&gt;&lt;/script&gt;</i> hoặc những câu lệnh trong tập tin JavaScript, ta tạm gọi chúng là <i style="color:#333;font-weight:bold">"kịch bản"</i>.</p>
+<h2>1) Thứ tự thực thi của các câu lệnh trong kịch bản</h2>
+<p>- Trong một kịch bản, các câu lệnh JavaScript được thực thi lần lượt theo thứ tự <span style="display:inline-block;border:1px solid gray;border-radius:50%;padding:10px 10px;">từ trên xuống dưới</span></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Giống như thứ tự được sắp đặt trong kịch bản bên dưới:</p>
+<ul style="list-style-type:circle">
+<li>Câu lệnh <span style="display:inline-block;border:1px solid #ddd;padding:3px 6px;border-radius:4px;"><i>document.write(&quot;&lt;h2&gt;Tài liệu học HTML&lt;/h2&gt;&quot;)</i></span> sẽ được thực thi đầu tiên</li>
+<li>Câu lệnh <span style="display:inline-block;border:1px solid #ddd;padding:3px 6px;border-radius:4px;margin:10px 0px;"><i>document.write(&quot;&lt;h2&gt;Tài liệu học CSS&lt;/h2&gt;&quot;)</i></span> được thực thi thứ hai</li>
+<li>Câu lệnh <span style="display:inline-block;border:1px solid #ddd;padding:3px 6px;border-radius:4px;"><i>document.write(&quot;&lt;h2&gt;Tài liệu học JavaScript&lt;/h2&gt;&quot;)</i></span> thực thi cuối cùng</li>
+</ul>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    document.write(&quot;&lt;h2&gt;Tài liệu học HTML&lt;/h2&gt;&quot;);
+    document.write(&quot;&lt;h2&gt;Tài liệu học CSS&lt;/h2&gt;&quot;);
+    document.write(&quot;&lt;h2&gt;Tài liệu học JavaScript&lt;/h2&gt;&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6776.html?file=1588" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Có những kịch bản mà trong đó câu lệnh bên dưới phải cần đến dữ liệu từ câu lệnh ở trên. Vì vậy, việc xác định thứ tự của các câu lệnh là vô cùng quan trọng <i>(Nếu xác định sai có thể dẫn đến trường hợp kịch bản thực thi không như mong đợi hoặc xảy ra lỗi)</i></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem">
+<p>- Ở kịch bản bên dưới, đầu tiên là khởi tạo biến a có giá trị 100, biến b giá trị 70. Kế đến tạo biến c với giá trị là tổng của a và b. Cuối cùng hiển thị lên màn hình giá trị của biến c.</p>
+<p>- Vì phải tồn tại a và b thì c mới có thể tính tổng của a và b được. Do đó, câu lệnh <span class="form_new_09" style="border-color:gray">var c = a + b</span> phải nằm sau câu lệnh <span class="form_new_09" style="border-color:gray">var a = 100</span> và <span class="form_new_09" style="border-color:gray">var b = 70</span></p>
+<p>- Vì phải tồn tại c thì mới hiển thị ra màn hình giá trị của nó được. Nên câu lệnh <span class="form_new_09" style="border-color:gray">document.write(c)</span> phải nằm sau câu lệnh <span class="form_new_09" style="border-color:gray">var c = a + b</span></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = 100;
+    var b = 70;
+    var c = a + b;
+    document.write(c);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo27b7.html?file=1589" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Thứ tự thực thi của các kịch bản trong trang web</h2>
+<p>- Trong một trang web, các kịch bản được thực thi lần lượt theo thứ tự <span style="display:inline-block;border:1px solid gray;border-radius:50%;padding:10px 20px;">từ trên xuống dưới</span></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Lập Trình Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Tài liệu học HTML&lt;/p&gt;
+    &lt;script&gt;
+        document.write(&quot;&lt;p&gt;Tài liệu học CSS&lt;/p&gt;&quot;);
+        document.write(&quot;&lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;&quot;);
+    &lt;/script&gt;
+    &lt;p&gt;Tài liệu học MySQL&lt;/p&gt;
+    &lt;p&gt;Tài liệu học PHP&lt;/p&gt;
+    &lt;script&gt;
+        var a = 100;
+        var b = 70;
+        var c = a + b;
+        document.write(c);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo31b0.html?file=1590" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Các kịch bản được viết tách biệt nhau, đó là do cách trình bày của người lập trình viên. Tuy nhiên, về mặt ý nghĩa thì chúng cũng giống như một kịch bản. Các câu lệnh của kịch bản phía trên sẽ cung cấp dữ liệu cho các câu lệnh của kịch bản phía dưới.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Trang web bên dưới có ba kịch bản, nhưng chúng mang ý nghĩa giống như kịch bản:<br></p>
+<span class="form_new_09" style="border-color:gray;border-radius:10px;margin-bottom:7px;">var a = 100;<br>
+var b = 70;<br>
+var c = a + b;<br>
+document.write(c);</span>
+</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Lập Trình Web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Tài liệu học HTML&lt;/p&gt;
+    &lt;script&gt;
+        var a = 100;
+        var b = 70;
+    &lt;/script&gt;
+    &lt;p&gt;Tài liệu học CSS&lt;/p&gt;
+    &lt;p&gt;Tài liệu học JavaScript&lt;/p&gt;
+    &lt;script&gt;
+        var c = a + b;
+    &lt;/script&gt;
+    &lt;p&gt;Tài liệu học MySQL&lt;/p&gt;
+    &lt;p&gt;Tài liệu học PHP&lt;/p&gt;
+    &lt;script&gt;
+        document.write(c);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo4f09.html?file=1591" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_07">
+<p>Thứ tự thực thi của các tập tin JavaScript được nhúng vào trang web cũng giống các đoạn <i>&lt;script&gt;</i></p>
+</div>
+<h2>3) Mối liên hệ giữa HTML và mã lệnh JavaScript</h2>
+<p>- Không riêng gì thứ tự thực thi giữa các câu lệnh JavaScript mới quan trọng, thứ tự thực thi giữa HTML và JavaScript cũng quan trọng không kém.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Ở đoạn mã bên dưới, <span class="form_new_09" style="border-color:gray;margin:7px 0px;">&lt;h2 id=&quot;demo&quot;&gt;Tài liệu học HTML&lt;/h2&gt;</span> thực thi trước để tạo một phần tử có id là demo, sau đó câu lệnh <span class="form_new_09" style="border-color:gray;margin:7px 0px;">document.getElementById(&quot;demo&quot;).innerHTML = &quot;Tài liệu học CSS&quot;</span> được thực thi với ý nghĩa là thay thế nội dung của phần tử có id là demo thành câu <i>Tài liệu học CSS</i></p>
+</div>
+    <hr>
+    <pre>&lt;h2 id=&quot;demo&quot;&gt;Tài liệu học HTML&lt;/h2&gt;
+&lt;script&gt;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;Tài liệu học CSS&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo15ce.html?file=1592" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ở ví dụ phía trên, phần tử có id là demo phải tồn tại trước thì câu lệnh JavaScript mới có thể thay thế nội dung của nó thành câu <i>Tài liệu học CSS</i> được. Còn nếu thay thế nội dung mà trong khi phần tử đó chưa tồn tại thì sẽ dẫn đến trường hợp bị lỗi.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Ở đoạn mã bên dưới, câu lệnh <span class="form_new_09" style="border-color:gray;margin:7px 0px;">document.getElementById(&quot;demo&quot;).innerHTML = &quot;Tài liệu học CSS&quot;</span> không thể thực thi được vì phần tử có id là demo chưa tồn tại.</p></div>
+    <hr>
+    <pre>&lt;script&gt;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;Tài liệu học CSS&quot;;
+&lt;/script&gt;
+&lt;h2 id=&quot;demo&quot;&gt;Tài liệu học HTML&lt;/h2&gt;</pre>
+    <div class="nutxem"><a href="democef0.html?file=1593" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28"></span>
+<p>- Trong JavaScript, khi một câu lệnh bị lỗi thì việc thực thi sẽ kết thúc (tức là những câu lệnh JavaScript nằm sau câu lệnh bị lỗi sẽ không được thực thi tiếp)</p>
+<p>- Không giống như những ngôn ngữ lập trình khác, khi bị lỗi JavaScript không hiển thị thông báo lên màn hình, nó chỉ hiển thị lỗi trong phần Console của trình duyệt <i>(Bạn sẽ được tìm hiểu kỹ về vấn đề này trong bài <a href="../xem/lienket/272.html" target="_blank" style="color:brown">Cách tìm và khắc phục lỗi trong JavaScript</a>)</i></p>
+</div>
+<p>- Có một cách để đề phòng trường hợp người lập trình viên sơ ý sắp xếp sai thứ tự của mã HTML và JavaScript dẫn đến tình trạng phần tử HTML không tồn tại khiến câu lệnh JavaScript thực thi bị lỗi, đó chính là đặt các kịch bản JavaScript nằm ở vị trí cuối cùng trong phần tử &lt;body&gt;, bởi vì khi đó các mã HTML được thực thi trước đảm bảo phần tử HTML tồn tại trước khi mã lệnh JavaScript được thực thi. Ngoài ra nó còn giúp cải thiện tốc độ tải giao diện của trang web <i>(vì mã HTML được thực thi trước)</i></p><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:28 GMT -->
+</html>

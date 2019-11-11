@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/ham-fileatime-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:48 GMT -->
+<head>
+<title>Hàm fileatime() trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="fileatime,hàm fileatime,ham fileatime,hàm fileatime trong php,ham fileatime trong php,fileatime trong php">
+<meta name="description" content="fileatime, hàm fileatime, ham fileatime, hàm fileatime trong php, ham fileatime trong php, fileatime trong php">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Hàm fileatime() trong PHP">Hàm fileatime() trong PHP</h1>
+<div class="breadcrumb">
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html"><span class="fa fa-sign-out"></span> PHP File (các hàm dùng để làm việc với tập tin)</a>
+</div>
+<h4>- Hàm <strong>fileatime()</strong> trả về thời điểm lần truy cập cuối cùng của một tập tin được chỉ định.</h4>
+<p><i>(thời điểm được tính bằng tổng số giây từ ngày 01/01/1970 UTC đến thời điểm lần truy cập cuối cùng)</i></p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_20"><div>fileatime(<i>đường dẫn đến tập tin mà bạn muốn kiểm tra</i>)</div></div>
+<div class="form_new_14" style="border:1px solid #ddd">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;?php
+    echo fileatime(&quot;file/test.txt&quot;);
+?&gt;</pre>
+    <div class="noithem2">
+        <p>Khi đó, trên màn hình sẽ hiển thị:</p>
+    </div>
+    <div class="thehiendemo">
+        1505392378
+    </div>
+</div>
+<p>- Để hiển thị thời điểm dưới dạng ngày tháng thì ta sử dụng kết hợp với hàm date() giống ví dụ sau:</p>
+<div class="form_new_14" style="border:1px solid #ddd">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;?php
+    echo date(&quot;d-m-Y H:i:s&quot;,fileatime(&quot;file/test.txt&quot;));
+?&gt;</pre>
+    <div class="noithem2">
+        <p>Khi đó, trên màn hình sẽ hiển thị:</p>
+    </div>
+    <div class="thehiendemo">
+        14-09-2017 19:32:58
+    </div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html"><span class="fa fa-sign-out"></span> PHP File (các hàm dùng để làm việc với tập tin)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/ham-fileatime-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:48:48 GMT -->
+</html>

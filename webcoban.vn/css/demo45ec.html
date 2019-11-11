@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3550 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:30 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:158px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:137px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            background-color:green;
+            width:100px;
+            height:100px;
+            transition-property:<span id="layvitri1" style="color:red;font-size:20px">none</span>;
+            transition-duration:4s;
+        }
+        div:hover{
+            background-color:red;
+            width:300px;
+            height:300px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;- Các bạn hãy thử dí con trỏ vào phần tử bên dưới.&lt;/h3&gt;
+    &lt;div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;padding-left:20px;">
+                <p style="margin-top:15px"><input type="radio" name="jeu4xd" value="none" checked> none (mặc định)</p>
+                <p><input type="radio" name="jeu4xd" value="all"> all</p>
+                <p><input type="radio" name="jeu4xd" value="background-color"> background-color</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<h3>- Các bạn hãy thử dí con trỏ vào phần tử bên dưới.</h3><div></div><style>div{background-color:green;width:100px;height:100px;transition-property:none;transition-duration:4s;}div:hover{background-color:red;width:300px;height:300px;}</style>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='jeu4xd']").change(function(){
+                $("#layvitri1").html($(this).val());
+                var text = "<img src='../image/loading.gif' style='height:100px;position:fixed;top:100px;left:236px'>";
+                view_result(text);
+                var text = "<h3>- Các bạn hãy thử dí con trỏ vào phần tử bên dưới.</h3><div></div><style>div{background-color:green;width:100px;height:100px;transition-property:"+$(this).val()+";transition-duration:4s;}div:hover{background-color:red;width:300px;height:300px;}</style>";
+                setTimeout(function(){view_result(text);}, 300);
+            })
+        })
+    </script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3550 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:30 GMT -->
+</html>﻿

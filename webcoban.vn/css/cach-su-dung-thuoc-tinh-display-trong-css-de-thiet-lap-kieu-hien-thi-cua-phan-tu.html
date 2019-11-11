@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:50 GMT -->
+<head>
+<title>Thiết lập kiểu hiển thị của phần tử bằng thuộc tính display trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thiết lập kiểu hiển thị của phần tử bằng thuộc tính display trong css">
+<meta name="description" content="Hướng dẫn cách sử dụng thuộc tính display trong CSS để thiết lập cách thức hiển thị cho một phần tử HTML, ví dụ như chuyển phần tử sang dạng phần tử khối, chuyển sang dạng phần tử nội tuyến hoặc ẩn phần tử.">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.2957.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" class='active'>- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thiết lập kiểu hiển thị của phần tử bằng thuộc tính display trong CSS">Chỉnh cách thức hiển thị của một phần tử HTML</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Trong loạt tài liệu hướng dẫn học HTML thì tôi đã từng giới thiệu sơ qua với các bạn về hai loại phần tử, đó chính là phần tử khối và phần tử nội tuyến, lý do mà các phần tử này được phân loại như vậy là bởi vì <u>cách thức hiển thị</u> của chúng (ví dụ như các phần tử &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, . . . . được liệt vào nhóm phần tử khối là do khi hiển thị thì chúng luôn bắt đầu trên một hàng mới và trải dài từ trái sang phải chiếm toàn bộ chiều rộng phần content của cha chúng, còn các phần tử như &lt;span&gt;, &lt;i&gt;, &lt;u&gt;, . . . . được liệt vào nhóm phần tử nội tuyến là do khi hiển thị thì chúng sẽ tiếp nối trên hàng hiện tại và chiều rộng phụ thuộc vào kích cỡ của nội dung nằm ở bên trong chúng)</p>
+<table>
+<tr>
+<td><img src="../image/question.jpg"></td>
+<td>
+<p>- Vậy câu hỏi được đặt ra ở đây là: <i><q>tại sao tất cả đều là phần tử, mà phần tử này thì lại có cách thức hiển thị như thế này, phần tử kia thì lại có cách thức hiển thị như thế kia !?</q></i></p>
+</td>
+</tr>
+</table>
+<p><span>&#10063;</span> <u><b>TRẢ LỜI</b></u>: Trong CSS, ban đầu mỗi phần tử đều được thiết lập thuộc tính <span class="mark2">display</span> với một giá trị mặc định, giá trị này sẽ quyết định cách thức hiển thị của phần tử, ví dụ:</p>
+<ul>
+<li>Đối với các phần tử như &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, . . . thì mặc định chúng được thiết lập thuộc tính display với giá trị block, cho nên chúng sẽ hiển thị dưới dạng khối.</li>
+<li>Đối với các phần tử như &lt;span&gt;, &lt;i&gt;, &lt;u&gt;, . . . thì mặc định chúng được thiết lập thuộc tính display với giá trị inline, cho nên chúng sẽ hiển thị dưới dạng nội tuyến.</li>
+</ul>
+<p><span>&#9940;</span> Chỉ cần thiết lập lại giá trị cho thuộc tính display của phần tử thì đồng nghĩa với việc chúng ta có thể thay đổi cách thức hiển thị của phần tử đó.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more">
+<p>- Cách thức hiển thị của phần tử &lt;span&gt; được chuyển sang dạng khối.</p>
+<p>- Cách thức hiển thị của phần tử &lt;div&gt; được chuyển sang dạng nội tuyến.</p>
+</div>
+<hr>
+<pre>&lt;style&gt;
+    span{
+        display:block;
+    }
+    div{
+        display:inline;
+    }
+&lt;/style&gt;</pre>
+<div><a href="demo7b4e.html?file=3565" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- Tuy nhiên, <u>cách thức hiển thị</u> của phần tử không chỉ dừng lại ở hai dạng khối &amp; nội tuyến, mà thật ra nó còn có rất nhiều dạng khác nữa, dưới đây là danh sách những giá trị (cũng chính là cách thức hiển thị)  mà chúng ta có thể gán cho thuộc tính display. Các bạn vui lòng bấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để tìm hiểu chi tiết khi chúng ta sử dụng giá trị đó thì cách thức hiển thị của phần tử sẽ trông như thế nào nhé !</p>
+<table class="table table-bordered mjk2o">
+<tr>
+<td>inline</td>
+<td>
+<p>- Phần tử sẽ hiển thị dưới dạng nội tuyến.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-inline</div></span></div>
+</td>
+</tr>
+<tr>
+<td>block</td>
+<td>
+<p>- Phần tử sẽ hiển thị dưới dạng khối.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-block</div></span></div>
+</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>
+<p>- Phần tử sẽ hiển thị dưới dạng khối nội tuyến.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-inline-block</div></span></div>
+</td>
+</tr>
+<tr>
+<td>none</td>
+<td>
+<p>- Phần tử sẽ bị ẩn đi.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-none</div></span></div>
+</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>
+<p>- Phần tử sẽ hiển thị dưới dạng một cái thùng chứa flex dạng khối.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-flex</div></span></div>
+</td>
+</tr>
+<tr>
+<td>grid</td>
+<td>
+<p>- Phần tử sẽ hiển thị dưới dạng một cái thùng chứa grid dạng khối.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-grid</div></span></div>
+</td>
+</tr>
+<tr>
+<td>inline-flex</td>
+<td><p>- Phần tử sẽ hiển thị dưới dạng một cái thùng chứa flex dạng nội tuyến.</p></td>
+</tr>
+<tr>
+<td>inline-grid</td>
+<td><p>- Phần tử sẽ hiển thị dưới dạng một cái thùng chứa grid dạng nội tuyến.</p></td>
+</tr>
+<tr>
+<td>list-item</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;li&gt;</p></td>
+</tr>
+<tr>
+<td>table</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;table&gt;</p></td>
+</tr>
+<tr>
+<td>table-caption</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;caption&gt;</p></td>
+</tr>
+<tr>
+<td>table-column-group</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;colgroup&gt;</p></td>
+</tr>
+<tr>
+<td>table-header-group</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;thead&gt;</p></td>
+</tr>
+<tr>
+<td>table-footer-group</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;tfoot&gt;</p></td>
+</tr>
+<tr>
+<td>table-row-group</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;tbody&gt;</p></td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;td&gt;</p></td>
+</tr>
+<tr>
+<td>table-column</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;col&gt;</p></td>
+</tr>
+<tr>
+<td>table-row</td>
+<td><p>- Cách thức hiển thị của phần tử sẽ giống với một phần tử &lt;tr&gt;</p></td>
+</tr>
+</table>
+<div class="zzz-big-form">
+<div class="ttt-inline">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">inline</span> thì phần tử sẽ hiển thị dưới dạng nội tuyến.</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td>
+<p>- Một phần tử hiển thị dưới dạng nội tuyến sẽ có các đặc điểm như sau:</p>
+<ul>
+<li>Phần tử hiển thị tiếp nối trên hàng hiện tại.</li>
+<li>Chiều rộng của phần tử phụ thuộc vào kích cỡ của nội dung nằm ở bên trong nó.</li>
+<li>Chúng ta không thể sử dụng các thuộc tính width &amp; height để thiết lập kích thước cho phần tử.</li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style&gt;
+        p{
+            display:inline;
+            border:1px solid black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;Tài liệu học &lt;p&gt;Lập Trình Web&lt;/p&gt; miễn phí&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo44a0.html?file=3566" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-block">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">block</span> thì phần tử sẽ hiển thị dưới dạng khối.</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td>
+<p>- Một phần tử hiển thị dưới dạng khối sẽ có các đặc điểm như sau:</p>
+<ul>
+<li>Phần tử luôn bắt đầu trên một hàng mới.</li>
+<li>Chiều rộng của phần tử sẽ trải dài từ trái qua phải (chiếm toàn bộ chiều rộng phần content của cha nó)</li>
+<li>Chúng ta có thể sử dụng các thuộc tính width &amp; height để thiết lập lại kích thước cho phần tử.</li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style&gt;
+        span{
+            display:block;
+            border:1px solid black;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;Tài liệu học &lt;span&gt;Lập Trình Web&lt;/span&gt; miễn phí&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo6e0c.html?file=3567" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-inline-block">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">inline-block</span> thì phần tử sẽ hiển thị dưới dạng khối nội tuyến.</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td>
+<p>- Một phần tử hiển thị dưới dạng khối nội tuyến sẽ có các đặc điểm như sau:</p>
+<ul>
+<li>Phần tử hiển thị tiếp nối trên hàng hiện tại.</li>
+<li>Chiều rộng của phần tử phụ thuộc vào kích thước của nội dung nằm ở bên trong nó. Tuy nhiên, chúng ta có thể sử dụng các thuộc tính width &amp; height để thiết lập lại kích thước cho phần tử.</li>
+</ul>
+</td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style&gt;
+        span{
+            display:inline-block;
+            border:1px solid black;
+            width:300px;
+            height:200px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;Tài liệu học &lt;span&gt;Lập Trình Web&lt;/span&gt; miễn phí&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo5a1f.html?file=3568" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-none">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">none</span> thì phần tử sẽ bị ẩn đi (giống như không hề tồn tại)</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style&gt;
+        h1:nth-child(2){
+            display:none;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;1) Tài liệu học HTML&lt;/h1&gt;
+    &lt;h1&gt;2) Tài liệu học CSS&lt;/h1&gt;
+    &lt;h1&gt;3) Tài liệu học JavaScript&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo14da.html?file=3569" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-flex">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">flex</span> thì phần tử sẽ hiển thị dưới dạng một cái thùng chứa flex, nó thường được sử dụng kết hợp với lệnh truy vấn @media để thiết kế giao diện responsive (loại giao diện tương thích với nhiều thiết bị<span>,</span> tùy vào kích thước màn hình của thiết bị mà trang web sẽ hiển thị theo một kiểu khác)</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><p>- Các bạn sẽ được tìm hiểu chi tiết cách sử dụng nhóm thuộc tính flex trong các bài hướng dẫn tiếp theo.</p></td>
+</tr>
+</table>
+<div class="e9lop"><div><div><div></div><div></div><div></div></div><div><div></div><div></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-grid">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Khi chúng ta thiết lập thuộc tính display với giá trị <span class="mark2">grid</span> thì phần tử sẽ hiển thị dưới dạng một cái thùng chứa grid, nó thường được sử dụng để thiết kế giao diện dạng lưới.</p>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></td>
+<td><p>- Các bạn sẽ được tìm hiểu chi tiết cách sử dụng nhóm thuộc tính grid trong các bài hướng dẫn tiếp theo.</p></td>
+</tr>
+</table>
+<div class="i8wez"><div><div><div></div><div></div><div></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.2281.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:53 GMT -->
+</html>

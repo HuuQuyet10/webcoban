@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/jquery/ham-callback-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:46 GMT -->
+<head>
+<title>Hàm Callback trong jQuery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Hàm Callback trong jQuery">
+<meta name="description" content="Hàm Callback trong jQuery">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>jQuery</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tìm hiểu tổng quan về jQuery</a>
+<a href="cu-phap-cua-jquery.html" >- Bài 02: jQuery Syntax</a>
+<a href="bai-03-jquery-selectors.html" >- Bài 03: jQuery Selectors</a>
+<a href="cach-hien-an-phan-tu-html-bang-phuong-thuc-show-hide-trong-jquery.html" >- Bài 04: Cách hiện và ẩn một phần tử</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html" >- Bài 05: Cách hiện và ẩn một phần tử (với hiệu ứng phai màu)</a>
+<a href="ham-callback-trong-jquery.html" class='active'>- Bài 06: jQuery Callback</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html" >- Bài 07: Cách hiện và ẩn một phần tử (với hiệu ứng trượt)</a>
+<a href="hieu-ung-dong-animation-trong-jquery.html" >- Bài 08: jQuery Animate</a>
+<a href="ket-thuc-hieu-ung-bang-phuong-thuc-stop-trong-jquery.html" >- Bài 09: Phương thức Stop()</a>
+<a href="cac-phuong-thuc-lay-noi-dung-va-thuoc-tinh-trong-jquery.html" >- Bài 10: jQuery Get</a>
+<a href="xoa-phan-tu-html-trong-jquery.html" >- Bài 11: jQuery Remove</a>
+<a href="cac-phuong-thuc-thiet-lap-thuoc-tinh-class-trong-jquery.html" >- Bài 12: jQuery CSS Classes</a>
+<a href="cach-chon-cac-phan-tu-to-tien-trong-jquery.html" >- Bài 13: jQuery Ancestors</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="tat-ca-bo-chon-trong-jquery.html" >- jQuery Selectors (tất cả bộ chọn trong jQuery)</a>
+<a href="tat-ca-su-kien-trong-jquery.html" >- jQuery Event (tất cả sự kiện trong jQuery)</a>
+<a href="danh-sach-tat-ca-cac-phuong-thuc-trong-jquery.html" >- jQuery Methods (các phương thức cơ bản trong jQuery)</a>
+<a href="cac-phuong-thuc-dung-de-thao-tac-voi-html-css-trong-jquery.html" >- jQuery HTML/CSS (các phương thức dùng để xử lý HTML/CSS trong jQuery)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Hàm Callback trong jQuery">Hàm Callback trong jQuery</h1>
+<div class="breadcrumb">
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h4>Một h&agrave;m Callback sẽ được thực thi sau khi hiệu ứng jQuery hiện tại đ&atilde; thực hiện xong 100%.</h4>
+
+<h2>Tại sao lại cần d&ugrave;ng h&agrave;m Callback?</h2>
+
+<p>Trong JavaScript, c&aacute;c c&acirc;u lệnh sẽ được thực thi theo thứ tự từ tr&ecirc;n xuống dưới sau khi c&acirc;u lệnh ph&iacute;a tr&ecirc;n đ&atilde; ho&agrave;n th&agrave;nh xong. Tuy nhi&ecirc;n, đối với c&aacute;c hiệu ứng của jQuery th&igrave; c&aacute;c c&acirc;u lệnh ph&iacute;a b&ecirc;n dưới vẫn c&oacute; thể thực thi mặc d&ugrave; hiệu ứng jQuery đ&atilde; thực thi xong hay chưa.</p>
+
+<p>Đối với c&aacute;c hiệu ứng thiết lập thười gian qu&aacute; d&agrave;i (chẳng hạn như 5 gi&acirc;y, 10 gi&acirc;y). Nếu kh&ocirc;ng d&ugrave;ng h&agrave;m Callback m&agrave; bạn lại muốn c&acirc;u lệnh ph&iacute;a dưới thực thi sau khi hiệu ứng jQuery ho&agrave;n th&agrave;nh, th&igrave; đ&oacute; l&agrave; điều kh&ocirc;ng thể, dẫn đến chức năng hoạt động kh&ocirc;ng như &yacute; muốn.</p>
+
+<p>Do đ&oacute;, để ngăn chặn điều n&agrave;y, bạn cần d&ugrave;ng đến h&agrave;m callback.&nbsp;</p>
+
+<p>Một h&agrave;m callback sẽ được thực thi sau khi hiệu ứng jQuery ho&agrave;n th&agrave;nh 100%.</p>
+
+<p>Một c&uacute; ph&aacute;p điển h&igrave;nh: <strong>$(selector).hide(speed,callback);</strong></p>
+
+<div class="form_6">
+<div class="theh3">V&iacute; dụ</div>
+
+<div class="noithem">
+<p>Đo&atilde;n m&atilde; dưới đ&acirc;y bao gồm hai v&iacute; dụ, một v&iacute; dụ KH&Ocirc;NG&nbsp;sử dụng h&agrave;m callback, một v&iacute; dụ C&Oacute;&nbsp;sử dụng h&agrave;m callback</p>
+</div>
+
+<hr />
+<pre>
+$(&quot;#hide-khong&quot;).click(function(){
+&nbsp; &nbsp; $(&quot;div&quot;).hide(3000);
+&nbsp; &nbsp; alert(&quot;Đ&atilde; ẩn phần tử HTML&quot;);
+});
+$(&quot;#hide-co&quot;).click(function(){
+&nbsp; &nbsp; $(&quot;div&quot;).hide(3000, function(){
+&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Đ&atilde; ẩn phần tử HTML&quot;);
+&nbsp; &nbsp; });
+});</pre>
+
+<div class="nutxem"><a href="demo281c.html?file=238" target="_blank">Xem v&iacute; dụ</a></div>
+</div>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-phai-mau-trong-jquery.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-hien-an-phan-tu-voi-hieu-ung-truot-trong-jquery.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/jquery/ham-callback-trong-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:42:46 GMT -->
+</html>

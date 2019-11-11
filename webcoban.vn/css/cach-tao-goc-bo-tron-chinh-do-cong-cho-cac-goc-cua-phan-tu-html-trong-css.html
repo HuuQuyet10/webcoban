@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:56 GMT -->
+<head>
+<title>Tạo góc bo tròn, chỉnh độ cong cho các góc của phần tử trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tạo góc bo tròn, chỉnh độ cong cho các góc của phần tử trong css">
+<meta name="description" content="Cách sử dụng thuộc tính border-radius trong CSS để tạo góc bo tròn cho phần tử, hay nói cách khác là thiết lập việc chỉnh độ cong cho các góc của một phần tử HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.1660.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" class='active'>- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Tạo góc bo tròn, chỉnh độ cong cho các góc của phần tử trong CSS">Cách chỉnh độ cong cho các góc của một phần tử</h1>
+<div class="breadcrumb">
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Tìm hiểu sơ lược về độ cong của một góc</h2>
+<p>- Thông thường thì &quot;độ cong&quot; của một góc được xác định dựa trên hai yếu tố: chiều rộng của góc &amp; chiều cao của góc.</p>
+<p>- <u>Ví dụ</u>: Tôi lấy góc &quot;phía trên bên phải&quot; của phần tử để làm minh họa.</p>
+<div>
+<table class="lj1ig">
+<tr>
+<td>
+<table>
+<tr><td colspan="3"><div>Chiều rộng của góc: <span>200</span> pixel</div></td></tr>
+<tr>
+<td>0</td>
+<td><p><input type="range" value="200" min="0" max="200"></p></td>
+<td>200</td>
+</tr>
+<tr>
+<td>0</td>
+<td><p><input type="range" value="100" min="0" max="100"></p></td>
+<td>100</td>
+</tr>
+<tr><td colspan="3"><div>Chiều cao của góc: <span>100</span> pixel</div></td></tr>
+</table>
+</td>
+<td><div></div></td>
+</tr>
+</table>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Cách chỉnh độ cong cho các góc của một phần tử</h2>
+<p>- Để chỉnh &quot;độ cong&quot; cho các góc của một phần tử thì chúng ta sử dụng thuộc tính <strong>border-radius</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">border-radius: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong ba loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>width/height</td>
+<td><p>- Độ cong của góc được xác định dựa theo cặp giá trị width/height.</p>
+<p>- Trong đó:</p>
+<ul>
+<li>Width là chiều rộng của góc, nó có thể được xác định dựa theo một giá trị pixel cụ thể hoặc tỷ lệ phần trăm <span>chiều rộng</span> của phần tử.</li>
+<li>Height là chiều cao của góc, nó có thể được xác định dựa theo một giá trị pixel cụ thể hoặc tỷ lệ phần trăm <span>chiều cao</span> của phần tử.</li>
+</ul>
+<p>- <u>Lưu ý</u>: Nếu chúng ta chỉ xác định một giá trị thì giá trị đó sẽ đại diện cho cả width &amp; height <a href="demo43fa.html?file=3119" target="_blank" class="i-link-1">(Xem ví dụ)</a></p>
+</td>
+<td><a href="demof004.html?file=3118" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó</p>
+<p>(mặc định thì thuộc tính border-radius có giá trị là 0px)</p>
+</td>
+<td><a href="demoed35.html?file=3120" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính border-radius từ phần tử cha của nó.</p></td>
+<td><a href="democ284.html?file=3121" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Cách thiết lập độ cong cho từng góc</h2>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></div></td>
+<td>
+<p>- Sau khi xem xong phần hướng dẫn phía trên thì chắc các bạn cũng đã thấy: <i>&quot;khi chúng ta thiết lập độ cong cho các góc của một phần tử HTML thì mặc định cả bốn góc của phần tử sẽ có chung một độ cong&quot;</i></p>
+<div><div>Lập Trình Web</div></div>
+<p>- Tuy nhiên, không phải lúc nào người lập trình viên cũng muốn như thế, mà đôi khi họ muốn mỗi góc của phần tử sẽ có một &quot;độ cong&quot; khác nhau.</p>
+<div><div>Lập Trình Web</div></div>
+<p>- Để làm được điều đó thì chúng ta có hai cách cơ bản như sau:</p>
+<ul>
+<li><u>Cách 1</u>: Thiết lập nhiều giá trị cho thuộc tính border-radius.</li>
+<li><u>Cách 2</u>: Thêm tên góc vào bên trong tên thuộc tính border-radius.</li>
+</ul>
+<p>- Tuy nhiên, trước khi đi vào tìm hiểu chi tiết hai cách trên thì các bạn cần phải nắm rõ tên của từng góc (bên dưới là ảnh minh họa vị trí từng góc và tên của chúng)</p>
+<p><img alt="chỉnh độ cong góc bo tròn cho phần tử bằng thuộc tính border-radius" src="../image/chinh-do-cong-goc-bo-tron-cho-phan-tu-bang-thuoc-tinh-border-radius.jpg" class="img-responsive"></p>
+</div>
+</td>
+</tr>
+</table>
+<h3>3.1) Thiết lập nhiều giá trị cho thuộc tính border-radius</h3>
+<p>- Để chỉnh &quot;độ cong&quot; cho riêng từng góc bằng cách thiết lập nhiều giá trị thì chúng ta sử dụng thuộc tính <strong>border-radius</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">border-radius: bộ giá trị width / bộ giá trị height;</div>
+<p>- Trong đó:</p>
+<ul>
+<li>Bộ giá trị width dùng để xác định chiều rộng của từng góc.</li>
+<li>Bộ giá trị height dùng để xác định chiều cao của từng góc.</li>
+</ul>
+<p>- Mỗi một bộ giá trị width (height) có thể được xác định dựa theo:</p>
+<table class="table table-bordered">
+<tr>
+<td>Một tập hợp gồm <u>bốn</u> giá trị</td>
+<td>
+<p>- Giá trị 1 sẽ là chiều rộng (chiều cao) của góc (1)</p>
+<p>- Giá trị 2 sẽ là chiều rộng (chiều cao) của góc (2)</p>
+<p>- Giá trị 3 sẽ là chiều rộng (chiều cao) của góc (3)</p>
+<p>- Giá trị 4 sẽ là chiều rộng (chiều cao) của góc (4)</p>
+</td>
+</tr>
+<tr>
+<td>Một tập hợp gồm <u>ba</u> giá trị</td>
+<td>
+<p>- Giá trị 1 sẽ là chiều rộng (chiều cao) của góc (1)</p>
+<p>- Giá trị 2 sẽ là chiều rộng (chiều cao) của góc (2) &amp; (4)</p>
+<p>- Giá trị 3 sẽ là chiều rộng (chiều cao) của góc (3)</p>
+</td>
+</tr>
+<tr>
+<td>Một tập hợp gồm <u>hai</u> giá trị</td>
+<td>
+<p>- Giá trị 1 sẽ là chiều rộng (chiều cao) của góc (1) &amp; (3)</p>
+<p>- Giá trị 2 sẽ là chiều rộng (chiều cao) của góc (2) &amp; (4)</p>
+</td>
+</tr>
+</table>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>div{
+    border:1px solid black;
+    background-color:violet;
+    width:400px;
+    height:200px;
+    border-radius:75px 100px 20px / 50px 10px;
+}</pre>
+<div><a href="demo4212.html?file=3122" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Nếu chúng ta chỉ khai báo một bộ giá trị duy nhất thì bộ giá trị đó sẽ đại diện cho cả hai bộ giá trị là width &amp; height.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>div{
+    border:1px solid black;
+    background-color:violet;
+    width:400px;
+    height:200px;
+    border-radius:50px 100px 25px;
+}</pre>
+<div><a href="demod786.html?file=3123" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<h3>3.2) Thêm tên góc vào bên trong tên thuộc tính</h3>
+<p>- Để thiết lập &quot;độ cong&quot; cho riêng từng góc bằng cách thêm tên góc vào bên trong tên thuộc tính thì chúng ta sử dụng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">border-TênGóc-radius: width height;</div>
+<p>- <u>Lưu ý</u>: Đối với cú pháp loại này thì ở giữa giá trị width &amp; height không được đặt dấu gạch chéo /</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>div{
+    border:1px solid black;
+    background-color:violet;
+    width:400px;
+    height:200px;
+    border-top-left-radius:75px 50px;
+    border-top-right-radius:100px 10px;
+    border-bottom-right-radius:25px 25px;
+    border-bottom-left-radius:40px 20px;
+}</pre>
+<div><a href="demofc38.html?file=3124" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Nếu chúng ta chỉ khai báo một giá trị thì giá trị đó sẽ đại diện cho cả width &amp; height.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>div{
+    border:1px solid black;
+    background-color:violet;
+    width:400px;
+    height:200px;
+    border-top-left-radius:20px;
+    border-top-right-radius:40px;
+    border-bottom-right-radius:60px;
+    border-bottom-left-radius:80px;
+}</pre>
+<div><a href="demoe754.html?file=3125" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.2792.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:00 GMT -->
+</html>

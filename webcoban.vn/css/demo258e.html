@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3525 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:26 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left #top pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 300px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #left #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        right:5px;
+        height:280px;
+    }
+    #container #left #bottom #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #content{
+        position: absolute;
+        top:10px;
+        bottom:10px;
+        left:5px;
+        right:10px;
+        border:1px solid #b3b2b2;
+        background-color: white;
+        box-sizing:border-box;
+        overflow: auto;
+        padding:1px 15px;
+    }
+    #container #right #content p,li{
+        line-height: 25px;
+    }
+    #container #right #content li{
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    #container #right #content pre{
+        font-size:16px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="top">
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            border:10px solid black;
+            padding:30px;
+            width:300px;
+            height:150px;
+        }
+    &lt;/style&gt;
+&lt;body&gt;
+    &lt;p&gt;- Phần tử 1&lt;/p&gt;
+    &lt;div style=&quot;box-sizing:content-box&quot;&gt;
+        &lt;hr&gt;&lt;hr&gt;&lt;hr&gt;&lt;hr&gt;&lt;hr&gt;
+    &lt;/div&gt;
+    &lt;p&gt;- Phần tử 2&lt;/p&gt;
+    &lt;div style=&quot;box-sizing:border-box&quot;&gt;
+        &lt;hr&gt;&lt;hr&gt;&lt;hr&gt;&lt;hr&gt;&lt;hr&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <div id="right">
+            <div id="content" style="font-size:18px">
+                <h1><u>GIẢI THÍCH</u>:</h1>
+                <p>- <u>Phần tử 1</u> được thiết lập thuộc tính box-sizing với giá trị <mark>content-box</mark>, điều đó có nghĩa là khi chúng ta sử dụng thuộc tính width (height) để thiết lập chiều rộng (chiều cao) cho phần tử thì chiều rộng (chiều cao) đó chỉ là chiều rộng (chiều cao) của phần nội dung "content" của phần tử.</p>
+                <p>- Điển hình như các bạn sẽ thấy:</p>
+                <ul style="list-style-type:circle">
+                    <li>Chiều rộng của <u>phần tử 1</u> = width + padding + border = 380px</li>
+                    <li style="margin-top:10px">Chiều cao của <u>phần tử 1</u> = height + padding + border = 230px</li>
+                </ul>
+                <hr>
+                <p>- <u>Phần tử 2</u> được thiết lập thuộc tính box-sizing với giá trị <mark>border-box</mark>, điều đó có nghĩa là khi chúng ta sử dụng thuộc tính width (height) để thiết lập chiều rộng (chiều cao) cho phần tử thì chiều rộng (chiều cao) đó chính là chiều rộng (chiều cao) của nguyên cả phần tử.</p>
+                <p>- Điển hình như các bạn sẽ thấy:</p>
+                <ul style="list-style-type:circle">
+                    <li>Chiều rộng của <u>phần tử 2</u> = width = 300px</li>
+                    <li style="margin-top:10px">Chiều cao của <u>phần tử 2</u> = height = 150px</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("bottom").innerHTML = "";
+            document.getElementById("bottom").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<p>- Phần tử 1</p><div style='border:10px solid black;padding:30px;width:300px;height:150px;box-sizing:content-box'><hr><hr><hr><hr><hr></div><p>- Phần tử 2</p><div style='border:10px solid black;padding:30px;width:300px;height:150px;box-sizing:border-box'><hr><hr><hr><hr><hr></div>";
+        view_result(text);
+    </script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3525 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:26 GMT -->
+</html>﻿

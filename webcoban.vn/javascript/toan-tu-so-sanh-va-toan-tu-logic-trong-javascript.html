@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:39 GMT -->
+<head>
+<title>Toán tử so sánh và toán tử logic trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Toán tử so sánh trong JavaScript,toan tu so sanh trong javascript,toán tử logic trong javascript,toan tu logic trong javascript">
+<meta name="description" content="Toán tử so sánh trong JavaScript, toan tu so sanh trong javascript, toán tử logic trong javascript, toan tu logic trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" class='active'>- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Toán tử so sánh và toán tử logic trong JavaScript">Toán tử so sánh &amp; Toán tử logic trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Toán tử so sánh & biểu thức so sánh</h2>
+<p>- Toán tử so sánh là loại toán tử dùng để so sánh hai giá trị với nhau, ví dụ như:</p>
+<ul style="list-style-type:circle;font-style:italic;">
+<li>So sánh xem giá trị này có lớn hơn giá trị kia hay không.</li>
+<li style="margin-top:6px;margin-bottom:6px">So sánh xem giá trị này có nhỏ hơn giá trị kia hay không.</li>
+<li style="margin-bottom:6px">So sánh xem giá trị này có bằng với giá trị kia hay không.</li>
+<li>....</li>
+</ul>
+<p>- Dưới đây là danh sách các toán tử so sánh trong JavaScript:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Toán tử</th>
+        <th>Ý nghĩa của toán tử</th>
+    </tr>
+    <tr>
+        <td>></td>
+        <td>Lớn hơn</td>
+    </tr>
+    <tr>
+        <td>>=</td>
+        <td>Lớn hơn hoặc bằng</td>
+    </tr>
+    <tr>
+        <td><</td>
+        <td>Nhỏ hơn</td>
+    </tr>
+    <tr>
+        <td><=</td>
+        <td>Nhỏ hơn hoặc bằng</td>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>Bằng giá trị <i>(không phân biệt kiểu dữ liệu)</i></td>
+    </tr>
+    <tr>
+        <td>===</td>
+        <td>Bằng giá trị <i>(phải có chung kiểu dữ liệu)</i></td>
+    </tr>
+    <tr>
+        <td>!=</td>
+        <td>Khác giá trị</td>
+    </tr>
+    <tr>
+        <td>!==</td>
+        <td>Khác giá trị hoặc khác kiểu dữ liệu</td>
+    </tr>
+</table>
+<p>- <i><u>Lưu ý</u>:</i> Biểu thức dùng để so sánh hai giá trị với nhau, được gọi là <span class="form_new_28">biểu thức so sánh</span></p>
+<p>- Biểu thức so sánh sẽ trả về một trong hai giá trị:</p>
+<ul style="list-style-type:circle">
+<li>true <i>(nếu biểu thức so sánh đó là đúng)</i></li>
+<li style="margin-top:6px">false <i>(nếu biểu thức so sánh đó là sai)</i></li>
+</ul>
+<div style="background-color:#eee;padding:15px;border-radius:10px">
+<div style="font-size:20px;margin-bottom:13px">Một số ví dụ:</div>
+<style type="text/css">
+.table-bordered2>tbody>tr>td, .table-bordered2>tbody>tr>th, .table-bordered2>tfoot>tr>td, .table-bordered2>tfoot>tr>th, .table-bordered2>thead>tr>td, .table-bordered2>thead>tr>th {border:1px solid #ccc;}
+</style>
+<table class="table table-bordered2 form_new_12">
+    <tr>
+        <th style="font-weight:normal">Biểu thức so sánh</th>
+        <th style="font-weight:normal">Mô tả</th>
+        <th style="font-weight:normal">Trả về</th>
+    </tr>
+    <tr>
+        <td>5 > 3</td>
+        <td>số 5 có giá trị lớn hơn số 3</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 > 7</td>
+        <td>số 5 có giá trị lớn hơn số 7</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>5 >= 3</td>
+        <td>số 5 có giá trị lớn hơn hoặc bằng số 3</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 >= 5</td>
+        <td>số 5 có giá trị lớn hơn hoặc bằng số 5</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 >= 7</td>
+        <td>số 5 có giá trị lớn hơn hoặc bằng số 7</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>5 < 7</td>
+        <td>số 5 có giá trị nhỏ hơn số 7</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 < 3</td>
+        <td>số 5 có giá trị nhỏ hơn số 3</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>5 <= 7</td>
+        <td>số 5 có giá trị nhỏ hơn hoặc bằng số 7</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 <= 5</td>
+        <td>số 5 có giá trị nhỏ hơn hoặc bằng số 5</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 <= 3</td>
+        <td>số 5 có giá trị nhỏ hơn hoặc bằng số 3</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>5 == "5"</td>
+        <td>số 5 có giá trị bằng với chuỗi "5"</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 === "5"</td>
+        <td>số 5 có giá trị bằng với chuỗi "5" và có chung kiểu dữ liệu</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>5 != 7</td>
+        <td>số 5 khác với số 7</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>5 !== "7"</td>
+        <td>số 5 khác với chuỗi "7" hoặc khác kiểu dữ liệu</td>
+        <td>true</td>
+    </tr>
+</table>
+<div class="form_new_22" style="margin-bottom:-7px;margin-top:-5px"><a href="demo68fb.html?file=1980" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Toán tử logic</h2>
+<p>- Toán tử logic là loại toán tử dùng để xác định mối quan hệ logic giữa các giá trị logic <i>(true, false)</i></p>
+<p>- Toán tử logic được chia làm ba loại: <span class="form_new_28">&&</span> <span class="form_new_28">||</span> <span class="form_new_28">!</span></p>
+<p>=&gt;Toán tử && <i>(and)</i> sẽ trả về giá trị:</p>
+<ul style="list-style-type:circle">
+<li>true: <i>nếu hai giá trị là true</i></li>
+<li style="margin-top:6px">false: <i>nếu hai giá trị là false, hoặc một giá trị là true và một giá trị là false</i></li>
+</ul>
+<p>=&gt;Toán tử || <i>(or)</i> sẽ trả về giá trị:</p>
+<ul style="list-style-type:circle">
+<li>true: <i>nếu hai giá trị là true, hoặc một giá trị là true và một giá trị là false</i></li>
+<li style="margin-top:6px">false: <i>nếu hai giá trị là false</i></li>
+</ul>
+<p>=&gt; Toán tử ! <i>(not)</i> sẽ trả về giá trị logic ngược lại.</p>
+<div style="background-color:#eee;padding:15px;border-radius:10px">
+<div style="font-size:20px;margin-bottom:13px">Một số ví dụ:</div>
+<style type="text/css">
+.table-bordered2>tbody>tr>td, .table-bordered2>tbody>tr>th, .table-bordered2>tfoot>tr>td, .table-bordered2>tfoot>tr>th, .table-bordered2>thead>tr>td, .table-bordered2>thead>tr>th {border:1px solid #ccc;}
+</style>
+<table class="table table-bordered2 form_new_12">
+    <tr>
+        <td>true && true</td>
+        <td>Trả về: true</td>
+    </tr>
+    <tr>
+        <td>true && false</td>
+        <td>Trả về: false</td>
+    </tr>
+    <tr>
+        <td>false && true</td>
+        <td>Trả về: false</td>
+    </tr>
+    <tr>
+        <td>false && false</td>
+        <td>Trả về: false</td>
+    </tr>
+    <tr>
+        <td>true || true</td>
+        <td>Trả về: true</td>
+    </tr>
+    <tr>
+        <td>true || false</td>
+        <td>Trả về: true</td>
+    </tr>
+    <tr>
+        <td>false || true</td>
+        <td>Trả về: true</td>
+    </tr>
+    <tr>
+        <td>false || false</td>
+        <td>Trả về: false</td>
+    </tr>
+    <tr>
+        <td>!true</td>
+        <td>Trả về: false</td>
+    </tr>
+    <tr>
+        <td>!false</td>
+        <td>Trả về: true</td>
+    </tr>
+</table>
+<div class="form_new_22" style="margin-bottom:-7px;margin-top:-5px"><a href="demo7975.html?file=1981" target="_blank">Xem ví dụ</a></div>
+</div>
+<p style="margin-top:15px">- <i><u>Lưu ý</u>:</i> Mỗi toán tử logic sẽ có một độ ưu tiên khác nhau, tùy vào độ ưu tiên sẽ quyết định biểu thức nào được thực thi trước.</p>
+<p>- Sau đây là thứ tự sắp xếp độ ưu tiên giảm dần của ba toán tử logic: <span class="form_new_28">!</span> ==&gt; <span class="form_new_28">&&</span> ==&gt; <span class="form_new_28">||</span></p>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <div class="doanma">&lt;==&gt; false || false &amp;&amp; false || true
+
+&lt;==&gt; false || false || true
+
+&lt;==&gt; false || true
+
+&lt;==&gt; true</div>
+    <div class="nutxem"><a href="demo478b.html?file=1983" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ngoài ra, ta có thể sử dụng toán tử () để nhóm những biểu thức mà bạn muốn được thực thi trước.</p>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <div class="doanma">&lt;==&gt; (false || false) &amp;&amp; (false || true)
+
+&lt;==&gt; false &amp;&amp; true
+
+&lt;==&gt; false</div>
+    <div class="nutxem"><a href="demo010f.html?file=1984" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Biểu thức logic</h2>
+<p>- Biểu thức logic thường là một tập hợp gồm hai hoặc nhiều biểu thức so sánh và các toán tử logic.</p>
+<p>- Tương tự như biểu thức so sánh, biểu thức logic sẽ trả về một trong hai giá trị: true hoặc false.</p>
+<div style="background-color:#eee;padding:15px;border-radius:10px">
+<div style="font-size:20px;margin-bottom:13px">Một số ví dụ:</div>
+<style type="text/css">
+.table-bordered2>tbody>tr>td, .table-bordered2>tbody>tr>th, .table-bordered2>tfoot>tr>td, .table-bordered2>tfoot>tr>th, .table-bordered2>thead>tr>td, .table-bordered2>thead>tr>th {border:1px solid #ccc;}
+</style>
+<table class="table table-bordered2 form_new_12">
+    <tr>
+        <th style="font-weight:normal">Biểu thức logic</th>
+        <th style="font-weight:normal">Trả về</th>
+        <th style="font-weight:normal">Giải thích</th>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 > 3) && (5 < 7)</td>
+        <td style="vertical-align:middle">true</td>
+        <td>
+<!-- giải thích 1 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &gt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">&amp;&amp;</td>
+			<td style="text-align:center">(5 &lt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+			<td style="text-align:center">&amp;&amp;</td>
+			<td style="text-align:center">true</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">true</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 > 3) && (5 > 7)</td>
+        <td style="vertical-align:middle">false</td>
+        <td>
+<!-- giải thích 2 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &gt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">&amp;&amp;</td>
+			<td style="text-align:center">(5 &gt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+			<td style="text-align:center">&amp;&amp;</td>
+			<td style="text-align:center">false</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">false</td>
+		</tr>
+</table>
+</td>
+    </tr><tr>
+        <td style="vertical-align:middle">(5 < 3) && (5 > 7)</td>
+        <td style="vertical-align:middle">false</td>
+        <td>
+<!-- giải thích 3 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &lt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">&amp;&amp;</td>
+			<td style="text-align:center">(5 &gt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">false</td>
+			<td style="text-align:center">&amp;&amp;</td>
+			<td style="text-align:center">false</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">false</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 > 3) || (5 < 7)</td>
+        <td style="vertical-align:middle">true</td>
+        <td>
+<!-- giải thích 4 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &gt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">||</td>
+			<td style="text-align:center">(5 &lt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+			<td style="text-align:center">||</td>
+			<td style="text-align:center">true</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">true</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 > 3) || (5 > 7)</td>
+        <td style="vertical-align:middle">true</td>
+        <td>
+<!-- giải thích 5 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &gt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">||</td>
+			<td style="text-align:center">(5 &gt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+			<td style="text-align:center">||</td>
+			<td style="text-align:center">false</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">true</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 < 3) || (5 > 7)</td>
+        <td style="vertical-align:middle">false</td>
+        <td>
+<!-- giải thích 6 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 &lt; 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">||</td>
+			<td style="text-align:center">(5 &gt; 7)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">false</td>
+			<td style="text-align:center">||</td>
+			<td style="text-align:center">false</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">false</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">!(5 < 3)</td>
+        <td style="vertical-align:middle">true</td>
+        <td>
+<!-- giải thích 7 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">!(5 &lt; 3)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">!(false)</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">!(5 > 3)</td>
+        <td style="vertical-align:middle">false</td>
+        <td>
+<!-- giải thích 8 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">!(5 > 3)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">!(true)</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td style="text-align:center">false</td>
+		</tr>
+</table>
+</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">(5 > 3) && (5 > 7) || (7 > 5)</td>
+        <td style="vertical-align:middle">true</td>
+        <td>
+<!-- giải thích 9 -->
+<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td style="text-align:center">(5 > 3)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">&&</td>
+			<td style="text-align:center">(5 > 7)</td>
+			<td style="text-align:center;padding-left:5px;padding-right:5px">||</td>
+			<td style="text-align:center">(7 > 5)</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td style="text-align:center">true</td>
+			<td style="text-align:center">&&</td>
+			<td style="text-align:center">false</td>
+			<td style="text-align:center">||</td>
+			<td style="text-align:center">true</td>
+		</tr>
+		<tr>
+			<td style="text-align:center">&lt;=&gt;</td>
+			<td colspan="3" style="text-align:center">false</td>
+			<td style="text-align:center">||</td>
+			<td style="text-align:center">true</td>
+		</tr>
+		<tr>
+			<td>&lt;=&gt;</td>
+			<td colspan="5" style="text-align:center">true</td>
+		</tr>
+</table>
+</td>
+    </tr>
+</table>
+<div class="form_new_22" style="margin-bottom:-7px;margin-top:-5px"><a href="demod556.html?file=1982" target="_blank">Xem ví dụ</a></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:40 GMT -->
+</html>

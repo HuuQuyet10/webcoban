@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-mang-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:21 GMT -->
+<head>
+<title>Các phương thức xử lý mảng trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Các phương thức dùng để xử lý mảng trong JavaScript,cac phuong thuc dung de xu ly mang trong javascript">
+<meta name="description" content="Các phương thức dùng để xử lý mảng trong JavaScript,cac phuong thuc dung de xu ly mang trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" class='active'>- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các phương thức xử lý mảng trong JavaScript">Các phương thức xử lý mảng trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="tim-hieu-ve-mang-array-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p style="margin-top:10px">- Trong JavaScript đã tích hợp sẵn các phương thức dùng để xử lý mảng. Với các phương thức này, ta có thể làm được những công việc như: <em>chuyển một mảng về dạng chuỗi, thêm hoặc xóa các phần tử mảng, ghép các mảng lại với nhau, . . . .</em></p>
+<p>- Dưới đây là bảng tóm tắt một vài phương thức xử lý mảng phổ biến mà ta phải thường hay dùng:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Phương thức</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td>toString()</td>
+        <td>Chuyển một mảng về dạng chuỗi ký tự.</td>
+    </tr>
+    <tr>
+        <td>push()</td>
+        <td>Thêm một phần tử mới vào vị trí cuối mảng.</td>
+    </tr>
+    <tr>
+        <td>pop()</td>
+        <td>Xóa phần tử nằm ở vị trí cuối mảng.</td>
+    </tr>
+    <tr>
+        <td>unshift()</td>
+        <td>Thêm một phần tử mới vào vị trí đầu mảng.</td>
+    </tr>
+    <tr>
+        <td>shift()</td>
+        <td>Xóa phần tử nằm ở vị trí đầu mảng.</td>
+    </tr>
+    <tr>
+        <td>concat()</td>
+        <td>Ghép các mảng con lại với nhau rồi trả về một mảng mới.</td>
+    </tr>
+    <tr>
+        <td>slice()</td>
+        <td>Trích xuất một phần của mảng ban đầu rồi trả về một mảng mới.</td>
+    </tr>
+    <tr>
+        <td>splice()</td>
+        <td>Thêm hoặc xóa <i>"một hoặc nhiều phần tử"</i> ở vị trí bất kỳ trong mảng.</td>
+    </tr>
+    <tr>
+        <td>length</td>
+        <td>Trả về số lượng phần tử của mảng.</td>
+    </tr>
+</table>
+<p>- <i><u>Lưu ý</u>:</i> length được gọi là thuộc tính <i>(không phải phương thức)</i></p>
+<h2>1) Chuyển mảng về dạng chuỗi ký tự</h2>
+<p>- Phương thức <strong>toString()</strong> dùng để chuyển một mảng về dạng chuỗi ký tự.</p>
+<p><i>(chuỗi trả về sẽ là một dãy các phần tử mảng được ngăn cách bởi dấu phẩy)</i></p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_20"><div>array.toString()</div></div>
+<div class="form_new_15">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var text = mobile.toString();
+&lt;/script&gt;</pre>
+    <div class="noithem2">
+        <p>Giá trị của biến text sẽ là:</p>
+    </div>
+    <div class="thehiendemo">
+        HTC,Nokia,SamSung,LG,Apple
+    </div>
+    <div class="nutxem"><a href="demoe208.html?file=1899" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ngoài ra, ta cũng có thể dùng phương thức <strong>join()</strong> để chuyển một mảng về dạng chuỗi ký tự.</p>
+<p>- Tuy nhiên, đối với phương thức <strong>join()</strong> thì ta có thể xác định thêm ký tự đặt giữa các phần tử mảng trong chuỗi trả về.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_20"><div>array.join(<i>chuỗi ký tự ngăn cách giữa các phần tử mảng trong chuỗi trả về</i>)</div></div>
+<div class="form_new_15">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var text = mobile.join(&quot;- - -&quot;);
+&lt;/script&gt;</pre>
+    <div class="noithem2">
+        <p>Giá trị của biến text sẽ là:</p>
+    </div>
+    <div class="thehiendemo">
+        HTC- - -Nokia- - -SamSung- - -LG- - -Apple
+    </div>
+    <div class="nutxem"><a href="demo54d6.html?file=1900" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Thêm một phần tử mới vào vị trí cuối mảng</h2>
+<p>- Phương thức <strong>push()</strong> được dùng để thêm một phần tử mới vào vị trí cuối mảng.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33">array.push(<i>giá trị của phần tử mà bạn muốn thêm vào cuối mảng</i>)</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thêm phần tử có giá trị là chuỗi Lenovo vào cuối mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.push(&quot;Lenovo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demobb67.html?file=1901" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Phương thức <strong>push()</strong> ngoài việc thêm một phần tử mới vào vị trí cuối mảng thì nó còn trả về tổng số lượng phần tử trong mảng <i>(tính luôn cả phần tử mới vừa được thêm vào)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var x = mobile.push(&quot;Lenovo&quot;); //Biến x sẽ có giá trị là 6
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demodb50.html?file=1902" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Xóa phần tử ở vị trí cuối mảng</h2>
+<p>- Phương thức <strong>pop()</strong> được dùng để xóa phần tử nằm ở vị trí cuối mảng.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33">array.pop()</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xóa phần tử nằm ở vị trí cuối cùng trong mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.pop();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8429.html?file=1903" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Phương thức <strong>pop()</strong> ngoài việc xóa phần tử nằm ở vị trí cuối mảng thì nó còn trả về giá trị của phần tử bị xóa.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var x = mobile.pop(); //Biến x sẽ có giá trị là chuỗi Apple
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4f1e.html?file=1904" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Thêm một phần tử mới vào vị trí đầu mảng</h2>
+<p>- Phương thức <strong>unshift()</strong> được dùng để thêm một phần tử mới vào vị trí đầu mảng.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33">array.unshift(<i>giá trị của phần tử mà bạn muốn thêm vào đầu mảng</i>)</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thêm phần tử có giá trị là chuỗi Lenovo vào đầu mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.unshift(&quot;Lenovo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4839.html?file=1905" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Phương thức <strong>unshift()</strong> ngoài việc thêm một phần tử mới vào vị trí đầu mảng thì nó còn trả về tổng số lượng phần tử trong mảng <i>(tính luôn cả phần tử mới vừa được thêm vào)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var x = mobile.unshift(&quot;Lenovo&quot;); //Biến x sẽ có giá trị là 6
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demodb0c.html?file=1906" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Xóa phần tử ở vị trí đầu mảng</h2>
+<p>- Phương thức <strong>shift()</strong> được dùng để xóa phần tử nằm ở vị trí đầu mảng.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33">array.shift()</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xóa phần tử nằm ở vị trí đầu tiên trong mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.shift();
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo5728.html?file=1907" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Phương thức <strong>shift()</strong> ngoài việc xóa phần tử nằm ở vị trí đầu mảng thì nó còn trả về giá trị của phần tử bị xóa.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var x = mobile.shift(); //Biến x sẽ có giá trị là chuỗi HTC
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo2e7b.html?file=1908" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>6) Ghép các mảng lại với nhau</h2>
+<p>- Phương thức <strong>concat()</strong> được dùng để ghép các mảng con lại với nhau rồi trả về một mảng mới.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33"><span style="color:#006393">var</span> tên mảng = <i>array1</i>.concat(<i>array2, array3, ...., arrayN</i>);</div>
+<p>- <i><u>Lưu ý</u>:</i> Mảng được trả về sẽ chứa tất cả các phần tử của những mảng con, thứ tự của các phần tử sẽ giống với thứ tự được sắp xếp lúc ghép mảng.</p>
+<div class="form_new_15">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;];
+    var motorbike = [&quot;Honda&quot;, &quot;Yamaha&quot;, &quot;Suzuki&quot;];
+    var SinhVien = [&quot;Nguyễn Thành Nhân&quot;, 1993];
+    var city = [&quot;Cần Thơ&quot;, &quot;Vĩnh Long&quot;];
+    var data = motorbike.concat(city, SinhVien, mobile);
+&lt;/script&gt;</pre>
+    <div class="noithem2">
+        <p>Khi này mảng data sẽ là:</p>
+    </div>
+    <div class="thehiendemo">
+        Honda,Yamaha,Suzuki,Cần Thơ,Vĩnh Long,Nguyễn Thành Nhân,1993,HTC,Nokia
+    </div>
+    <div class="nutxem"><a href="demo5dbc.html?file=1909" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>7) Trích xuất một phần của mảng</h2>
+<p>- Phương thức <strong>slice()</strong> được dùng để trích xuất một phần của mảng ban đầu rồi trả về một mảng mới.</p>
+<p>- <i><u>Cú pháp</u>:</i></p>
+<div class="form_new_33"><span style="color:#006393">var</span> tên mảng = <i>array</i>.slice(<i>start, end</i>);</div>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li><i>"start"</i> là chỉ số của phần tử bắt đầu được trích xuất.</li>
+<li style="margin-top:5px"><i>"end"</i> là chỉ số của phần tử kết thúc việc trích xuất <i>(mảng trả về không bao gồm phần tử này)</i></li>
+</ul>
+<div class="form_new_15" style="border:1px solid #ccc">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;script&gt;
+   var data = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;Apple&quot;, &quot;LG&quot;, &quot;Honda&quot;, &quot;SYM&quot;, &quot;Suzuki&quot;];
+   var abc = data.slice(1,5);
+&lt;/script&gt;</pre>
+    <div class="noithem2">
+        <p>- Khi này mảng abc sẽ là:</p>
+    </div>
+    <div class="thehiendemo">
+        Nokia,Apple,LG,Honda
+    </div>
+    <div class="nutxem"><a href="demof247.html?file=1910" target="_blank">Xem ví dụ</a></div>
+<div style="padding:15px;padding-top:0px;padding-bottom:20px">
+<p>- Dưới đây là sơ đồ minh họa cho nguyên lý trích xuất mảng con của ví dụ phía trên:</p>
+<style type="text/css">
+.table-bordered746>tbody>tr>td, .table-bordered746>tbody>tr>th, .table-bordered746>tfoot>tr>td, .table-bordered746>tfoot>tr>th, .table-bordered746>thead>tr>td, .table-bordered746>thead>tr>th {
+border:1px solid #ccc;
+}
+</style>
+<table class="table table-bordered746" style="width:auto;margin:auto;">
+    <tr>
+        <td style="width:100px">Phần tử</td>
+        <td style="width:80px;text-align:center">HTC</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Nokia</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Apple</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">LG</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Honda</td>
+        <td style="width:80px;text-align:center">SYM</td>
+        <td style="width:80px;text-align:center">Suzuki</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Chỉ số</td>
+        <td style="text-align:center">0</td>
+        <td style="text-align:center">1<br><i>(start)</i></td>
+        <td style="text-align:center">2</td>
+        <td style="text-align:center">3</td>
+        <td style="text-align:center">4</td>
+        <td style="text-align:center">5<br><i>(end)</i></td>
+        <td style="text-align:center">6</td>
+    </tr>
+</table>
+<p style="margin-top:12px">- Ngoài ra, nếu ta bỏ trống tham số <i>"end"</i> thì phương thức <strong>slice()</strong> sẽ trích xuất từ phần tử có chỉ số là <i>"start"</i> cho đến hết mảng <a href="demoe18d.html?file=1911" target="_blank">(Xem ví dụ)</a></p>
+<table class="table table-bordered746" style="width:auto;margin:auto;">
+    <tr>
+        <td style="width:100px">Phần tử</td>
+        <td style="width:80px;text-align:center">HTC</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Nokia</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Apple</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">LG</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Honda</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">SYM</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Suzuki</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Chỉ số</td>
+        <td style="text-align:center">0</td>
+        <td style="text-align:center">1<br><i>(start)</i></td>
+        <td style="text-align:center">2</td>
+        <td style="text-align:center">3</td>
+        <td style="text-align:center">4</td>
+        <td style="text-align:center">5</td>
+        <td style="text-align:center">6</td>
+    </tr>
+</table>
+</div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Giá trị của tham số <i>"start"</i> và <i>"end"</i> cũng có thể là số âm. Tuy nhiên, với số âm thì chỉ số của các phần tử mảng sẽ được xác định theo chiều ngược lại <i>(phần tử đầu tiên sẽ có chỉ số là -1)</i></p>
+<div class="form_new_15" style="border:1px solid #ccc">
+    <div class="theh3">Ví dụ</div>
+    <pre>&lt;script&gt;
+   var data = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;Apple&quot;, &quot;LG&quot;, &quot;Honda&quot;, &quot;SYM&quot;, &quot;Suzuki&quot;];
+   var abc = data.slice(-6,-3);
+&lt;/script&gt;</pre>
+    <div class="noithem2">
+        <p>- Khi này mảng abc sẽ là:</p>
+    </div>
+    <div class="thehiendemo">
+        Nokia,Apple,LG
+    </div>
+    <div class="nutxem"><a href="demo2dc1.html?file=1912" target="_blank">Xem ví dụ</a></div>
+<div style="padding:15px;padding-top:0px;padding-bottom:20px">
+<p>- Dưới đây là sơ đồ minh họa cho nguyên lý trích xuất mảng con của ví dụ phía trên:</p>
+<table class="table table-bordered746" style="width:auto;margin:auto;">
+    <tr>
+        <td style="width:100px">Phần tử</td>
+        <td style="width:80px;text-align:center">HTC</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Nokia</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Apple</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">LG</td>
+        <td style="width:80px;text-align:center;">Honda</td>
+        <td style="width:80px;text-align:center">SYM</td>
+        <td style="width:80px;text-align:center">Suzuki</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Chỉ số</td>
+        <td style="text-align:center">-7</td>
+        <td style="text-align:center">-6<br><i>(start)</i></td>
+        <td style="text-align:center">-5</td>
+        <td style="text-align:center">-4</td>
+        <td style="text-align:center">-3<br><i>(end)</i></td>
+        <td style="text-align:center">-2</td>
+        <td style="text-align:center">-1</td>
+    </tr>
+</table>
+<p style="margin-top:12px">- Ngoài ra, nếu ta bỏ trống tham số <i>"end"</i> thì phương thức <strong>slice()</strong> sẽ trích xuất từ phần tử có chỉ số là <i>"start"</i> cho đến hết mảng <a href="demo544e.html?file=1913" target="_blank">(Xem ví dụ)</a></p>
+<table class="table table-bordered746" style="width:auto;margin:auto;">
+    <tr>
+        <td style="width:100px">Phần tử</td>
+        <td style="width:80px;text-align:center">HTC</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Nokia</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Apple</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">LG</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Honda</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">SYM</td>
+        <td style="width:80px;text-align:center;background-color:#5ee6e6">Suzuki</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Chỉ số</td>
+        <td style="text-align:center">-7</td>
+        <td style="text-align:center">-6<br><i>(start)</i></td>
+        <td style="text-align:center">-5</td>
+        <td style="text-align:center">-4</td>
+        <td style="text-align:center">-3</td>
+        <td style="text-align:center">-2</td>
+        <td style="text-align:center">-1</td>
+    </tr>
+</table>
+</div>
+</div>
+<h2>8) Thêm & xóa phần tử ở vị trí bất kỳ trong mảng</h2>
+<p>- Như chúng ta đã biết:</p>
+<ul style="list-style-type:circle">
+<li>Phương thức push() dùng để thêm một phần tử mới vào vị trí cuối mảng.</li>
+<li style="margin-top:7px;margin-bottom:7px">Phương thức pop() dùng để xóa phần tử nằm ở vị trí cuối mảng.</li>
+<li style="margin-bottom:7px">Phương thức unshift() dùng để thêm một phần tử mới vào vị trí đầu mảng.</li>
+<li>Phương thức shift() dùng để xóa phần tử nằm ở vị trí đầu mảng.</li>
+</ul>
+<p>- Tuy nhiên, để thêm hoặc xóa <i>"nhiều phần tử"</i> ở một <i>"vị trí bất kỳ"</i> thì ta phải làm như thế nào !?</p>
+<p>&nbsp;&nbsp;==&gt; Phương thức <strong>splice()</strong> có thể giải quyết được vấn đề này.</p>
+<p>- Phương thức <strong>splice()</strong> dùng để thêm hoặc xóa <i>"một hoặc nhiều phần tử"</i> ở vị trí bất kỳ trong mảng.</p>
+<h3>8.1) Trường hợp xóa phần tử mảng</h3>
+<p>- Nếu dùng phương thức <strong>splice()</strong> để xóa phần tử mảng thì ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33">array.splice(<i>start, length</i>)</div>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>Tham số <i>"start"</i> là chỉ số của phần tử bắt đầu được xóa.</li>
+<li style="margin-top:7px">Tham số <i>"length"</i> là số lượng phần tử mà bạn muốn xóa.</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xóa khỏi mảng data bốn phần tử <i>(bắt đầu từ phần tử thứ hai)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var data = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;Apple&quot;, &quot;LG&quot;, &quot;Honda&quot;, &quot;SYM&quot;, &quot;Suzuki&quot;];
+    data.splice(1,4);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demodac3.html?file=1914" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Nếu ta bỏ trống tham số <i>"length"</i> thì phương thức <strong>splice()</strong> sẽ xóa tất cả những phần tử bắt đầu từ phần tử có chỉ số là start cho đến hết mảng.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var data = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;Apple&quot;, &quot;LG&quot;, &quot;Honda&quot;, &quot;SYM&quot;, &quot;Suzuki&quot;];
+    data.splice(1);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="democb80.html?file=1915" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>8.2) Trường hợp thêm phần tử vào mảng</h3>
+<p>- Nếu dùng phương thức <strong>splice()</strong> để thêm phần tử mới vào mảng thì ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33">array.splice(<i>start, 0, phần tử mới 1, phần tử mới 2, phần tử mới 3, ....</i>)</div>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>Tham số <i>"start"</i> là chỉ số của phần tử nơi mà bạn muốn chèn các phần tử mới ngay tại đó.</li>
+<li style="margin-top:7px;margin-bottom:7px">Tham số <i>"0"</i> là số không.</li>
+<li>Các tham số <i>"phần tử mới"</i> là những phần tử mà bạn muốn thêm vào mảng.</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Chèn bốn phần tử là chuỗi "a", "b", "c", "d" vào mảng mobile <i>(bắt đầu chèn tại phần tử thứ ba)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.splice(2, 0, &quot; a &quot;, &quot; b &quot;, &quot; c &quot;, &quot; d &quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo90f8.html?file=1916" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Nếu ta thay giá trị của tham số 0 thành một số khác thì phương thức <strong>splice()</strong> ngoài việc thêm phần tử mới vào mảng, nó còn xóa đi những phần tử nằm phía sau phần tử có chỉ số là start với số lượng phần tử bị xóa sẽ bằng với giá trị của tham số này.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    mobile.splice(1, 3, &quot; a &quot;, &quot; b &quot;, &quot; c &quot;, &quot; d &quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo51a4.html?file=1917" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>9) Xác định số lượng phần tử của mảng</h2>
+<p>- Thuộc tính <strong>length</strong> dùng để trả về số lượng phần tử của một mảng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định số lượng phần tử của mảng mobile</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;, &quot;Nokia&quot;, &quot;SamSung&quot;, &quot;LG&quot;, &quot;Apple&quot;];
+    var a = mobile.length; //Biến a sẽ có giá trị là 5
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo5b9d.html?file=1918" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="tim-hieu-ve-mang-array-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-mang-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:26 GMT -->
+</html>

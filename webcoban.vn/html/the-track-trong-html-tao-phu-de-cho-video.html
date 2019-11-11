@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-track-trong-html-tao-phu-de-cho-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:47 GMT -->
+<head>
+<title>Thẻ &lt;track&gt; trong HTML | Tạo phụ đề cho video</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ track,thẻ track trong html,tạo phụ đề cho video">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ track trong HTML để tạo phụ đề cho video clip">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;track&gt; trong HTML | Tạo phụ đề cho video">Thẻ &lt;track&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Thẻ &lt;track&gt; trong HTML</h2>
+<p>- Thẻ <strong>&lt;track&gt;</strong> được dùng để <em>"chèn một bản phụ đề vào video"</em></p>
+<p>- <i><u>Ví dụ</u>:</i> Khi xem video bên dưới, bạn sẽ thấy nó có phụ đề.</p>
+<p style="margin-top:20px;margin-bottom:30px">
+<video controls width="100%">
+<source src="../file/bunny.mp4" type="video/mp4">
+<track src="../file/phude_vi.html" default="">
+</video>
+</p>
+<p>- Thẻ &lt;track&gt; phải được đặt bên trong phần tử &lt;video&gt; và nằm dưới thẻ &lt;source&gt;</p>
+<p>- <i><u>Ví dụ</u>:</i> Dưới đây là đoạn mã dùng để tạo trình xem phim và video có phụ đề giống ví dụ phía trên.</p>
+<div class="form_new_23">
+    <pre>&lt;video controls&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; default&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo3a3b.html?file=1476" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Một video có thể có nhiều bản phụ đề bằng việc sử dụng nhiều thẻ &lt;track&gt;, để lựa chọn bản phụ đề mà bạn muốn xem thì bấm vào nút <kbd style="font-size:18px">CC</kbd> trên thanh điều khiển của trình xem phim để chọn.</p>
+<p>- <i><u>Ví dụ</u>:</i> Video trong trình xem phim bên dưới có hai bản phụ đề, bản tiếng Việt và bản tiếng Anh.</p>
+<div class="form_new_23">
+    <pre>&lt;video controls&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; label=&quot;Tiếng Việt&quot; default&gt;
+    &lt;track src=&quot;../file/phude_en.vtt&quot; label=&quot;Tiếng Anh&quot;&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demoee7c.html?file=2224" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Các thuộc tính của thẻ &lt;track&gt;</h2>
+<p>- Thẻ &lt;track&gt; có ba thuộc tính cơ bản.</p>
+<p>- Dưới đây là bảng mô tả sơ lượt về ba thuộc tính đó.</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>src</td>
+        <td>Xác định đường dẫn đến tập tin phụ đề mà bạn muốn chèn vào video</td>
+    </tr>
+    <tr>
+        <td>default</td>
+        <td>Xác định bản phụ đề nào sẽ được hiển thị mặc định</td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>Gắn nhãn cho bản phụ đề <i>(nó được hiển thị trong phần lựa chọn phụ đề)</i></td>
+    </tr>
+</table>
+<h3>2.1) Thuộc tính src</h3>
+<p>- Thuộc tính src xác định đường dẫn đến tập tin phụ đề mà bạn muốn chèn vào video.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;video controls style=&quot;width:100%&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; default&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo5c18.html?file=1477" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> <i>"Đường dẫn đến tập tin phụ đề mà bạn muốn chèn vào video"</i> có thể được xác định bằng đường dẫn tương đối hoặc đường dẫn tuyệt đối.</p>
+<h3>2.2) Thuộc tính default</h3>
+<p>- Thuộc tính default xác định việc <i>"phụ đề sẽ được hiển thị"</i></p>
+<p>- Nếu không có thuộc tính default thì phụ đề sẽ bị tắt, bạn phải bấm vào nút <kbd style="font-size:18px">CC</kbd> trên thanh điều khiển của trình xem phim để mở lại.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;p&gt;- Phụ đề của video bên dưới mặc định được hiển thị.&lt;/p&gt;
+&lt;video controls style=&quot;width:350px&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; default&gt;
+&lt;/video&gt;
+&lt;p&gt;- Phụ đề của video bên dưới mặc định bị tắt.&lt;/p&gt;
+&lt;video controls style=&quot;width:350px&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot;&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo4cc8.html?file=1479" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ngoài ra, nếu video có nhiều bản phụ đề thì thuộc tính default còn dùng để xác định bản phụ đề nào sẽ được hiển thị mặc định.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Video bên dưới có hai bản phụ đề. Tuy nhiên, bản tiếng Việt có thuộc tính default nên nó được hiển thị mặc định.</p>
+</div>
+    <hr>
+    <pre>&lt;video controls style=&quot;width:350px&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; default&gt;
+    &lt;track src=&quot;../file/phude_en.vtt&quot;&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demoea28.html?file=2225" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h3>2.3) Thuộc tính label</h3>
+<p>- Thuộc tính label dùng để gắn nhãn cho bản phụ đề <i>(nó được hiển thị trong phần lựa chọn phụ đề)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;video controls style=&quot;width:100%&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude_vi.vtt&quot; label=&quot;Tiếng Việt&quot; default&gt;
+    &lt;track src=&quot;../file/phude_en.vtt&quot; label=&quot;Tiếng Anh&quot;&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo5e80.html?file=1480" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Cách tạo một tập tin phụ đề</h2>
+<p>- <i><u>Bước 1</u>:</i> Tạo một tập tin phụ đề.</p>
+<ul style="list-style-type:circle">
+<li>Mở notepad lên.</li>
+<li style="margin-top:6px;margin-bottom:6px">Bấm vào tab "File" rồi chọn "Save As".</li>
+<li>Đặt tên cho tập tin xong rồi lưu lại.</li>
+<div style="margin-top:6px;"><i>(Lưu ý: Endcoding chọn UTF-8, và tập tin phải có phần đuôi là .vtt)</i></div>
+<div><img alt="Cách tạo một tập tin phụ đề vtt" src="../image/cach-tao-mot-tap-tin-phu-de-vtt.png" class="img-responsive"></div>
+</ul>
+<p>- <i><u>Bước 2</u>:</i> Viết nội dung cho tập tin phụ đề.</p>
+<ul style="list-style-type:circle">
+<li>Nội dung của một tập tin phụ đề phải được tắt đầu bằng cụm từ WEBVTT</li>
+<li style="margin-top:6px;margin-bottom:10px">Cách xác định thời điểm hiển thị phụ đề khá đơn giản, dưới đây là nội dung của tập tin phude.vtt</li>
+<div>
+<div class="form_new_33" style="font-size:18px">WEBVTT
+
+00:00:00.500 --> 00:00:02.000
+ý !?
+
+00:00:02.000 --> 00:00:05.500
+Con bươm bướm kìa !
+
+00:00:06.000 --> 00:00:08.000
+Nó đẹp quá ba mẹ ơi =))
+
+00:00:09.000 --> 00:00:10.000
+Thế éo nào!? @_@</div>
+</div>
+<div>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;video controls style=&quot;width:100%&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude.vtt&quot; default&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo9bea.html?file=1481" target="_blank">Xem ví dụ</a></div>
+</div>
+</div>
+<li style="margin-top:6px;margin-bottom:6px">Chúng ta cũng có thể sử dụng kết hợp với các thẻ &lt;i&gt;, &lt;u&gt;, &lt;b&gt; để trang trí cho phụ đề.</li>
+<li style="margin-bottom:10px">Ví dụ, dưới đây là nội dung của tập tin phude2.vtt</li>
+<div>
+<div class="form_new_33" style="font-size:18px">WEBVTT
+
+00:00:00.500 --&gt; 00:00:02.000
+ý !?
+
+00:00:02.000 --&gt; 00:00:05.500
+Con &lt;i&gt;&lt;b&gt;&lt;u&gt;bươm bướm&lt;/u&gt;&lt;/b&gt;&lt;/i&gt; kìa !
+
+00:00:06.000 --&gt; 00:00:08.000
+&lt;u&gt;Nó đẹp quá ba mẹ ơi =))&lt;/u&gt;
+
+00:00:09.000 --&gt; 00:00:10.000
+Thế éo nào!? @_@</div>
+</div>
+<div>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;video controls style=&quot;width:100%&quot;&gt;
+    &lt;source src=&quot;../file/bunny.mp4&quot;&gt;
+    &lt;track src=&quot;../file/phude2.vtt&quot; default&gt;
+&lt;/video&gt;</pre>
+    <div class="nutxem"><a href="demo5f1a.html?file=1482" target="_blank">Xem ví dụ</a></div>
+</div>
+</div>
+</ul><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-track-trong-html-tao-phu-de-cho-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:49 GMT -->
+</html>

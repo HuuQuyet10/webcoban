@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3537 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:220px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        /*border: 1px solid #b3b2b2;*/
+        height:200px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        #a{
+           border:1px solid black;
+           width:500px;
+           height:200px;
+           position:relative;
+        }
+        #test{
+            border:1px solid black;
+            background-color:yellow;
+            position:absolute;
+            <span id="layvitri_1" style="font-size:20px;color:red">bottom</span>:<span id="layvitri_3" style="font-size:20px;color:red">0px</span>;
+            <span id="layvitri_2" style="font-size:20px;color:red">right</span>:<span id="layvitri_4" style="font-size:20px;color:red">0px</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Tài liệu hướng dẫn học Lập Trình Web 01&lt;/p&gt;
+    &lt;p&gt;Tài liệu hướng dẫn học Lập Trình Web 02&lt;/p&gt;
+    &lt;div id=&quot;a&quot;&gt;
+        &lt;div id=&quot;test&quot;&gt;Hello&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Tài liệu hướng dẫn học Lập Trình Web 03&lt;/p&gt;
+    &lt;p&gt;Tài liệu hướng dẫn học Lập Trình Web 04&lt;/p&gt;
+    &lt;p&gt;Tài liệu hướng dẫn học Lập Trình Web 05&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom">
+                <table style="width:100%;font-size:22px;height:100%" id="ksnjb23">
+                    <tr>
+                        <td style="padding:0px 10px;width:120px"><p style="margin-top:12px;margin-bottom:12px"><input name="chieudoc" value="top" type="radio"> top:</p><p style="margin-top:12px;margin-bottom:12px"><input name="chieudoc" value="bottom" type="radio" checked=""> bottom:</p></td>
+                        <td style="padding:0px 10px"><input type="range" name="giatri_chieudoc" id="giatri_chieudoc" value="0" min="0" max="150" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0px 10px"><p style="margin-top:12px;margin-bottom:12px"><input name="chieungang" value="left" type="radio"> left:</p><p style="margin-top:12px;margin-bottom:12px"><input name="chieungang" value="right" type="radio" checked=""> right:</p></td>
+                        <td style="padding:0px 10px"><input type="range" name="giatri_chieungang" id="giatri_chieungang" value="0" min="0" max="400" style="width:100%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<p>Tài liệu hướng dẫn học Lập Trình Web 01</p><p>Tài liệu hướng dẫn học Lập Trình Web 02</p><div style='border:1px solid black;width:500px;height:200px;position:relative;'><div style='border:1px solid black;background-color:yellow;position:absolute;bottom:0px;right:0px;'>Hello</div></div><p>Tài liệu hướng dẫn học Lập Trình Web 03</p><p>Tài liệu hướng dẫn học Lập Trình Web 04</p><p>Tài liệu hướng dẫn học Lập Trình Web 05</p>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).on('input', "[name='giatri_chieudoc'],[name='giatri_chieungang']", function(){
+                var chieudoc = $("input[name='chieudoc']:checked").val();
+                var chieungang= $("input[name='chieungang']:checked").val();
+                var giatri_chieudoc = $("input[name='giatri_chieudoc']").val() + "px";
+                var giatri_chieungang = $("input[name='giatri_chieungang']").val() + "px";
+                $("#layvitri_1").html(chieudoc);
+                $("#layvitri_2").html(chieungang);
+                $("#layvitri_3").html(giatri_chieudoc);
+                $("#layvitri_4").html(giatri_chieungang);
+                var text = "<p>Tài liệu hướng dẫn học Lập Trình Web 01</p><p>Tài liệu hướng dẫn học Lập Trình Web 02</p><div style='border:1px solid black;width:500px;height:200px;position:relative;'><div style='border:1px solid black;background-color:yellow;position:absolute;"+chieudoc+":"+giatri_chieudoc+";"+chieungang+":"+giatri_chieungang+"'>Hello</div></div><p>Tài liệu hướng dẫn học Lập Trình Web 03</p><p>Tài liệu hướng dẫn học Lập Trình Web 04</p><p>Tài liệu hướng dẫn học Lập Trình Web 05</p>";
+                view_result(text);
+        })
+        $(document).ready(function(){
+            $("input[name='chieudoc']").change(function(){
+                var chieudoc = $("input[name='chieudoc']:checked").val();
+                var chieungang= $("input[name='chieungang']:checked").val();
+                document.getElementById("giatri_chieudoc").value = "0";
+                var giatri_chieudoc = $("input[name='giatri_chieudoc']").val() + "px";
+                var giatri_chieungang = $("input[name='giatri_chieungang']").val() + "px";
+                $("#layvitri_1").html(chieudoc);
+                $("#layvitri_2").html(chieungang);
+                $("#layvitri_3").html(giatri_chieudoc);
+                $("#layvitri_4").html(giatri_chieungang);
+                var text = "<p>Tài liệu hướng dẫn học Lập Trình Web 01</p><p>Tài liệu hướng dẫn học Lập Trình Web 02</p><div style='border:1px solid black;width:500px;height:200px;position:relative;'><div style='border:1px solid black;background-color:yellow;position:absolute;"+chieudoc+":"+giatri_chieudoc+";"+chieungang+":"+giatri_chieungang+"'>Hello</div></div><p>Tài liệu hướng dẫn học Lập Trình Web 03</p><p>Tài liệu hướng dẫn học Lập Trình Web 04</p><p>Tài liệu hướng dẫn học Lập Trình Web 05</p>";
+                view_result(text);
+            })
+        })
+        $(document).ready(function(){
+            $("input[name='chieungang']").change(function(){
+                var chieudoc = $("input[name='chieudoc']:checked").val();
+                var chieungang= $("input[name='chieungang']:checked").val();
+                document.getElementById("giatri_chieungang").value = "0";
+                var giatri_chieudoc = $("input[name='giatri_chieudoc']").val() + "px";
+                var giatri_chieungang = $("input[name='giatri_chieungang']").val() + "px";
+                $("#layvitri_1").html(chieudoc);
+                $("#layvitri_2").html(chieungang);
+                $("#layvitri_3").html(giatri_chieudoc);
+                $("#layvitri_4").html(giatri_chieungang);
+                var text = "<p>Tài liệu hướng dẫn học Lập Trình Web 01</p><p>Tài liệu hướng dẫn học Lập Trình Web 02</p><div style='border:1px solid black;width:500px;height:200px;position:relative;'><div style='border:1px solid black;background-color:yellow;position:absolute;"+chieudoc+":"+giatri_chieudoc+";"+chieungang+":"+giatri_chieungang+"'>Hello</div></div><p>Tài liệu hướng dẫn học Lập Trình Web 03</p><p>Tài liệu hướng dẫn học Lập Trình Web 04</p><p>Tài liệu hướng dẫn học Lập Trình Web 05</p>";
+                view_result(text);
+            })
+        })
+    </script>
+    <style type="text/css">
+        #ksnjb23, #ksnjb23 td{border:1px solid #b3b2b2;border-collapse:collapse;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3537 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:29 GMT -->
+</html>﻿

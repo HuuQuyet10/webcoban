@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:36:02 GMT -->
+<head>
+<title>Cách chèn một đoạn audio (bài hát, bản nhạc, âm thanh) vào trang web</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách chèn một đoạn audio vào trang web">
+<meta name="description" content="Trong bài học này, tôi sẽ hướng dẫn các bạn cách sử dụng thẻ &lt;audio&gt; trong HTML để chèn một đoạn audio (bài hát, bản nhạc, âm thanh) vào bên trong trang web">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.808.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" class='active'>- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách chèn một đoạn audio (bài hát, bản nhạc, âm thanh) vào trang web">Cách chèn một đoạn audio vào trang web</h1>
+<div class="breadcrumb">
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p><audio controls><source src="../file/bell.mp3"></audio></p>
+<h2>1) Cách chèn một đoạn audio vào trang web</h2>
+<p>- Để chèn một đoạn audio vào trang web thì chúng ta sử dụng cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">&lt;audio controls&gt;
+    &lt;source src=&quot;đường dẫn đến tập tin audio&quot;&gt;
+&lt;/audio&gt;</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;audio controls&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+<div><a href="democ8a9.html?file=3392" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- <u>Lưu ý</u>: Chúng ta nên sử dụng nhiều thẻ &lt;source&gt; để xác định nhiều tập tin audio dự phòng (đề phòng trường hợp đường dẫn đến tập tin audio này không tồn tại thì trình nghe nhạc sẽ chuyển sang sử dụng đường dẫn đến một tập tin audio khác)</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more"><p>- Mặc định thì trình nghe nhạc sẽ sử dụng tập tin <span>jwiq.mp3</span>, nếu tập tin <span>jwiq.mp3</span> không tồn tại thì trình nghe nhạc sẽ sử dụng tập tin <span>wi1o.mp3</span>, nếu tập tin <span>wi1o.mp3</span> không tồn tại thì trình nghe nhạc sẽ chuyển sang sử dụng tập tin <span>bell.mp3</span>, . . . .</p></div>
+<hr>
+<pre>&lt;audio controls&gt;
+    &lt;source src=&quot;../file/jwiq.mp3&quot;&gt;
+    &lt;source src=&quot;../file/wi1o.mp3&quot;&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+<div><a href="demo15ba.html?file=3642" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Các thuộc tính được sử dụng bên trong thẻ &lt;audio&gt;</h2>
+<p>- Dưới đây là danh sách những thuộc tính thường được sử dụng bên trong thẻ &lt;audio&gt;</p>
+<p>(các bạn vui lòng tấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để tìm hiểu chi tiết chức năng và cách sử dụng của từng thuộc tính)</p>
+<table class="table table-bordered mjk2o">
+<tr>
+<td>autoplay</td>
+<td>
+<p>- Thiết lập việc đoạn audio sẽ tự động được phát ngay sau khi trang tải xong.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-autoplay</div></span></div>
+</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>
+<p>- Thiết lập việc hiển thị thanh công cụ điều khiển đoạn audio.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-controls</div></span></div>
+</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>
+<p>- Chỉnh chế độ tự động phát lại sau mỗi lần đoạn audio kết thúc.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-loop</div></span></div>
+</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>
+<p>- Tùy chỉnh việc đoạn audio có được tải xuống trong quá trình tải trang hay không.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-preload</div></span></div>
+</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>
+<p>- Chỉnh chế độ mặc định tắt âm thanh của đoạn audio.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-muted</div></span></div>
+</td>
+</tr>
+</table>
+<div class="zzz-big-form">
+<div class="ttt-controls">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính controls dùng để thiết lập việc hiển thị <u>thanh công cụ điều khiển đoạn audio</u></p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;audio<span> controls</span> autoplay&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Hiển thị thanh công cụ điều khiển đoạn audio</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-autoplay">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính autoplay dùng để thiết lập việc đoạn audio sẽ tự động được phát ngay sau khi trang tải xong.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;audio controls<span> autoplay</span>&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tự động phát đoạn audio ngay sau khi trang tải xong</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-loop">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính loop dùng để chỉnh chế độ tự động phát lại sau mỗi lần đoạn audio kết thúc.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;audio controls<span> loop</span>&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tự động phát lại sau mỗi lần đoạn audio kết thúc</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-preload">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- <u>VẤN ĐỀ</u>: Khi chúng ta chèn một đoạn audio vào trang web thì mặc định đoạn audio sẽ tự động được tải xuống trong quá trình tải trang, điều đó thật sự lãng phí (gây tốn băng thông, giảm tốc độ tải trang) nếu người dùng không có nhu cầu nghe đoạn audio.</p>
+<p>- Từ đây, thuộc tính preload cho phép chúng ta tùy chỉnh việc đoạn audio có được tải xuống trong quá trình tải trang hay không.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">preload=&quot;value&quot;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định đựa theo một trong hai loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>auto</td>
+<td><p>- Đoạn audio sẽ được tải xuống trong quá trình tải trang (mặc định)</p></td>
+<tr>
+<td>none</td>
+<td><p>- Đoạn audio chỉ được tải xuống khi người dùng bấm vào nút phát (play) đoạn audio.</p></td>
+</tr>
+</table>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;audio controls&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+    &lt;audio controls preload=&quot;<span>auto</span>&quot;&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Tự động tải audio trong quá trình tải trang</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-muted">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính muted dùng để chỉnh chế độ mặc định tắt âm thanh của đoạn audio.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;audio controls<span> muted</span>&gt;
+        &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+    &lt;/audio&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+<p><input type="checkbox" value="yes" checked> Chỉnh chế độ mặc định tắt âm thanh của đoạn audio</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.3848.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:36:05 GMT -->
+</html>

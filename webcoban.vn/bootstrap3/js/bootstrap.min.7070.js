@@ -1,0 +1,1 @@
+﻿$(document).on('input', '#main > h2:nth-of-type(1) + p + p + .i-form-free > div:last-child > input', function() {$("#main > h2:nth-of-type(1) + p + p + .i-form-free > div:nth-child(5) > div > div").css("opacity",1-($(this).val() / 100));});

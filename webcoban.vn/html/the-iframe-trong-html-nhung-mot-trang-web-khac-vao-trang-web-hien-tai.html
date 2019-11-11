@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-iframe-trong-html-nhung-mot-trang-web-khac-vao-trang-web-hien-tai.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:58 GMT -->
+<head>
+<title>Thẻ &lt;iframe&gt; trong HTML | Nhúng một trang web khác vào trang web hiện tại</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="ther iframe trong html,nhúng một trang web khác vào trang web hiện tại">
+<meta name="description" content="Cách sử dụng thẻ iframe trong HTML để nhúng một trang web khác vào trang web hiện tại">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;iframe&gt; trong HTML | Nhúng một trang web khác vào trang web hiện tại">Thẻ &lt;iframe&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Thẻ &lt;iframe&gt; trong HTML</h2>
+<p>- Thẻ <strong>&lt;iframe&gt;</strong> thường được dùng để nhúng <span class="form_new_28">một trang web nào đó</span> vào <span class="form_new_28">trang web hiện tại</span></p>
+<p>- <i><u>Ví dụ</u></i>: Phía dưới là trang chủ của trang <i>"webcoban.vn"</i> được tôi nhúng vào trang này.</p>
+<p style="margin-bottom:30px;"><iframe src="../index.html" width="100%" height="300px" style="border:1px solid #ccc;"></iframe></p>
+<p>- Để dùng thẻ <strong>&lt;iframe&gt;</strong>, chúng ta sử dụng cú pháp như sau:</p>
+<div class="form_new_20"><pre>&lt;iframe src=&quot;url của trang web mà bạn muốn nhúng vào trang hiện tại&quot;&gt;&lt;/iframe&gt;</pre></div>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;iframe src=&quot;http://webcoban.vn/css/default.html&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo5a73.html?file=2284" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Các thuộc tính của thẻ &lt;iframe&gt;</h2>
+<p>- Thẻ &lt;iframe&gt; có bảy thuộc tính cơ bản.</p>
+<p>- Dưới đây là bảng mô tả sơ lược về bảy thuộc tính đó:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>src</td>
+        <td>Xác định đường dẫn đến trang web mà bạn muốn nhúng vào trang hiện tại</td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>Xác định chiều rộng của phần tử &lt;iframe&gt;</td>
+    </tr>
+    <tr>
+        <td>height</td>
+        <td>Xác định chiều cao của phần tử &lt;iframe&gt;</td>
+    </tr>
+    <tr>
+        <td>scrolling</td>
+        <td>Xác định việc có hiển thị các thanh scroll hay không</td>
+    </tr>
+    <tr>
+        <td>srcdoc</td>
+        <td>Xác định một nội dung HTML sẽ được hiển thị bên trong phần tử &lt;iframe&gt;</td>
+    </tr>
+    <tr>
+        <td>frameborder</td>
+        <td>Xác định việc có hiển thị đường viền của phần tử &lt;iframe&gt; hay không</td>
+    </tr>
+    <tr>
+        <td>sandbox</td>
+        <td>Hạn chế một số tính năng của trang web được nhúng bởi phần tử &lt;iframe&gt;</td>
+    </tr>
+</table>
+<h3>2.1) Thuộc tính src</h3>
+<p>- Thuộc tính src dùng để xác định đường dẫn đến trang web mà bạn muốn nhúng vào trang hiện tại.</p>
+<p><i>(Đường dẫn ở đây có thể là đường dẫn tương đối hoặc đường dẫn tuyệt đối)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;p&gt;- Địa chỉ của trang web mà tôi nhúng vào trang hiện tại của phần tử iframe bên dưới được xác định bởi đường dẫn TUYỆT đối.&lt;/p&gt;
+    &lt;iframe src=&quot;http://webcoban.vn/css/default.html&quot;&gt;&lt;/iframe&gt;
+    &lt;p&gt;- Địa chỉ của trang web mà tôi nhúng vào trang hiện tại của phần tử iframe bên dưới được xác định bởi đường dẫn TƯƠNG đối.&lt;/p&gt;
+    &lt;iframe src=&quot;../css/default.html&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo53f7.html?file=2126" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.2) Thuộc tính width & height</h3>
+<p>- Thuộc tính width & height dùng để thiết lập chiều rộng & chiều cao của phần tử &lt;iframe&gt;</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Phần tử &lt;iframe&gt; bên dưới sẽ có chiều rộng bằng 100% chiều rộng phần nội dung của phần tử chứa nó và có chiều cao là 350px</p>
+</div>
+    <hr>
+    <pre>&lt;iframe src=&quot;http://webcoban.vn&quot; width=&quot;100%&quot; height=&quot;350px&quot;&gt;&lt;/iframe&gt;</pre>
+    <div class="nutxem"><a href="demo9324.html?file=2127" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Ngoài việc sử dụng thuộc tính width & height của phần tử &lt;iframe&gt; thì chúng ta cũng có thể sử dụng thuộc tính width & height trong CSS để thay thế.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h3>2.3) Thuộc tính scrolling</h3>
+<p>- Nếu trang web được nhúng vào có kích thước lớn hơn phần tử &lt;iframe&gt;, thì khi đó mặc định phần tử &lt;iframe&gt; sẽ hiển thị các thanh scroll <i>(ngang hoặc dọc)</i> giúp ta kéo lên xuống hoặc sang trái phải để có thể xem hết nội dung của trang web được nhúng vào.</p>
+<p>- <i><u>Ví dụ</u>:</i> Phần tử &lt;iframe&gt; bên dưới tự động có thêm các thanh scroll.</p>
+<p><iframe src="../index.html" width="500px" height="200px"></iframe></p>
+<p>- Từ đây, thuộc tính scrolling giúp chúng ta xác định việc có nên hiển thị các thanh scroll hay không.</p>
+<p>- Thuộc tính scrolling có thể có một trong ba giá trị: <i>auto, yes, no</i></p>
+<ul style="list-style-type:circle">
+<li>Giá trị auto <i>(đây là giá trị mặc định)</i>: thanh scroll sẽ tự động hiển thị khi nào kích thước của trang web được nhúng vào lớn hơn kích thước của phần tử &lt;iframe&gt;</li>
+<li style="margin-top:6px;margin-bottom:6px">Giá trị yes: thanh scroll sẽ luôn luôn hiển thị mặc cho có cần thiết hay không.</li>
+<li>Giá trị no: thanh scroll sẽ không bao giờ được hiển thị.</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;p&gt;- Phần tử iframe bên dưới luôn hiển thị các thanh scroll&lt;/p&gt;
+    &lt;iframe src=&quot;http://webcoban.vn&quot; scrolling=&quot;yes&quot;&gt;&lt;/iframe&gt;
+    &lt;p&gt;- Phần tử iframe bên dưới không bao giờ hiển thị các thanh scroll&lt;/p&gt;
+    &lt;iframe src=&quot;http://webcoban.vn&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="democ1b1.html?file=2128" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.4) Thuộc tính srcdoc</h3>
+<p>- Thuộc tính srcdoc dùng để xác định một nội dung HTML sẽ được hiển thị bên trong phần tử &lt;iframe&gt;</p>
+<p>- <i><u>Lưu ý</u>:</i></p>
+<ul style="list-style-type:circle">
+<li>Nếu trình duyệt có hỗ trợ thuộc tính srcdoc thì nó sẽ ghi đè lên thuộc tính src.</li>
+<li style="margin-top:6px">Nếu trình duyệt không hỗ trợ thuộc tính srcdoc thì thuộc tính src sẽ ghi đè lên thuộc tính srcdoc.</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;iframe src=&quot;http://webcoban.vn&quot; srcdoc=&quot;&lt;div style='border:1px solid black;border-radius:10px;padding:20px;margin:20px;'&gt;Hello&lt;/div&gt;&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo5938.html?file=2129" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.5) Thuộc tính frameborder</h3>
+<p>- Thuộc tính frameborder xác định việc có hiển thị đường viền của phần tử &lt;iframe&gt; hay không.</p>
+<p>- Thuộc tính frameborder có thể có một trong hai giá trị là: <i>1 hoặc 0</i></p>
+<ul style="list-style-type:circle">
+<li>Giá trị 1 <i>(đây là giá trị mặc định)</i>: Đường viền của phần tử &lt;iframe&gt; sẽ được hiển thị.</li>
+<li style="margin-top:6px">Giá trị 0: Đường viền của phần tử &lt;iframe&gt; sẽ không được hiển thị.</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;p&gt;- Phần tử iframe bên dưới có đường viền&lt;/p&gt;
+    &lt;iframe src=&quot;http://webcoban.vn&quot; frameborder=&quot;1&quot;&gt;&lt;/iframe&gt;
+    &lt;p&gt;- Phần tử iframe bên dưới không có đường viền&lt;/p&gt;
+    &lt;iframe src=&quot;http://webcoban.vn&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demoab11.html?file=2130" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Ngoài việc sử dụng thuộc tính frameborder của phần tử &lt;iframe&gt; thì chúng ta cũng có thể sử dụng thuộc tính border trong CSS để thay thế.</p>
+<h3>2.6) Thuộc tính sandbox</h3>
+<p>- Thuộc tính sandbox dùng để hạn chế một số tính năng của trang web được nhúng vào.</p>
+<p>- Mặc định, dưới đây là những tính năng bị hạn chế của trang web được nhúng vào:</p>
+<ul style="list-style-type:circle">
+<li>Không thể submit form <a href="demod28e.html?file=2132" target="_blank">(Xem ví dụ)</a></li>
+<li style="margin-top:6px;margin-bottom:6px">Không thể thực thi mã lệnh JavaScript <a href="demo2889.html?file=2133" target="_blank">(Xem ví dụ)</a></li>
+<li>Không thể mở những liên kết có thuộc tính target=&quot;_blank&quot; <a href="demo0222.html?file=2134" target="_blank">(Xem ví dụ)</a></li>
+<li style="margin-top:6px;margin-bottom:6px">Chặn nội dung từ các phần tử: <i>&lt;object&gt;</i>, <i>&lt;embed&gt;</i>, <i>&lt;applet&gt;, ....</i> <a href="demo9bdf.html?file=2135" target="_blank">(Xem ví dụ)</a></li>
+<li>Chặn những thuộc tính tự động được kích hoạt: <i>tự phát video, tự phát nhạc, ....</i> <a href="demo98b3.html?file=2136" target="_blank">(Xem ví dụ)</a></li>
+<li style="margin-top:6px">Vô hiệu hóa các API</li>
+</ul>
+<p>- Mặc định là những tính năng trên sẽ bị ngăn chặn. Tuy nhiên, chúng ta có thể thêm giá trị cho thuộc tính sandbox để kích hoạt lại những tính năng mà bạn không muốn bị chặn.</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Giá trị</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td>allow-forms</td>
+        <td>Cho phép submit form</td>
+    </tr>
+    <tr>
+        <td>allow-scripts</td>
+        <td>Cho phép thực thi mã lệnh JavaScript</td>
+    </tr>
+    <tr>
+        <td>allow-popups</td>
+        <td>Cho phép mở những liên kết có thuộc tính target="_blank"</td>
+    </tr>
+    <tr>
+        <td>allow-pointer-lock</td>
+        <td>Kích hoạt các API</td>
+    </tr>
+</table>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Kích hoạt lại tính năng cho phép submit form</p>
+</div>
+    <hr>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;iframe src=&quot;demo?file=2131&quot; sandbox=&quot;allow-forms&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    <div class="nutxem"><a href="demo971f.html?file=2137" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-iframe-trong-html-nhung-mot-trang-web-khac-vao-trang-web-hien-tai.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:00 GMT -->
+</html>

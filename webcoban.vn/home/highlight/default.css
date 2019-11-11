@@ -1,0 +1,64 @@
+.hljs-string{
+color: #AA5500;/*#CC6600;*/
+}
+/****** HTML *************************************************************/
+.hljs-attr{
+  color:#00c;
+}
+.hljs-comment {
+  color: #888888;
+}
+.hljs-name{
+  color: #170;
+}
+.hljs-keyword{
+  color:#006393;
+  font-size: 17px;
+}
+/****** CSS *************************************************************/
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-selector-attr{
+  color: #008000;
+}
+.hljs-selector-tag{
+  color: #B00058;
+}
+.hljs-attribute{
+  color:#005680;
+}
+.hljs-number{
+  color: #880000;
+}
+/****** JavaScript *************************************************************/
+.hljs-built_in{
+  color:#006393;
+}
+.hljs-title{
+  color: #008000;
+}
+.hljs-params{
+  color:#a11;
+}
+.hljs-regexp{
+  color: #AA5500;
+}
+/****** PHP *************************************************************/
+.php .hljs-class .hljs-keyword{
+  color: #006393;
+  font-size:17px;
+}
+.php .hljs-keyword{
+  color: #CC0099;/*#B00058;*/
+  font-size:17px;
+}
+.php .hljs-function .hljs-keyword{
+  color: #006393;
+}
+
+
+
+
+
+/****** JavaScript + PHP dùng chung *************************************************************/

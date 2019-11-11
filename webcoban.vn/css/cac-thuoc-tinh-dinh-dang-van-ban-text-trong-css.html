@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:08 GMT -->
+<head>
+<title>Các thuộc tính định dạng VĂN BẢN (TEXT) trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Các thuộc tính định dạng văn bản (text) trong CSS, canh lề văn bản, chọn màu chữ, đổi sang kiểu chữ hoa chữ thường, thiết lập chiều cao mỗi hàng cho văn bản, khoảng cách giữa các từ ký tự">
+<meta name="description" content="Các thuộc tính định dạng văn bản (text) trong CSS, canh lề văn bản, chọn màu chữ, đổi sang kiểu chữ hoa chữ thường, thiết lập chiều cao mỗi hàng cho văn bản, khoảng cách giữa các từ ký tự">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.2512.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" >- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" class='active'>- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các thuộc tính định dạng VĂN BẢN (TEXT) trong CSS">Các thuộc tính dùng để định dạng cho văn bản</h1>
+<div class="breadcrumb">
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Dưới đây là danh sách những thuộc tính được dùng để định dạng cho văn bản.</p>
+<p>(các bạn vui lòng bấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để xem hướng dẫn chi tiết về cách sử dụng của từng thuộc tính)</p>
+<table class="table table-bordered">
+<tr>
+<td>color</td>
+<td>
+<p>- Chỉnh màu sắc của văn bản.</p>
+<div class="sss-view-z"><a href="demo0937.html?file=3307" target="_blank"><span class="fa fa-file-text-o fa-lg"></span></a></div>
+</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>
+<p>- Thiết lập khoảng cách nằm giữa mỗi hai từ (word)</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-word-spacing</div></span></div>
+</td>
+</tr>
+<tr>
+<td>word-break</td>
+<td>
+<p>- Tùy chỉnh cách thức ngắt xuống dòng của một từ (word) trong trường hợp khoảng trống của hàng hiện tại không đủ để chứa hết nó.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-word-break</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>
+<p>- Canh lề (theo chiều ngang) cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-align</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-align-last</td>
+<td>
+<p>- Canh lề (theo chiều ngang) cho dòng chữ cuối cùng của đoạn văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-align-last</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>
+<p>- Thiết lập khoảng cách thụt đầu dòng của dòng chữ đầu tiên.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-indent</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-overflow</td>
+<td>
+<p>- Tùy chỉnh cách thức hiển thị của phần văn bản bị tràn ra khỏi phần tử.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-overflow</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>
+<p>- Tạo cái bóng cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-shadow</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>
+<p>- Chuyển đổi văn bản sang dạng chữ in hoa hoặc chữ thường.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-transform</div></span></div>
+</td>
+</tr>
+<tr>
+<td>text-decoration-line</td>
+<td rowspan="4">
+<p>- Chức năng của nhóm thuộc tính text-decoration là dùng để thiết lập một cái đường kẻ lên văn bản.</p>
+<p>- Trong đó:</p>
+<ul>
+<li>Thuộc tính text-decoration-line dùng để xác định vị trí của đường kẻ.</li>
+<li>Thuộc tính text-decoration-style dùng để xác định kiểu của đường kẻ.</li>
+<li>Thuộc tính text-decoration-color dùng để xác định màu của đường kẻ.</li>
+</ul>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-text-decoration</div></span></div>
+</td>
+</tr>
+<tr><td>text-decoration-style</td></tr>
+<tr><td>text-decoration-color</td></tr>
+<tr><td>text-decoration</td></tr>
+<tr>
+<td>font-family</td>
+<td>
+<p>- Chỉnh phông chữ cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-font-family</div></span></div>
+</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>
+<p>- Chỉnh kích cỡ chữ của văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-font-size</div></span></div>
+</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>
+<p>- Chuyển đổi văn bản sang dạng chữ in nghiêng hay không in nghiêng.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-font-style</div></span></div>
+</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>
+<p>- Chuyển đổi văn bản sang dạng chữ in đậm hay không in đậm.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-font-weight</div></span></div>
+</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>
+<p>- Thiết lập khoảng cách nằm giữa mỗi hai ký tự.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-letter-spacing</div></span></div>
+</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>
+<p>- Tùy chỉnh việc các dấu khoảng trắng dư thừa &amp; ngắt xuống dòng sẽ bị loại bỏ hay được giữ lại (khi chúng hiển thị lên màn hình)</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-white-space</div></span></div>
+</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>
+<p>- Thiết lập chiều cao của dòng chữ.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-line-height</div></span></div>
+</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>
+<p>- Canh lề (theo chiều dọc) cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-vertical-align</div></span></div>
+</td>
+</tr>
+<tr>
+<td>writing-mode</td>
+<td>
+<p>- Tùy chỉnh chế độ viết văn bản theo chiều ngang hoặc chiều dọc.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-writing-mode</div></span></div>
+</td>
+</tr>
+<tr>
+<td>user-select</td>
+<td>
+<p>- Tùy chỉnh việc có cho phép người dùng bôi đen văn bản hay không.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-user-select</div></span></div>
+</td>
+</tr>
+</table>
+<div class="zzz-big-form">
+<!-- word-spacing -->
+<div class="ttt-word-spacing">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>word-spacing</strong> được dùng để thiết lập khoảng cách nằm giữa mỗi hai từ.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">word-spacing: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Sử dụng khoảng cách mặc định.</p></td>
+<td rowspan="4"><a href="demo5b2a.html?file=3350" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>length</td>
+<td><p>- Chỉ định khoảng cách nằm giữa mỗi hai từ dựa theo một giá trị cụ thể.</p>
+<p>(giá trị này có thể được xác định dựa theo một trong các loại đơn vị như: px, em, cm, . . . .)</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính word-spacing có giá trị là normal)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính word-spacing từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- text-align -->
+<div class="ttt-text-align">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>text-align</strong> được dùng để canh lề (theo chiều ngang) cho văn bản bên trong phần tử.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-align: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>left</td>
+<td><p>- Văn bản được canh nằm bên trái.</p></td>
+<td rowspan="6"><a href="demod1d6.html?file=3326" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>center</td>
+<td><p>- Văn bản được canh nằm giữa.</p></td>
+</tr>
+<tr>
+<td>right</td>
+<td><p>- Văn bản được canh nằm bên phải.</p></td>
+</tr>
+<tr>
+<td>justify</td>
+<td><p>- Văn bản được canh đều hai bên trái &amp; phải.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-align có giá trị là left)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-align từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Thuộc tính text-align chủ yếu dùng để canh lề cho văn bản, tuy nhiên nó cũng có thể dùng để canh lề cho một số loại nội dung khác, ví dụ như: hình ảnh, . . . .</p>
+</div>
+</div>
+</div>
+</div>
+<!-- text-align-last -->
+<div class="ttt-text-align-last">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>text-align-last</strong> dùng để canh lề (theo chiều ngang) cho dòng chữ cuối cùng của đoạn văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-align-last: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bảy loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>auto</td>
+<td><p>- Dòng chữ cuối cùng sẽ phụ thuộc vào việc canh lề của đoạn văn bản.</p></td>
+<td><a href="demo4d04.html?file=3477" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td><p>- Dòng chữ cuối cùng sẽ được canh nằm bên trái.</p></td>
+<td rowspan="6"><a href="demo90de.html?file=3478" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>center</td>
+<td><p>- Dòng chữ cuối cùng sẽ được canh nằm giữa.</p></td>
+</tr>
+<tr>
+<td>right</td>
+<td><p>- Dòng chữ cuối cùng sẽ được canh nằm bên phải.</p></td>
+</tr>
+<tr>
+<td>justify</td>
+<td><p>- Dòng chữ cuối cùng sẽ được canh đều hai bên trái &amp; phải.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-align-last có giá trị là auto)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-align-last từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- text-indent -->
+<div class="ttt-text-indent">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>text-indent</strong> dùng để thiết lập khoảng cách thụt đầu dòng cho dòng chữ đầu tiên của đoạn văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-indent: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong ba loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>length</td>
+<td><p>- Chỉ định khoảng cách thụt đầu dòng dựa theo một giá trị cụ thể.</p>
+<p>(giá trị này có thể được xác định dựa theo một trong các loại đơn vị như: px, em, cm, %, . . . .)</p></td>
+<td rowspan="3"><a href="demo1be2.html?file=3487" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-indent có giá trị là 0)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-indent từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- font-size -->
+<div class="ttt-font-size">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>font-size</strong> dùng để chỉnh <u>kích cỡ chữ</u> của văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">font-size: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các loại giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>xx-small</td>
+<td><p>- Kích cỡ chữ tương đương 9px</p></td>
+<td rowspan="9"><a href="demoa421.html?file=3329" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>x-small</td>
+<td><p>- Kích cỡ chữ tương đương 10px</p></td>
+</tr>
+<tr>
+<td>small</td>
+<td><p>- Kích cỡ chữ tương đương 13px</p></td>
+</tr>
+<tr>
+<td>medium</td>
+<td><p>- Kích cỡ chữ tương đương 16px</p></td>
+</tr>
+<tr>
+<td>large</td>
+<td><p>- Kích cỡ chữ tương đương 18px</p></td>
+</tr>
+<tr>
+<td>x-large</td>
+<td><p>- Kích cỡ chữ tương đương 24px</p></td>
+</tr>
+<tr>
+<td>xx-large</td>
+<td><p>- Kích cỡ chữ tương đương 32px</p></td>
+</tr>
+<tr>
+<td>smaller</td>
+<td><p>- Kích cỡ chữ tương đương 13.3px</p></td>
+</tr>
+<tr>
+<td>larger</td>
+<td><p>- Kích cỡ chữ tương đương 19.2px</p></td>
+</tr>
+<tr>
+<td>length</td>
+<td><p>- Chỉ định kích cỡ chữ dựa theo một giá trị cụ thể (giá trị này có thể được xác định dựa theo một trong các loại đơn vị như: px, em, cm, %, . . . .)</p>
+<p>- <u>Lưu ý</u>:</p>
+<ul>
+<li>Tỷ lệ 1em = 16px</li>
+<li>Tỷ lệ 100% = 16px</li>
+</ul>
+</td>
+<td rowspan="3"><a href="demo918b.html?file=3330" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính font-size có giá trị là medium)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính font-size từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- font-style -->
+<div class="ttt-font-style">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>font-style</strong> dùng để chuyển đổi văn bản sang dạng chữ in nghiêng hay không in nghiêng.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">font-style: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Không in nghiêng.</p></td>
+<td rowspan="4"><a href="demo2fbc.html?file=3337" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>italic</td>
+<td><p>- In nghiêng.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính font-style có giá trị là normal)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính font-style từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- font-weight -->
+<div class="ttt-font-weight">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>font-weight</strong> dùng để chuyển đổi văn bản sang dạng chữ in đậm hay không in đậm.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">font-weight: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Không in đậm.</p></td>
+<td rowspan="4"><a href="demo73ac.html?file=3334" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>bold</td>
+<td><p>- In đậm.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính font-weight có giá trị là normal)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính font-weight từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- font-family -->
+<div class="ttt-font-family">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<h3>1) Thuộc tính font-family</h3>
+<p>- Chức năng của thuộc tính <strong>font-family</strong> là dùng để chỉnh &quot;phông chữ&quot; cho văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">font-family: tên phông chữ;</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<div class="i-more"><p>- Thiết lập phông chữ cursive cho phần tử &lt;h1&gt;</p></div>
+<hr>
+<pre>h1{
+    font-family:cursive;
+}</pre>
+<div><a href="demo323f.html?file=3582" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<h3>2) Giới thiệu một số mẫu phông chữ</h3>
+<p>- Thông thường thì các trình duyệt luôn hỗ trợ sẵn một số mẫu phông chữ phổ biến, dựa vào đặc điểm hiển thị có nét tương đồng giữa các phông chữ mà chúng được chia ra làm ba nhóm chính: <span class="mark2">serif</span> <span class="mark2">sans-serif</span> <span class="mark2">monospace</span></p>
+<p>- Dưới đây là danh sách những phông chữ thuộc nhóm serif:</p>
+<table class="table table-bordered">
+<tr>
+<td>Georgia</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Palatino Linotype</td>
+<td rowspan="2">
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Book Antiqua</td>
+</tr>
+<tr>
+<td>Times New Roman</td>
+<td rowspan="3">
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Times</td>
+</tr>
+<tr>
+<td>serif</td>
+</tr>
+</table>
+<p>- Dưới đây là danh sách những phông chữ thuộc nhóm sans-serif:</p>
+<table class="table table-bordered">
+<tr>
+<td>Arial</td>
+<td rowspan="2">
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Helvetica</td>
+</tr>
+<tr>
+<td>Arial Black</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Comic Sans MS</td>
+<td rowspan="2">
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>cursive</td>
+</tr>
+<tr>
+<td>Impact</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Lucida Sans Unicode</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Tahoma</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Trebuchet MS</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Helvetica</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Verdana</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>sans-serif</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+</table>
+<p>- Dưới đây là danh sách những phông chữ thuộc nhóm monospace:</p>
+<table class="table table-bordered">
+<tr>
+<td>Courier</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>Lucida Console</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+<tr>
+<td>monospace</td>
+<td>
+<p>This is a heading</p>
+<p>This is a paragraph</p>
+</td>
+</tr>
+</table>
+<h3>3) Một số điều cần lưu ý</h3>
+<p>&#9989; Đối với những phông chữ mà tên của nó gồm có hai từ (word) trở lên thì các bạn nên đặt phông chữ đó vào bên trong cặp dấu nháy kép hoặc cặp dấu nháy đơn.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>h1{
+    font-family:"Lucida Sans Unicode";
+}</pre>
+<div><a href="demo7592.html?file=3346" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>&#9989;  Không phải trình duyệt nào cũng hỗ trợ hết tất cả các phông chữ, cho nên khi gán giá trị cho thuộc tính font-family, các bạn nên liệt kê một danh sách các phông chữ mong muốn (nếu trình duyệt không hỗ trợ phông chữ thứ nhất thì nó sẽ chuyển sang dùng phông chữ thứ hai, nếu phông chữ thứ hai cũng không được hỗ trợ thì trình duyệt sẽ chuyển sang dùng phông chữ thứ ba, . . . .)</p>
+<p>&#9989;  Ba phông chữ đại diện cho ba nhóm <span class="mark2">serif</span> <span class="mark2">sans-serif</span> <span class="mark2">monospace</span> được hầu hết các trình duyệt hỗ trợ, vì vậy tôi gợi ý các bạn nên đặt một trong ba phông chữ này nằm ở vị trí cuối cùng bên trong danh sách những phông chữ mong muốn thiết lập cho văn bản, điều đó đảm bảo việc nó sẽ được áp dụng trong trường hợp các phông chữ trước đó không được trình duyệt hỗ trợ.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>h1{
+    font-family: "Comic Sans MS", Tahoma, sans-serif;
+}</pre>
+<div><a href="demo7756.html?file=3349" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- letter-spacing -->
+<div class="ttt-letter-spacing">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>letter-spacing</strong> dùng để thiết lập khoảng cách nằm giữa mỗi hai ký tự.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">letter-spacing: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Không thiết lập khoảng cách nằm giữa mỗi hai ký tự (tương đương 0px)</p></td>
+<td rowspan="4"><a href="demobbdb.html?file=3310" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>length</td>
+<td><p>- Chỉ định khoảng cách nằm giữa mỗi hai ký tự dựa theo một giá trị cụ thể.</p>
+<p>(giá trị này có thể được xác định dựa theo một trong các loại đơn vị như: px, em, cm, . . . .)</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính letter-spacing có giá trị là normal)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính letter-spacing từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- text-shadow -->
+<div class="ttt-text-shadow">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p class="sss-shadow">- Thuộc tính text-shadow được dùng để tạo cái bóng cho văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-shadow: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các loại giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>none</td>
+<td><p>- Không tạo cái bóng cho văn bản.</p></td>
+<td><a href="demob323.html?file=3229" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>x y</td>
+<td>
+<p>- Tham số x là khoảng cách mà cái bóng nhích ra khỏi vị trí mặc định của nó (theo chiều ngang)</p>
+<p>- Tham số y là khoảng cách mà cái bóng nhích ra khỏi vị trí mặc định của nó (theo chiều dọc)</p>
+</td>
+<td><a href="demo0ebf.html?file=3230" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>x y color</td>
+<td><p>- Tham số color dùng để xác định màu sắc của cái bóng.</p></td>
+<td><a href="demo2d6c.html?file=3368" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>x y shadow color</td>
+<td><p>- Tham số shadow dùng để xác định độ nhòe của cái bóng (giá trị càng lớn thì cái bóng sẽ càng nhòe)</p></td>
+<td><a href="demo18cf.html?file=3369" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td colspan="2">
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-shadow có giá trị là none)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td colspan="2"><p>- Kế thừa giá trị thuộc tính text-shadow từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Nếu muốn tạo nhiều cái bóng cho văn bản thì chúng ta gán nhiều bộ giá trị cho thuộc tính text-shadow.</p>
+<div class="i-form-demo i-form-5">
+<pre>h1{
+    color:yellow;
+    font-size:60px;
+    text-shadow:1px 0px 3px black, 0px 1px 3px black, -1px 0px 3px black, 0px -1px 3px black;
+}</pre>
+<div><a href="demo1586.html?file=3583" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- text-transform -->
+<div class="ttt-text-transform">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>text-transform</strong> dùng để chuyển đổi văn bản sang dạng chữ in hoa hoặc chữ thường.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-transform: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>none</td>
+<td><p>- Không chuyển đổi.</p></td>
+<td rowspan="6"><a href="demo2828.html?file=3320" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td><p>- Tất cả ký tự được chuyển sang dạng chữ in hoa.</p></td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td><p>- Tất cả ký tự được chuyển sang dạng chữ thường.</p></td>
+</tr>
+<tr>
+<td>capitalize</td>
+<td><p>- Ký tự đầu tiên của mỗi từ được chuyển sang dạng chữ in hoa, các ký tự còn lại sẽ giữ nguyên trạng thái ban đầu.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-transform có giá trị là none)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-transform từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- white-space -->
+<div class="ttt-white-space">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Như chúng ta đã biết: <i>&quot;Trong quá trình soạn thảo văn bản, nếu chúng ta sử dụng phím <kbd>Space</kbd> để nhập nhiều dấu khoảng trắng liên tiếp, hoặc sử dụng phím <kbd>Enter</kbd> để ngắt văn bản xuống dòng thì khi hiển thị lên màn hình, mặc định những dấu khoảng trắng dư thừa &amp; các dấu ngắt xuống dòng sẽ bị trình duyệt loại bỏ&quot;</i></p>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>white-space</strong> thì chúng ta có thể tùy chỉnh lại việc các dấu khoảng trắng &amp; dấu ngắt xuống dòng sẽ bị loại bỏ hay được giữ lại.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">white-space: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bảy loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td>
+<p>- Các dấu khoảng trắng dư thừa &amp; các dấu ngắt xuống dòng sẽ bị loại bỏ.</p>
+<p>- Văn bản sẽ tự động ngắt xuống dòng nếu hàng hiện tại không đủ chỗ chứa nó.</p>
+</td>
+<td rowspan="7"><a href="demo7558.html?file=3358" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>
+<p>- Các dấu khoảng trắng dư thừa &amp; các dấu ngắt xuống dòng sẽ bị loại bỏ.</p>
+<p>- Văn bản không được ngắt xuống dòng mặc cho nó có bị tràn ra khỏi phần tử.</p>
+</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>
+<p>- Giữ nguyên các dấu khoảng trắng &amp; các dấu ngắt xuống dòng.</p>
+<p>- Văn bản không được ngắt xuống dòng mặc cho nó có bị tràn ra khỏi phần tử.</p>
+</td>
+</tr>
+<tr>
+<td>pre-wrap</td>
+<td>
+<p>- Giữ nguyên các dấu khoảng trắng &amp; các dấu ngắt xuống dòng.</p>
+<p>- Văn bản sẽ tự động ngắt xuống dòng nếu hàng hiện tại không đủ chỗ chứa nó.</p>
+</td>
+</tr>
+<tr>
+<td>pre-line</td>
+<td>
+<p>- Các dấu khoảng trắng dư thừa sẽ bị loại bỏ.</p>
+<p>- Các dấu ngắt xuống dòng sẽ được giữ nguyên.</p>
+<p>- Văn bản sẽ tự động ngắt xuống dòng nếu hàng hiện tại không đủ chỗ chứa nó.</p>
+</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính white-space có giá trị là normal)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính white-space từ phần tử cha của nó</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- line-height -->
+<div class="ttt-line-height">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>line-height</strong> dùng để thiết lập chiều cao của các dòng chữ bên trong phần tử.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">line-height: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Sử dụng chiều cao mặc định của các dòng chữ.</p></td>
+<td rowspan="6"><a href="demo0e33.html?file=3314" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>length</td>
+<td>
+<p>- Chỉ định chiều cao cho các dòng chữ dựa theo một giá trị cụ thể.</p>
+<p>(giá trị này có thể được xác định dựa theo một trong các loại đơn vị như: px, em, cm, . . . .)</p>
+</td>
+</tr>
+<tr>
+<td>number</td>
+<td>
+<p>- Chỉ định chiều cao cho các dòng chữ dựa theo cấp số nhân so với kích cỡ chữ.</p>
+<p>- <u>Ví dụ</u>: Khi văn bản bên trong phần tử có kích cỡ 20px.</p>
+<ul>
+<li>Nếu number là 1 thì chiều cao của mỗi dòng chữ sẽ là 20px</li>
+<li>Nếu number là 1.5 thì chiều cao của mỗi dòng chữ sẽ là 30px</li>
+<li>Nếu number là 2 thì chiều cao của mỗi dòng chữ sẽ là 40px</li>
+<li>Nếu number là 5 thì chiều cao của mỗi dòng chữ sẽ là 100px</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>percent</td>
+<td>
+<p>- Chỉ định chiều cao cho các dòng chữ dựa theo tỷ lệ phần trăm so với kích cỡ chữ.</p>
+<p>- <u>Ví dụ</u>: Khi văn bản bên trong phần tử có kích cỡ 20px.</p>
+<ul>
+<li>Nếu percent là 100% thì chiều cao của mỗi dòng chữ sẽ là 20px</li>
+<li>Nếu percent là 150%  thì chiều cao của mỗi dòng chữ sẽ là 30px</li>
+<li>Nếu percent là 200% thì chiều cao của mỗi dòng chữ sẽ là 40px</li>
+<li>Nếu percent là 500% thì chiều cao của mỗi dòng chữ sẽ là 100px</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính line-height có giá trị là normal)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính line-height từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- user-select -->
+<div class="ttt-user-select">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>user-select</strong> dùng để tùy chỉnh việc có cho phép người dùng bôi đen văn bản hay không.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">user-select: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong ba loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>auto</td>
+<td><p>- Cho phép người dùng bôi đen văn bản (đây là giá trị mặc định)</p></td>
+<td rowspan="4"><a href="demo3ac1.html?file=3584" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>none</td>
+<td><p>- Không cho phép người dùng bôi đen văn bản.</p></td>
+</tr>
+<tr>
+<td>all</td>
+<td><p>- Cho phép người dùng bôi đen toàn bộ đoạn văn bản chỉ với một cú nhấp chuột.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- vertical-align -->
+<div class="ttt-vertical-align">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>vertical-align</strong> dùng để canh lề (theo chiều dọc) cho văn bản bên trong phần tử.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">vertical-align: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các loại giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>top</td>
+<td><p>- Văn bản sẽ nằm ở vị trí cao nhất.</p></td>
+<td rowspan="3"><a href="demo154c.html?file=3360" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>middle</td>
+<td><p>- Văn bản sẽ nằm ở giữa.</p></td>
+</tr>
+<tr>
+<td>bottom</td>
+<td><p>- Văn bản sẽ nằm ở vị trí thấp nhất.</p></td>
+</tr>
+<tr>
+<td>super</td>
+<td><p>- Văn bản sẽ nằm ở phía trên đường cơ sở.</p></td>
+<td rowspan="3"><a href="demo0cda.html?file=3361" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>baseline</td>
+<td><p>- Văn bản sẽ nằm ở giữa đường cơ sở.</p></td>
+</tr>
+<tr>
+<td>sub</td>
+<td><p>- Văn bản sẽ nằm ở phía dưới đường cơ sở.</p></td>
+</tr>
+<tr>
+<td>length</td>
+<td><p>- Chỉ định một khoảng cách cụ thể mà văn bản sẽ nằm cách đường cơ sở.</p>
+<p>- <u>Lưu ý</u>:</p>
+<ul>
+<li>Nếu giá trị dương thì văn bản sẽ nằm phía trên đường cơ sở.</li>
+<li>Nếu giá trị âm thì văn bản sẽ nằm phía dưới đường cơ sở.</li>
+</ul></td>
+<td><a href="demo1aeb.html?file=3362" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td colspan="2">
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính vertical-align có giá trị là baseline)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td colspan="2"><p>- Kế thừa giá trị thuộc tính vertical-align từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- word-break -->
+<div class="ttt-word-break">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>word-break</strong> dùng để tùy chỉnh <span class="mark1">cách thức ngắt xuống dòng</span> của một từ (word) trong trường hợp khoảng trống của hàng hiện tại không đủ để chứa hết nó.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">word-break: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong năm loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>normal</td>
+<td><p>- Một từ (word) sẽ được bắt đầu trên <span class="mark1">hàng mới</span> nếu khoảng trống của hàng hiện tại không đủ chỗ để chứa hết nó. Khi đã bắt đầu trên một hàng mới, nếu nó dài vượt quá chiều rộng của phần tử thì <span class="mark1">nó sẽ bị tràn ra khỏi phần tử</span>.</p></td>
+<td rowspan="5"><a href="demo3803.html?file=3473" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>break-word</td>
+<td><p>- Một từ (word) sẽ được bắt đầu trên <span class="mark1">hàng mới</span> nếu khoảng trống của hàng hiện tại không đủ chỗ để chứa hết nó. Khi đã bắt đầu trên một hàng mới, nếu nó dài vượt quá chiều rộng của phần tử thì <span class="mark1">những ký tự tràn ra ngoài sẽ tự động ngắt xuống dòng</span>.</p></td>
+</tr>
+<tr>
+<td>break-all</td>
+<td><p>- Một từ (word) sẽ được bắt đầu trên <span class="mark1">hàng hiện tại</span> mặc cho khoảng trống của hàng hiện tại có đủ chỗ chứa hết nó hay không, <span class="mark1">những ký tự bị tràn ra ngoài sẽ tự động ngắt xuống dòng</span>.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính word-break có giá trị là normal)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính word-break từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- text-overflow -->
+<div class="ttt-text-overflow">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>text-overflow</strong> thường được sử dụng kết hợp với hai thuộc tính <span class="mark2">white-space</span> &amp; <span class="mark2">overflow</span> để tùy chỉnh cách thức hiển thị của phần văn bản bị tràn ra khỏi phần tử.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-overflow: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>clip</td>
+<td><p>- Phần văn bản bị tràn ra ngoài sẽ được cắt bỏ.</p></td>
+<td rowspan="4"><a href="demoe7e2.html?file=3366" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>ellipsis</td>
+<td><p>- Phần văn bản bị tràn ra ngoài sẽ được cắt bỏ &amp; thay thế bởi dấu ba chấm (...)</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-overflow có giá trị là clip)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-overflow từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- writing-mode -->
+<div class="ttt-writing-mode">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thuộc tính <strong>writing-mode</strong> dùng để tùy chỉnh chế độ viết một đoạn văn bản.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">writing-mode: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong ba loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>horizontal-tb</td>
+<td><p>- Văn bản được viết theo chiều ngang, hướng từ trên xuống dưới.</p></td>
+<td rowspan="3"><a href="demodff3.html?file=3585" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>vertical-lr</td>
+<td><p>- Văn bản được viết theo chiều dọc, hướng từ trái sang phải.</p></td>
+</tr>
+<tr>
+<td>vertical-rl</td>
+<td><p>- Văn bản được viết theo chiều dọc, hướng từ phải sang trái.</p></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- text-decoration -->
+<div class="ttt-text-decoration">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<div class="i-note-style-2 i-note-1">
+<span class="fa fa-file-text-o fa-lg"></span>
+<p>- Chức năng của nhóm thuộc tính <strong>text-decoration</strong> là dùng để thiết lập một cái đường kẻ lên văn bản.</p>
+<p>- Nhóm thuộc tính text-decoration được chia ra làm ba thuộc tính chính:</p>
+<ul>
+<li>text-decoration-line</li>
+<li>text-decoration-style</li>
+<li>text-decoration-color</li>
+</ul>
+</div>
+<h3>1) Thuộc tính text-decoration-line</h3>
+<p>- Thuộc tính <strong>text-decoration-line</strong> dùng để chỉ định vị trí của cái đường kẻ.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-decoration-line: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>none</td>
+<td>
+<p>- Không thiết lập đường kẻ lên văn bản.</p>
+<p>(giá trị này thường được sử dụng để vô hiệu hóa đường kẻ nằm ở dưới chân các liên kết)</p>
+</td>
+<td rowspan="4"><a href="demo8751.html?file=3480" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>overline</td>
+<td><p>- Đường kẻ nằm trên đầu văn bản.</p></td>
+</tr>
+<tr>
+<td>line-through</td>
+<td><p>- Đường kẻ nằm giữa văn bản.</p></td>
+</tr>
+<tr>
+<td>underline</td>
+<td><p>- Đường kẻ nằm dưới chân văn bản.</p></td>
+</tr>
+</table>
+<h3>2) Thuộc tính text-decoration-style</h3>
+<p>- Thuộc tính <strong>text-decoration-style</strong> dùng để xác định kiểu của cái đường kẻ.</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-decoration-style: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong các giá trị sau đây:</p>
+<table class="table table-bordered">
+<tr>
+<td>solid</td>
+<td><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></td>
+<td rowspan="7"><a href="demo76ac.html?file=3483" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>dashed</td>
+<td><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></td>
+</tr>
+<tr>
+<td>double</td>
+<td><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></td>
+</tr>
+<tr>
+<td>dotted</td>
+<td><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></td>
+</tr>
+<tr>
+<td>wavy</td>
+<td><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính text-decoration-style có giá trị là solid)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính text-decoration-style từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<h3>3) Thuộc tính text-decoration-color</h3>
+<p>- Thuộc tính <strong>text-decoration-color</strong> dùng để xác định màu sắc của cái đường kẻ.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        p{
+            text-decoration-line:underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p style=&quot;text-decoration-color:red&quot;&gt;1 2 3 4 5&lt;/p&gt;
+   &lt;p style=&quot;text-decoration-color:rgb(140,51,79)&quot;&gt;1 2 3 4 5&lt;/p&gt;
+   &lt;p style=&quot;text-decoration-color:#FFA500&quot;&gt;1 2 3 4 5&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demof2e9.html?file=3485" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<h3>4) Thuộc tính text-decoration</h3>
+<p>- Thuộc tính <strong>text-decoration</strong> là cú pháp tổng quát dùng để thiết lập một cái đường kẻ lên văn bản (thay vì phải sử dụng kết hợp ba thuộc tính text-decoration-line, text-decoration-style, text-decoration-color được nêu ở trên thì bây giờ chúng ta chỉ cần sử dụng mỗi thuộc tính này là đủ)</p>
+<p>- Cú pháp:</p>
+<div class="i-pre-not-color i-form-2">text-decoration: line color style;</div>
+<p>- Trong đó, <span class="mark2">line</span> <span class="mark2">color</span> <span class="mark2">style</span> lần lượt là giá trị của ba thuộc tính <span class="mark2">text-decoration-line</span> <span class="mark2">text-decoration-color</span> <span class="mark2">text-decoration-style</span></p>
+<p>- Tuy nhiên, thuộc tính <strong>text-decoration</strong> không bắt buộc chúng ta phải gán cho nó đủ ba tham số, những tham số của thuộc tính nào còn thiếu thì trình duyệt sẽ tự động sử dụng giá trị mặc định của thuộc tính tương ứng.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        .text1{
+            text-decoration:overline wavy;
+        }
+        .text2{
+            text-decoration:line-through red dotted;
+        }
+        .text3{
+            text-decoration:underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1 class=&quot;text1&quot;&gt;1 2 3 4 5 6 7 8 9&lt;/h1&gt;
+   &lt;h1 class=&quot;text2&quot;&gt;1 2 3 4 5 6 7 8 9&lt;/h1&gt;
+   &lt;h1 class=&quot;text3&quot;&gt;1 2 3 4 5 6 7 8 9&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo8625.html?file=3308" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--  -->
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.9094.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:39:18 GMT -->
+</html>

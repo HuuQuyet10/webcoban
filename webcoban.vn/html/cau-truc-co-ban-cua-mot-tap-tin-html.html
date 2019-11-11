@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/cau-truc-co-ban-cua-mot-tap-tin-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:34:59 GMT -->
+<head>
+<title>Cấu trúc cơ bản của một tập tin HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cấu trúc cơ bản của một tập tin html">
+<meta name="description" content="Trong bài học này, các bạn sẽ được tìm hiểu cấu trúc cơ bản của một tập tin HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.9526.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" class='active'>- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cấu trúc cơ bản của một tập tin HTML">Cấu trúc cơ bản của một tập tin HTML</h1>
+<div class="breadcrumb">
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="doan-van-ban-trong-html.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Thông thường thì <u>bất kỳ một thứ gì</u> cũng có một cái <u>cấu trúc cơ bản</u> mà nó phải tuân theo nhằm đảm bảo việc nó có thể hoạt động được ổn định (ví dụ như một bài văn thường có cấu trúc gồm ba thành phần mở bài - thân bài - kết luận, nếu chúng ta loại bỏ đi một thành phần nào đó hoặc xáo trộn thứ tự giữa ba thành phần thì nội dung của bài văn sẽ không được trơn tru mạch lạc). Việc viết mã lệnh bên trong một tập tin HTML cũng tương tự như vậy, nó cần phải tuân theo một cái cấu trúc cơ bản để đảm bảo trang web hiển thị được như ý, tránh mắc phải những lỗi không đáng có.</p>
+<h2>1) Cấu trúc của một tập tin HTML</h2>
+<p>- Nội dung của một tập tin HTML phải được bắt đầu bằng thẻ &lt;html&gt; và kết thúc bởi thẻ &lt;/html&gt;.</p>
+<p>- Bên trong cặp thẻ &lt;html&gt;&lt;/html&gt; được chia làm hai thành phần chính:</p>
+<ul>
+<li><u>Phần head</u> được bắt đầu bằng thẻ &lt;head&gt; và kết thúc bởi thẻ &lt;/head&gt;, nó dùng để chứa tiêu đề và các thẻ khai báo thông tin cho trang web.</li>
+<li><u>Phần body</u> được bắt đầu bằng thẻ &lt;body&gt; và kết thúc bởi thẻ &lt;/body&gt;, nó dùng để chứa những nội dung mà chúng ta muốn hiển thị trên trang web.</li>
+</ul>
+<p>- Dưới đây là hình ảnh minh họa về cấu trúc cơ bản của một tập tin HTML.</p>
+<p><img alt ="cấu trúc của một tập tin html" src="../image/cau-truc-cua-mot-tap-tin-html.png" class="img-responsive"></p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một tập tin HTML với nội dung như bên dưới.</p>
+<pre class="i-form-1">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello WEB CƠ BẢN&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;1) Tài liệu học HTML&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+        &lt;p&gt;2) Tài liệu học CSS&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+        &lt;p&gt;3) Tài liệu học JavaScript&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>- Khi thực thi tập tin này thì trình duyệt sẽ hiển thị là.</p>
+<div><img src="../image/cau-truc-noi-dung-ben-trong-tap-tin-html.png" class="img-responsive"></div>
+</div>
+<p>- <u>Lưu ý</u>: Thẻ &lt;meta charset=&quot;utf-8&quot;&gt; có chức năng tương tự như việc chúng ta chọn kiểu mã hóa <span class="mark2">UTF-8</span> khi tạo một tập tin HTML, nó sẽ giúp cho trang web hiển thị ngôn ngữ tiếng Việt được chính xác.</p>
+<h2>2) Cấu trúc của một tập tin HTML5</h2>
+<p>- Cái cấu trúc của tập tin HTML mà tôi hướng dẫn cho các bạn ở phía trên là cấu trúc của phiên bản HTML đầu tiên. Hiện nay, HTML đã cho ra phiên bản mới nhất là HTML5, phiên bản này hỗ trợ thêm một số thẻ mới cùng với những tính năng vượt trội hơn.</p>
+<p> - Để sử dụng phiên bản HTML5 thì ta thêm thẻ &lt;!DOCTYPE html&gt; vào vị trí đầu tiên bên trong tập tin.</p>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello WEB CƠ BẢN&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;1) Tài liệu học HTML&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+        &lt;p&gt;2) Tài liệu học CSS&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+        &lt;p&gt;3) Tài liệu học JavaScript&lt;/p&gt;
+        &lt;p&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+<div><a href="demo2f8e.html?file=87" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="doan-van-ban-trong-html.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/cau-truc-co-ban-cua-mot-tap-tin-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:02 GMT -->
+</html>

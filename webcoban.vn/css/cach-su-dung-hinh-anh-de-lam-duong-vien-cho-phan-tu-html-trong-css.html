@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:30 GMT -->
+<head>
+<title>Cách tạo đường viền hình ảnh trong CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="đường viền hình ảnh trong css">
+<meta name="description" content="Trong bài học này, tôi sẽ hướng dẫn các bạn cách sử dụng các thuộc tính border-image trong CSS để dùng hình ảnh tạo đường viền hình ảnh cho một phần tử HTML, hay nói cách khác là sử dụng hình ảnh để làm đường viền cho phần tử HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.4232.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>CSS</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: CSS Intro (tìm hiểu tổng quan về CSS)</a>
+<a href="cach-dinh-dang-cho-mot-phan-tu-html-bang-css.html" >- Bài 02: CSS How (làm thế nào để định dạng cho một phần tử !?)</a>
+<a href="nhung-kien-thuc-co-ban-trong-viec-viet-ma-css.html" >- Bài 03: CSS Syntax (những kiến thức cơ bản trong việc viết mã CSS)</a>
+<a href="cach-lay-ma-mau-cua-mot-mau-sac-color-trong-css.html" >- Bài 04: CSS Color (cách xác định giá trị của một màu sắc trong CSS)</a>
+<a href="cach-xac-dinh-bo-chon-selector-cua-mot-phan-tu-trong-css.html" >- Bài 05: CSS Selectors (cách xác định bộ chọn của một phần tử)</a>
+<a href="cau-truc-cua-mot-phan-tu-html.html" >- Bài 06: CSS Element (tìm hiểu cấu trúc của một phần tử HTML)</a>
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html" >- Bài 07: CSS Border (cách tạo đường viền cho một phần tử HTML)</a>
+<a href="cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html" class='active'>- Bài 08: CSS Border Image (cách sử dụng hình ảnh để làm đường viền cho phần tử)</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html" >- Bài 09: CSS Padding (thiết lập vùng đệm cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-margin-trong-css-de-thiet-lap-khoang-cach-le-cho-phan-tu.html" >- Bài 10: CSS Margin (thiết lập khoảng cách lề cho phần tử)</a>
+<a href="cach-chinh-mau-nen-cho-mot-phan-tu-html-trong-css.html" >- Bài 11: CSS Background Color (cách thiết lập màu nền cho một phần tử)</a>
+<a href="cach-thiet-lap-kich-thuoc-chieu-rong-chieu-cao-cho-mot-phan-tu-html-trong-css.html" >- Bài 12: CSS Width/Height (cách thiết lập kích thước cho một phần tử)</a>
+<a href="cach-thiet-lap-hinh-nen-background-image-cho-phan-tu-trong-css.html" >- Bài 13: CSS Background Image (cách thiết lập hình nền cho một phần tử)</a>
+<a href="cach-tao-goc-bo-tron-chinh-do-cong-cho-cac-goc-cua-phan-tu-html-trong-css.html" >- Bài 14: CSS Border Radius (cách chỉnh độ cong cho các góc của phần tử HTML)</a>
+<a href="cach-tao-mot-cai-bong-box-shadow-cho-phan-tu-trong-css.html" >- Bài 15: CSS Box Shadow (cách tạo một cái bóng cho phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-danh-sach-list-trong-css.html" >- Bài 16: CSS List (các thuộc tính được dùng để định dạng cho danh sách)</a>
+<a href="cac-thuoc-tinh-dinh-dang-van-ban-text-trong-css.html" >- Bài 17: CSS Text (tổng hợp các thuộc tính được dùng để định dạng cho văn bản)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-dua-theo-quan-he-huyet-thong-trong-css.html" >- Bài 18: CSS Combinators (cách xác định bộ chọn của phần tử dựa theo quan hệ huyết thống)</a>
+<a href="cach-xac-dinh-bo-chon-cua-phan-tu-trong-mot-so-truong-hop-dac-biet-trong-css.html" >- Bài 19: CSS Pseudo-class (cách xác định bộ chọn của phần tử trong một số trường hợp đặc biệt)</a>
+<a href="cach-xac-dinh-bo-chon-cua-mot-thanh-phan-nao-do-cua-phan-tu-trong-css.html" >- Bài 20: CSS Pseudo-element (cách xác định bộ chọn của &quot;một thành phần&quot; của phần tử)</a>
+<a href="cac-thuoc-tinh-dinh-dang-bang-table-trong-css.html" >- Bài 21: CSS Table (tìm hiểu cách thức định dạng cho một cái bảng)</a>
+<a href="cach-su-dung-thuoc-tinh-box-sizing-trong-css.html" >- Bài 22: CSS Box-sizing (tìm hiểu chức năng &amp; cách sử dụng thuộc tính box-sizing)</a>
+<a href="dinh-dang-cho-cap-dau-ngoac-trich-dan-bang-thuoc-tinh-quotes-trong-css.html" >- Bài 23: CSS Quotes (cách sử dụng thuộc tính quotes để định dạng cho cặp dấu ngoặc)</a>
+<a href="cach-su-dung-thuoc-tinh-column-trong-css-de-chia-van-ban-ben-trong-phan-tu-ra-thanh-nhieu-cot.html" >- Bài 24: CSS Columns (cách chia văn bản bên trong phần tử ra thành nhiều cột)</a>
+<a href="cach-su-dung-thuoc-tinh-filter-trong-css-de-tao-hieu-ung-cho-hinh-anh.html" >- Bài 25: CSS Filter (cách chỉnh một vài hiệu ứng đơn giản cho hình ảnh)</a>
+<a href="cach-chinh-do-trong-suot-cho-mot-phan-tu-html-bang-thuoc-tinh-opacity-trong-css.html" >- Bài 26: CSS Opacity (cách chỉnh độ trong suốt cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-overflow-trong-css-de-tao-thanh-cuon-trang-scroll-cho-phan-tu.html" >- Bài 27: CSS Overflow (cách tạo thanh scroll cho một phần tử HTML)</a>
+<a href="cach-su-dung-thuoc-tinh-display-trong-css-de-thiet-lap-kieu-hien-thi-cua-phan-tu.html" >- Bài 28: CSS Display (thiết lập cách thức hiển thị của phần tử)</a>
+<a href="cach-chinh-vi-tri-cho-mot-phan-tu-html-bang-thuoc-tinh-position-trong-css.html" >- Bài 29: CSS Position (cách thiết lập vị trí cho một phần tử)</a>
+<a href="cach-tao-hieu-ung-chuyen-dong-cho-mot-phan-tu-html-bang-thuoc-tinh-animation-trong-css.html" >- Bài 30: CSS Animation (cách tạo hiệu ứng chuyển động cho phần tử)</a>
+<a href="cach-su-dung-thuoc-tinh-transition-trong-css-de-tao-hieu-ung-luan-chuyen-gia-tri.html" >- Bài 31: CSS Transitions (tìm hiểu chức năng &amp; cách sử dụng nhóm thuộc tính transition)</a>
+<a href="cach-dinh-dang-cho-lien-ket-link-trong-css.html" >- Bài 32: CSS Link (tìm hiểu cách thức định dạng cho một cái liên kết)</a>
+<a href="cach-su-dung-thuoc-tinh-float-clear-trong-css.html" >- Bài 33: CSS Float (tìm hiểu cách sử dụng thuộc tính float &amp; clear trong CSS)</a>
+<a href="cach-chinh-do-uu-tien-hien-thi-cho-phan-tu-bang-thuoc-tinh-z-index-trong-css.html" >- Bài 34: CSS Z-index (cách thiết lập độ ưu tiên hiển thị giữa các phần tử)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách tạo đường viền hình ảnh trong CSS">Cách tạo đường viền hình ảnh cho một phần tử</h1>
+<div class="breadcrumb">
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div class="ijl3v">
+<div>HAI BỐ CON NHÀ MÈO ĐANG ÔM NHAU NGỦ</div>
+<div><img src="../image/cat.jpg"></div>
+</div>
+<h2>1) Cách tạo một cái đường viền hình ảnh cho phần tử</h2>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></div></td>
+<td>
+<p>- Để tạo một cái &quot;đường viền hình ảnh&quot; cho phần tử thì về cơ bản chúng ta cần phải thực hiện lần lượt ba công việc như sau.</p>
+<ul>
+<li>1)&nbsp; Tạo một cái đường viền cho phần tử.</li>
+<li>2)&nbsp; Xác định tấm hình dùng làm đường viền hình ảnh.</li>
+<li>3)&nbsp; Ghép tấm hình lên đường viền để tạo thành đường viền hình ảnh.</li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>1.1) Tạo một cái đường viền cho phần tử</h3>
+<p>- Thật ra thì <span class="mark1">đường viền hình ảnh</span> không phải là đường viền của phần tử, nó là một thứ gì đó hiển thị đè lên đường viền của phần tử, nếu đường viền của phần tử không tồn tại thì <span class="mark1">đường viền hình ảnh</span> sẽ không thể nào tồn tại. Cho nên, để tạo được một cái <span class="mark1">đường viền hình ảnh</span> thì điều đầu tiên mà chúng ta cần phải làm đó chính là tạo một cái đường viền cho phần tử.</p>
+<p>- <u>Lưu ý</u>: Bởi vì <span class="mark1">đường viền hình ảnh</span> sẽ nằm đè lên đường viền của phần tử, cho nên kiểu &amp; màu sắc của đường viền không quan trọng (miễn sao kiểu đường viền không phải none là được)</p>
+<h3>1.2) Xác định tấm hình dùng làm đường viền hình ảnh</h3>
+<p>- Để xác định tấm hình mà các bạn muốn dùng nó để làm đường viền hình ảnh thì chúng ta sử dụng thuộc tính <strong>border-image-source</strong> với cú pháp như sau:</p>
+<div class="i-pre-not-color i-form-2">border-image-source: url(đường dẫn đến tập tin hình ảnh);</div>
+<h3>1.3) Ghép tấm hình lên đường viền để tạo thành đường viền hình ảnh</h3>
+<p>- Sau khi đã tạo đường viền &amp; xác định tấm hình dùng làm đường viền hình ảnh thì công việc cuối cùng đó chính là phân chia tấm hình ra thành nhiều mảnh, sau đó ghép các mảnh hình ảnh lên đường viền để tạo thành đường viền hình ảnh.</p>
+<div class="i-form-free r6jdl1">
+<div><u>Ví dụ</u>:</div>
+<div class="juei1"><div class="ei1lf"><p>WEB CƠ BẢN</p></div></div>
+<p>- Để tạo một cái &quot;đường viền hình ảnh&quot; cho phần tử giống như minh họa phía trên thì tôi thực hiện lần lượt các bước như sau:</p>
+<p>- <u>Bước 1</u>: Sử dụng thuộc tính <strong>border</strong> để tạo một cái đường viền cho phần tử.</p>
+<div class="juei1"><div class="ety1l"><p>WEB CƠ BẢN</p></div></div>
+<p>- <u>Bước 2</u>: Sử dụng thuộc tính <strong>border-image-source</strong> để xác định tấm hình mà mình muốn dùng để làm đường viền hình ảnh.</p>
+<div class="qio1xl"><div><img src="../image/pattern.png"></div></div>
+<p>- <u>Bước 3</u>: Sử dụng thuộc tính <strong>border-image-slice</strong> để phân chia tấm hình ra thành nhiều mảnh, mặc định thì tấm hình sẽ được chia thành chín mảnh như bên dưới.</p>
+<div class="seijl3"><div></div><div></div><div></div><div></div><div><div>1</div><div>2</div><div>3</div></div><div><div>8</div><div>9</div><div>4</div></div><div><div>7</div><div>6</div><div>5</div></div></div>
+<p>- Tám mảnh hình ảnh <span class="etaji1">1</span> <span class="etaji1">2</span> <span class="etaji1">3</span> <span class="etaji1">4</span> <span class="etaji1">5</span> <span class="etaji1">6</span> <span class="etaji1">7</span> <span class="etaji1">8</span> sẽ được ghép lần lượt lên tám vị trí tương ứng trên đường viền của phần tử.</p>
+<div class="juei1"><div class="jl1uf5"><div><p>WEB CƠ BẢN</p></div><div></div><div></div><div></div><div></div><div><div>1</div><div>2</div><div>3</div></div><div><div>8</div><div></div><div>4</div></div><div><div>7</div><div>6</div><div>5</div></div></div></div>
+<p>- Tạo thành đường viền hình ảnh.</p>
+<div class="juei1"><div class="ei1lf"><p>WEB CƠ BẢN</p></div></div>
+<div><a href="demob3d8.html?file=3097" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>2) Kỹ thuật phân chia các mảnh hình ảnh</h2>
+<p>- Như các bạn đã biết, thuộc tính <strong>border-image-slice</strong> dùng để phân chia tấm hình được sử dụng làm đường viền hình ảnh ra thành <u>chín mảnh hình ảnh</u>.</p>
+<p>- Tuy nhiên, kích thước của mỗi <span class="mark2">mảnh hình ảnh</span> không phải tự nhiên mà có, nó là do vị trí của bốn đường kẻ trên tấm hình tạo thành, ví dụ:</p>
+<div class="juei1">
+<table class="wish2l">
+<tr>
+<td><p>Tôi có một tấm hình với kích thước 380x380 như bên dưới</p></td>
+<td><p>Tôi cho vào đó bốn đường kẻ thì sẽ nhận được chín mảnh hình ảnh</p></td>
+</tr>
+<tr>
+<td><div></div></td>
+<td><div class="vni1ls"><div></div><div></div><div></div><div></div><div><div>1</div><div>2</div><div>3</div></div><div><div>8</div><div>9</div><div>4</div></div><div><div>7</div><div>6</div><div>5</div></div></div></td>
+</tr>
+</table>
+</div>
+<table class="table-lamp">
+<tr>
+<td><img src="../home/image/lamp.png"></div></td>
+<td><p>- Vậy vấn đề đặt ra ở đây là <i>&quot;làm thế nào để xác định vị trí của bốn đường kẻ đó !?&quot;</i></p></td>
+</tr>
+</table>
+<p>- Thông thường, thuộc tính <strong>border-image-slice</strong> sẽ nhận một giá trị bao gồm bốn số tương ứng với vị trí của bốn đường kẻ.</p>
+<ul>
+<li>Số thứ nhất dùng để tạo đường kẻ màu đỏ.</li>
+<div>(nó được xác định dựa trên khoảng cách từ <u>cạnh trên</u> của tấm hình đến <u>đường kẻ màu đỏ</u>)</div>
+<li>Số thứ hai dùng để tạo đường kẻ màu xanh lá.</li>
+<div>(nó được xác định dựa trên khoảng cách từ <u>cạnh phải</u> của tấm hình đến <u>đường kẻ xanh lá</u>)</div>
+<li>Số thứ ba dùng để tạo đường kẻ màu xanh dương.</li>
+<div>(nó được xác định dựa trên khoảng cách từ <u>cạnh dưới</u> của tấm hình đến <u>đường kẻ xanh dương</u>)</div>
+<li>Số thứ tư dùng để tạo đường kẻ màu đen.</li>
+<div>(nó được xác định dựa trên khoảng cách từ <u>cạnh trái</u> của tấm hình đến <u>đường kẻ màu đen</u>)</div>
+</ul>
+<p>- <i><u>Ví dụ</u>:</i></p>
+<div class="p1lzif">
+<table>
+<tr class="iauw5v">
+<td>
+<div>border-image-slice: <span id="jhc_number">80 80 80 80</span>;</div>
+<table class="doi6f">
+<tr>
+<td>
+<input type="radio" name="jhc_red" value="30"> 30<br>
+<input type="radio" name="jhc_red" value="40"> 40<br>
+<input type="radio" name="jhc_red" value="50"> 50<br>
+<input type="radio" name="jhc_red" value="60"> 60<br>
+<input type="radio" name="jhc_red" value="70"> 70<br>
+<input type="radio" name="jhc_red" value="80" checked=""> 80<br>
+<input type="radio" name="jhc_red" value="90"> 90<br>
+<input type="radio" name="jhc_red" value="100"> 100<br>
+<input type="radio" name="jhc_red" value="110"> 110<br>
+<input type="radio" name="jhc_red" value="120"> 120<br>
+<input type="radio" name="jhc_red" value="130"> 130
+</td>
+<td>
+<input type="radio" name="jhc_green" value="30"> 30<br>
+<input type="radio" name="jhc_green" value="40"> 40<br>
+<input type="radio" name="jhc_green" value="50"> 50<br>
+<input type="radio" name="jhc_green" value="60"> 60<br>
+<input type="radio" name="jhc_green" value="70"> 70<br>
+<input type="radio" name="jhc_green" value="80" checked=""> 80<br>
+<input type="radio" name="jhc_green" value="90"> 90<br>
+<input type="radio" name="jhc_green" value="100"> 100<br>
+<input type="radio" name="jhc_green" value="110"> 110<br>
+<input type="radio" name="jhc_green" value="120"> 120<br>
+<input type="radio" name="jhc_green" value="130"> 130
+</td>
+<td>
+<input type="radio" name="jhc_blue" value="30"> 30<br>
+<input type="radio" name="jhc_blue" value="40"> 40<br>
+<input type="radio" name="jhc_blue" value="50"> 50<br>
+<input type="radio" name="jhc_blue" value="60"> 60<br>
+<input type="radio" name="jhc_blue" value="70"> 70<br>
+<input type="radio" name="jhc_blue" value="80" checked=""> 80<br>
+<input type="radio" name="jhc_blue" value="90"> 90<br>
+<input type="radio" name="jhc_blue" value="100"> 100<br>
+<input type="radio" name="jhc_blue" value="110"> 110<br>
+<input type="radio" name="jhc_blue" value="120"> 120<br>
+<input type="radio" name="jhc_blue" value="130"> 130
+</td>
+<td>
+<input type="radio" name="jhc_black" value="30"> 30<br>
+<input type="radio" name="jhc_black" value="40"> 40<br>
+<input type="radio" name="jhc_black" value="50"> 50<br>
+<input type="radio" name="jhc_black" value="60"> 60<br>
+<input type="radio" name="jhc_black" value="70"> 70<br>
+<input type="radio" name="jhc_black" value="80" checked=""> 80<br>
+<input type="radio" name="jhc_black" value="90"> 90<br>
+<input type="radio" name="jhc_black" value="100"> 100<br>
+<input type="radio" name="jhc_black" value="110"> 110<br>
+<input type="radio" name="jhc_black" value="120"> 120<br>
+<input type="radio" name="jhc_black" value="130"> 130
+</td>
+</tr>
+</table>
+<div style="text-align:center;color:red;"><i>(không được đặt chữ px phía sau các con số)</i></div>
+</td>
+<td>
+<div>
+<img src="../image/pattern.png">
+<div id="inj6s1"><div></div></div>
+<div id="inj6s3"><div></div></div>
+<div id="inj6s4"><div></div></div>
+<div id="inj6s2"><div></div></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="i-form-demo i-form-5">
+<div><u>Ví dụ</u>:</div>
+<hr>
+<pre>div{
+    border:100px solid black;
+    border-image-source:url(../image/pattern.png);
+    border-image-slice:80 80 80 80;
+}</pre>
+<div><a href="demo336a.html?file=3098" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h2>3) Tùy chỉnh kiểu lặp lại của bốn mảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span></h2>
+<p>- Thông thường, khi chúng ta thiết lập đường viền hình ảnh cho một phần tử thì mặc định, bốn mảnh hình ảnh <span class="etaji1-3">2</span> <span class="etaji1-3">4</span> <span class="etaji1-3">6</span> <span class="etaji1-3">8</span> sẽ tự động giãn ra hoặc co lại để lấp đầy các vị trí tương ứng trên đường viền của phần tử.</p>
+<div class="i-form-free">
+<div><u>Ví dụ</u>:</div>
+<p>- Tôi có một phần tử bên dưới:</p>
+<div class="eifh4"><div>WEB CƠ BẢN</div></div>
+<p>- Và một tấm hình với kích thước <u>250x250</u> như sau:</p>
+<p><img src="../image/matrix.png" class="img-responsive"></p>
+<p>- Tôi sử dụng tấm hình đó để làm đường viền hình ảnh cho phần tử phía trên, sau khi thiết lập thuộc tính <strong>border-image-slice</strong> với giá trị <u>50 50 50 50</u> thì phần tử phía trên sẽ trở thành:</p>
+<div class="gil18x"><div>WEB CƠ BẢN</div></div>
+<div><a href="demo3495.html?file=3226" target="_blank" class="btn-view-demo-2">Xem ví dụ</a></div>
+</div>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>border-image-repeat</strong> thì chúng ta có thể tùy chỉnh kiểu lặp lại của bốn mảnh hình ảnh này.</p>
+<div class="i-pre-not-color i-form-2">border-image-repeat: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered ixht7a">
+<tr>
+<td>stretch</td>
+<td><p>- Bốn mảnh hình ảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span> sẽ tự động giãn ra hoặc co lại để lấp đầy các vị trí tương ứng trên đường viền của phần tử.</p></td>
+<td rowspan="6"><a href="democ448.html?file=3099" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>round</td>
+<td><p>- Bốn mảnh hình ảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span> sẽ tự động giãn ra hoặc co lại để lấp đầy các vị trí tương ứng trên đường viền của phần tử <i>(Tuy nhiên, bốn mảnh hình ảnh này chỉ có thể giãn ra ở một mức độ vừa phải, nếu các vị trí tương ứng có kích thước quá lớn so với chúng thì chúng sẽ tự động được lặp lại)</i></p></td>
+</tr>
+<tr>
+<td>repeat</td>
+<td><p>- Bốn mảnh hình ảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span> sẽ tự động được lặp lại hoặc xén bớt để lấp đầy các vị trí tương ứng trên đường viền.</p>
+<p>- <u>Lưu ý</u>: Bốn mảnh hình ảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span> không lặp lại hoàn toàn, chúng chỉ lặp lại một phần nào đó ở hai đầu vừa đủ để lấp đầy các các vị trí tương ứng trên đường viền mà thôi.</p></td>
+</tr>
+<tr>
+<td>space</td>
+<td>
+<p>- Đối với giá trị này thì các mảnh hình ảnh sẽ có những đặc điểm như sau:</p>
+<ul>
+<li>Mảnh <span class="etaji1-2">2</span> &amp; <span class="etaji1-2">6</span> được giữ đúng kích thước theo chiều ngang.</li>
+<li>Mảnh <span class="etaji1-2">4</span> &amp; <span class="etaji1-2">8</span> được giữ đúng kích thước theo chiều dọc.</li>
+<li>Bốn mảnh hình ảnh <span class="etaji1-2">2</span> <span class="etaji1-2">4</span> <span class="etaji1-2">6</span> <span class="etaji1-2">8</span> sẽ tự động được lặp lại nếu các vị trí tương ứng có kích thước lớn hơn chúng <span class="jwis">&amp;</span> đủ không gian để chứa lần lặp kế tiếp của chúng, nếu không đủ không gian thì sẽ bị thay thế bởi các khoảng trắng.</p>
+</ul>
+</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó.</p>
+<p>(mặc định thì thuộc tính border-image-repeat có giá trị là stretch)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính border-image-repeat từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h2>4) Cách thiết lập độ dày của đường viền hình ảnh</h2>
+<p>- Mặc định thì &quot;đường viền hình ảnh&quot; sẽ có độ dày bằng với độ dày đường viền của phần tử. Vì vậy, cách đơn giản nhất để thiết lập độ dày của &quot;đường viền hình ảnh&quot; đó chính là thiết lập độ dày đường viền của phần tử. Tuy nhiên, việc thay đổi độ dày đường viền của phần tử sẽ khiến kích thước của phần tử bị thay đổi theo <span class="s3hji">(<a href="demoe602.html?file=3105" target="_blank">Xem ví dụ</a>)</span></p>
+<p>- Từ đây, chúng ta có một cách khác dùng để thiết độ dày cho &quot;đường viền hình ảnh&quot; mà không làm thay đổi kích thước của phần tử, đó chính là sử dụng thuộc tính <strong>border-image-width</strong>.</p>
+<div class="i-pre-not-color i-form-2">border-image-width: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong sáu loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>pixel</td>
+<td><p>- Chỉ định độ dày &quot;đường viền hình ảnh&quot; dựa theo một giá trị px cụ thể.</p></td>
+<td rowspan="6"><a href="demo31ff.html?file=3106" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>percent</td>
+<td><p>- Chỉ định độ dày &quot;đường viền hình ảnh&quot; dựa theo tỷ lệ phần trăm kích thước của phần tử HTML.</p>
+<ul>
+<li>Độ dày đường viền phía trên &amp; phía dưới sẽ được tính theo tỷ lệ phần trăm chiều cao (border + padding + content) của phần tử.</li>
+<li>Độ dày đường viền bên trái &amp; bên phải sẽ được tính theo tỷ lệ phần trăm chiều rộng (border + padding + content) của phần tử.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>number</td>
+<td><p>- Chỉ định độ dày &quot;đường viền hình ảnh&quot; dựa theo cấp số nhân so với độ dày đường viền của phần tử.</p></td>
+</tr>
+<tr>
+<td>auto</td>
+<td><p>- Giá trị của thuộc tính <strong>border-image-width</strong> sẽ bằng với giá trị của thuộc tính <strong>border-image-slice</strong>.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td><p>- Sử dụng giá trị mặc định của nó (mặc định thì độ dày đường viền hình ảnh sẽ bằng với độ dày đường viền của phần tử)</p></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính border-image-width từ phần tử cha của nó.</p></td>
+</tr>
+</table>
+<p>- <u>Lưu ý</u>: Việc thiết lập độ dày cho &quot;đường viền hình ảnh&quot; bằng thuộc tính <strong>border-image-width</strong> cũng có mặt hạn chế, đó là khi độ dày của &quot;đường viền hình ảnh&quot; lớn hơn độ dày đường viền của phần tử thì đường viền hình ảnh sẽ ăn lẹm vào phần padding và content của phần tử.</p>
+<div class="quangcaotrongbaiviet"></div>
+<h2>5) Cách thiết lập vị trí của đường viền hình ảnh</h2>
+<p>- Mặc định thì &quot;đường viền hình ảnh&quot; sẽ nằm đè lên đường viền của phần tử.</p>
+<p>- Tuy nhiên, với việc sử dụng thuộc tính <strong>border-image-outset</strong> thì chúng ta có thể đẩy đường viền hình ảnh ra khỏi vị trí ban đầu của nó.</p>
+<div class="i-pre-not-color i-form-2">border-image-outset: value;</div>
+<p>- Trong đó, <u>value</u> có thể được xác định dựa theo một trong bốn loại giá trị:</p>
+<table class="table table-bordered">
+<tr>
+<td>pixel</td>
+<td><p>- Chỉ định khoảng cách đẩy &quot;đường viền hình ảnh&quot; ra khỏi vị trí ban đầu dựa theo một giá trị pixel cụ thể.</p></td>
+<td rowspan="4"><a href="demo367d.html?file=3112" target="_blank" class="btn-view-demo">Xem ví dụ</a></td>
+</tr>
+<tr>
+<td>number</td>
+<td><p>- Chỉ định khoảng cách đẩy &quot;đường viền hình ảnh&quot; ra khỏi vị trí ban đầu dựa theo cấp số nhân so với độ dày của đường viền.</p></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>
+<p>- Sử dụng giá trị mặc định của nó</p>
+<p>(mặc định thì thuộc tính border-image-outset có giá trị là 0)</p>
+</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td><p>- Kế thừa giá trị thuộc tính border-image-outset từ phần tử cha của nó.</p></td>
+</tr>
+</table><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-tao-duong-vien-border-cho-mot-phan-tu-html-trong-css.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-thiet-lap-vung-dem-padding-cho-mot-phan-tu-trong-css.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.4291.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/cach-su-dung-hinh-anh-de-lam-duong-vien-cho-phan-tu-html-trong-css.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:38:35 GMT -->
+</html>

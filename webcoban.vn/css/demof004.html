@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3118 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:20 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:284px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 0px solid #b3b2b2;
+        height:263px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+       div{
+          background-color:violet;
+          width:400px;
+          height:200px;
+          border-radius:<span id="layvitri1" style="color:red;font-weight:bold;font-size:20px;">50px</span>/<span id="layvitri2" style="color:red;font-weight:bold;font-size:20px;">50px</span>;
+       }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;div&gt;&lt;/div&gt;
+   &lt;p&gt;- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+                
+            </div>
+            <div id="bottom" style="font-size:20px;">
+                <table style="width:100%;margin:0px;height:100%" class="ssss-table">
+                    <tr>
+                        <td rowspan="2" style="width:165px">Chiều rộng của góc</td>
+                        <td style="width:1px;text-align:center" id="ssss_width_px" class="sss_active">px</td>
+                        <td><input type="range" name="width_px" value="50" min="0" max="200" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:1px;text-align:center" id="ssss_width_percent">%</td>
+                        <td><input type="range" name="width_percent" value="25" min="0" max="50" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Chiều cao của góc</td>
+                        <td style="width:1px;text-align:center" id="ssss_height_px" class="sss_active">px</td>
+                        <td><input type="range" name="height_px" value="50" min="0" max="100" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td style="width:1px;text-align:center" id="ssss_height_percent">%</td>
+                        <td><input type="range" name="height_percent" value="25" min="0" max="50" style="width:100%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='background-color:violet;width:400px;height:200px;border-radius:50px/50px;'></div><p>- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.</p>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var style_width = "width_px";
+            var style_height = "height_px";
+            $(document).on('input',"[name='width_px']",function(){
+            	style_width = "width_px";
+                $("#ssss_width_px, #ssss_width_percent").removeClass("sss_active");
+                $("#ssss_width_px").addClass("sss_active");
+                if(style_width=="width_px"){
+                    var width = $("input[name='width_px']").val() + "px";
+                }
+                if(style_width=="width_percent"){
+                    var width = $("input[name='width_percent']").val() + "%";
+                }
+                if(style_height=="height_px"){
+                    var height = $("input[name='height_px']").val() + "px";
+                }
+                if(style_height=="height_percent"){
+                    var height = $("input[name='height_percent']").val() + "%";
+                }
+                var text = "<div style='background-color:violet;width:400px;height:200px;border-radius:"+width+"/"+height+";'></div><p>- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.</p>";
+                $("#layvitri1").html(width);
+                $("#layvitri2").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='width_percent']",function(){
+            	style_width = "width_percent";
+                $("#ssss_width_px, #ssss_width_percent").removeClass("sss_active");
+                $("#ssss_width_percent").addClass("sss_active");
+                if(style_width=="width_px"){
+                    var width = $("input[name='width_px']").val() + "px";
+                }
+                if(style_width=="width_percent"){
+                    var width = $("input[name='width_percent']").val() + "%";
+                }
+                if(style_height=="height_px"){
+                    var height = $("input[name='height_px']").val() + "px";
+                }
+                if(style_height=="height_percent"){
+                    var height = $("input[name='height_percent']").val() + "%";
+                }
+                var text = "<div style='background-color:violet;width:400px;height:200px;border-radius:"+width+"/"+height+";'></div><p>- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.</p>";
+                $("#layvitri1").html(width);
+                $("#layvitri2").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='height_px']",function(){
+            	style_height = "height_px";
+                $("#ssss_height_px, #ssss_height_percent").removeClass("sss_active");
+                $("#ssss_height_px").addClass("sss_active");
+                if(style_width=="width_px"){
+                    var width = $("input[name='width_px']").val() + "px";
+                }
+                if(style_width=="width_percent"){
+                    var width = $("input[name='width_percent']").val() + "%";
+                }
+                if(style_height=="height_px"){
+                    var height = $("input[name='height_px']").val() + "px";
+                }
+                if(style_height=="height_percent"){
+                    var height = $("input[name='height_percent']").val() + "%";
+                }
+                var text = "<div style='background-color:violet;width:400px;height:200px;border-radius:"+width+"/"+height+";'></div><p>- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.</p>";
+                $("#layvitri1").html(width);
+                $("#layvitri2").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='height_percent']",function(){
+            	style_height = "height_percent";
+                $("#ssss_height_px, #ssss_height_percent").removeClass("sss_active");
+                $("#ssss_height_percent").addClass("sss_active");
+                if(style_width=="width_px"){
+                    var width = $("input[name='width_px']").val() + "px";
+                }
+                if(style_width=="width_percent"){
+                    var width = $("input[name='width_percent']").val() + "%";
+                }
+                if(style_height=="height_px"){
+                    var height = $("input[name='height_px']").val() + "px";
+                }
+                if(style_height=="height_percent"){
+                    var height = $("input[name='height_percent']").val() + "%";
+                }
+                var text = "<div style='background-color:violet;width:400px;height:200px;border-radius:"+width+"/"+height+";'></div><p>- Lưu ý: Chiều rộng (chiều cao) của một góc không được vượt quá 50% chiều rộng (chiều cao) của phần tử.</p>";
+                $("#layvitri1").html(width);
+                $("#layvitri2").html(height);
+                view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style type="text/css">
+        table.ssss-table,
+        table.ssss-table td{
+            border:1px solid #ccc;
+            border-collapse:collapse;
+        }
+        table.ssss-table td{padding:7px 10px;}
+        .sss_active{background-color:pink;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3118 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:20 GMT -->
+</html>﻿

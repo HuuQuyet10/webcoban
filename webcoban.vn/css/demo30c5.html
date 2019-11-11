@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3464 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="../home/highlight/default.css" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:10px;
+        left:10px;
+        right:5px;
+    }
+    #container #left #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom:281px;
+        left:5px;
+        right:10px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 0px solid #b3b2b2;
+        height:260px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+        overflow:auto;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="top">
+                
+            </div>
+        </div>
+        <div id="right">
+            <div id="top">
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        div{
+           border:20px dotted #10a244;
+           padding:30px;
+           width:<span id="layvitri2" style="font-size:20px">200px</span>;
+           height:<span id="layvitri3" style="font-size:20px">250px</span>;
+           background-image:url(../image/man.jpg);
+           background-repeat:no-repeat;
+           background-origin:<span id="layvitri1" style="color:#880000;font-size:20px">content-box</span>;
+           background-size:<span id="layvitri1" style="color:blue !important;font-size:20px">contain</span>;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;. . . . . . . . . . . . . . . . . . . . . . . . . . . .&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+            <div id="bottom" style="font-size:20px;">
+                <table class="ssss-table" style="width:100%;height:100%">
+                    <tr>
+                        <td style="width:170px">background-origin:</td>
+                        <td>
+                            <div style="padding-left: 8px">
+                                <div><input name="background_origin" value="border-box" type="radio"> border-box</div>
+                                <p><input name="background_origin" value="padding-box" type="radio"> padding-box</p>
+                                <div><input name="background_origin" value="content-box" type="radio" checked=""> content-box</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>width:</td>
+                        <td><input type="range" name="width" value="200" min="60" max="450" style="width:100%"></td>
+                    </tr>
+                    <tr>
+                        <td>height:</td>
+                        <td><input type="range" name="height" value="250" min="60" max="450" style="width:100%"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div style='border:20px dotted #10a244;padding:30px;width:200px;height:250px;background-image:url(../image/man.jpg);background-repeat:no-repeat;background-origin:content-box;background-size:contain;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . .</div>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='background_origin']").change(function(){
+                var background_origin = $(this).val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='border:20px dotted #10a244;padding:30px;width:"+width+";height:"+height+";background-image:url(../image/man.jpg);background-repeat:no-repeat;background-origin:"+background_origin+";background-size:contain;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . .</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='width']",function(){
+                var background_origin = $("input[name='background_origin']:checked").val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='border:20px dotted #10a244;padding:30px;width:"+width+";height:"+height+";background-image:url(../image/man.jpg);background-repeat:no-repeat;background-origin:"+background_origin+";background-size:contain;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . .</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+            $(document).on('input',"[name='height']",function(){
+                var background_origin = $("input[name='background_origin']:checked").val();
+                var width = $("input[name='width']").val() + "px";
+                var height = $("input[name='height']").val() + "px";
+                var text = "<div style='border:20px dotted #10a244;padding:30px;width:"+width+";height:"+height+";background-image:url(../image/man.jpg);background-repeat:no-repeat;background-origin:"+background_origin+";background-size:contain;'>. . . . . . . . . . . . . . . . . . . . . . . . . . . .</div>";
+                $("#layvitri1").html(background_origin);
+                $("#layvitri2").html(width);
+                $("#layvitri3").html(height);
+                view_result(text);
+            })
+        })
+    </script>
+    <script src="../home/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style type="text/css">
+        table.ssss-table,
+        table.ssss-table td{
+            border:1px solid #c0bebe;
+            border-collapse:collapse;
+        }
+        table.ssss-table td{padding:15px 10px;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3464 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:19 GMT -->
+</html>﻿

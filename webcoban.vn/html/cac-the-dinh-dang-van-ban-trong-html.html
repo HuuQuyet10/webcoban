@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/cac-the-dinh-dang-van-ban-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:11 GMT -->
+<head>
+<title>Các thẻ định dạng văn bản trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="các thẻ định dạng văn bản trong html">
+<meta name="description" content="Cách sử dụng của một số thẻ được dùng để định dạng cho văn bản trong HTML, danh sách các thẻ dùng để định dạng văn bản trong HTML">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.4772.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" class='active'>- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các thẻ định dạng văn bản trong HTML">Các thẻ định dạng văn bản trong HTML</h1>
+<div class="breadcrumb">
+<a href="the-tieu-de-heading-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="phan-tu-html-html-element-la-gi.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p>- Dưới đây là danh sách những thẻ thường được sử dụng để định dạng cho văn bản.</p>
+<p>(các bạn vui lòng tấm vào hình <span class="fa fa-file-text-o fa-lg"></span> để tìm hiểu chi tiết chức năng và cách sử dụng của từng thẻ)</p>
+<table class="table table-bordered">
+<tr>
+<td>&lt;b&gt;</td>
+<td>
+<p>- Định dạng chữ in đậm cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-b</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;i&gt;</td>
+<td>
+<p>- Định dạng chữ in nghiêng cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-i</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;u&gt;</td>
+<td>
+<p>- Tạo một cái đường kẻ ngang nằm dưới chân văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-u</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;s&gt;</td>
+<td>
+<p>- Tạo một cái đường kẻ ngang nằm giữa văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-s</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;big&gt;</td>
+<td>
+<p>- Định dạng chữ to hơn so với văn bản bình thường.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-big</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;small&gt;</td>
+<td>
+<p>- Định dạng chữ nhỏ hơn so với văn bản bình thường.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-small</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;sup&gt;</td>
+<td>
+<p>- Định dạng chữ nhỏ &amp; nằm ở khoảng nửa trên so với văn bản bình thường.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-sup</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;sub&gt;</td>
+<td>
+<p>- Định dạng chữ nhỏ &amp; nằm ở khoảng nửa dưới so với văn bản bình thường.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-sub</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;mark&gt;</td>
+<td>
+<p>- Đánh dấu màu nền nổi bật cho văn bản.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-mark</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;pre&gt;</td>
+<td>
+<p>- Giữ nguyên định dạng cho văn bản (giống như lúc soạn thảo)</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-pre</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;hr&gt;</td>
+<td>
+<p>- Tạo một cái đường kẻ ngang ngăn cách nội dung phía trên và nội dung phía dưới.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-hr</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;br&gt;</td>
+<td>
+<p>- Tạo một dấu ngắt xuống dòng.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-br</div></span></div>
+</td>
+</tr>
+<tr>
+<td>&lt;bdo&gt;</td>
+<td>
+<p>- Đảo ngược thứ tự xuất hiện của các ký tự.</p>
+<div class="sss-view"><span class="fa fa-file-text-o fa-lg"><div>.ttt-bdo</div></span></div>
+</td>
+</tr>
+</table>
+<div class="zzz-big-form">
+<div class="ttt-b">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;b&gt; dùng để định dạng chữ in đậm cho văn bản.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;b&gt;Lập Trình Web&lt;/b&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Thẻ &lt;strong&gt; cũng có chức năng &amp; cách sử dụng tương tự.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-i">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;i&gt; dùng để định dạng chữ in nghiêng cho văn bản.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;i&gt;Lập Trình Web&lt;/i&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Thẻ &lt;em&gt; cũng có chức năng &amp; cách sử dụng tương tự.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-u">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;u&gt; dùng để tạo một cái đường kẻ ngang nằm dưới chân văn bản.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;u&gt;Lập Trình Web&lt;/u&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Thẻ &lt;ins&gt; cũng có chức năng &amp; cách sử dụng tương tự.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-s">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;s&gt; dùng để tạo một cái đường kẻ ngang nằm giữa văn bản.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;s&gt;Lập Trình Web&lt;/s&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Thẻ &lt;del&gt; cũng có chức năng &amp; cách sử dụng tương tự.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-big">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;big&gt; dùng để định dạng chữ to hơn so với văn bản bình thường.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;big&gt;Lập Trình Web&lt;/big&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-small">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;small&gt; dùng để định dạng chữ nhỏ hơn so với văn bản bình thường.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Học &lt;small&gt;Lập Trình Web&lt;/small&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-sup">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;sup&gt; dùng để định dạng chữ nhỏ &amp; nằm ở khoảng nửa trên so với văn bản bình thường.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;25&lt;sup&gt;2&lt;/sup&gt; + 2&lt;sup&gt;3&lt;/sup&gt; = 633&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-sub">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;sub&gt; dùng để định dạng chữ nhỏ &amp; nằm ở khoảng nửa dưới so với văn bản bình thường.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt; + H&lt;sub&gt;2&lt;/sub&gt;O = H&lt;sub&gt;2&lt;/sub&gt;CO&lt;sub&gt;3&lt;/sub&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-mark">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;mark&gt; dùng để đánh dấu màu nền nổi bật cho văn bản.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Học &lt;mark&gt;Lập Trình Web&lt;/mark&gt; miễn phí&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+<p>- <u>Lưu ý</u>: Những ký tự nằm bên trong cặp thẻ &lt;mark&gt;&lt;/mark&gt; sẽ mặc định có nền màu vàng.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-pre">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;pre&gt; dùng để giữ nguyên định dạng cho văn bản (giống như lúc soạn thảo)</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;pre&gt;Hãy tham gia      diễn đàn HỎI
+ĐÁP LẬP 
+TRÌNH WEB trên Facebook của chúng tôi
+
+Để được hỗ   trợ giải đáp những    câu hỏi về 
+
+lĩnh vực    lập trình web 
+   một cách nhanh        nhất và tốt 
+        nhất&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-hr">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;hr&gt; dùng để tạo một cái đường kẻ ngang ngăn cách nội dung phía trên và nội dung phía dưới.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+   &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Tài liệu học HTML&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Tài liệu học CSS&lt;/p&gt;
+    &lt;hr&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-br">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;br&gt; dùng để tạo một dấu ngắt xuống dòng.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Lập&lt;br&gt;Trình&lt;br&gt;&lt;br&gt;&lt;br&gt;Web&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttt-bdo">
+<span class="zzz-close"><img src="../home/image/close.png"></span>
+<div>
+<div>
+<div>
+<p>- Thẻ &lt;bdo&gt; dùng để đảo ngược thứ tự xuất hiện của các ký tự.</p>
+<div>
+<table>
+<tr>
+<td><div class="i-brs04"><div></div></div></td>
+<td>
+<div class="i-pre-not-color i-form-2">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề của trang web&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;12345 được đảo ngược thành &lt;bdo dir=&quot;rtl&quot;&gt;12345&lt;/bdo&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="the-tieu-de-heading-trong-html.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="phan-tu-html-html-element-la-gi.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="http://www.dmca.com/Protection/Status.aspx?ID=a9ed0b5b-9ca8-4296-9ea8-7a325ebb0c78" class="dmca-badge"><img src ="../home/image/dmca.jpg"/></a> <script src="../../images.dmca.com/Badges/DMCABadgeHelper.min.js"></script></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script src="../bootstrap3/js/bootstrap.min.8015.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/cac-the-dinh-dang-van-ban-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:35:12 GMT -->
+</html>

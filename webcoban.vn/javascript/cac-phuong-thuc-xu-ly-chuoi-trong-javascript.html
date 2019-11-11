@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:50 GMT -->
+<head>
+<title>Các phương thức xử lý chuỗi trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="các phương thức xử lý chuỗi trong javascript,cac phuong thuc xu ly chuoi trong javascript">
+<meta name="description" content="các phương thức xử lý chuỗi trong javascript, cac phuong thuc xu ly chuoi trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" class='active'>- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Các phương thức xử lý chuỗi trong JavaScript">Các phương thức xử lý chuỗi trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-chuoi-string-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p style="margin-top:10px">- Chuỗi <i>(hay còn được gọi là chuỗi ký tự)</i> là một dãy các ký tự, ví dụ:</p>
+<table class="table-bordered table-hover table-striped tbbang1">
+<tr>
+	<td>Tai</td>
+	<td>Chuỗi có 3 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu</td>
+	<td>Chuỗi có 8 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu hoc</td>
+	<td>Chuỗi có 12 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu hoc JavaScript</td>
+	<td>Chuỗi có 23 ký tự</td>
+</tr>
+</table>
+<p>- Một chuỗi sẽ có các <u><em>phương thức</em></u> và <u><em>thuộc tính</em></u>, với việc truy cập vào các phương thức và thuộc tính của chuỗi, ta có thể làm được những công việc như: <em>đếm số lượng ký tự của chuỗi, chuyển toàn bộ ký tự của chuỗi về dạng chữ in hoa, chuyển toàn bộ ký tự của chuỗi về dạng chữ thường, trích xuất một chuỗi con bên trong chuỗi, ....</em></p>
+<div style="border:0px solid #ddd;border-radius:30px;padding:20px 20px 20px 20px;margin:20px 0px 20px 0px;background-color:#ddd">
+<p>- Tuy nhiên, để sử dụng được các phương thức và thuộc tính này thì trước hết bạn cần phải hiểu rõ khái niệm <span class="form_new_24" style="margin-top:5px"><u>chỉ số</u> của ký tự trong chuỗi</span></p>
+<p>- Trong một chuỗi, các ký tự được sắp xếp theo thứ tự vị trí tăng dần từ 1 đến hết, ví dụ:</p>
+<style>
+table#ntn_phuongthucsubstring2{margin:auto;}
+table#ntn_phuongthucsubstring2,
+table#ntn_phuongthucsubstring2 tr,
+table#ntn_phuongthucsubstring2 th,
+table#ntn_phuongthucsubstring2 td{
+border:1px solid gray;
+}
+table#ntn_phuongthucsubstring2 tr:first-child td,
+table#ntn_phuongthucsubstring2 tr:nth-child(2) td,
+table#ntn_phuongthucsubstring2 tr:nth-child(3) td{
+width:40px;
+height:40px;
+text-align:center;
+vertical-align:middle;
+}
+</style>
+<table id="ntn_phuongthucsubstring2" style="margin-bottom:10px">
+<tr>
+<th style="color:#333;padding:0px 10px">Chuỗi</th>
+<td>T</td>
+<td>À</td>
+<td>I</td>
+<td></td>
+<td>L</td>
+<td>I</td>
+<td>Ệ</td>
+<td>U</td>
+<td></td>
+<td>H</td>
+<td>Ọ</td>
+<td>C</td>
+<td></td>
+<td>H</td>
+<td>T</td>
+<td>M</td>
+<td>L</td>
+</tr>
+<tr>
+<th style="color:#333;padding:0px 10px">Vị trí</th>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+</tr>
+</table>
+<p>- Nhưng khi làm việc với các phương thức thì không dùng đến vị trí mà là dùng đến chỉ số<br><i>(chỉ số của ký tự luôn có giá trị nhỏ hơn vị trí của ký tự một đơn vị)</i>, ví dụ:</p>
+<table id="ntn_phuongthucsubstring2" style="margin-bottom:10px">
+<tr>
+<th style="color:#333;padding:0px 10px">Chuỗi</th>
+<td>T</td>
+<td>À</td>
+<td>I</td>
+<td></td>
+<td>L</td>
+<td>I</td>
+<td>Ệ</td>
+<td>U</td>
+<td></td>
+<td>H</td>
+<td>Ọ</td>
+<td>C</td>
+<td></td>
+<td>H</td>
+<td>T</td>
+<td>M</td>
+<td>L</td>
+</tr>
+<th style="color:#333;padding:0px 10px">Chỉ số</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+</tr>
+<tr>
+<th style="color:#333;padding:0px 10px">Vị trí</th>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+</tr>
+</table>
+</div>
+<p>- Dưới đây là một số phương thức và thuộc tính thường được sử dụng nhất trong việc xử lý chuỗi:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th style="width:250px">Phương thức / Thuộc tính</th>
+        <th>Mô tả chức năng</th>
+    </tr>
+    <tr>
+        <td>length</td>
+        <td>Trả về số lượng ký tự của chuỗi</td>
+    </tr>
+    <tr>
+        <td>toUpperCase()</td>
+        <td>Chuyển toàn bộ ký tự của chuỗi về dạng chữ in hoa</td>
+    </tr>
+    <tr>
+        <td>toLowerCase()</td>
+        <td>Chuyển toàn bộ ký tự của chuỗi về dạng chữ thường</td>
+    </tr>
+    <tr>
+        <td>concat()</td>
+        <td>Nối các chuỗi lại với nhau</td>
+    </tr>
+    <tr>
+        <td>indexOf()</td>
+        <td>Trả về chỉ số của chuỗi trùng khớp được tìm thấy đầu tiên<br><i>(Khi bạn muốn tìm một chuỗi con nào đó trong chuỗi)</i></td>
+    </tr>
+    <tr>
+        <td>lastIndexOf()</td>
+        <td>Trả về chỉ số của chuỗi trùng khớp được tìm thấy sau cùng<br><i>(Khi bạn muốn tìm một chuỗi con nào đó trong chuỗi)</i></td>
+    </tr>
+    <tr>
+        <td>charAt()</td>
+        <td>Trích xuất <u><i>một ký tự</i></u> trong chuỗi</td>
+    </tr>
+    <tr>
+        <td>substring()</td>
+        <td>Trích xuất <u><i>một chuỗi con</i></u> trong chuỗi</td>
+    </tr>
+    <tr>
+        <td>substr()</td>
+        <td>Trích xuất <u><i>một chuỗi con</i></u> trong chuỗi</td>
+    </tr>
+    <tr>
+        <td>replace()</td>
+        <td>Thay thế một nội dung nào đó trong chuỗi bằng nội dung mới</td>
+    </tr>
+</table>
+<h2>1) Đếm số lượng ký tự của chuỗi</h2>
+<p>- Để đếm số lượng ký tự của một chuỗi, ta truy cập vào thuộc tính <strong>length</strong> của chuỗi đó.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tai lieu hoc JavaScript&quot;;
+    var a = text.length; //Biến a sẽ có giá trị là 23
+
+    var b = &quot;JavaScript&quot;.length; //Biến b sẽ có giá trị là 10
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8de6.html?file=1714" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Chuyển chuỗi về dạng chữ in hoa</h2>
+<p>- Để chuyển toàn bộ ký tự của một chuỗi về dạng chữ in hoa, ta truy cập vào phương thức <strong>toUpperCase()</strong> của chuỗi đó.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tai lieu hoc JavaScript&quot;;
+    var a = text.toUpperCase(); //Biến a sẽ có giá trị là TAI LIEU HOC JAVASCRIPT
+
+    var b = &quot;JavaScript&quot;.toUpperCase(); //Biến b sẽ có giá trị là JAVASCRIPT    
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo013d.html?file=1715" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Chuyển chuỗi về dạng chữ thường</h2>
+<p>- Để chuyển toàn bộ ký tự của một chuỗi về dạng chữ thường, ta truy cập vào phương thức <strong>toLowerCase()</strong> của chuỗi đó.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tai lieu hoc JavaScript&quot;;
+    var a = text.toLowerCase(); //Biến a sẽ có giá trị là tai lieu hoc javascript
+
+    var b = &quot;JavaScript&quot;.toLowerCase(); //Biến b sẽ có giá trị là javacript
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6307.html?file=1716" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Nối các chuỗi lại với nhau</h2>
+<p>- Thay vì sử dụng <span class="form_new_28">toán tử +</span> để nối các chuỗi lại với nhau thì ta cũng có thể sử dụng phương thức <strong>concat()</strong> với cú pháp như sau để nối chuỗi:</p>
+<div class="form_new_18"><i>string1</i>.concat(<i>string2, string3, ..., stringN</i>)</div>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var a = &quot;Lập &quot;;
+    var b = &quot;trình&quot;;
+    var c = &quot; web&quot;;
+
+    var str1 = a.concat(b, c); //Tương tự "Lập " + "trình" + " web"
+    var str2 = a.concat(b, &quot; di động&quot;); //Tương tự "Lập " + "trình" + " di động"
+    var str3 = &quot;Java&quot;.concat(&quot;Script&quot;); //Tương tự "Java" + "Script"
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="democbe3.html?file=1717" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Xác định chỉ số của một chuỗi con</h2>
+<p>- Ta có thể xác định được chỉ số của một chuỗi con nào đó nằm bên trong chuỗi bằng cách sử dụng phương thức <strong>indexOf()</strong> hoặc <strong>lastIndexOf()</strong>.</p>
+<p>- Cú pháp:</p>
+<div class="form_new_18"><i>string</i>.indexOf(<i>chuỗi mà bạn xác định chỉ số của nó  trong chuỗi string</i>)<br>
+<i>string</i>.lastIndexOf(<i>chuỗi mà bạn xác định chỉ số của nó  trong chuỗi string</i>)
+</div>
+<p>- Phương thức <strong>indexOf()</strong> sẽ trả về chỉ số của chuỗi trùng khớp được tìm thấy đầu tiên.</p>
+<p>- Phương thức <strong>lastIndexOf()</strong> sẽ trả về chỉ số của chuỗi trùng khớp được tìm thấy cuối cùng.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML và tài liệu học CSS&quot;;
+    var a = text.indexOf(&quot;học&quot;); //Biến a sẽ có giá trị là 9
+    var b = text.lastIndexOf(&quot;học&quot;); //Biến b sẽ có giá trị là 30
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demod28a.html?file=1718" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ta có thể thêm vào phương thức indexOf() và lastIndexOf() tham số thứ hai để xác định vị trí bắt đầu tìm kiếm chuỗi.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Xác định chỉ số của chuỗi <i><u>học</u></i> đầu tiên trong chuỗi <i><u>Tài liệu học HTML và tài liệu học CSS</u></i><br>
+<i>(Lưu ý: Bắt đầu tìm kiếm từ vị trí của ký tự có chỉ số là 21)</i>
+</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML và <b style="background-color:#ccc">tài liệu học CSS</b>&quot;;
+    var a = text.indexOf(&quot;học&quot;, 21); //Biến a sẽ có giá trị là 30
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo9c0c.html?file=1719" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_01"><p>Phương thức indexOf() và lastIndexOf() sẽ trả về -1 nếu như không tìm thấy chuỗi trùng khớp</p></div>
+<h2>6) Trích xuất một ký tự trong chuỗi</h2>
+<p>- Ta có thể trích xuất một ký tự nào đó trong chuỗi bằng cách sử dụng phương thức <strong>charAt()</strong> với cú pháp như sau:</p>
+<div class="form_new_18"><i>string</i>.charAt(<i>chỉ số của ký tự mà bạn muốn trích xuất</i>)</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Trích xuất ký tự có chỉ số là 4 trong chuỗi text</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;TÀI LIỆU HỌC HTML&quot;;
+    var a = text.charAt(4);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demob414.html?file=1728" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>7) Trích xuất một chuỗi con</h2>
+<p>- Ta có thể trích xuất được <i><u>một chuỗi con</u></i> bên trong chuỗi bằng phương thức <strong>substring()</strong> hoặc
+ <strong>substr()</strong></p>
+<h3>7.1) Phương thức substring()</h3>
+<p>- Cú pháp:</p>
+<div class="form_new_18"><i>string</i>.substring(<i>start</i>, <i>end</i>)</div>
+<ul style="list-style-type:circle">
+<li>start là chỉ số của ký tự bắt đầu được trích xuất</li>
+<li>end là chỉ số của ký tự kết thúc việc trích xuất</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;TÀI LIỆU HỌC HTML&quot;;
+    var a = text.substring(4, 14);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoa157.html?file=1720" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là ví dụ minh họa để giúp bạn thấy rõ cách trích xuất chuỗi của phương thức substring()</p>
+<style>
+table#ntn_phuongthucsubstring5,
+table#ntn_phuongthucsubstring5 tr,
+table#ntn_phuongthucsubstring5 th,
+table#ntn_phuongthucsubstring5 td{
+border:1px solid #ddd;
+}
+table#ntn_phuongthucsubstring5 tr:first-child td{
+width:40px;
+height:40px;
+text-align:center;
+vertical-align:middle;
+}
+table#ntn_phuongthucsubstring5 tr:nth-child(2) td{
+width:40px;
+height:40px;
+text-align:center;
+vertical-align:middle;
+}
+</style>
+<table id="ntn_phuongthucsubstring5" style="margin-bottom:10px">
+<th style="color:#333;padding:0px 10px">Chỉ số</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td style="background-color:red">4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td style="background-color:red">14</td>
+<td>15</td>
+<td>16</td>
+</tr>
+<tr>
+<th style="color:#333;padding:0px 10px">Chuỗi</th>
+<td>T</td>
+<td>À</td>
+<td>I</td>
+<td></td>
+<td style="background-color:#4CAF50">L</td>
+<td style="background-color:#4CAF50">I</td>
+<td style="background-color:#4CAF50">Ệ</td>
+<td style="background-color:#4CAF50">U</td>
+<td style="background-color:#4CAF50"></td>
+<td style="background-color:#4CAF50">H</td>
+<td style="background-color:#4CAF50">Ọ</td>
+<td style="background-color:#4CAF50">C</td>
+<td style="background-color:#4CAF50"></td>
+<td style="background-color:#4CAF50">H</td>
+<td>T</td>
+<td>M</td>
+<td>L</td>
+</tr>
+</table>
+<h3>7.2) Phương thức substr()</h3>
+<p>- Cú pháp:</p>
+<div class="form_new_18"><i>string</i>.substr(<i>start</i>, <i>length</i>)</div>
+<ul style="list-style-type:circle">
+<li>start là chỉ số của ký tự bắt đầu được trích xuất</li>
+<li>length là số lượng ký tự được trích xuất</li>
+</ul>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;TÀI LIỆU HỌC HTML&quot;;
+    var a = text.substr(4, 3);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoe2fb.html?file=1721" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là ví dụ minh họa để giúp bạn thấy rõ cách trích xuất chuỗi của phương thức substr()</p>
+<table id="ntn_phuongthucsubstring5" style="margin-bottom:10px">
+<th style="color:#333;padding:0px 10px">Chỉ số</th>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td style="background-color:red">4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+</tr>
+<tr>
+<th style="color:#333;padding:0px 10px">Chuỗi</th>
+<td>T</td>
+<td>À</td>
+<td>I</td>
+<td></td>
+<td style="background-color:#4CAF50">L</td>
+<td style="background-color:#4CAF50">I</td>
+<td style="background-color:#4CAF50">Ệ</td>
+<td>U</td>
+<td></td>
+<td>H</td>
+<td>Ọ</td>
+<td>C</td>
+<td></td>
+<td>H</td>
+<td>T</td>
+<td>M</td>
+<td>L</td>
+</tr>
+</table>
+<h2>8) Thay thế nội dung trong chuỗi</h2>
+<p>- Để thay thế một nội dung nào đó trong chuỗi bằng nội dung mới, ta sử dụng phương thức <strong>replace()</strong> với cú pháp như sau:</p>
+<div class="form_new_18"><i>string</i>.replace(<i>nội dung cũ</i>, <i>nội dung mới</i>)</div>
+<div class="form_new_21">
+<p>Nội dung ở đây có thể là một ký tự hoặc một chuỗi ký tự.</p>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Thay thế chữ <i>"học"</i> thành chữ "tham khảo"</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML&quot;;
+    var a = text.replace(&quot;học&quot;, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo0ed4.html?file=1722" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>8.1) Thay thế tất cả nội dung trùng khớp</h3>
+<p>- Mặc định, phương thức replace() chỉ thay thế nội dung trùng khớp được tìm thấy đầu tiên.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Trong chuỗi text bên dưới có hai chữ <i>"học"</i>, tuy nhiên chỉ có chữ học đầu tiên là được đổi thành chữ <i>"tham khảo"</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML và tài liệu học CSS&quot;;
+    var a = text.replace(&quot;học&quot;, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo63e6.html?file=1723" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Để thay thế tất cả nội dung trùng khớp thì ta sử dụng biểu thức chính quy sau:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML và tài liệu học CSS&quot;;
+    var a = text.replace(/học/g, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6a30.html?file=1724" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>8.2) Thay thế nội dung không phân biệt trường hợp chữ hoa hay thường</h3>
+<p>- Mặc định, phương thức replace() có phân biệt trường hợp chữ in hoa và chữ thường</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML&quot;;
+    var a = text.replace(&quot;HọC&quot;, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoe944.html?file=1725" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Để thay thế nội dung trùng khớp mà không phân biệt trường hợp chữ in hoa hay chữ thường thì ta sử dụng biểu thức chính quy sau:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML&quot;;
+    var a = text.replace(/HọC/i, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoa7db.html?file=1726" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Và để thay thế tất cả nội dung trùng khớp mà không phân biệt trường hợp chữ in hoa hay chữ thường thì ta sử dụng biểu thức chính quy sau:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var text = &quot;Tài liệu học HTML và tài liệu học CSS&quot;;
+    var a = text.replace(/HọC/gi, &quot;tham khảo&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoa4dc.html?file=1727" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-chuoi-string-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:40:55 GMT -->
+</html>

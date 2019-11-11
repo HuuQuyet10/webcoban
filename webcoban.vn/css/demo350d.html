@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3613 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:23 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Xem ví dụ</title>
+    <link rel="shortcut icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+        font-family:"Roboto Slab",Arial,sans-serif;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left #top pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 250px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #left #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        right:5px;
+        height:230px;
+    }
+    #container #left #bottom #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #content{
+        position: absolute;
+        top:10px;
+        bottom:10px;
+        left:5px;
+        right:10px;
+        border:1px solid #b3b2b2;
+        background-color: white;
+        box-sizing:border-box;
+        overflow: auto;
+        padding-left:7px;
+    }
+    #container #right #content p,li{
+        line-height: 25px;
+    }
+    #container #right #content li{
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    #container #right #content pre{
+        font-size:16px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="top">
+                <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+        <span id="layvitri1" style="color:red;font-size:20px"></span>{
+            background-color:pink;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;html&quot;&gt;
+        &lt;h1 class=&quot;content&quot; title=&quot;hello&quot;&gt;Tài liệu học HTML&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;css&quot;&gt;
+        &lt;h1 class=&quot;content&quot; title=&quot;hello&quot;&gt;Tài liệu học CSS&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <div id="right">
+            <div id="content">
+            	<table style="width:100%" class="jsbnj2ka">
+            		<tr>
+            		<td style="width:230px;padding-top:15px"><input type="radio" name="zz_selector" value='' checked></td>
+            		<td style="width:220px"></td>
+            		<td></td>
+            		</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1'> h1</td>
+					<td><input type="radio" name="zz_selector" value='.content'> .content</td>
+					<td><input type="radio" name="zz_selector" value='[title]'> [title]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content'> h1.content</td>
+					<td><input type="radio" name="zz_selector" value='.content[title]'> .content[title]</td>
+					<td><input type="radio" name="zz_selector" value='[title="hello"]'> [title="hello"]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title]'> h1.content[title]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title="hello"]'> .content[title="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='[title~="hello"]'> [title~="hello"]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title="hello"]'> h1.content[title="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title~="hello"]'> .content[title~="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='[title*="hello"]'> [title*="hello"]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title~="hello"]'> h1.content[title~="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title*="hello"]'> .content[title*="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='[title^="hello"]'> [title^="hello"]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title*="hello"]'> h1.content[title*="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title^="hello"]'> .content[title^="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='[title$="hello"]'> [title$="hello"]</td></tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title^="hello"]'> h1.content[title^="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title$="hello"]'> .content[title$="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='[title|="hello"]'> [title|="hello"]</td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title$="hello"]'> h1.content[title$="hello"]</td>
+					<td><input type="radio" name="zz_selector" value='.content[title|="hello"]'> .content[title|="hello"]</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1.content[title|="hello"]'> h1.content[title|="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title]'> h1[title]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title="hello"]'> h1[title="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title~="hello"]'> h1[title~="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title*="hello"]'> h1[title*="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title^="hello"]'> h1[title^="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title$="hello"]'> h1[title$="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+					<tr>
+					<td><input type="radio" name="zz_selector" value='h1[title|="hello"]'> h1[title|="hello"]</td>
+					<td></td>
+					<td></td>
+					</tr>
+				</table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("bottom").innerHTML = "";
+            document.getElementById("bottom").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<div class='html'><h1 class='content' title='hello'>Tài liệu học HTML</h1></div><div class='css'><h1 class='content' title='hello'>Tài liệu học CSS</h1></div>";
+        view_result(text);
+        $(document).ready(function(){
+        	$("input[name='zz_selector']").change(function(){
+        		$("#layvitri1").html($(this).val());
+        		var text = "<style>"+$(this).val()+"{background-color:pink;}</style><div class='html'><h1 class='content' title='hello'>Tài liệu học HTML</h1></div><div class='css'><h1 class='content' title='hello'>Tài liệu học CSS</h1></div>";
+        		view_result(text);
+        	})
+        })
+    </script>
+    <style type="text/css">
+    	.jsbnj2ka tr td{padding:5px 0px;}
+    </style>
+</body>
+
+<!-- Mirrored from webcoban.vn/css/demo?file=3613 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:46:23 GMT -->
+</html>﻿

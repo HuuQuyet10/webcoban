@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:48 GMT -->
+<head>
+<title>Một số thủ thuật giúp nâng cao hiệu suất (tốc độ) mã lệnh JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thủ thuật nâng cao hiệu suất tốc độ mã lệnh JavaScript,thu thuat nang cao hieu suat toc do ma lenh javascript,tăng tốc độ tải trang,tang toc do tai trang">
+<meta name="description" content="Hướng dẫn một số thủ thuật phổ biến nhất được dùng để nâng cao hiệu suất của chương trình JavaScript hay nói cách khác là cải thiện tốc độ mã lệnh JavaScript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" class='active'>- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Một số thủ thuật giúp nâng cao hiệu suất (tốc độ) mã lệnh JavaScript">Thủ thuật giúp cải thiện hiệu suất chương trình</h1>
+<div class="breadcrumb">
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<p style="margin-top:10px">- Trong JavaScript, khi  chúng ta muốn xây dựng một chương trình để thực hiện một công việc nào đó thì chúng ta có rất nhiều giải thuật để xây dựng chương trình đó. Tuy nhiên, mỗi giải thuật sẽ mang lại một hiệu suất <em>(tốc độ hoàn thành công việc)</em> khác nhau.</p>
+<p>- <i><u>Ví dụ</u>:</i> Hai đoạn mã bên dưới cùng thực hiện một công việc là hiển thị dòng chữ <i>"Hello JavaScript"</i> lên màn hình. Tuy nhiên, đoạn mã thứ hai có tốc độ hoàn thành công việc chậm hơn so với đoạn mã thứ nhất <i>(Vì nó phải thực thi tới hai câu lệnh)</i></p>
+<table class="table table-bordered" style="background-color:#eee;">
+    <tr>
+        <td style="width:50%">Đoạn mã 1</td>
+        <td style="width:50%">Đoạn mã 2</td>
+    </tr>
+    <tr>
+        <td style="padding:0px"><div class="form_new_18" style="margin:0px;padding:0px;border:0px"><pre style="border:0px;background-color:#eee">&lt;script&gt;
+    document.write(&quot;Hello JavaScript&quot;);
+&lt;/script&gt;</pre></div></td>
+        <td style="padding:0px"><div class="form_new_18" style="margin:0px;padding:0px;border:0px"><pre style="border:0px;background-color:#eee">&lt;script&gt;
+    var str = &quot;Hello JavaScript&quot;;
+    document.write(str);
+&lt;/script&gt;</pre></div></td>
+    </tr>
+    <tr>
+        <td style="padding-bottom:0px;padding-top:11px"><div class="form_new_22"><a href="demob4d8.html?file=1655" target="_blank">Xem ví dụ</a></div></td>
+        <td style="padding-bottom:0px;padding-top:11px"><div class="form_new_22"><a href="demo9c04.html?file=1656" target="_blank">Xem ví dụ</a></div></td>
+    </tr>
+</table>
+<p>- Qua ví dụ trên thì chắc các bạn cũng đã thấy <b style="color:#555"><i>"Những giải thuật khác nhau mà thực hiện cùng một công việc thì sẽ có giải thuật mang lại hiệu suất cao và giải thuật mang lại hiệu suất thấp"</i></b>. Người lập trình viên luôn mong muốn chương trình của mình có hiệu suất cao để tăng tốc độ tải trang. Nên ở bài hướng dẫn này, chúng tôi sẽ giới thiệu đến bạn một số thủ thuật phổ biến nhất để xây dựng được chương trình có hiệu suất cao.</p>
+<h2>1) Tránh khai báo những biến không cần thiết</h2>
+<p>- Câu lệnh khai báo biến có tốc độ thực thi chậm hơn so với những câu lệnh thông thường, ta không nên khai báo một biến mới nếu như không có mục đích sử dụng lại biến đó nhiều lần.</p>
+<p>- Ví dụ, đoạn mã có hiệu suất thấp:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var fullName = &quot;Nguyễn Thành Nhân&quot;;
+    document.write(fullName);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8ddb.html?file=1657" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ví dụ, đoạn mã có hiệu suất cao:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    document.write(&quot;Nguyễn Thành Nhân&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4c6c.html?file=1658" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Hạn chế truy cập vào phần tử HTML</h2>
+<p>- Những câu lệnh truy cập vào phần tử HTML có tốc độ thực thi rất chậm. Nếu muốn truy cập vào cùng một phần tử nhiều lần thì ta nên truy cập một lần rồi sau đó lưu nó vào một biến để sử dụng lại.</p>
+<p>- Ví dụ, đoạn mã có hiệu suất thấp:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;1&quot;;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;2&quot;;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;3&quot;;
+    document.getElementById(&quot;demo&quot;).innerHTML = &quot;4&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoa3b6.html?file=1659" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ví dụ, đoạn mã có hiệu suất cao:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var a = document.getElementById(&quot;demo&quot;);
+    a.innerHTML = &quot;1&quot;;
+    a.innerHTML = &quot;2&quot;;
+    a.innerHTML = &quot;3&quot;;
+    a.innerHTML = &quot;4&quot;;
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo36bc.html?file=1660" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ngoài ra, tốc độ thực thi của những câu lệnh truy cập vào phần tử HTML sẽ càng bị chậm nếu số lượng phần tử trong một trang quá lớn <i>(Vì nó phải tìm phần tử phù hợp, ít phần tử thì tìm ra nhanh, nhiều phần tử thì tìm lâu)</i>. Cho nên trong quá trình thiết kế giao diện của trang, số lượng phần tử HTML ít chừng nào thì tốt chừng nấy.</p>
+<h2>3) Tối ưu hóa vòng lặp</h2>
+<p>- Các vòng lặp như <b style="color:#555"><i>for, while, do while</i></b> thường được sử dụng rất nhiều trong JavaScript. Nếu ta tối ưu hóa được hết tất cả các vòng lặp thì tốc độ tải trang sẽ được cải thiện đáng kể.</p>
+<p>- Vòng lặp dùng để lặp lại việc thực thi một đoạn mã nhiều lần, nếu trong vòng lặp có chứa những những câu lệnh phức tạp thì tốc độ thực thi sẽ chậm lại. Do đó, để tăng tốc độ thực thi thì ta nên thay thế những câu lệnh phức tạp bằng những câu lệnh đơn giản hơn.</p>
+<p>- Ví dụ, đoạn mã có hiệu suất thấp:</p>
+<div class="form_new_08">
+    <pre>&lt;script&gt;
+    for (var i = 0; i &lt; arr.length; i++){
+        document.write(arr[i]);
+    }
+&lt;/script&gt;</pre>
+</div>
+<p>- Ví dụ, đoạn mã có hiệu suất cao:</p>
+<div class="form_new_08">
+    <pre>&lt;script&gt;
+    var n = arr.length;
+    for (var i = 0; i &lt; n; i++){
+        document.write(arr[i]);
+    }
+&lt;/script&gt;</pre>
+</div>
+<h2>4) Không sử dụng từ khóa <b>new</b></h4>
+<p>- Chúng ta không nên sử dụng từ khóa <b style="color:#333"><i>new</i></b> để tạo chuỗi, số, mảng, đối tượng, hàm, .... vì nó có tốc độ thực thi rất chậm.</p>
+<p>- Ví dụ, đoạn mã có hiệu suất thấp:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var a = new String(&quot;Nguyễn Thành Nhân&quot;);
+    var b = new Number(100);
+    var c = new Array(&quot;HTML&quot;, &quot;CSS&quot;, &quot;JavaScript&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demoa202.html?file=1661" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ví dụ, đoạn mã có hiệu suất cao:</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var a = &quot;Nguyễn Thành Nhân&quot;;
+    var b = 100;
+    var c = [&quot;HTML&quot;, &quot;CSS&quot;, &quot;JavaScript&quot;];
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo694d.html?file=1662" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Đặt mã JavaScript ở dưới cùng</h2>
+<p>- Trong quá trình tải trang, các câu lệnh sẽ được thực thi lần lượt theo thứ tự từ trên xuống dưới. Nếu mã HTML được đặt ở trên thì nó sẽ được thực thi trước đồng nghĩa với việc giao diện được hiển thị trước <i>(Điều đó tạo cảm giác như trang được tải nhanh)</i>. Vì vậy, chúng ta nên cố gắng sắp xếp các đoạn mã HTML nằm trên còn mã JavaScript thì nằm ở dưới.</p><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:50 GMT -->
+</html>

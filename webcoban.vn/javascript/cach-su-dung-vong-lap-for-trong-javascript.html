@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-vong-lap-for-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:33 GMT -->
+<head>
+<title>Cách sử dụng vòng lặp for trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách sử dụng vòng lặp for trong javascript,cach su dung vong lap for trong javascript">
+<meta name="description" content="cách sử dụng vòng lặp for trong javascript, cach su dung vong lap for trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" class='active'>- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách sử dụng vòng lặp for trong JavaScript">Cách sử dụng vòng lặp for trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Vòng lặp là gì?</h2>
+<p>- Trong JavaScript, vòng lặp là một loại cú pháp giúp ta lặp lại việc thực thi một đoạn mã nhiều lần.</p>
+<p>- Ví dụ, nếu tôi muốn hiển thị lên màn hình 1000 dòng chữ <i>"Lập Trình Web"</i> thì đáng ra phải gõ 1000 câu lệnh <span class="form_new_28">document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;)</span>. Tuy nhiên, với việc sử dụng vòng lặp thì chỉ cần đến ba câu lệnh như bên dưới là đủ.</p>
+<div class="form_new_37">
+    <div class="doanma"><span style="color:#006393">for</span>(<span style="color:#006393">var</span> i=1; i&lt;=1000; i++){
+    document.write(<span style="color:#AA5500">&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;</span>);
+}</div>
+    <div class="nutxem"><a href="democaea.html?file=1823" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Qua ví dụ trên, ta thấy <em>"vòng lặp"</em> giúp ta tiết kiệm được rất nhiều thời gian trong việc viết những đoạn mã cần thực thi nhiều lần liên tiếp.</p>
+<p>- Trong JavaScript, vòng lặp được chia làm bốn loại:</p>
+<ul style="list-style-type:circle">
+<li><i>(1)</i> Vòng lặp <span class="form_new_28">for</span></li>
+<li><i>(2)</i> Vòng lặp <span class="form_new_28" style="margin:7px 0px">for in</span></li>
+<li><i>(3)</i> Vòng lặp <span class="form_new_28" style="margin-bottom:7px">while</span></li>
+<li><i>(4)</i> Vòng lặp <span class="form_new_28">do while</span></li>
+</ul>
+<p>- Ở bài hướng dẫn này, bạn sẽ được tìm hiểu về hai loại vòng lặp là <span class="form_new_28">for</span> và <span class="form_new_28">for in</span></p>
+<h2>2) Cách sử dụng vòng lặp for trong JavaScript</h2>
+<p>- Vòng lặp for dùng để lặp lại việc thực thi một đoạn mã nào đó một số lần.</p>
+<h3>2.1) Cú pháp</h3>
+<div class="form_new_33"><span style="color:#006393">for</span>(<i>biểu thức 1</i>; <i>biểu thức 2</i>; <i>biểu thức 3</i>){
+    <span style="color:gray">//Đoạn mã mà bạn muốn được thực thi nhiều lần</span>
+}</div>
+<p>- Trong đó:</p>
+<ul style="list-style-type:circle">
+<li>Biểu thức 1 thường là một câu lệnh khai báo biến</li>
+<div><i>(biến này được dùng để tham gia vào biểu thức 2)</i></div>
+<li style="margin-top:10px">Biểu thức 2 là một biểu thức điều kiện</li>
+<div><i>(nếu điều kiện đúng thì đoạn mã sẽ được thực thi, nếu điều kiện sai thì vòng lặp kết thúc)</i></div>
+<li style="margin-top:10px">Biểu thức 3 thường là một biểu thức làm thay đổi giá trị của biến được khai báo trong biểu thức 1</li>
+<div><i>(mục đích là để cho biểu thức điều kiện dần trở nên bị SAI, giúp vòng lặp được kết thúc)</i></div>
+</ul>
+<p>- Dưới đây là sơ đồ minh họa cho nguyên lý hoạt động của vòng lặp for:</p>
+<div style="position:relative;height:690px;width:725px;border:0px solid red;margin-left:50px;">
+    <div style="border-left:1px solid gray;height:88px;position:absolute;left:285px;"></div>
+    <div style="border-top:20px solid black;border-left:10px solid transparent;border-right:10px solid transparent;width:0px;height:0px;position:absolute;left:275px;top:68px;"></div>
+    <div style="position:absolute;left:252px;top:25px;font-weight:bold;">Bắt đầu</div>
+    <div style="position:absolute;left:295px;top:200px;">Kiểm tra</div>
+<!-- KHUNG 1 -->
+<div style="position:absolute;left:150px;width:290px;height:80px;border:1px solid gray;background-color:#ddd;border-radius:20px;top:90px;">
+    <div style="position:absolute;text-align:center;padding:10px;top:-3px;">
+        Khai báo một biến dùng để tham gia vào biểu thức điều kiện<br><i style="color:blue"><b>(Biểu thức 1)</b></i>
+    </div>
+</div>
+<!-- KHUNG 2 -->
+<div style="position:absolute;top:260px;left:150px;width:290px;height:80px;border:1px solid gray;background-color:#ddd;border-radius:20px;">
+    <div style="position:absolute;text-align:center;padding:10px;top:7px;left:75px;">
+        ĐIỀU KIỆN<br><i style="color:blue"><b>(Biểu thức 2)</b></i>
+    </div>
+</div>
+<!-- KHUNG 3 -->
+<div style="position:absolute;top:430px;left:150px;width:290px;height:80px;border:1px solid gray;background-color:#ddd;border-radius:20px;">
+    <div style="position:absolute;text-align:center;padding:10px;top:8px;left:3px;">Đoạn mã mà bạn muốn thực thi được thực thi</div>
+</div>
+<!-- KHUNG 4 -->
+<div style="position:absolute;top:600px;left:150px;width:290px;height:80px;border:1px solid gray;background-color:#ddd;border-radius:20px;">
+    <div style="position:absolute;text-align:center;padding:10px;top:7px;left:10px;">
+        Thay đổi giá trị biến điều kiện<br><i style="color:blue"><b>(Biểu thức 3)</b></i>
+    </div>
+</div>
+<!-- KHUNG 5 -->
+<div style="position:absolute;top:600px;left:500px;width:200px;height:80px;border:1px solid gray;background-color:#ddd;border-radius:20px;">
+    <div style="position:absolute;text-align:center;padding:10px;top:17px;left:20px;">Vòng lặp kết thúc</div>
+</div>
+    <div style="border-left:1px solid gray;height:88px;position:absolute;left:285px;top:171px;"></div>
+    <div style="border-left:1px solid gray;height:88px;position:absolute;left:285px;top:341px;"></div>
+    <div style="border-left:1px solid gray;height:88px;position:absolute;left:285px;top:511px;"></div>
+    <div style="border-left:1px solid gray;border-top:1px solid gray;border-bottom:1px solid gray;width:80px;height:340px;position:absolute;left:68px;top:300px;"></div>
+    <div style="border-top:1px solid gray;border-right:1px solid gray;width:159px;height:299px;position:absolute;left:441px;top:300px;"></div>
+    <div style="border-top:20px solid black;border-left:10px solid transparent;border-right:10px solid transparent;width:0px;height:0px;position:absolute;left:275px;top:239px;"></div>
+    <div style="border-top:20px solid black;border-left:10px solid transparent;border-right:10px solid transparent;width:0px;height:0px;position:absolute;left:275px;top:409px;"></div>
+    <div style="border-top:20px solid black;border-left:10px solid transparent;border-right:10px solid transparent;width:0px;height:0px;position:absolute;left:275px;top:579px;"></div>
+    <div style="border-left:20px solid black;border-top:10px solid transparent;border-bottom:10px solid transparent;width:0px;height:0px;position:absolute;left:129px;top:290px;"></div>
+   <div style="border-top:20px solid black;border-left:10px solid transparent;border-right:10px solid transparent;width:0px;height:0px;position:absolute;left:590px;top:579px;"></div>
+    <div style="position:absolute;left:295px;top:370px;font-weight:bold;color:green">ĐÚNG</div>
+    <div style="position:absolute;left:500px;top:275px;font-weight:bold;color:red">SAI</div>
+    <div style="position:absolute;-webkit-transform: rotate(-90deg);-moz-transform: rotate(-90deg);top:459px;left:-107px;">Tiếp tục quay lại kiểm tra điều kiện</div>
+</div>
+<h3>2.2) Ví dụ thứ nhất</h3>
+<p>- Sử dụng vòng lặp for để hiển thị ba câu <em>"Lập Trình Web"</em> lên màn hình.</p>
+<div class="form_new_37">
+    <div class="doanma"><span style="color:#006393">for</span>(<span style="color:#006393">var</span> i=1; i&lt;=3; i++){
+    document.write(<span style="color:#AA5500">&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;</span>);
+}</div>
+    <div class="nutxem"><a href="demoa572.html?file=1824" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là phần mô tả các bước thực thi của vòng lặp trên:</p>
+<ul style="list-style-type:circle">
+<li>Lần thứ nhất</li>
+    <ul style="list-style-type:square">
+    <li>Khai báo biến i với giá trị là 1.</li>
+    <li style="margin-top:5px">Kiểm tra xem điều kiện <span class="form_new_28">i <= 3</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 2)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ hai</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i <= 3</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 3)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ ba</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i <= 3</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 4)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ tư</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i <= 3</span> có đúng hay không.</li>
+    <div><i>(Kết quả là <b>SAI</b> vì 4 không nhỏ hơn hoặc bằng 3)</i></div>
+    <div style="margin-top:5px">==&gt; VÒNG LẶP KẾT THÚC</div>
+    </ul>
+</ul>
+<h3>2.3) Ví dụ thứ hai</h3>
+<p>- Sử dụng vòng lặp for để hiển thị một dãy số tăng dần từ 1 đến 10.</p>
+<div class="form_new_37">
+    <div class="doanma"><span style="color:#006393">for</span>(<span style="color:#006393">var</span> i=0; i&lt;10; i++){
+    <span style="color:#006393">var</span> j = i + 1;
+    document.write(<span style="color:#AA5500">&quot;Số: &quot;</span> + j + <span style="color:#AA5500">&quot;&lt;br&gt;&quot;</span>);
+}</div>
+    <div class="nutxem"><a href="demo6e90.html?file=1825" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là phần mô tả các bước thực thi của vòng lặp trên:</p>
+<ul style="list-style-type:circle">
+<li>Lần thứ nhất</li>
+    <ul style="list-style-type:square">
+    <li>Khai báo biến i với giá trị là 0.</li>
+    <li style="margin-top:5px">Kiểm tra xem điều kiện <span class="form_new_28">i < 10</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 1)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ hai</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i < 10</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 2)</i></li>
+    </ul>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li style="margin-top:10px">Lần thứ mười</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i < 10</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i được tăng thêm một <i>(tức bây giờ giá trị của biến i sẽ là 10)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ mười một</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i < 10</span> có đúng hay không.</li>
+    <div><i>(Kết quả là <b>SAI</b> vì 10 không nhỏ hơn 10)</i></div>
+    <div style="margin-top:5px">==&gt; VÒNG LẶP KẾT THÚC</div>
+    </ul>
+</ul>
+<h3>2.4) Ví dụ thứ ba</h3>
+<p>- Sử dụng vòng lặp for để hiển thị một dãy số giảm dần từ 9 xuống 2.</p>
+<div class="form_new_37">
+    <div class="doanma"><span style="color:#006393">for</span>(<span style="color:#006393">var</span> i=9; i&gt;1; i--){
+    document.write(<span style="color:#AA5500">&quot;Số: &quot;</span> + i + <span style="color:#AA5500">&quot;&lt;br&gt;&quot;</span>);
+}</div>
+    <div class="nutxem"><a href="demo5150.html?file=1826" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Dưới đây là phần mô tả các bước thực thi của vòng lặp trên:</p>
+<ul style="list-style-type:circle">
+<li>Lần thứ nhất</li>
+    <ul style="list-style-type:square">
+    <li>Khai báo biến i với giá trị là 9.</li>
+    <li style="margin-top:5px">Kiểm tra xem điều kiện <span class="form_new_28">i > 1</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i bị giảm đi một <i>(tức bây giờ giá trị của biến i sẽ là 8)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ hai</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i > 1</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i bị giảm đi một <i>(tức bây giờ giá trị của biến i sẽ là 7)</i></li>
+    </ul>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li>....</li>
+<li style="margin-top:10px">Lần thứ tám</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i > 1</span> có đúng hay không.</li>
+    <div><i>(Kết quả đúng nên đoạn mã nằm trong cặp dấu {} được thực thi)</i></div>
+    <li style="margin-top:7px">Giá trị của biến i bị giảm đi một <i>(tức bây giờ giá trị của biến i sẽ là 1)</i></li>
+    </ul>
+<li style="margin-top:10px">Lần thứ chín</li>
+    <ul style="list-style-type:square">
+    <li>Kiểm tra xem điều kiện <span class="form_new_28">i > 1</span> có đúng hay không.</li>
+    <div><i>(Kết quả là <b>SAI</b> vì 1 không lớn hơn 1)</i></div>
+    <div style="margin-top:5px">==&gt; VÒNG LẶP KẾT THÚC</div>
+    </ul>
+</ul>
+<h3>2.5) Một số điều cần lưu ý</h3>
+<div style="background-color:#ddd;padding:15px;border-radius:10px;padding-bottom:3px;">
+<p><b style="color:#333">LƯU Ý THỨ NHẤT</b></p>
+<p>- Trong <span class="form_new_24">biểu thức 1</span> của ví dụ thứ nhất, biến i được khai báo với giá trị là 1 nhưng còn ở ví dụ thứ hai thì biến i được khai báo với giá trị là 0.</p>
+<p>- Trong <span class="form_new_24">biểu thức 2</span> của ví dụ thứ nhất, biểu thức điều kiện ta dùng phép so sánh <span class="form_new_24">&lt;=</span> nhưng còn ở ví dụ thứ hai thì ta dùng phép so sánh <span class="form_new_24">&lt;</span></p>
+<p>- Trong <span class="form_new_24">biểu thức 3</span> của ví dụ thứ nhất và thứ hai thì ta tăng giá trị của biến thêm một, còn ở ví dụ thứ ba thì ta giảm giá trị của biến đi một.</p>
+<p>==&gt; Bạn đừng gò bó vào khuôn khổ việc biến được khai báo là mấy, biểu thức điều kiện là gì, ....</p>
+<p>==&gt; Cái mà bạn cần quan tâm chính là thiết kế ra một mô hình giúp cho vòng lặp có thể hoạt động đúng theo số lần mong muốn.</p>
+<p>- Ví dụ, năm đoạn mã bên dưới có cách viết khác nhau, tuy nhiên chúng có cùng một chức năng là hiển thị bảy câu <i>"Lập Trình Web"</i> lên màn hình</p>
+<div class="form_new_33">for(var i = 0; i < 7; i++){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+<div class="form_new_33">for(var i = 1; i <= 7; i++){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+<div class="form_new_33">for(var i = 5; i < 12; i++){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+<div class="form_new_33">for(var i = 9; i > 2; i--){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+<div class="form_new_33">for(var i = 0; i < 13; i = i + 2){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+</div>
+<div style="background-color:#ddd;padding:15px;border-radius:10px;margin-top:20px;padding-bottom:3px;">
+<p><b style="color:#333">LƯU Ý THỨ HAI</b></p>
+<p>- <span class="form_new_24">Biểu thức 1</span> thường là câu lệnh khai báo biến để tham gia vào biểu thức điều kiện.</p>
+<p>- Tuy nhiên, nếu biến dùng để tham gia vào biểu thức điều kiện đã được khai báo và gán giá trị trước đó rồi thì <span class="form_new_24">biểu thức 1</span> ta có thể bỏ trống.</p>
+<p>- Ví dụ:</p>
+<div class="form_new_33">var i = 0;
+for(; i < 7; i++){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+<p style="margin-bottom:0px">- Còn nếu biến dùng để tham gia vào biểu thức điều kiện đã được khai báo trước đó nhưng chưa được gán giá trị thì trong <span class="form_new_24">biểu thức 1</span> ta chỉ cần gán giá trị cho biến <i>(không cần dùng đến từ khóa var)</i></p>
+<p>- Ví dụ:</p>
+<div class="form_new_33">var i;
+for(i = 0; i < 7; i++){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+}</div>
+</div>
+<div style="background-color:#ddd;padding:15px;border-radius:10px;margin-top:20px;padding-bottom:3px;">
+<p><b style="color:#333">LƯU Ý THỨ BA</b></p>
+<p>- <span class="form_new_24">Biểu thức 3</span> trong vòng lặp for rất quan trọng, nó khiến điều kiện của vòng lặp dần dần trở thành bị SAI để giúp cho vòng lặp được kết thúc <i>(Nếu một vòng lặp mà điều kiện luôn luôn đúng thì vòng lặp đó sẽ không bao giờ kết thúc và dẫn đến trường hợp chương trình bị lỗi)</i></p>
+<p>- Tuy nhiên, nếu trong đoạn mã được thực thi có chứa câu lệnh làm thay đổi giá trị của biến điều kiện thì <span class="form_new_24">biểu thức 3</span> ta có thể bỏ trống.</p>
+<p>- Ví dụ:</p>
+<div class="form_new_33">for(var i = 0; i < 7;){
+    document.write(&quot;&lt;p&gt;Lập Trình Web&lt;/p&gt;&quot;);
+    i++;
+}</div>
+</div>
+<div style="background-color:#ddd;padding:15px;border-radius:10px;margin-top:20px;margin-bottom:20px;">
+<p><b style="color:#333">LƯU Ý THỨ TƯ</b></p>
+<p>- Trong phần LƯU Ý THỨ HAI & LƯU Ý THỨ BA tôi đã giới thiệu về trường hợp mà <span class="form_new_24">biểu thức 1</span> và <span class="form_new_24">biểu thức 3</span> có thể bỏ trống, tuy nhiên đó là một số trường hợp đặc biệt. Về mặt viết mã lệnh tốt thì bạn không nên bỏ trống biểu thức như thế, bạn cần phải xây dựng đoạn mã như thế nào để cho cả ba biểu thức đều phải có mặt đầy đủ.</p>
+</div>
+<h3>2.6) Vòng lặp for lồng nhau</h3>
+<p>- Thực chất <span class="form_new_28">vòng lặp for lồng nhau</span> chỉ là cách sử dụng nâng cao của <span class="form_new_28">vòng lặp for thông thường</span> để giúp cho số lần lặp được tăng theo cấp số nhân.</p>
+<p>- Vòng lặp con  được đặt vào bên trong vòng lặp cha. Khi điều kiện của vòng lặp cha đúng thì vòng lặp con sẽ được thực thi.</p>
+<p>- Dưới đây là cú pháp cơ bản của một vòng lặp for lồng nhau:</p>
+<div class="form_new_33"><span style="color:#006393">for</span>(<i>biểu thức 1</i>; <i>biểu thức 2</i>; <i>biểu thức 3</i>){
+    <span style="color:#006393">for</span>(<i>biểu thức 1</i>; <i>biểu thức 2</i>; <i>biểu thức 3</i>){
+        <span style="color:gray">//Đoạn mã mà bạn muốn được thực thi nhiều lần</span>
+    }
+}</div>
+<p>- <i><u>Lưu ý</u>:</i> Bên trong vòng lặp cha, ngoài vòng lặp con thì nó còn có thể chứa thêm các mã lệnh khác.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 1</div>
+    <div class="noithem"><p>- Hiển thị dãy số từ 1 đến 50 <i>(bằng cách sử dụng vòng lặp for lồng nhau)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+
+    var number = 1;
+
+    for(i = 0; i &lt; 10; i++){
+        for(j = 0; j &lt; 5; j++){
+            document.write(number + &quot; &quot;);
+            number++;
+        }
+    }
+
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo704d.html?file=1827" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 2</div>
+    <div class="noithem"><p>- Hiển thị ba dòng dãy số <span class="form_new_28">1 2 3 4 5 6 7 8 9</span></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    for(i = 1; i &lt; 4; i++){
+        var text = &quot;&quot;;
+        for(j = 1; j &lt; 10; j++){
+            text = text + j + &quot; &quot;;
+        }
+        document.write(text + &quot;&lt;br&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demof75d.html?file=1828" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ 3</div>
+    <div class="noithem"><p>- Hiển thị một ma trận ô vuông giống hình bên dưới:</p>
+<div style="padding:0px 0px 0px 0px;">
+    <style>
+        .sdb723_javascript_for{
+            height:20px;
+            width:20px;
+            float:left;
+            border:1px solid gray;
+            margin-left:5px;
+            margin-bottom:5px;
+        }
+    </style>
+<script>
+for(var sdb723_javascript_for_i = 0; sdb723_javascript_for_i < 5; sdb723_javascript_for_i++){
+            for(var sdb723_javascript_for_j = 0; sdb723_javascript_for_j < 10; sdb723_javascript_for_j++){
+                if(sdb723_javascript_for_j==0){document.write("<div class='sdb723_javascript_for' style='margin-left:0px;'></div>");}else{document.write("<div class='sdb723_javascript_for'></div>");}
+            }
+            document.write("<div style='clear:both'></div>");
+        }
+</script>
+</div>
+</div>
+    <hr>
+    <pre>&lt;style&gt;
+    .square{
+        height:20px;
+        width:20px;
+        float:left;
+        border:1px solid gray;
+        margin-left:5px;
+        margin-bottom:5px;
+    }
+&lt;/style&gt;
+
+&lt;script&gt;
+    for(var i = 0; i &lt; 5; i++){
+        for(var j = 0; j &lt; 10; j++){
+            document.write(&quot;&lt;div class='square'&gt;&lt;/div&gt;&quot;);
+        }
+        document.write(&quot;&lt;div style='clear:both'&gt;&lt;/div&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo70a5.html?file=1829" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.7) Lệnh break</h3>
+<p>- Lệnh break thường được đặt vào bên trong vòng lặp for.</p>
+<p>- Khi lệnh break được thực thi, vòng lặp sẽ kết thúc mặc cho điều kiện của vòng lặp có còn đúng hay không.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Lặp lại 10 lần việc hiển thị giá trị của biến number.</p>
+<p>- Sau mỗi lần hiển thị cho giá trị của biến number tăng thêm một.</p>
+<p>- Tuy nhiên, đến khi giá trị của biến number được tăng lên thành 5 thì kết thúc vòng lặp.</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var number = 1;
+    for(var i = 1; i &lt;= 10;i++){
+        document.write(number + &quot;&lt;hr&gt;&quot;);
+        number++;
+        if(number==5){
+            break;
+        }
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo15d8.html?file=1831" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.8) Lệnh continue</h3>
+<p>- Lệnh continue thường được đặt vào bên trong vòng lặp for.</p>
+<p>- Khi lệnh continue được thực thi, những câu lệnh còn lại của <i><u>lần lặp hiện tại</u></i> sẽ bị bỏ qua.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Hiển thị dãy số từ một đến mười <i>(ngoại trừ các số 2, 5, 9)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    for(var i = 1; i &lt;= 10;i++){
+        if(i==2 || i==5 || i==9){
+            continue;
+        }
+        document.write(i + &quot;&lt;br&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo9b87.html?file=1832" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.9) Lặp qua một lần các phần tử của mảng</h3>
+<p>- Ta có thể sử dụng vòng lặp for để lặp qua một lần các phần tử trong mảng.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var mobile = [&quot;HTC&quot;,&quot;Nokia&quot;,&quot;SamSung&quot;,&quot;LG&quot;,&quot;Apple&quot;,&quot;Lenovo&quot;];
+    for(var i = 0; i &lt; mobile.length; i++){
+        document.write(mobile[i] + &quot;&lt;br&gt;&quot;);
+    }
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo6782.html?file=1843" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Cách sử dụng vòng lặp for in trong JavaScript</h2>
+<p>- Vòng lặp <span class="form_new_28">for in</span> dùng để lặp qua một lần các thuộc tính của một đối tượng.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+
+    var SinhVien = {
+        name:&quot;Nguyễn Thành Nhân&quot;,
+        year:1993,
+        gender:&quot;Nam&quot;,
+        hometown:&quot;Cần Thơ&quot;
+    }
+
+    for(x in SinhVien){
+        document.write(SinhVien[x]);
+        document.write(&quot;&lt;hr&gt;&quot;);
+    }
+
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demof4bc.html?file=1830" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cach-su-dung-vong-lap-for-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:35 GMT -->
+</html>

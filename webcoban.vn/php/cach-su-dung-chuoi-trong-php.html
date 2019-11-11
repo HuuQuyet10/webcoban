@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/cach-su-dung-chuoi-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:53 GMT -->
+<head>
+<title>Cách sử dụng chuỗi trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách sử dụng chuỗi trong php,cach su dung chuoi trong php">
+<meta name="description" content="cách sử dụng chuỗi trong php, cach su dung chuoi trong php">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" class='active'>- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" >- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách sử dụng chuỗi trong PHP">Cách sử dụng chuỗi trong PHP</h1>
+<div class="breadcrumb">
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-ghi-chu-thich-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Chuỗi là gì !?</h2>
+<p>- Chuỗi <i>(hay còn gọi được là chuỗi ký tự)</i> là một dãy các ký tự.</p>
+<p>- <i><u>Ví dụ</u>:</i></p>
+<table class="table-bordered table-hover table-striped tbbang1">
+<tr>
+	<td>Tai</td>
+	<td>Chuỗi gồm 3 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu</td>
+	<td>Chuỗi gồm 8 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu hoc</td>
+	<td>Chuỗi gồm 12 ký tự</td>
+</tr>
+<tr>
+	<td>Tai lieu hoc PHP</td>
+	<td>Chuỗi gồm 16 ký tự</td>
+</tr>
+<tr>
+	<td></td>
+	<td>Chuỗi rỗng</td>
+</tr>
+</table>
+<div class="form_new_21">
+<p>Chuỗi mà không chứa ký tự thì được gọi là chuỗi rỗng</p>
+</div>
+<h2 id="d2">2) Cách viết một chuỗi</h2>
+<p>- Trong PHP, một chuỗi phải được đặt bên trong cặp dấu nháy kép <span class="form_new_28">" "</span> hoặc cặp dấu nháy đơn <span class="form_new_28">' '</span></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $a = &quot;HTML và CSS&quot;; //Biến a có giá trị là chuỗi HTML và CSS
+    $b = 'Tài liệu PHP'; //Biến b có giá trị là chuỗi Tài liệu PHP
+    $c = &quot;&quot;; //Biến c có giá trị là một chuỗi rỗng
+?&gt;</pre>
+    <div class="nutxem"><a href="demof7a8.html?file=2024" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Hai dấu dùng để đặt xung quanh chuỗi phải cùng một loại, nếu khác loại sẽ dẫn đến sai cú pháp làm chương trình bị lỗi.</p>
+<div class="form_new_31">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <div class="div_pre">&lt;?php
+    $a = <span style="color:#AA5500">&quot;HTML và CSS'</span>; <span style="color:gray">//SAI</span>
+    $b = <span style="color:#AA5500">'Tài liệu PHP&quot;</span>; <span style="color:gray">//SAI</span>
+?&gt;</div>
+</div>
+<p>- Nếu chuỗi được đặt bên trong cặp dấu nháy kép thì chuỗi đó không được chứa ký tự là dấu nháy kép <i>(tuy nhiên nó có thể chứa ký tự là dấu nháy đơn)</i></p>
+<p>- Nếu chuỗi được đặt bên trong cặp dấu nháy đơn thì chuỗi đó không được chứa ký tự là dấu nháy đơn <i>(tuy nhiên nó có thể chứa ký tự là dấu nháy kép)</i></p>
+<div class="form_new_31">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <div class="div_pre">&lt;?php
+    $a = <span style="color:#AA5500">&quot;Tài liệu học &quot; PHP&quot;</span>; <span style="color:gray">//SAI</span>
+    $b = <span style="color:#AA5500">'Tài liệu học ' PHP'</span>; <span style="color:gray">//SAI</span>
+    $c = <span style="color:#AA5500">&quot;Tài liệu học ' PHP&quot;</span>; <span style="color:gray">//ĐÚNG</span>
+    $d = <span style="color:#AA5500">'Tài liệu học &quot; PHP'</span>; <span style="color:gray">//ĐÚNG</span>
+?&gt;</div>
+</div>
+<p>- Để giải quyết trường hợp bạn muốn chuỗi được đặt bên trong cặp dấu nháy kép có thể chứa ký tự là dấu nháy kép thì bạn phải đặt một dấu gạch chéo ngược phía trước ký tự là dấu nháy kép đó <i>(trường hợp dấu nháy đơn cũng tương tự)</i>.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $a = &quot;Tài liệu học \&quot; PHP&quot;;
+    $b = 'Tài liệu học \' PHP';
+?&gt;</pre>
+    <div class="nutxem"><a href="demo1df9.html?file=2029" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Điểm khác nhau giữa <span class="form_new_28">" "</span> và <span class="form_new_28">' '</span></h2>
+<p>- Đối với chuỗi được đặt bên trong cặp dấu nháy kép, nếu chuỗi đó có chứa cụm từ <i>"gọi tên biến"</i> thì khi ta hiển thị chuỗi này lên màn hình, nó sẽ hiển thị luôn cả giá trị của biến.</p>
+<p>- Đối với chuỗi được đặt bên trong cặp dấu nháy đơn, nếu chuỗi đó có chứa cụm từ <i>"gọi tên biến"</i> thì khi ta hiển thị chuỗi này lên màn hình, nó sẽ KHÔNG hiển thị giá trị của biến.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $name = &quot;Nguyễn Thành Nhân&quot;;
+    $text_1 = &quot;Tên của tôi là $name&quot;;
+    $text_2 = 'Tên của tôi là $name';
+    echo $text_1;
+    echo $text_2;
+?&gt;</pre>
+    <div class="nutxem"><a href="demof54c.html?file=2040" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Cách nối các chuỗi lại với nhau</h2>
+<p>- Ta có thể nối hai hoặc nhiều chuỗi lại với nhau thành một chuỗi bằng cách đặt <span class="form_new_28">dấu chấm</span> ở giữa hai chuỗi cần nối.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Giá trị của biến $text là một chuỗi được nối từ ba chuỗi.</p></div>
+    <hr>
+    <pre>&lt;?php
+    $text = &quot;Tài liệu học &quot;.&quot;ngôn ngữ lập trình&quot;.&quot; PHP&quot;;
+    echo $text;
+?&gt;</pre>
+    <div class="nutxem"><a href="demo1ed1.html?file=2026" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ví dụ trên, giá trị của biến $text là một chuỗi được nối từ ba chuỗi <span class="form_new_28">Tài liệu học </span> <span class="form_new_28">ngôn ngữ lập trình</span> <span class="form_new_28"> PHP</span> và cả ba chuỗi đều được đặt bên trong cặp dấu nháy kép. Điều đó không có nghĩa là để nối các chuỗi lại với nhau thì các chuỗi phải có cùng một loại dấu bao xung quanh, mà chỉ cần mỗi chuỗi viết đúng theo <a href="#d2" style="font-weight:bold;text-decoration:underline">quy tắc</a> là được.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $text = 'Tài liệu học '.'ngôn ngữ lập trình'.&quot; PHP&quot;;
+    echo $text;
+?&gt;</pre>
+    <div class="nutxem"><a href="demo46c1.html?file=2027" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Nếu giá trị của biến là một chuỗi thì biến đó cũng có thể sử dụng trong việc nối chuỗi.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $a = &quot;Tài liệu học &quot;;
+    $b = &quot; PHP&quot;;
+    $text = $a.'ngôn ngữ lập trình'.$b;
+    echo $text;
+?&gt;</pre>
+    <div class="nutxem"><a href="demo202b.html?file=2028" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Một số hàm xử lý chuỗi thông dụng</h2>
+<p>- PHP đã xây dựng sẵn các hàm dùng để làm những công việc xử lý chuỗi như:</p>
+<ul style="list-style-type:circle">
+<li>Đếm số lượng ký tự của chuỗi.</li>
+<li>Đếm số từ trong chuỗi.</li>
+<li>Chuyển chuỗi về dạng chữ hoa hoặc chữ thường.</li>
+<li>....</li>
+</ul>
+<p>- Dưới đây là một số hàm thường được sử dụng để xử lý chuỗi trong PHP:</p>
+<h3>5.1) Hàm strlen() trong PHP</h3>
+<p>- Hàm <strong>strlen()</strong> trả về số lượng ký tự trong một chuỗi <i>(hay còn được gọi là chiều dài của chuỗi)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $text = &quot;HTML and CSS&quot;;
+    $a = strlen($text); //biến $a sẽ có giá trị là 12
+    $b = strlen(&quot;JavaScript&quot;); //biến $b sẽ có giá trị là 10
+    $c = strlen('MySQL &amp; PHP'); //biến $c sẽ có giá trị là 11
+?&gt;</pre>
+    <div class="nutxem"><a href="demo1633.html?file=2030" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>5.2) Hàm str_word_count() trong PHP</h3>
+<p>- Hàm <strong>str_word_count()</strong> trả về số từ trong một chuỗi.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $a = str_word_count(&quot;HTML&quot;); //biến $a sẽ có giá trị là 1
+    $b = str_word_count(&quot;HTML CSS&quot;); //biến $b sẽ có giá trị là 2
+    $c = str_word_count(&quot;HTML CSS JavaScript&quot;); //biến $c sẽ có giá trị là 3
+    $d = str_word_count(&quot;HTML CSS JavaScript MySQL&quot;); //biến $d sẽ có giá trị là 4
+    $e = str_word_count(&quot;HTML CSS JavaScript MySQL PHP&quot;); //biến $e sẽ có giá trị là 5
+?&gt;</pre>
+    <div class="nutxem"><a href="demoee74.html?file=2031" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>5.3) Hàm strtoupper() trong PHP</h3>
+<p>- Hàm <strong>strtoupper()</strong> dùng để chuyển toàn bộ ký tự trong chuỗi về dạng chữ in hoa.</p>
+<p>- <i><u>Lưu ý</u>:</i> Hàm này sẽ trả về một chuỗi mới chứ không làm thay đổi giá trị của chuỗi ban đầu.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $text_1 = &quot;Tai lieu hoc PHP&quot;;
+    $text_2 = strtoupper($text_1); //biến $text_2 sẽ có giá trị là chuỗi TAI LIEU HOC PHP
+?&gt;</pre>
+    <div class="nutxem"><a href="demod48c.html?file=2032" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>5.4) Hàm strtolower() trong PHP</h3>
+<p>- Hàm <strong>strtolower()</strong> dùng để chuyển toàn bộ ký tự trong chuỗi về dạng chữ thường.</p>
+<p>- <i><u>Lưu ý</u>:</i> Hàm này sẽ trả về một chuỗi mới chứ không làm thay đổi giá trị của chuỗi ban đầu.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $text_1 = &quot;Tai lieu hoc PHP&quot;;
+    $text_2 = strtolower($text_1); //biến $text_2 sẽ có giá trị là chuỗi tai lieu hoc php
+?&gt;</pre>
+    <div class="nutxem"><a href="demo6a2a.html?file=2033" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>5.5) Hàm strrev() trong PHP</h3>
+<p>- Hàm <strong>strrev()</strong> dùng để đảo ngược thứ tự của các ký tự trong chuỗi.</p>
+<p>- <i><u>Lưu ý</u>:</i> Hàm này sẽ trả về một chuỗi mới chứ không làm thay đổi giá trị của chuỗi ban đầu.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;?php
+    $text_1 = &quot;123456789&quot;;
+    $text_2 = strrev($text_1); //biến $text_2 sẽ có giá trị là chuỗi 987654321
+?&gt;</pre>
+    <div class="nutxem"><a href="demo9be3.html?file=2034" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-ghi-chu-thich-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/cach-su-dung-chuoi-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:56 GMT -->
+</html>

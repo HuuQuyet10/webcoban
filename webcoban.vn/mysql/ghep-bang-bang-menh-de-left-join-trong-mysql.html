@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/mysql/ghep-bang-bang-menh-de-left-join-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:42 GMT -->
+<head>
+<title>Ghép bảng bằng mệnh đề LEFT JOIN trong MySQL</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Nối bảng,ghép bảng,LEFT JOIN">
+<meta name="description" content="Ghép bảng bằng mệnh đề LEFT JOIN trong MySQL">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>MySQL</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về MySQL</a>
+<a href="huong-dan-cai-dat-xampp.html" >- Bài 02: Cài đặt XAMPP để học MySQL</a>
+<a href="cach-chay-lenh-mysql-tren-phpmyadmin.html" >- Bài 03: Chạy câu lệnh MySQL đầu tiên</a>
+<a href="mo-hinh-phan-cap-trong-mysql.html" >- Bài 04: Mô hình phân cấp trong MySQL</a>
+<a href="cau-lenh-tao-database-trong-mysql.html" >- Bài 05: CREATE DATABASE (Tạo database)</a>
+<a href="cac-kieu-du-lieu-trong-mysql.html" >- Bài 06: DATA TYPE (Các kiểu dữ liệu trong MySQL)</a>
+<a href="cau-lenh-tao-bang-trong-mysql.html" >- Bài 07: CREATE TABLE (Tạo bảng)</a>
+<a href="cach-them-du-lieu-vao-bang-trong-mysql.html" >- Bài 08: INSERT INTO (Thêm dữ liệu vào bảng)</a>
+<a href="cach-truy-xuat-du-lieu-trong-mysql.html" >- Bài 09: SELECT (Truy xuất dữ liệu)</a>
+<a href="truy-xuat-du-lieu-dua-theo-dieu-kien-trong-mysql.html" >- Bài 10: WHERE (Truy xuất dữ liệu dựa theo điều kiện)</a>
+<a href="truy-xuat-du-lieu-dua-theo-nhieu-dieu-kien-trong-mysql.html" >- Bài 11: AND &amp; OR (Truy xuất dữ liệu dựa theo nhiều điều kiện)</a>
+<a href="order-by-lay-ket-qua-theo-thu-tu-trong-mysql.html" >- Bài 12: ORDER BY (Lấy kết quả theo thứ tự)</a>
+<a href="distinct-truy-xuat-cac-du-lieu-khac-nhau-trong-mysql.html" >- Bài 13: DISTINCT (Lấy các kết quả không trùng nhau)</a>
+<a href="limit-gioi-han-so-luong-ket-qua-tra-ve-trong-mysql.html" >- Bài 14: LIMIT (Giới hạn số lượng kết quả trả về)</a>
+<a href="in-truy-xuat-du-lieu-khi-thoa-mot-trong-so-cac-gia-tri.html" >- Bài 15: IN (Truy xuất dữ liệu khi thỏa một trong số các giá trị)</a>
+<a href="between-truy-xuat-du-lieu-trong-mot-khoang-gia-tri-trong-mysql.html" >- Bài 16: BETWEEN (Truy xuất dữ liệu trong một khoảng giá trị)</a>
+<a href="like-truy-xuat-du-lieu-dua-theo-chuoi-trong-mysql.html" >- Bài 17: LIKE &amp; NOT LIKE (Truy xuất dự liệu dựa theo chuỗi ký tự)</a>
+<a href="delete-xoa-du-lieu-cua-bang-trong-mysql.html" >- Bài 18: DELETE (Xóa dữ liệu)</a>
+<a href="update-cap-nhat-du-lieu-trong-bang-trong-mysql.html" >- Bài 19: UPDATE (Cập nhật dữ liệu)</a>
+<a href="as-dat-lai-ten-cho-bang-cot-trong-mysql.html" >- Bài 20: AS (Đặt tên tạm thời cho bảng, cột)</a>
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html" >- Bài 21: INNER JOIN</a>
+<a href="ghep-bang-bang-menh-de-left-join-trong-mysql.html" class='active'>- Bài 22: LEFT JOIN</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html" >- Bài 23: RIGHT JOIN</a>
+<a href="ghep-bang-bang-menh-de-full-join-trong-mysql.html" >- Bài 24: FULL JOIN</a>
+<a href="alter-sua-doi-cau-truc-bang-trong-mysql.html" >- Bài 25: ALTER (Sửa đổi cấu trúc bảng)</a>
+<a href="not-null-khong-cho-phep-nhan-gia-tri-null-trong-mysql.html" >- Bài 26: NOT NULL</a>
+<a href="primary-key-tao-khoa-chinh-trong-mysql.html" >- Bài 27: PRIMARY KEY (Tạo khóa chính cho bảng)</a>
+<a href="avg-lay-gia-tri-trung-binh-cua-cot-trong-mysql.html" >- Bài 28: AVG() - Lấy giá trị trung bình cộng của cột</a>
+<a href="count-dem-so-luong-mau-tin-du-lieu-hang-cua-bang-trong-mysql.html" >- Bài 29: COUNT() - Đếm số lượng mẫu tin trong bảng</a>
+<a href="ham-max-lay-gia-tri-lon-nhat-cua-cot-trong-mysql.html" >- Bài 30: MAX() - Lấy giá trị lớn nhất của cột</a>
+<a href="ham-min-lay-gia-tri-nho-nhat-cua-cot-trong-mysql.html" >- Bài 31: MIN() - Lấy giá trị nhỏ nhất của cột</a>
+<a href="ham-sum-lay-gia-tri-tong-cua-mot-cot-trong-mysql.html" >- Bài 31: SUM() - Lấy tổng của cột</a>
+<a href="ham-round-lam-tron-so-trong-mysql.html" >- Bài 33: ROUND() - Làm tròn số</a>
+<a href="ham-substring-lay-chuoi-con-trong-mysql.html" >- Bài 34: SUBSTRING() - Trích xuất chuỗi ký tự con</a>
+<a href="ham-upper-doi-chu-hoa-trong-mysql.html" >- Bài 35: UPPER() - Truy xuất dữ liệu ở dạng chữ HOA</a>
+<a href="ham-lower-doi-chu-thuong-trong-mysql.html" >- Bài 36: LOWER() - Truy xuất dữ liệu ở dạng chữ thường</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Ghép bảng bằng mệnh đề LEFT JOIN trong MySQL">Ghép bảng bằng mệnh đề LEFT JOIN trong MySQL</h1>
+<div class="breadcrumb">
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h4>Từ kh&oacute;a&nbsp;LEFT JOIN trả về <u><em>tất cả c&aacute;c h&agrave;ng</em></u> của bảng b&ecirc;n tr&aacute;i (table1), kết hợp với c&aacute;c h&agrave;ng trong&nbsp;bảng b&ecirc;n phải (table2).</h4>
+
+<p><u><em><strong>Lưu &yacute;:</strong></em></u> Kết quả của&nbsp;ph&iacute;a b&ecirc;n phải sẽ l&agrave; NULL nếu ch&uacute;ng kh&ocirc;ng giao nhau.</p>
+
+<h2>C&uacute; ph&aacute;p</h2>
+
+<pre>
+SELECT *
+FROM table1
+LEFT JOIN table2
+ON table1.column_name=table2.column_name;
+</pre>
+
+<p style="text-align:center"><img alt="Mệnh đề LEFT JOIN trong MySQL" src="../image/menh-de-left-join-trong-mysql.png" /></p>
+
+<h2>Một số v&iacute; dụ</h2>
+
+<div style="width:100%;float:left">
+<div style="float:left">
+<p>Ch&uacute;ng ta c&oacute; một bảng&nbsp;khachhang (kh&aacute;ch h&agrave;ng) :</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+  <tbody>
+    <tr>
+      <th>ID_khachhang</th>
+      <th>NAME_khachhang</th>
+    </tr>
+    <tr>
+      <td>Kh001</td>
+      <td>Khach Hang 001</td>
+    </tr>
+    <tr>
+      <td>Kh002</td>
+      <td>Khach Hang 002</td>
+    </tr>
+    <tr>
+      <td>Kh003</td>
+      <td>Khach Hang 003</td>
+    </tr>
+    <tr>
+      <td>Kh004</td>
+      <td>Khach Hang 004</td>
+    </tr>
+    <tr>
+      <td>Kh005</td>
+      <td>Khach Hang 005</td>
+    </tr>
+    <tr>
+      <td>Kh006</td>
+      <td>Khach Hang 006</td>
+    </tr>
+    <tr>
+      <td>Kh007</td>
+      <td>Khach Hang 007</td>
+    </tr>
+    <tr>
+      <td>Kh008</td>
+      <td>Khach Hang 008</td>
+    </tr>
+    <tr>
+      <td>Kh009</td>
+      <td>Khach Hang 009</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="float:left;margin-left:40px;">
+<p>V&agrave; một bảng&nbsp;hoadon (h&oacute;a đơn) như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+  <tbody>
+    <tr>
+      <th>ID_hoadon</th>
+      <th>ID_khachhang</th>
+      <th>DATE_hoadon</th>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>Kh005</td>
+      <td>2015-03-03</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Kh008</td>
+      <td>2015-07-09</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>Kh003</td>
+      <td>2015-10-12</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td>Kh004</td>
+      <td>2016-05-06</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td>Kh008</td>
+      <td>2016-08-08</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<p><a href="demoef9a.html?file=37" style="color:brown" target="_blank">(Bạn c&oacute; thể bấm v&agrave;o đ&acirc;y để download c&acirc;u lệnh tạo 2 bảng như tr&ecirc;n)</a></p>
+
+<p><u><strong>V&iacute; dụ</strong></u></p>
+
+<p>C&acirc;u lệnh MySQL dưới đ&acirc;y sẽ trả về danh s&aacute;ch tất cả c&aacute;c kh&aacute;ch h&agrave;ng v&agrave; những h&oacute;a đơn m&agrave; họ đ&atilde; mua.</p>
+
+<pre>
+SELECT khachhang.ID_khachhang, khachhang.NAME_khachhang, hoadon.ID_hoadon, hoadon.DATE_hoadon
+FROM khachhang
+LEFT JOIN hoadon&nbsp;
+ON hoadon.ID_khachhang=khachhang.ID_khachhang
+ORDER BY khachhang.ID_khachhang;
+</pre>
+
+<p>Sau khi thực thi, MySQL trả về một bảng kết quả như sau:</p>
+
+<table class="table-bordered table-hover table-striped tbbang1">
+  <tbody>
+    <tr>
+      <th>ID_khachhang</th>
+      <th>NAME_khachhang</th>
+      <th>ID_hoadon</th>
+      <th>DATE_hoadon</th>
+    </tr>
+    <tr>
+      <td>Kh001</td>
+      <td>Khach Hang 001</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+    <tr>
+      <td>Kh002</td>
+      <td>Khach Hang 002</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+    <tr>
+      <td>Kh003</td>
+      <td>Khach Hang 003</td>
+      <td>103</td>
+      <td>2015-10-12</td>
+    </tr>
+    <tr>
+      <td>Kh004</td>
+      <td>Khach Hang 004</td>
+      <td>105</td>
+      <td>2016-05-06</td>
+    </tr>
+    <tr>
+      <td>Kh005</td>
+      <td>Khach Hang 005</td>
+      <td>101</td>
+      <td>2015-03-03</td>
+    </tr>
+    <tr>
+      <td>Kh006</td>
+      <td>Khach Hang 006</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+    <tr>
+      <td>Kh007</td>
+      <td>Khach Hang 007</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+    <tr>
+      <td>Kh008</td>
+      <td>Khach Hang 008</td>
+      <td>102</td>
+      <td>2015-07-09</td>
+    </tr>
+    <tr>
+      <td>Kh008</td>
+      <td>Khach Hang 008</td>
+      <td>106</td>
+      <td>2016-08-08</td>
+    </tr>
+    <tr>
+      <td>Kh009</td>
+      <td>Khach Hang 009</td>
+      <td>NULL</td>
+      <td>NULL</td>
+    </tr>
+  </tbody>
+</table>
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="ghep-bang-bang-menh-de-inner-join-trong-mysql.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="ghep-bang-bang-menh-de-right-join-trong-mysql.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/mysql/ghep-bang-bang-menh-de-left-join-trong-mysql.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:43:43 GMT -->
+</html>

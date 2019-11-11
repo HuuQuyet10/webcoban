@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-audio-trong-html-tao-mot-trinh-nghe-nhac-cho-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:42 GMT -->
+<head>
+<title>Thẻ &lt;audio&gt; trong HTML | Tạo một trình nghe nhạc cho trang web</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ audio,thẻ audio trong html,tạo một trình nghe nhạc cho trang web">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ audio trong HTML để tạo một trình nghe nhạc cho trang web">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;audio&gt; trong HTML | Tạo một trình nghe nhạc cho trang web">Thẻ &lt;audio&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Thẻ &lt;audio&gt; trong HTML</h2>
+<p>- Thẻ <strong>&lt;audio&gt;</strong> được dùng để tạo một <em>"trình phát nhạc"</em> cho trang web.</p>
+<p>- <i><u>Ví dụ</u>:</i> Bên dưới là một trình phát nhạc.</p>
+<p style="margin-top:20px;margin-bottom:20px">
+<audio controls>
+  <source src="../file/bell.mp3">
+</audio>
+</p>
+<p>- Để tạo một trình phát nhạc thì thẻ &lt;audio&gt; cần phải được sử dụng kết hợp với thẻ &lt;source&gt; để xác định tập tin âm thanh mà bạn muốn phát.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Đoạn mã bên dưới dùng để tạo một trình phát nhạc giống như ví dụ phía trên</p>
+</div>
+    <hr>
+    <pre>&lt;audio controls&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo1378.html?file=1455" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Các thuộc tính được sử dụng trong thẻ &lt;audio&gt;</h2>
+<p>- Thẻ &lt;audio&gt; có sáu thuộc tính cơ bản.</p>
+<p>- Dưới đây là bảng mô tả sơ lược về sáu thuộc tính đó:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>src</td>
+        <td>Xác định đường dẫn đến tập tin âm thanh mà bạn muốn phát</td>
+    </tr>
+    <tr>
+        <td>controls</td>
+        <td>Xác định việc <i>"trình phát nhạc sẽ được hiển thị trên màn hình"</i></td>
+    </tr>
+    <tr>
+        <td>autoplay</td>
+        <td>Thiết lập hành động:<br><i>"sau khi trang web được tải xong, trình phát nhạc sẽ tự động chơi bản nhạc"</i></td>
+    </tr>
+    <tr>
+        <td>loop</td>
+        <td>Thiết lập hành động <i>"bản nhạc sẽ tự động được phát lặp lại sau mỗi lần kết thúc"</i></td>
+    </tr>
+    <tr>
+        <td>muted</td>
+        <td>Xác định việc trình phát nhạc sẽ mặc định được thiết lập ở chế độ <i>"tắt tiếng"</i></td>
+    </tr>
+    <tr>
+        <td>preload</td>
+        <td>Xác định việc tập tin âm thanh có được tải cùng với lúc tải trang hay không</td>
+    </tr>
+</table>
+<h3>2.1) Thuộc tính src</h3>
+<p>- Thuộc tính src dùng để xác định đường dẫn đến tập tin âm thanh mà bạn muốn phát.</p>
+<p>- <i><u>Lưu ý</u>:</i> <i>"Đường dẫn đến tập tin âm thanh mà bạn muốn phát"</i> có thể được xác định bằng đường dẫn tương đối hoặc đường dẫn tuyệt đối.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio src=&quot;../file/bell.mp3&quot; controls&gt;&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demod2ca.html?file=1456" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Tuy nhiên, hầu hết các lập trình viên không sử dụng thuộc tính src của thẻ &lt;audio&gt; để xác định đường dẫn đến tập tin âm thanh mà bạn muốn phát. Họ sử dụng thẻ &lt;source&gt;, vì thẻ &lt;source&gt; có hỗ trợ thêm nhiều thuộc tính, giúp trình phát nhạc trở nên đa năng hơn.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo1378.html?file=1455" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="quangcaotrongbaiviet"></div>
+<h3>2.2) Thuộc tính autoplay</h3>
+<p>- Thuộc tính autoplay thiết lập hành động <i>"sau khi trang web được tải xong, trình phát nhạc sẽ tự động chơi bản nhạc"</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls autoplay&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demoa77d.html?file=1458" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.3) Thuộc tính controls</h3>
+<p>- Thuộc tính controls xác định việc <i>"trình phát nhạc sẽ được hiển thị trên màn hình"</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;p&gt;- Trình phát nhạc bên dưới ĐƯỢC hiển thị.&lt;/p&gt;
+&lt;audio controls&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;
+&lt;p&gt;- Trình phát nhạc bên dưới KHÔNG ĐƯỢC hiển thị.&lt;/p&gt;
+&lt;audio&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="democdd6.html?file=1459" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Thẻ &lt;audio&gt; không có thuộc tính controls thì trình phát nhạc không hiển thị. Tuy nhiên, nếu tồn tại thuộc tính autoplay thì bản nhạc vẫn được phát bình thường.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio autoplay&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo4363.html?file=1460" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.4) Thuộc tính loop</h3>
+<p>- Thuộc tính loop thiết lập hành động <i>"bản nhạc sẽ tự động được phát lặp lại sau mỗi lần kết thúc"</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls loop&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo28af.html?file=1461" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.5) Thuộc tính muted</h3>
+<p>- Thuộc tính muted xác định việc trình phát nhạc sẽ mặc định được thiết lập ở chế độ <i>"tắt tiếng"</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls muted&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo3c4f.html?file=1462" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.6) Thuộc tính preload</h3>
+<div class="form_new_06">
+<span class="fa fa-warning fa-lg" style="color:#ea3b28;top:17px"></span>
+<p>Mặc định khi trang web được tải thì tập tin âm thanh của trình phát nhạc cũng được tải theo, điều đó đồng nghĩa với việc tốc độ tải trang bị chậm lại.</p>
+</div>
+<p>- Thuộc tính preload xác định việc tập tin âm thanh có được tải cùng với lúc tải trang hay không.</p>
+<p>- Thuộc tính preload có hai giá trị:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>auto</td>
+        <td>Tập tin âm thanh sẽ được tải cùng với lúc tải trang</td>
+    </tr>
+    <tr>
+        <td>none</td>
+        <td>Tập tin âm thanh sẽ KHÔNG được tải cùng với lúc tải trang<br><i>(nó chỉ được tải khi người dùng bấm vào nút play)</i></td>
+    </tr>
+</table>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls preload=&quot;none&quot;&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo3989.html?file=1463" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Những định dạng âm thanh được hỗ trợ</h2>
+<p>- Hiện nay có ba loại định dạng âm thanh phổ biến được hỗ trợ trên các trình duyệt: <i>MP3, Wav, Ogg</i></p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Format</th>
+        <th>MIME-type</th>
+    </tr>
+    <tr>
+        <td>MP3</td>
+        <td>audio/mpeg</td>
+    </tr>
+    <tr>
+        <td>Wav</td>
+        <td>audio/wav</td>
+    </tr>
+    <tr>
+        <td>Ogg</td>
+        <td>audio/ogg</td>
+    </tr>
+</table>
+<p>- Tuy nhiên, không phải tất cả các trình duyệt đều hỗ tợ hết ba loại định dạng âm thanh này.</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Trình duyệt</th>
+        <th>MP3</th>
+        <th>Wav</th>
+        <th>Ogg</th>
+    </tr>
+    <tr>
+        <td>Chrome</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+    </tr>
+    <tr>
+        <td>Firefox</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+    </tr>
+    <tr>
+        <td>Opera</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+    </tr>
+    <tr>
+        <td>Safari</td>
+        <td>CÓ</td>
+        <td>CÓ</td>
+        <td>KHÔNG</td>
+    </tr>
+    <tr>
+        <td>Internet Explorer</td>
+        <td>CÓ</td>
+        <td>KHÔNG</td>
+        <td>KHÔNG</td>
+    </tr>
+</table>
+<p>- Để đề phòng trường hợp trình duyệt không hỗ trợ định dạng tập tin âm thanh của bạn, bạn có thể <i>"sơ cua"</i> thêm một vài tập tin âm thanh khác bằng những thẻ &lt;source&gt; khác <i>(nếu định dạng tập tin âm thanh thứ nhất không được hỗ trợ thì nó sẽ chuyển sang sử dụng tập tin âm thanh thứ hai, ....)</i></p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;audio controls&gt;
+    &lt;source src=&quot;../file/bell.ogg&quot;&gt;
+    &lt;source src=&quot;../file/bell.mp3&quot;&gt;
+&lt;/audio&gt;</pre>
+    <div class="nutxem"><a href="demo8aa6.html?file=1464" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-audio-trong-html-tao-mot-trinh-nghe-nhac-cho-trang-web.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:44 GMT -->
+</html>

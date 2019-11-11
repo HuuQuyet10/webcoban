@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:13 GMT -->
+<head>
+<title>Cách định dạng chuỗi ngày tháng trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách định dạng chuỗi ngày tháng trong javascript,cach dinh dang chuoi ngay thang trong javascript">
+<meta name="description" content="cách định dạng chuỗi ngày tháng trong javascript, cach dinh dang chuoi ngay thang trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" class='active'>- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách định dạng chuỗi ngày tháng trong JavaScript">Cách định dạng CHUỖI NGÀY THÁNG trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<div style="background-color:#ddd;padding:15px 20px 5px 20px;text-align:justify;border:1px solid #ccc;border-radius:15px;margin-top:10px"><p>- Trong bài hướng dẫn trước, tôi có nói đến việc để tạo một đối tượng ngày tháng thì ta phải sử dụng cấu trúc <b style="color:#333">new Date()</b> và cấu trúc <b style="color:#333">new Date()</b> thì được chia làm bốn dạng cú pháp chính:</p>
+<ul style="list-style-type:circle;font-style:italic">
+<li>Cú pháp 1: new Date()</li>
+<li>Cú pháp 2: new Date(milliseconds)</li>
+<li>Cú pháp 3: new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+<li>Cú pháp 4: new Date(chuỗi ngày tháng)</li>
+</ul>
+<p>- Trong bốn cú pháp trên: Cú pháp 1-2-3 thì quá đơn giản và đã được giải thích cụ thể trong bài hướng dẫn trước. Riêng cú pháp thứ tư, cách định dạng một chuỗi ngày tháng hơi phức tạp.</p>
+<p>- Do đó, ở bài này, tôi sẽ hướng dẫn cụ thể cách định dạng một chuỗi ngày tháng để sử dụng trong cú pháp <b style="color:#333">new Date(chuỗi ngày tháng)</b></p>
+</div>
+<p style="margin-top:20px">- Trong JavaScript có bốn kiểu cơ bản để định dạng một chuỗi ngày tháng: </p>
+<ul style="list-style-type:circle">
+<li>Short Date</li>
+<li>Long Date</li>
+<li>Full Date</li>
+<li>ISO Date</li>
+</ul>
+<p>- Dưới đây là ví dụ minh họa về <span class="form_new_28">ngày 12 tháng 3 năm 1974</span> được định dạng bởi bốn kiểu trên:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <th style="width:200px">Kiểu</th>
+        <th>Định dạng</th>
+    </tr>
+    <tr>
+        <td>Short Date</td>
+        <td>"03/12/1974"</td>
+    </tr>
+    <tr>
+        <td>Long Date</td>
+        <td>"Mar 12 1974"</td>
+    </tr>
+    <tr>
+        <td>Full Date</td>
+        <td>"Tue Mar 12 1974"</td>
+    </tr>
+    <tr>
+        <td>ISO Date</td>
+        <td>"1974-03-12"</td>
+    </tr>
+</table>
+<h2>1) Short Date</h2>
+<p>- Một chuỗi ngày tháng được định dạng theo kiểu Short Date sẽ có cấu trúc là:</p>
+<div class="form_new_20"><div>MM/DD/YYYY</div></div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(&quot;03/12/1974&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo8181.html?file=1787" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Long Date</h2>
+<p>- Một chuỗi ngày tháng được định dạng theo kiểu Long Date sẽ có cấu trúc là:</p>
+<div class="form_new_20"><div>Month DD YYYY</div></div>
+<p>- Lưu ý:</p>
+<ul style="list-style-type:circle">
+<li>Month là tháng được viết theo tên tiếng anh.<br><i>(có thể viết đầy đủ như January hoặc viết tắt từ ba ký tự đầu tiên của nó như Jan)</i></li>
+<li>Month và DD có thể hoán đổi vị trí cho nhau.</li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974</i>
+<br><i>(Cả bốn đối tượng bên dưới đều như nhau)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date1 = new Date(&quot;March 12 1974&quot;);
+    var date2 = new Date(&quot;12 March 1974&quot;);
+    var date3 = new Date(&quot;Mar 12 1974&quot;);
+    var date4 = new Date(&quot;12 Mar 1974&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo36cb.html?file=1789" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Full Date</h2>
+<p>- Một chuỗi ngày tháng được định dạng theo kiểu Full Date sẽ có cấu trúc là:</p>
+<div class="form_new_20"><div>Day Month DD YYYY</div></div>
+<p>- Lưu ý:</p>
+<ul style="list-style-type:circle">
+<li>Day là ngày trong tuần <i>(hay còn gọi là thứ)</i> được viết theo tên tiếng anh.<br><i>(có thể viết đầy đủ như Wednesday hoặc viết tắt từ ba ký tự đầu tiên của nó như Wed)</i></li>
+<li>Month là tháng được viết theo tên tiếng anh.<br><i>(có thể viết đầy đủ như January hoặc viết tắt từ ba ký tự đầu tiên của nó như Jan)</i></li>
+</ul>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974</i>
+<br><i>(Cả hai đối tượng bên dưới đều như nhau)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date1 = new Date(&quot;Tuesday March 12 1974&quot;);
+    var date2 = new Date(&quot;Tue Mar 12 1974&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo55b7.html?file=1790" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) ISO Date</h2>
+<p>- Một chuỗi ngày tháng được định dạng theo kiểu ISO Date sẽ có cấu trúc là:</p>
+<div class="form_new_20"><div>YYYY-MM-DD</div></div>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(&quot;1974-03-12&quot;);
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo1f5a.html?file=1791" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Thêm thời gian vào chuỗi ngày tháng</h2>
+<p>- Để thêm thời gian <i>(giờ, phút, giây)</i> vào chuỗi ngày tháng thì ta đặt <span class="form_new_28">dấu cách HH:MM:SS</span> vào phía sau chuỗi ngày tháng.</p>
+<p>- Riêng kiểu định dạng ISO Date thì ta đặt <span class="form_new_28">THH:MM:SS</span> vào phía sau chuỗi ngày tháng.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974, lúc 9 giờ 30 phút</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date1 = new Date(&quot;03/12/1974 09:30:00&quot;); //Short Date
+    var date2 = new Date(&quot;Mar 12 1974 09:30:00&quot;); //Long Date
+    var date3 = new Date(&quot;Tue Mar 12 1974 09:30:00&quot;); //Full Date
+    var date4 = new Date(&quot;1974-03-12T09:30:00&quot;); //ISO Date
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo30db.html?file=1793" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>6) Chuỗi ngày tháng theo giờ tiêu chuẩn UTC</h2>
+<p>- Ta có thể thêm chữ Z vào cuối chuỗi ngày tháng để thiết lập chuỗi ngày tháng đó được xác định theo giờ tiêu chuẩn UTC.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974, lúc 9 giờ 30 phút</i>
+<br><i>(theo giờ tiêu chuẩn UTC)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date1 = new Date(&quot;03/12/1974 09:30:00Z&quot;); //Short Date
+    var date2 = new Date(&quot;Mar 12 1974 09:30:00Z&quot;); //Long Date
+    var date3 = new Date(&quot;Tue Mar 12 1974 09:30:00Z&quot;); //Full Date
+    var date4 = new Date(&quot;1974-03-12T09:30:00Z&quot;); //ISO Date
+    //Việt Nam trễ hơn giờ tiêu chuẩn 7 tiếng, nên vào thời điểm giờ tiêu chuẩn là 9:30 thì ở Việt Nam sẽ là 16:30
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demod4ab.html?file=1794" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>7) Xác định múi giờ cho chuỗi ngày tháng</h2>
+<p>- Ta có thể thêm múi giờ vào cuối chuỗi ngày tháng để xác định múi giờ của chuỗi ngày tháng đó.</p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo đối tượng ngày tháng với thời điểm là: <i>ngày 12 tháng 3 năm 1974, lúc 9 giờ 30 phút</i>
+<br><i>(theo múi giờ của vùng Trung Âu)</i></p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(&quot;03/12/1974 09:30:00 GMT+0100 (W. Europe Standard Time)&quot;);
+    //Trung Âu trễ hơn giờ tiêu chuẩn 1 tiếng, Việt Nam trễ hơn giờ tiêu chuẩn 7 tiếng, suy ra Việt Nam trễ hơn Trung Âu 6 tiếng, nên vào thời điểm Trung Âu là 9:30 thì ở Việt Nam sẽ là 15:30
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demod3e2.html?file=1795" target="_blank">Xem ví dụ</a></div>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:14 GMT -->
+</html>

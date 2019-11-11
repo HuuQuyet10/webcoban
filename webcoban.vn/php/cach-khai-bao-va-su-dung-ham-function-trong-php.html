@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/php/cach-khai-bao-va-su-dung-ham-function-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:07 GMT -->
+<head>
+<title>Cách khai báo và sử dụng hàm (function) trong PHP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="cách khai báo và sử dụng hàm function trong php,cach khai bao va su dung ham function trong php">
+<meta name="description" content="cách khai báo và sử dụng hàm function trong php, cach khai bao va su dung ham function trong php">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>PHP</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về ngôn ngữ lập trình PHP</a>
+<a href="cai-dat-may-chu-web-tren-may-tinh-localhost-bang-xampp.html" >- Bài 02: Cài đặt máy chủ web trên máy tính (localhost) bằng XAMPP</a>
+<a href="cach-tao-va-chay-mot-tap-tin-php.html" >- Bài 03: Cách tạo và chạy một tập tin PHP</a>
+<a href="quy-tac-viet-ma-lenh-trong-tap-tin-php.html" >- Bài 04: Quy tắc viết mã lệnh trong tập tin PHP</a>
+<a href="cach-hien-thi-noi-dung-len-man-hinh-trong-php.html" >- Bài 05: Cách hiển thị nội dung lên màn hình trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-bien-trong-php.html" >- Bài 06: Cách khai báo và sử dụng biến trong PHP</a>
+<a href="cach-su-dung-chuoi-trong-php.html" >- Bài 07: Cách sử dụng chuỗi (string) trong PHP</a>
+<a href="cach-ghi-chu-thich-trong-php.html" >- Bài 08: Viết chú thích (ghi chú) trong PHP</a>
+<a href="cach-su-dung-lenh-if-else-trong-php.html" >- Bài 09: Lệnh điều kiện if ... else trong PHP</a>
+<a href="cach-su-dung-lenh-switch-case-trong-php.html" >- Bài 10: Lệnh switch case trong PHP</a>
+<a href="cach-su-dung-vong-lap-for-foreach-trong-php.html" >- Bài 11: Vòng lặp for &amp; foreach trong PHP</a>
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html" >- Bài 12: Vòng lặp while &amp; do while trong PHP</a>
+<a href="cach-khai-bao-va-su-dung-ham-function-trong-php.html" class='active'>- Bài 13: Cách khai báo và sử dụng hàm (function) trong PHP</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tham khảo chuyên sâu</div>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html" >- PHP String (các hàm dùng để xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-php.html" >- PHP Array (các hàm dùng để xử lý mảng)</a>
+<a href="cac-ham-xu-ly-ngay-thang-va-thoi-gian-trong-php.html" >- PHP Date (các hàm dùng để xử lý ngày tháng &amp; thời gian)</a>
+<a href="cac-ham-dung-de-lam-viec-voi-tap-tin-file-trong-php.html" >- PHP File (các hàm dùng để làm việc với tập tin)</a>
+<a href="cac-ham-dung-de-quan-ly-thu-muc-trong-php.html" >- PHP Directory (các hàm dùng để quản lý thư mục)</a>
+<a href="cac-ham-toan-hoc-math-trong-php.html" >- PHP Math (các hàm toán học)</a>
+<a href="danh-sach-cac-mui-gio-timezones-trong-php.html" >- PHP Timezones (các múi giờ được hỗ trợ trong PHP)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Cách khai báo và sử dụng hàm (function) trong PHP">Cách khai báo và sử dụng hàm (function) trong PHP</h1>
+<div class="breadcrumb">
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Hàm là gì !?</h2>
+<p>- Hàm là một tập hợp gồm nhiều câu lệnh, các câu lệnh này được sắp xếp theo một thứ tự xác định để xây dựng thành <span class="form_new_28">một chức năng cụ thể</span> và mỗi hàm sẽ có một cái tên.</p>
+<div class="form_new_36">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><ul style="list-style-type:circle">
+<li style="margin-top:5px;margin-bottom:6px">Đoạn mã bên dưới, chúng ta có một hàm tên là GioiThieuBanThan.</li>
+<li>Hàm này gồm ba câu lệnh với chức năng hiển thị một câu giới thiệu về bản thân.</li>
+</ul>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan(){
+        $name = &quot;Nguyễn Thành Nhân&quot;;
+        $year = 1993;
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+?&gt;</div>
+</div>
+<p>- Một hàm <i>(hay nói cách khác là các câu lệnh bên trong hàm)</i> sẽ không tự động được thực thi.</p>
+<p>- Hàm chỉ thực thi khi nó được <span class="form_new_28">gọi đến tên</span></p>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Câu lệnh nằm ở dòng thứ bảy chính là câu lệnh gọi hàm GioiThieuBanThan để cho nó thực thi</p>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan(){
+        $name = &quot;Nguyễn Thành Nhân&quot;;
+        $year = 1993;
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan();
+?&gt;</div>
+    <div class="nutxem"><a href="demo161b.html?file=2047" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Một hàm có thể được gọi nhiều lần <i>(hay nói cách khác là không giới hạn số lần gọi hàm)</i></p>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Hàm GioiThieuBanThan bên dưới được gọi đến ba lần.</p>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan(){
+        $name = &quot;Nguyễn Thành Nhân&quot;;
+        $year = 1993;
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan();
+    GioiThieuBanThan();
+    GioiThieuBanThan();
+?&gt;</div>
+    <div class="nutxem"><a href="demof0aa.html?file=2048" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>2) Phân loại hàm</h2>
+<p>- Trong PHP, hàm được chia làm hai loại: <span class="form_new_28">hàm không có tham số</span> &amp; <span class="form_new_28">hàm có tham số</span></p>
+<p>- <span class="form_new_28">Hàm không có tham số</span> là loại hàm mà kết quả thực thi của nó luôn luôn không thay đổi.</p>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><ul style="list-style-type:circle;padding-left:30px;">
+<li style="margin-top:5px;margin-bottom:5px">Hàm GioiThieuBanThan bên dưới là một hàm không có tham số.</li>
+<li>Kết quả thực thi của nó luôn hiển thị dòng chữ <i>"Tôi tên là Nguyễn Thành Nhân sinh năm 1993"</i></li>
+</ul>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan(){
+        echo &quot;&lt;p&gt;Tôi tên là Nguyễn Thành Nhân sinh năm 1993&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan(); <span style="color:gray">//Tôi tên là Nguyễn Thành Nhân sinh năm 1993</span>
+    GioiThieuBanThan(); <span style="color:gray">//Tôi tên là Nguyễn Thành Nhân sinh năm 1993</span>
+    GioiThieuBanThan(); <span style="color:gray">//Tôi tên là Nguyễn Thành Nhân sinh năm 1993</span>
+?&gt;</div>
+    <div class="nutxem"><a href="demof41a.html?file=2049" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <span class="form_new_28">Hàm có tham số</span> là loại hàm mà khi gọi hàm ta phải truyền giá trị vào cho nó. Tùy vào giá trị được truyền mà hàm sẽ thực thi và cho ra kết quả khác nhau.</p>
+<p>- <i><u>Lưu ý</u>:</i> Tham số có ý nghĩa tương tự như biến. Tuy nhiên, nó chỉ có thể sử dụng bên trong hàm mà nó được khai báo.</p>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem">
+<p>- Hàm GioiThieuBanThan bên dưới có hai tham số là <span class="form_new_28">name</span> & <span class="form_new_28">year</span></p>
+<p>- Về chức năng, hàm sẽ hiển thị lên màn hình một câu với nội dung là:</p>
+<p><i>"Tôi tên là <span class="form_new_28">giá trị của tham số name</span> sinh năm <span class="form_new_28">giá trị của tham số year</span>"</i></p>
+<p>- (1) Trong lần gọi hàm đầu tiên:</p>
+<ul style="list-style-type:circle">
+<li>tham số <span class="form_new_28">name</span> được truyền giá trị là Trình Giảo Kim</li>
+<li style="margin-top:8px;margin-bottom:8px">tham số <span class="form_new_28">year</span> được truyền giá trị là 1993</li>
+<div>==&gt; Hàm sẽ hiển thị câu <i>"Tôi tên là Trình Giảo Kim sinh năm 1993"</i></div>
+</ul>
+<p>- (2) Trong lần gọi hàm thứ hai:</p>
+<ul style="list-style-type:circle">
+<li>tham số <span class="form_new_28">name</span> được truyền giá trị là La Thành</li>
+<li style="margin-top:8px;margin-bottom:8px">tham số <span class="form_new_28">year</span> được truyền giá trị là 1989</li>
+<div>==&gt; Hàm sẽ hiển thị câu <i>"Tôi tên là La Thành sinh năm 1989"</i></div>
+</ul>
+<p>- (3) Trong lần gọi hàm thứ ba:</p>
+<ul style="list-style-type:circle">
+<li>tham số <span class="form_new_28">name</span> được truyền giá trị là Tần Thúc Bảo</li>
+<li style="margin-top:8px;margin-bottom:8px">tham số <span class="form_new_28">year</span> được truyền giá trị là 1985</li>
+<div>==&gt; Hàm sẽ hiển thị câu <i>"Tôi tên là Tần Thúc Bảo sinh năm 1985"</i></div>
+</ul>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan($name, $year){
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan(&quot;Trình Giảo Kim&quot;, 1993); <span style="color:gray">//Tôi tên là Trình Giảo Kim sinh năm 1993</span>
+    GioiThieuBanThan(&quot;La Thành&quot;, 1989); <span style="color:gray">//Tôi tên là La Thành sinh năm 1989</span>
+    GioiThieuBanThan(&quot;Tần Thúc Bảo&quot;, 1985); <span style="color:gray">//Tôi tên là Tần Thúc Bảo sinh năm 1985</span>
+?&gt;</div>
+    <div class="nutxem"><a href="demoad69.html?file=2050" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>3) Cách khai báo và gọi hàm <span class="form_new_28">không có tham số</span></h2>
+<p>- Để khai báo <i>(khởi tạo)</i> một hàm thuộc thoại không có tham số, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33">function tên hàm(){
+    //Danh sách các câu lệnh của hàm
+}</div>
+<p>- Để gọi một hàm thuộc loại không có tham số, ta sử dụng cú pháp:</p>
+<div class="form_new_33">tên hàm()</div>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem">
+<ul style="list-style-type:circle">
+<li style="margin-top:4px;margin-bottom:5px">Ba câu lệnh nằm ở dòng 2, 3, 4 dùng để khai báo một hàm có tên là GioiThieuBanThan.</li>
+<li>Câu lệnh nằm ở dòng thứ 5 dùng để gọi đến hàm GioiThieuBanThan cho nó thực thi.</li>
+</ul>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan(){
+        echo &quot;Tôi tên là Nguyễn Thành Nhân sinh năm 1993&quot;;
+    }
+    GioiThieuBanThan();
+?&gt;</div>
+    <div class="nutxem"><a href="demo8979.html?file=2051" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>4) Cách khai báo và gọi hàm <span class="form_new_28">có tham số</span></h2>
+<p>- Để khai báo một hàm thuộc thoại có tham số, ta sử dụng cú pháp như sau:</p>
+<div class="form_new_33">function tên hàm(<i>tham số thứ nhất, tham số thứ hai, tham số thứ ba, ....</i>) {
+    //Danh sách các câu lệnh của hàm
+}</div>
+<p>- Tham số có ý nghĩa tương tự như biến, tuy nhiên nó chỉ có thể sử dụng bên trong hàm mà nó được khai báo.</p>
+<p>- Đối với hàm có tham số, khi gọi hàm ta phải truyền giá trị cho các tham số <i>(hành động này cũng tương tự như việc gán giá trị cho biến)</i> với cú pháp như sau:</p>
+<div class="form_new_32">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem">
+<ul style="list-style-type:circle">
+<li style="margin-top:4px;margin-bottom:5px">Ba câu lệnh nằm ở dòng 2, 3, 4 dùng để khai báo một hàm có tên là GioiThieuBanThan.</li>
+<div style="margin-bottom:5px"><i>(hàm này có hai tham số là <span class="form_new_28">name</span> và <span class="form_new_28">year</span>)</i></div>
+<li>Ba câu lệnh nằm ở ba dòng 5, 6, 7 dùng để gọi đến hàm GioiThieuBanThan cho nó thực thi.</li>
+<div style="margin-top:5px;margin-bottom:15px"><i>(trong mỗi lần gọi hàm, giá trị của tham số được truyền vào là khác nhau)</i></div>
+</ul>
+</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan($name, $year){
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan(&quot;Trình Giảo Kim&quot;, 1993);
+    GioiThieuBanThan(&quot;La Thành&quot;, 1989);
+    GioiThieuBanThan(&quot;Tần Thúc Bảo&quot;, 1985);
+?&gt;</div>
+    <div class="nutxem"><a href="demo179a.html?file=2052" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ngoài ra, ta có thể gán giá trị mặc định cho các tham số trong lúc khai báo. Khi gọi hàm, nếu không truyền giá trị cho các tham số thì các tham số sẽ nhận những giá trị mặc định này.</p>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function GioiThieuBanThan($name = &quot;Nguyễn Thành Nhân&quot;, $year = 1993){
+        echo &quot;&lt;p&gt;Tôi tên là $name sinh năm $year&lt;/p&gt;&quot;;
+    }
+    GioiThieuBanThan();
+    GioiThieuBanThan(&quot;La Thành&quot;);
+    GioiThieuBanThan(&quot;Tần Thúc Bảo&quot;, 1985);
+?&gt;</div>
+    <div class="nutxem"><a href="democ809.html?file=2053" target="_blank">Xem ví dụ</a></div>
+</div>
+<h2>5) Lệnh return</h2>
+<p>- Lệnh <span class="form_new_28">return</span> dùng để trả về cho hàm một giá trị.</p>
+<p><i>(Sau khi thực thi xong, hàm sẽ có một giá trị, lúc đó nó có thể được sử dụng giống như một biến)</i></p>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ 1</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function number(){
+        return (10*10 - 50);
+    }
+    $result_01 = number();
+    $result_02 = 7 + number() - 30;
+    $result_03 = &quot;Hello: &quot; . number();
+?&gt;</div>
+    <div class="nutxem"><a href="democcb6.html?file=2054" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ 2</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function number($a, $b){
+        return ($a+$b)*2;
+    }
+    $result_01 = number(5,10);
+    $result_02 = number(2,8) - 5;
+    $result_03 = 5*number(1,4) - 49;
+?&gt;</div>
+    <div class="nutxem"><a href="demo70ff.html?file=2055" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_34">
+    <div class="theh3">Ví dụ 3</div>
+    <hr>
+    <div class="doanma">&lt;?php
+    function ThongTin($name, $year){
+        $thongtin = &quot;- Họ tên: $name &lt;br&gt;- Năm sinh: $year&quot;; 
+        return $thongtin;
+    }
+    $SinhVien = &quot;SINH VIÊN&lt;hr&gt;&quot; . ThongTin(&quot;Nguyễn Thành Nhân&quot;, 1993);
+    echo $SinhVien;     
+?&gt;</div>
+    <div class="nutxem"><a href="democ19e.html?file=2056" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Trong một hàm, sau khi thực thi xong lệnh <span class="form_new_28">return</span> thì hàm sẽ kết thúc <i>(tức là những câu lệnh nằm phía sau lệnh return sẽ không được thực thi)</i>. Cho nên trong một hàm, lệnh <span class="form_new_28">return</span> cần phải được đặt ở vị trí cuối cùng.</p><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="cach-su-dung-vong-lap-while-do-while-trong-php.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cac-ham-xu-ly-chuoi-trong-php.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/php/cach-khai-bao-va-su-dung-ham-function-trong-php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:10 GMT -->
+</html>

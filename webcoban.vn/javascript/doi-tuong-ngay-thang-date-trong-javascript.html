@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/javascript/doi-tuong-ngay-thang-date-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:11 GMT -->
+<head>
+<title>Đối tượng ngày tháng DATE trong JavaScript</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="đối tượng ngày tháng trong javascript,đối tượng date trong javascript,doi tuong ngay thang trong javascript,doi tuong date trong javascript">
+<meta name="description" content="Đối tượng ngày tháng trong JavaScript, đối tượng date trong javascript, cách khởi tạo khai báo một đối tượng ngày tháng trong javascript, doi tuong ngay thang trong javascript, doi tuong date trong javascript, cach khoi tao mot doi tuong ngay thang trong javascript">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="../html/default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>JavaScript</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Tổng quan về JavaScript</a>
+<a href="cach-su-dung-javascript.html" >- Bài 02: Cách sử dụng JavaScript</a>
+<a href="cach-hien-thi-du-lieu-ra-man-hinh-trong-javascript.html" >- Bài 03: Cách hiển thị dữ liệu ra màn hình trong JavaScript</a>
+<a href="cau-lenh-javascript-la-gi-chuong-trinh-javascript-la-gi.html" >- Bài 04: Khái niệm &quot;câu lệnh&quot; và &quot;chương trình&quot; trong JavaScript</a>
+<a href="nguyen-ly-thuc-thi-ma-lenh-trong-javascript.html" >- Bài 05: Nguyên lý thực thi mã lệnh trong JavaScript</a>
+<a href="cach-viet-chu-thich-ghi-chu-trong-javascript.html" >- Bài 06: Cách ghi chú thích trong JavaScript</a>
+<a href="cach-su-dung-bien-trong-javascript.html" >- Bài 07: Cách sử dụng biến (Variable) trong JavaScript</a>
+<a href="bieu-thuc-va-cac-toan-tu-trong-javascript.html" >- Bài 08: Biểu thức và các toán tử cơ bản trong JavaScript</a>
+<a href="toan-tu-tang-mot-va-toan-tu-giam-mot-tien-to-hau-to-trong-javascript.html" >- Bài 09: Toán tử tăng một (++) và Toán tử giảm một (--)</a>
+<a href="toan-tu-gan-trong-javascript.html" >- Bài 10: Toán tử gán trong JavaScript</a>
+<a href="cac-kieu-du-lieu-data-type-trong-javascript.html" >- Bài 11: Kiểu dữ liệu (Data Type) trong JavaScript</a>
+<a href="toan-tu-so-sanh-va-toan-tu-logic-trong-javascript.html" >- Bài 12: Toán tử so sánh &amp; Toán tử logic</a>
+<a href="cach-su-dung-ham-function-trong-javascript.html" >- Bài 13: Cách sử dụng hàm (Function) trong JavaScript</a>
+<a href="cach-su-dung-doi-tuong-object-trong-javascript.html" >- Bài 14: Cách sử dụng đối tượng (Object) trong JavaScript</a>
+<a href="tim-hieu-pham-vi-bien-trong-javascript.html" >- Bài 15: Tìm hiểu &quot;phạm vi biến&quot; trong JavaScript</a>
+<a href="cach-su-dung-chuoi-string-trong-javascript.html" >- Bài 16: Cách sử dụng chuỗi trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-chuoi-trong-javascript.html" >- Bài 17: Các phương thức xử lý chuỗi trong JavaScript</a>
+<a href="bieu-thuc-chinh-quy-trong-javascript.html" >- Bài 18: Biểu thức chính quy (Regular Expression) trong JavaScript</a>
+<a href="cach-bat-su-kien-event-trong-javascript.html" >- Bài 19: Sự kiện (Event) trong JavaScript</a>
+<a href="so-number-trong-javascript.html" >- Bài 20: Số (Number) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-so-trong-javascript.html" >- Bài 21: Các phương thức xử lý số trong JavaScript </a>
+<a href="doi-tuong-number-trong-javascript.html" >- Bài 22: Đối tượng Number trong JavaScript</a>
+<a href="doi-tuong-toan-hoc-math-trong-javascript.html" >- Bài 23: Đối tượng toán học Math trong JavaScript</a>
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html" >- Bài 24: Kỹ thuật tạo một số ngẫu nhiên</a>
+<a href="doi-tuong-ngay-thang-date-trong-javascript.html" class='active'>- Bài 25: Đối tượng ngày tháng trong JavaScript</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html" >- Bài 26: Cách định dạng chuỗi ngày tháng trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-doi-tuong-ngay-thang-date-trong-javascript.html" >- Bài 27: Các phương thức xử lý ngày tháng trong JavaScript</a>
+<a href="tim-hieu-ve-mang-array-trong-javascript.html" >- Bài 28: Tìm hiểu về mảng (Array) trong JavaScript</a>
+<a href="cac-phuong-thuc-xu-ly-mang-trong-javascript.html" >- Bài 29: Các phương thức xử lý mảng trong JavaScript</a>
+<a href="sap-xep-thu-tu-cac-phan-tu-trong-mang-javascript.html" >- Bài 30: Sắp xếp thứ tự các phần tử trong mảng</a>
+<a href="cach-su-dung-lenh-dieu-kien-if-else-trong-javascript.html" >- Bài 31: Lệnh điều kiện if ... else trong JavaScript</a>
+<a href="cach-su-dung-lenh-switch-case-trong-javascript.html" >- Bài 32: Lệnh Switch Case trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-for-trong-javascript.html" >- Bài 33: Vòng lặp for trong JavaScript</a>
+<a href="cach-su-dung-vong-lap-while-va-vong-lap-do-while-trong-javascript.html" >- Bài 34: Vòng lặp while &amp; do while trong JavaScript</a>
+<a href="cach-su-dung-lenh-break-va-continue-trong-javascript.html" >- Bài 35: Lệnh break &amp; continue trong JavaScript</a>
+<a href="lenh-try-catch-trong-javascript.html" >- Bài 36: Các lệnh xử lý lỗi (try, catch, throw, finally) trong JavaScript</a>
+<a href="cach-tim-va-sua-nhung-cau-lenh-bi-loi-trong-mot-chuong-trinh-javascript.html" >- Bài 37: Cách tìm và sửa những câu lệnh bị lỗi trong một chương trình JavaScript</a>
+<a href="thuat-ngu-hoisting-trong-javascript-hoisting-la-gi.html" >- Bài 38: Thuật ngữ &quot;Hoisting&quot; trong JavaScript</a>
+<a href="che-do-nghiem-ngat-strict-mode-trong-javascript.html" >- Bài 39: Thiết lập chế độ nghiêm ngặt (Strict Mode) trong việc viết mã lệnh JavaScript</a>
+<a href="khuon-kho-trinh-bay-ma-lenh-javascript.html" >- Bài 40: Khuôn khổ trình bày mã lệnh JavaScript</a>
+<a href="mot-so-thu-thuat-giup-nang-cao-hieu-suat-toc-do-ma-lenh-javascript.html" >- Bài 41: Một số thủ thuật giúp cải thiện hiệu suất chương trình</a>
+<a href="danh-sach-cac-tu-danh-rieng-reserved-words-trong-javascript.html" >- Bài 42: Từ dành riêng (Reserved Words)</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Browser Object Model (BOM)</div>
+<a href="doi-tuong-screen-man-hinh-trong-javascript.html" >- | BOM | Đối tượng Screen</a>
+<a href="doi-tuong-location-trong-javascript.html" >- | BOM | Đối tượng Location</a>
+<a href="doi-tuong-history-trong-javascript.html" >- | BOM | Đối tượng History</a>
+<a href="doi-tuong-navigator-trong-javascript.html" >- | BOM | Đối tượng Navigator</a>
+<a href="phuong-thuc-alert-confirm-prompt-trong-javascript.html" >- | BOM | Phương thức alert() confirm() prompt() trong JavaScript</a>
+<a href="phuong-thuc-settimeout-va-setinterval-trong-javascript.html" >- | BOM | Phương thức setTimeout() và setInterval() trong Javascript</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> [Tìm hiểu nâng cao] Browser Object Model</div>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-location-trong-javascript.html" >- Đối tượng Location</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-history-trong-javascript.html" >- Đối tượng History</a>
+<a href="cac-phuong-thuc-va-thuoc-tinh-cua-doi-tuong-navigator-trong-javascript.html" >- Đối tượng Navigator</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các phương thức và thuộc tính trong JavaScript</div>
+<a href="cac-ham-xu-ly-chuoi-trong-javascript.html" >- JS String (Các phương thức xử lý chuỗi)</a>
+<a href="cac-ham-xu-ly-mang-trong-javascript.html" >- JS Array (Các phương thức xử lý mảng)</a>
+<a href="cac-phuong-thuc-xu-ly-ngay-thang-trong-javascript.html" >- JS Date (Các hàm xử lý ngày tháng)</a>
+<a href="bieu-thuc-chinh-quy-regular-expressions-trong-javascript.html" >- JS RegExp (biểu thức chính quy)</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Đối tượng ngày tháng DATE trong JavaScript">Đối tượng ngày tháng trong JavaScript</h1>
+<div class="breadcrumb">
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+<h2>1) Đối tượng ngày tháng là gì !?</h2>
+<p>- Đối tượng ngày tháng là một tập hợp các thông tin về thời gian <i>(thứ, ngày, tháng, năm, giờ, phút, giây, mili giây, múi giờ)</i> của một thời điểm nào đó.</p>
+<p>- Khi ta hiển thị một đối tượng ngày tháng lên màn hình thì nó sẽ có dạng như sau:</>
+<p><img alt="đối tượng ngày tháng date trong javascript" src="../image/doi-tuong-ngay-thang-date-trong-javascript.png" class="img-responsive"></p>
+<p>- Trong đó:</p>
+<table class="table table-bordered" style="margin-top:15px">
+    <tr>
+        <td style="width:120px;vertical-align:middle">Vị trí số 1</td>
+        <td style="width:350px;vertical-align:middle"><b>THỨ</b> của đối tượng ngày tháng</td>
+        <td>Là chữ viết tắt từ 3 ký tự đầu tiên của thứ trong tiếng anh:<ul style="list-style-type:circle;font-style:italic">
+<li>Mon (Monday)</li>
+<li>Tue (Tuesday)</li>
+<li>Wed (Wednesday)</li>
+<li>Thu (Thursday)</li>
+<li>Fri (Friday)</li>
+<li>Sat (Saturday)</li>
+<li>Sun (Sunday)</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Vị trí số 2</td>
+        <td style="vertical-align:middle"><b>THÁNG</b> của đối tượng ngày tháng</td>
+        <td>Là chữ viết tắt từ 3 ký tự đầu tiên của tháng trong tiếng anh: <ul style="list-style-type:circle;font-style:italic">
+<li>Jan (January)</li>
+<li>Feb (February)</li>
+<li>Mar (March)</li>
+<li>Apr (April)</li>
+<li>May (May)</li>
+<li>Jun (June)</li>
+<li>Jul (July)</li>
+<li>Aug (August)</li>
+<li>Sep (September)</li>
+<li>Oct (October)</li>
+<li>Nov (November)</li>
+<li>Dec (December)</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td>Vị trí số 3</td>
+        <td><b>NGÀY</b> của đối tượng ngày tháng</td>
+        <td>Một số có giá trị từ 1 - 31</td>
+    </tr>
+    <tr>
+        <td>Vị trí số 4</td>
+        <td><b>NĂM</b> của đối tượng ngày tháng</td>
+        <td>Một số có giá trị từ 1000 - 9999</td>
+    </tr>
+    <tr>
+        <td>Vị trí số 5</td>
+        <td><b>GIỜ</b> của đối tượng ngày tháng</td>
+        <td>Một số có giá trị từ 00 - 23</td>
+    </tr>
+    <tr>
+        <td>Vị trí số 6</td>
+        <td><b>PHÚT</b> của đối tượng ngày tháng</td>
+        <td>Một số có giá trị từ 00 - 59</td>
+    </tr>
+    <tr>
+        <td>Vị trí số 7</td>
+        <td><b>GIÂY</b> của đối tượng ngày tháng</td>
+        <td>Một số có giá trị từ 00 - 59</td>
+    </tr>
+    <tr>
+        <td style="vertical-align:middle">Vị trí số 8</td>
+        <td style="vertical-align:middle"><b>MÚI GIỜ</b> của đối tượng ngày tháng</td>
+        <td>Trình duyệt sẽ dựa vào vùng lãnh thổ của bạn để hiển thị múi giờ tương ứng</td>
+    </tr>
+</table>
+<h2>2) Cách khai báo (khởi tạo) một đối tượng ngày tháng</h2>
+<p>- Để khai báo một đối tượng ngày tháng, ta sử dụng cấu trúc <span class="form_new_28">new Date()</span></p>
+<p>- Cấu trúc <span class="form_new_28">new Date()</span> được chia làm bốn cú pháp chính:</p>
+<i>
+<ul style="list-style-type:circle">
+<li>Cú pháp 1: new Date()</li>
+<li>Cú pháp 2: new Date(milliseconds)</li>
+<li>Cú pháp 3: new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+<li>Cú pháp 4: new Date(chuỗi ngày tháng)</li>
+</ul>
+</i>
+<h3>2.1) new Date()</h3>
+<p>- Cú pháp <i style="color:crimson;background-color:#f1f1f1">new Date()</i> dùng để tạo một đối tượng ngày tháng với các thông tin về thời gian sẽ là thời điểm hiện tại <i>(thời điểm khi câu lệnh được thực thi)</i>.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date();
+    //Biến date là một đối tượng ngày tháng chứa thông tin về thời điểm hiện tại của bạn
+    //<script>document.write(new Date());</script>
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo225f.html?file=1782" target="_blank">Xem ví dụ</a></div>
+</div>
+<h3>2.2) new Date(milliseconds)</h2>
+<p>- Cú pháp <i style="color:crimson;background-color:#f1f1f1">new Date(milliseconds)</i> dùng để tạo một đối tượng ngày tháng với thời điểm là sau ngày <span class="form_new_28" style="margin:4px 0px">01/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span> một khoảng thời gian milliseconds. Các thông tin về thời gian của đối tượng ngày tháng sẽ được hệ thống tự động xác định dựa vào thời điểm đó.</p>
+<p>- Ví dụ: 1296000000 milliseconds bằng với 15 ngày. Khi thực thi <span class="form_new_28" style="margin-bottom:4px">new Date(1296000000)</span> thì ta sẽ được một đối tượng ngày tháng với thời điểm là sau <span class="form_new_28" style="margin:4px 0px">01/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span> 15 ngày.</p>
+<div class="form_new_23">
+    <pre>&lt;script&gt;
+    var date = new Date(1296000000);
+    //<script>document.write(new Date(1296000000));</script>
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="democ9a0.html?file=1796" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_01"><p>- Chắc các bạn đang thắc mắc một điều là: <br><i>"Tại sao 15 ngày sau thời điểm <span class="form_new_28" style="margin:5px 0px">01/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span><br>không phải là <span class="form_new_28" style="margin:5px 0px">16/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span><br>mà lại là <span class="form_new_28" style="margin:5px 0px">16/01/1970 <span style="color:red">07</span>:00:00 GMT+0700 (SE Asia Standard Time)</span> !?"</i></p>
+<p>- Thắc mắc đó sẽ được giải đáp trong phần MÚI GIỜ & GIỜ PHỐI HỢP QUỐC TẾ ở cuối bài hướng dẫn này.</p></div>
+<h3>2.3) new Date(year, month, day, hours, minutes, seconds, milliseconds)</h3>
+<p>- Cú pháp <i style="color:crimson;background-color:#f1f1f1">new Date(year, month, day, hours, minutes, seconds, milliseconds)</i> dùng để tạo một đối tượng ngày tháng với các thông tin về thời gian sẽ do bạn tự xác định bằng các đối số <i><span style="color:blue">year</span>, <span style="color:blue">month</span>, <span style="color:blue">day</span>, <span style="color:blue">hours</span>, <span style="color:blue">minutes</span>, <span style="color:blue">seconds</span>, <span style="color:blue">milliseconds</span></i></p>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>Tạo một đối tượng ngày tháng với thời điểm là 12/03/1974 10:30:00:999</p>
+</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(1974,2,12,10,30,00,999);
+    //<script>document.write(new Date(1974,2,12,10,30,00,999));</script>
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4ca7.html?file=1784" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Ở ví dụ trên, đối số của tháng ba tôi không nhập là 3 mà tôi nhập là 2, vì đối số tháng có giá trị trong khoảng từ 0 đến 11:</p>
+<ul style="list-style-type:circle;font-style:italic">
+<li>Tháng một = 0</li>
+<li>Tháng hai = 1</li>
+<li>Tháng ba = 2</li>
+<li>....</li>
+<li>Tháng mười hai = 11</li>
+</ul>
+<p>- Ngoài ra, với cú pháp này thì ta không nhất thiết phải điền đủ bảy đối số, chỉ cần từ hai đối số trở lên là được, các đối số còn lại hệ thống tự động thiết lập giá trị mặc định cho nó.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(2017,6,4);
+     //<script>document.write(new Date(2017,6,4));</script>
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo4c43.html?file=1785" target="_blank">Xem ví dụ</a></div>
+</div>
+<div class="form_new_05" style="border-left:6px solid #ffeb3b;background-color:#ffc">
+<span class="fa fa-file-text-o fa-lg"></span>
+<p><i><u>Giới thiệu thêm</u>:</i></p>
+<p>- Như chúng ta đã biết:</p>
+<ul style="list-style-type:circle">
+<li>Một năm có tối đa 12 tháng. Nên đối số <i><u>month</u></i> chỉ có thể nhập từ 0 đến 11</li>
+<li>Một tháng có tối đa 31 ngày. Nên đối số <i><u>day</u></i> chỉ có thể nhập từ 1 đến 31</li>
+<li>Một ngày có tối đa 24 giờ. Nên đối số <i><u>hours</u></i> chỉ có thể nhập từ 0 đến 23</li>
+<li>Một giờ có tối đa 60 phút. Nên đối số <i><u>minutes</u></i> chỉ có thể nhập từ 0 đến 59</li>
+<li>Một phút có tối đa 60 giây. Nên đối số <i><u>seconds</u></i> chỉ có thể nhập từ 0 đến 59</li>
+<li>Một giây có tối đa 1000 mili giây. Nên đối số <i><u>milliseconds</u></i> chỉ có thể nhập từ 0 đến 999</li>
+</ul>
+<p>- Vậy <i>"Nếu ta nhập đối số với giá trị nằm ngoài phạm vi cho phép thì chuyện gì sẽ xảy ra !?"</i></p>
+<p>- Trả lời:</p>
+    <div style="border-radius:7px;border:1px solid #ccc;padding:10px">
+<div><span class="fa fa-angle-double-right"></span> Khi một đối số có giá trị nằm ngoài phạm vi cho phép <i>(lớn hơn)</i> thì hệ thống sẽ tự động tính toán để xác định giá trị thích hợp cho đối số, rồi sau đó dùng phần còn dư để cộng thêm vào giá trị của đối số đứng trước nó.</div>
+<div><span class="fa fa-angle-double-right"></span> <i><u>Ví dụ</u>: new Date(2017,6,4,15,130,0) có đối số phút là 130 tương đương với 2 giờ 10 phút, khi đó new Date(2017,6,4,<b style="color:red">15</b>,<b style="color:red">130</b>,0)  sẽ bằng với new Date(2017,6,4,<b style="color:red">17</b>,<b style="color:red">10</b>,0)</i></div>
+</div>
+    <div style="border-radius:7px;border:1px solid #ccc;padding:10px;margin:12px 0px 15px 0px;">
+<div><span class="fa fa-angle-double-right"></span> Khi một đối số có giá trị nằm ngoài phạm vi cho phép <i>(nhỏ hơn)</i> thì hệ thống sẽ tự động tính toán để xác định giá trị thích hợp cho đối số, rồi sau đó giá trị của đối số đứng trước nó sẽ bị trừ đi một phần bằng với phần còn thiếu.</div>
+<div><span class="fa fa-angle-double-right"></span> <i><u>Ví dụ</u>: new Date(2017,6,4,15,-90,0 có đối số phút là -90 tương đương với -1 giờ -30 phút, khi đó new Date(2017,6,4,<b style="color:red">15</b>,<b style="color:red">-90</b>,0)  sẽ bằng với new Date(2017,6,4,<b style="color:red">13</b>,<b style="color:red">30</b>,0)</i></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<h3>2.4) new Date(chuỗi ngày tháng)</h3>
+<p>- Cú pháp <i style="color:crimson;background-color:#f1f1f1">new Date(chuỗi ngày tháng)</i> dùng để tạo một đối tượng ngày tháng với các thông tin về thời gian sẽ được hệ thống tự động xác định dựa vào <i><u>chuỗi ngày tháng</u></i> do bạn đưa ra.</p>
+<div class="form_new_02">
+    <div class="theh3">Ví dụ</div>
+    <hr>
+    <pre>&lt;script&gt;
+    var date = new Date(&quot;Tuesday Jul 18 2017&quot;);
+    //<script>document.write(new Date("Tuesday Jul 18 2017"));</script>
+&lt;/script&gt;</pre>
+    <div class="nutxem"><a href="demo1576.html?file=1786" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- Các bạn sẽ được tìm hiểu kỹ về <a href="../xem/lienket/571.html" target="_blank" style="font-weight:bold;">cách định dạng chuỗi ngày tháng</a> trong bài hướng dẫn tiếp theo.</p>
+<h2>3) Múi giờ (Timezone) & Giờ phối hợp quốc tế (UTC)</h2>
+<div class="form_new_21">
+<p>- Khái niệm <i><u>múi giờ</u></i> và <i><u>giờ phối hợp quốc tế</u></i> rất dài dòng và phức tạp, nếu giải thích tường tận hai khái niệm đó thì sẽ mất rất nhiều thời gian. Cho nên ở phần này tôi chỉ mô tả sơ qua giúp bạn vừa đủ hiểu để có thể áp dụng vào lĩnh vực lập trình JavaScript thôi (^_^)</p>
+</div>
+<p>- Như chúng ta đã biết, vào cùng một thời điểm, nhưng các quốc gia nằm ở những vùng lãnh thổ khác nhau sẽ có một thời gian khác nhau. Ví dụ:</p>
+<ul style="list-style-type:circle">
+<li>Hiện tại ở Việt Nam là <span class="form_new_24">
+<script>
+var djvudfv134v = new Date().getTime();
+if(new Date(djvudfv134v).getDate()<10){document.write("0"+new Date(djvudfv134v).getDate());}else{document.write(new Date(djvudfv134v).getDate());}
+document.write("-");
+if((new Date(djvudfv134v).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v).getMonth()+1));}else{document.write(new Date(djvudfv134v).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v).getHours()<10){document.write("0"+new Date(djvudfv134v).getHours());}else{document.write(new Date(djvudfv134v).getHours());}
+document.write(":");
+if(new Date(djvudfv134v).getMinutes()<10){document.write("0"+new Date(djvudfv134v).getMinutes());}else{document.write(new Date(djvudfv134v).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v).getSeconds()<10){document.write("0"+new Date(djvudfv134v).getSeconds());}else{document.write(new Date(djvudfv134v).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+<li>Tuy nhiên, cùng thời điểm này thì ở Ấn Độ lại là <span class="form_new_24" style="margin:10px 0px 7px 0px">
+<script>
+var djvudfv134v_ando = djvudfv134v - 5400000;
+if(new Date(djvudfv134v_ando).getDate()<10){document.write("0"+new Date(djvudfv134v_ando).getDate());}else{document.write(new Date(djvudfv134v_ando).getDate());}
+document.write("-");
+if((new Date(djvudfv134v_ando).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v_ando).getMonth()+1));}else{document.write(new Date(djvudfv134v_ando).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v_ando).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v_ando).getHours()<10){document.write("0"+new Date(djvudfv134v_ando).getHours());}else{document.write(new Date(djvudfv134v_ando).getHours());}
+document.write(":");
+if(new Date(djvudfv134v_ando).getMinutes()<10){document.write("0"+new Date(djvudfv134v_ando).getMinutes());}else{document.write(new Date(djvudfv134v_ando).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v_ando).getSeconds()<10){document.write("0"+new Date(djvudfv134v_ando).getSeconds());}else{document.write(new Date(djvudfv134v_ando).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+<li>Và Nhật Bản là <span class="form_new_24" style="margin-bottom:7px">
+<script>
+var djvudfv134v_nhatban = djvudfv134v + 7200000;
+if(new Date(djvudfv134v_nhatban).getDate()<10){document.write("0"+new Date(djvudfv134v_nhatban).getDate());}else{document.write(new Date(djvudfv134v_nhatban).getDate());}
+document.write("-");
+if((new Date(djvudfv134v_nhatban).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v_nhatban).getMonth()+1));}else{document.write(new Date(djvudfv134v_nhatban).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v_nhatban).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v_nhatban).getHours()<10){document.write("0"+new Date(djvudfv134v_nhatban).getHours());}else{document.write(new Date(djvudfv134v_nhatban).getHours());}
+document.write(":");
+if(new Date(djvudfv134v_nhatban).getMinutes()<10){document.write("0"+new Date(djvudfv134v_nhatban).getMinutes());}else{document.write(new Date(djvudfv134v_nhatban).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v_nhatban).getSeconds()<10){document.write("0"+new Date(djvudfv134v_nhatban).getSeconds());}else{document.write(new Date(djvudfv134v_nhatban).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+<li>....</li>
+</ul>  
+<p>- Nguyên nhân của sự khác biệt trên chính là là do việc phân chia múi giờ giữa các vùng lãnh thổ trên thế giới. <i style="font-size:17px;color:red">"Vậy cách phân chia múi giờ như thế nào !?"</i></p>
+<p>- Chúng ta có một hệ thống thời gian gọi là <i><u>giờ phối hợp quốc tế (UTC)</u></i>, trong đó có một móc thời gian dùng để làm tiêu chuẩn. Mỗi vùng lãnh thổ sẽ có một múi giờ, múi giờ này chênh lệch một khoảng thời gian <i>(có thể trễ hơn hoặc sớm hơn)</i> so với giờ tiêu chuẩn.</p>
+<p>- Ví dụ, dưới đây là bảng một số múi giờ trong hệ thống giờ phối hợp quốc tế:</p>
+<table class="table table-bordered table-hover table-striped form_new_12">
+    <tr>
+        <th>Vùng lãnh thổ</th>
+        <th>Múi giờ</th>
+        <th>Mô tả</th>
+    </tr>
+    <tr>
+        <td>Thái Bình Dương</td>
+        <td>-8</td>
+        <td>Chạy sớm hơn giờ tiêu chuẩn 8 tiếng</td>
+    </tr>
+    <tr>
+        <td>Miền núi nước Mỹ</td>
+        <td>-7</td>
+        <td>Chạy sớm hơn giờ tiêu chuẩn 7 tiếng</td>
+    </tr>
+    <tr>
+        <td>Miền trung nước Mỹ</td>
+        <td>-6</td>
+        <td>Chạy sớm hơn giờ tiêu chuẩn 6 tiếng</td>
+    </tr>
+    <tr>
+        <td>Miền đông nước Mỹ</td>
+        <td>-5</td>
+        <td>Chạy sớm hơn giờ tiêu chuẩn 5 tiếng</td>
+    </tr>
+    <tr>
+        <td>Đại Tây Dương</td>
+        <td>-4</td>
+        <td>Chạy sớm hơn giờ tiêu chuẩn 4 tiếng</td>
+    </tr>
+    <tr style="color:blue">
+        <td>GIỜ TIÊU CHUẨN</td>
+        <td>GIỜ TIÊU CHUẨN</td>
+        <td>GIỜ TIÊU CHUẨN</td>
+    </tr>
+    <tr>
+        <td>Trung Âu</td>
+        <td>+1</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 1 tiếng</td>
+    </tr>
+    <tr>
+        <td>Đông Âu</td>
+        <td>+2</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 2 tiếng</td>
+    </tr>
+    <tr>
+        <td>Moskva</td>
+        <td>+3</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 3 tiếng</td>
+    </tr>
+    <tr>
+        <td>Ấn Độ</td>
+        <td>+5:30</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 5 tiếng rưỡi</td>
+    </tr>
+    <tr>
+        <td>Việt Nam</td>
+        <td>+7</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 7 tiếng</td>
+    </tr>
+    <tr>
+        <td>Tây Úc, Hồng Kông, Trung Quốc</td>
+        <td>+8</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 8 tiếng</td>
+    </tr>
+    <tr>
+        <td>Nhật Bản, Hàn Quốc</td>
+        <td>+9</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 9 tiếng</td>
+    </tr>
+    <tr>
+        <td>Đông Úc</td>
+        <td>+10</td>
+        <td>Chạy trễ hơn giờ tiêu chuẩn 10 tiếng</td>
+    </tr>
+</table>
+<p>- Với bảng trên, ta có thể xác định được thời gian chênh lệch giữa các vùng lãnh thổ. Ví dụ:</p>
+<ul style="list-style-type:circle">
+<li>Ấn Độ chạy trễ hơn giờ tiêu chuẩn 5 tiếng rưỡi</li>
+<li>Việt Nam chạy trễ hơn giờ tiêu chuẩn 7 tiếng</li>
+<li>Nhật Bản chạy trễ hơn giờ tiêu chuẩn 9 tiếng</li>
+<div style="margin-top:10px;margin-bottom:10px"><i><span class="fa fa-angle-double-right fa-lg"></span> Từ đó suy ra:</i></div>
+<li>Ấn Độ chạy sớm hơn Việt Nam 1 tiếng rưỡi và sớm hơn Nhật Bản 3 tiếng rưỡi</li>
+<li>Việt Nam chạy trễ hơn Ấn Độ 1 tiếng rưỡi và sớm hơn Nhật Bản 2 tiếng</li>
+<li>Nhật Bản chạy trễ hơn Ấn Độ 3 tiếng rưỡi và trễ hơn Việt Nam 2 tiếng</li>
+<div style="margin-top:10px;margin-bottom:10px"><i><span class="fa fa-angle-double-right fa-lg"></span> Đó chính là lý do của:</i></div>
+<li>Hiện tại ở Việt Nam mình là <span class="form_new_24">
+<script>
+var djvudfv134v = new Date().getTime();
+if(new Date(djvudfv134v).getDate()<10){document.write("0"+new Date(djvudfv134v).getDate());}else{document.write(new Date(djvudfv134v).getDate());}
+document.write("-");
+if((new Date(djvudfv134v).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v).getMonth()+1));}else{document.write(new Date(djvudfv134v).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v).getHours()<10){document.write("0"+new Date(djvudfv134v).getHours());}else{document.write(new Date(djvudfv134v).getHours());}
+document.write(":");
+if(new Date(djvudfv134v).getMinutes()<10){document.write("0"+new Date(djvudfv134v).getMinutes());}else{document.write(new Date(djvudfv134v).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v).getSeconds()<10){document.write("0"+new Date(djvudfv134v).getSeconds());}else{document.write(new Date(djvudfv134v).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+<li>Tuy nhiên, cùng thời điểm này ở Ấn Độ lại là <span class="form_new_24" style="margin:10px 0px 7px 0px">
+<script>
+var djvudfv134v_ando = djvudfv134v - 5400000;
+if(new Date(djvudfv134v_ando).getDate()<10){document.write("0"+new Date(djvudfv134v_ando).getDate());}else{document.write(new Date(djvudfv134v_ando).getDate());}
+document.write("-");
+if((new Date(djvudfv134v_ando).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v_ando).getMonth()+1));}else{document.write(new Date(djvudfv134v_ando).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v_ando).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v_ando).getHours()<10){document.write("0"+new Date(djvudfv134v_ando).getHours());}else{document.write(new Date(djvudfv134v_ando).getHours());}
+document.write(":");
+if(new Date(djvudfv134v_ando).getMinutes()<10){document.write("0"+new Date(djvudfv134v_ando).getMinutes());}else{document.write(new Date(djvudfv134v_ando).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v_ando).getSeconds()<10){document.write("0"+new Date(djvudfv134v_ando).getSeconds());}else{document.write(new Date(djvudfv134v_ando).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+<li>Và Nhật Bản là <span class="form_new_24" style="margin-bottom:7px">
+<script>
+var djvudfv134v_nhatban = djvudfv134v + 7200000;
+if(new Date(djvudfv134v_nhatban).getDate()<10){document.write("0"+new Date(djvudfv134v_nhatban).getDate());}else{document.write(new Date(djvudfv134v_nhatban).getDate());}
+document.write("-");
+if((new Date(djvudfv134v_nhatban).getMonth()+1)<10){document.write("0"+(new Date(djvudfv134v_nhatban).getMonth()+1));}else{document.write(new Date(djvudfv134v_nhatban).getMonth()+1);}
+document.write("-");
+document.write(new Date(djvudfv134v_nhatban).getFullYear());
+document.write(" <b>");
+if(new Date(djvudfv134v_nhatban).getHours()<10){document.write("0"+new Date(djvudfv134v_nhatban).getHours());}else{document.write(new Date(djvudfv134v_nhatban).getHours());}
+document.write(":");
+if(new Date(djvudfv134v_nhatban).getMinutes()<10){document.write("0"+new Date(djvudfv134v_nhatban).getMinutes());}else{document.write(new Date(djvudfv134v_nhatban).getMinutes());}
+document.write(":");
+if(new Date(djvudfv134v_nhatban).getSeconds()<10){document.write("0"+new Date(djvudfv134v_nhatban).getSeconds());}else{document.write(new Date(djvudfv134v_nhatban).getSeconds());}
+document.write("</b>");
+</script>
+</span></li>
+</ul>
+<div class="form_new_01">
+<p>- Trong phần <b>2.2) new Date(milliseconds)</b>, chúng ta có thắc mắc một điều là: <br><i>"Tại sao 15 ngày sau thời điểm <span class="form_new_28" style="margin:5px 0px">01/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span><br>không phải là <span class="form_new_28" style="margin:5px 0px">16/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span><br>mà lại là <span class="form_new_28" style="margin:5px 0px">16/01/1970 <span style="color:red">07</span>:00:00 GMT+0700 (SE Asia Standard Time)</span> !?"</i></p>
+<p>- Thật ra thì <span class="form_new_28" style="margin:5px 0px">16/01/1970 00:00:00 (theo giờ tiêu chuẩn UTC)</span> và <span class="form_new_28" style="margin:5px 0px">16/01/1970 <span style="color:red">07</span>:00:00 GMT+0700 (SE Asia Standard Time)</span> hoàn toàn giống nhau, chúng là cùng một thời điểm. Việt Nam chạy trễ hơn giờ tiêu chuẩn 7 tiếng cho nên vào thời điểm giờ tiêu chuẩn là 0 giờ thì khi đó ở Việt Nam là 7 giờ <i>(vì trình duyệt trả về theo giờ địa phương của bạn nên mới chuyển đổi ra như thế)</i>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="ky-thuat-tao-mot-so-ngau-nhien-bang-phuong-thuc-random-trong-javascript.html"><span class="fa fa-angle-double-left fa-lg"></span> Bài trước</a>
+<a href="cach-dinh-dang-chuoi-ngay-thang-trong-javascript.html">Bài kế tiếp <span class="fa fa-angle-double-right fa-lg"></span></a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/javascript/doi-tuong-ngay-thang-date-trong-javascript.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:41:12 GMT -->
+</html>

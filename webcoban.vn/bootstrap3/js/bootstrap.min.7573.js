@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".sss-view").click(function(){$("html").css("overflow","hidden");$(".zzz-big-form > div").hide();$(".zzz-big-form").show();var sss_xacdinh = $(this).find("div").html();$(".zzz-big-form > "+sss_xacdinh).show();});});$(document).ready(function(){$(".zzz-close").click(function(){$("html").css("overflow","auto");$(".zzz-big-form").hide();});});

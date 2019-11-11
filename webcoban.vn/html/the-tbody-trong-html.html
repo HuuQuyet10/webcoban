@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/the-tbody-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:30 GMT -->
+<head>
+<title>Thẻ &lt;tbody&gt; trong HTML</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="thẻ tbody,thẻ tbody trong html,thẻ tbody là gì,thẻ tbody dùng làm gì">
+<meta name="description" content="Hướng dẫn cách sử dụng thẻ tbody trong HTML để xác định những dòng nào thuộc phần thân của bảng">
+<link rel="icon" href="../home/image/favicon.png">
+<link rel="stylesheet" type="text/css" href="../home/css/style10.css">
+<link rel="stylesheet" type="text/css" href="../home/highlight/default.css">
+<link rel="stylesheet" type="text/css" href="../home/font-awesome/css/font-awesome.min.css">
+<script src="../../ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+<div class="container">
+<div><a href="../index.html"><img src="../home/image/logo.png"></a></div>
+<div></div>
+</div>
+</header>
+<nav id="navigation">
+<div class="container">
+<ul>
+<li>
+<span><i class="fa fa-bars fa-lg" onclick="open_menu()"></i></span>
+<span><i class="fa fa-book fa-lg" onclick="open_unit()"></i></span>
+<span>
+<script>(function() {var cx = '009719991472361915522:mv0hqzomq50';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = '../../cse.google.com/cse07b6.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script>
+<gcse:search></gcse:search>
+</span>
+</li>
+<li>
+<ul>
+<li><a href="../index.html"><i class="fa fa-home fa-lg"></i></a></li>
+<li><a href="default.html">HTML</a></li>
+<li><a href="../css/default.html">CSS</a></li>
+<li><a href="../javascript/default.html">JAVASCRIPT</a></li>
+<li><a href="../jquery/default.html">JQUERY</a></li>
+<li><a href="../mysql/default.html">MYSQL</a></li>
+<li><a href="../php/default.html">PHP</a></li>
+<li><a onclick="open_search()"><i class="fa fa-search"></i></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="body">
+<div class="container">
+<div id="left">
+<div class="side">
+<div class="project"><div>HTML</div></div>
+<div class="category"><span class="fa fa-book fa-lg"></span> Các hướng dẫn cơ bản</div>
+<a href="default.html" >- Bài 01: Một số kiến thức cơ bản về HTML</a>
+<a href="cach-tao-va-chay-thuc-thi-mot-tap-tin-html.html" >- Bài 02: Cách tạo và chạy một tập tin HTML</a>
+<a href="cau-truc-co-ban-cua-mot-tap-tin-html.html" >- Bài 03: Cấu trúc cơ bản của một tập tin HTML</a>
+<a href="doan-van-ban-trong-html.html" >- Bài 04: Đoạn văn bản (Paragraph) trong HTML</a>
+<a href="the-tieu-de-heading-trong-html.html" >- Bài 05: Thẻ tiêu đề (Heading) trong HTML</a>
+<a href="cac-the-dinh-dang-van-ban-trong-html.html" >- Bài 06: Các thẻ dùng để định dạng cho văn bản (Text) trong HTML</a>
+<a href="phan-tu-html-html-element-la-gi.html" >- Bài 07: Tìm hiểu khái niệm phần tử (Element) trong HTML</a>
+<a href="cach-ghi-chu-thich-trong-html.html" >- Bài 08: Cách ghi chú thích (Comment) trong HTML</a>
+<a href="cach-tao-mot-cai-lien-ket-link-trong-html.html" >- Bài 09: Cách tạo một cái liên kết (Link) trong HTML</a>
+<a href="cach-tao-lien-ket-den-mot-vi-tri-ben-trong-trang-web.html" >- Bài 10: Liên kết đến một vị trí (Bookmark) bên trong trang web</a>
+<a href="khai-niem-thuoc-tinh-cua-phan-tu-html.html" >- Bài 11: Tìm hiểu khái niệm thuộc tính (Attribute) trong HTML</a>
+<a href="thuoc-tinh-style-trong-html.html" >- Bài 12: Cách sử dụng thuộc tính Style trong HTML</a>
+<a href="thuoc-tinh-id-va-thuoc-tinh-class-trong-html.html" >- Bài 13: Tìm hiểu thuộc tính ID, thuộc tính CLASS trong HTML</a>
+<a href="phan-tu-khoi-va-phan-tu-noi-tuyen-trong-html.html" >- Bài 14: Tìm hiểu khái niệm phần tử khối, phần tử nội tuyến trong HTML</a>
+<a href="cach-su-dung-the-div-trong-html.html" >- Bài 15: Cách sử dụng phần tử &lt;div&gt;, phần tử &lt;span&gt; trong HTML</a>
+<a href="cach-chen-hinh-anh-vao-trang-web-html.html" >- Bài 16: Chèn hình ảnh (Image) vào trang web</a>
+<a href="cach-tao-mot-cai-ban-do-hinh-anh-image-map-trong-html.html" >- Bài 17: Cách tạo một cái bản đồ ảnh (Image Map) trong HTML</a>
+<a href="cach-chen-mot-doan-phim-video-vao-trang-web.html" >- Bài 18: Cách chèn một đoạn phim (Video) vào trang web</a>
+<a href="cach-chen-mot-doan-audio-bai-hat-ban-nhac-am-thanh-vao-trang-web.html" >- Bài 19: Cách chèn một đoạn âm thanh (Audio) vào trang web</a>
+<a href="cach-chen-iframe-khung-trang-web-vao-trang-web.html" >- Bài 20: Cách chèn một cái khung (Iframe) vào trang web</a>
+<a href="cach-chen-mot-doan-video-tren-youtube-vao-trang-web.html" >- Bài 21: Cách chèn một đoạn video (Youtube) vào trang web</a>
+<a href="cach-tao-danh-sach-list-trong-html.html" >- Bài 22: Cách tạo một cái danh sách (List) trong HTML</a>
+<a href="cach-tao-bang-table-trong-html.html" >- Bài 23: Cách tạo một cái bảng (Table) trong HTML</a>
+<a href="cach-chen-plug-in-vao-trang-web-html.html" >- Bài 24: Cách nhúng ứng dụng bên ngoài (Plugin) vào trang web</a>
+<a href="cac-ky-tu-thuc-the-trong-html.html" >- Bài 25: Các ký tự thực thể (Entities) trong HTML</a>
+<div class="category"><span class="fa fa-book fa-lg"></span> Tìm hiểu nâng cao</div>
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+<a href="danh-sach-tat-ca-cac-the-co-ban-trong-html.html" >- Danh sách các thẻ trong HTML (sắp xếp theo thể loại)</a>
+<a href="ma-ngon-ngu-language-code-trong-html.html" >- Danh sách mã ngôn ngữ (Language Code) trong HTML</a>
+</div>
+</div>
+<div id="right">
+<div class="page">
+<article id="main">
+<div class="banner"></div>
+<h1 title="Thẻ &lt;tbody&gt; trong HTML">Thẻ &lt;tbody&gt; trong HTML</h1>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+<h2>1) Giới thiệu về <i>"mẫu bảng có ba thành phần"</i></h2>
+<p>- Thông thường, khi truy cập vào các trang web, ta sẽ thỉnh thoảng thấy một số bảng có cấu trúc gồm ba phần <i>(đầu bảng, thân bảng, chân bảng)</i> được phân biệt rõ ràng.</p>
+<p>- <i><u>Ví dụ</u>:</i> Bên dưới là một bảng có cấu trúc gồm ba phần phân biệt rõ ràng:</p>
+<ul style="list-style-type:circle;font-style:italic;">
+<li>Dòng đầu tiên là phần đầu của bảng.</li>
+<li style="margin-top:6px;margin-bottom:6px">Bốn dòng kế là phần thân của bảng.</li>
+<li>Dòng cuối cùng là phần chân của bảng.</li>
+</ul>
+<iframe srcdoc='<table border="1"><tr><th>Họ và tên</th><th>Năm sinh</th><th>Giới tính</th><th>Quê quán</th></tr><tr>
+<td>Nguyễn Thành A</td><td>1993</td><td>Nam</td><td>Cần Thơ</td></tr><tr><td>Trần Văn B</td><td>1985</td><td>Nam</td>
+<td>Vĩnh Long</td></tr><tr><td>Lê Thị C</td><td>1990</td><td>Nữ</td><td>Sóc Trăng</td></tr><tr><td>Mai Phước D</td><td>1992</td><td>Nam</td><td>Hậu Giang</td></tr><tr><td colspan="4" style="text-align:center">Mọi chi tiết vui lòng liên hệ cố vấn học tập</td></tr></table>' style="width:100%;height:167px;border:0px;"></iframe>
+<h2>2) Thẻ &lt;tbody&gt; trong HTML</h2>
+<p>- Thẻ &lt;tbody&gt; dùng để xác định những dòng nào thuộc <i>"phần thân"</i> của bảng.</p>
+<p>- Thẻ &lt;tbody&gt; thường được sử dụng chung với thẻ &lt;thead&gt; và &lt;tfoot&gt; để xác định những dòng nào thuộc <i>"phần đầu"</i> và <i>"phần chân"</i> của bảng.</p>
+<p>- Thẻ &lt;tbody&gt; phải được đặt bên trong phần tử &lt;table&gt; và đặt bên ngoài phần tử &lt;tr&gt;</p>
+<p>- Đối với bảng có sử dụng các thẻ &lt;thead&gt; - &lt;tbody&gt; - &lt;tfoot&gt; thì nó sẽ có hai điều đặc biệt:</p>
+<ul style="list-style-type:circle">
+<li><i><u>Thứ nhất</u>:</i> Cho dù các phần tử &lt;thead&gt; - &lt;tbody&gt; - &lt;tfoot&gt; không được sắp xếp theo đúng thứ tự. Tuy nhiên, khi hiển thị lên màn hình thì các thành phần của bảng sẽ được hiển thị theo đúng thứ tự: đầu bảng -&gt; thân bảng -&gt; chân bảng <a href="demoa0f3.html?file=2234"
+ target="_blank">(Xem ví dụ)</a></li>
+<li style="margin-top:6px"><i><u>Thứ hai</u>:</i> Ở chế độ xem trước khi in <kbd style="font-size:16px">Ctrl + P</kbd> , nếu bảng quá dài dẫn đến việc bị trải trên nhiều trang thì phần đầu của bảng sẽ được hiển thị lặp lại ở mỗi trang <a href="demo085f.html?file=2235" target="_blank">(Xem ví dụ)</a></li>
+</ul>
+<h2>3) Các thuộc tính của thẻ &lt;tbody&gt;</h2>
+<p>- Thẻ &lt;tbody&gt; có hai thuộc tính cơ bản.</p>
+<p>- Dưới đây là bảng mô tả sơ lược về hai thuộc tính đó:</p>
+<table class="table table-bordered form_new_12">
+    <tr>
+        <td>align</td>
+        <td>Canh lề cho nội dung của các ô nằm bên trong phần tử &lt;tbody&gt; theo chiều ngang</td>
+    </tr>
+    <tr>
+        <td>valign</td>
+        <td>Canh lề cho nội dung của các ô nằm bên trong phần tử &lt;tbody&gt; theo chiều dọc</td>
+    </tr>
+</table>
+<div class="quangcaotrongbaiviet"></div>
+<h3>3.1) Thuộc tính align</h3>
+<p>- Thuộc tính align dùng để canh lề cho nội dung của các ô nằm bên trong phần tử &lt;tbody&gt; theo chiều ngang.</p>
+<p>- Thuộc tính align có bốn giá trị cơ bản:</p>
+<table class="table table-bordered table-hover table-striped form_new_29">
+    <tr>
+        <td>left</td>
+        <td>Nội dung sẽ được canh nằm phía bên trái của ô</td>
+    </tr>
+    <tr>
+        <td>right</td>
+        <td>Nội dung sẽ được canh nằm phía bên phải của ô</td>
+    </tr>
+    <tr>
+        <td>center</td>
+        <td>Nội dung sẽ được canh nằm giữa ô</td>
+    </tr>
+    <tr>
+        <td>justify</td>
+        <td>Nội dung sẽ được canh đều hai bên trái phải của ô</td>
+    </tr>
+</table>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Nội dung của những ô bên trong phần tử &lt;tbody&gt; sẽ được canh nằm phía bên phải của ô</p>
+</div>
+    <hr>
+    <pre>&lt;table&gt;
+    
+    ...
+
+    &lt;tbody align=&quot;right&quot;&gt;
+        
+        ...
+
+    &lt;/tbody&gt;
+    
+    ...
+
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demoa7f0.html?file=2236" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Thay vì dùng thuộc tính align của thẻ &lt;tbody&gt; thì ta cũng có thể sử dụng thuộc tính text-align trong CSS để thay thế.</p>
+<h3>3.2) Thuộc tính valign</h3>
+<p>- Thuộc tính valign dùng để canh lề cho nội dung của các ô nằm bên trong phần tử &lt;tbody&gt; theo chiều dọc.</p>
+<p>- Thuộc tính valign có ba giá trị cơ bản:</p>
+<table class="table table-bordered table-hover table-striped form_new_29">
+    <tr>
+        <td>top</td>
+        <td>Nội dung sẽ được canh nằm phía trên của ô</td>
+    </tr>
+    <tr>
+        <td>bottom</td>
+        <td>Nội dung sẽ được canh nằm phía dưới của ô</td>
+    </tr>
+    <tr>
+        <td>middle</td>
+        <td>Nội dung sẽ được canh nằm giữa ô</td>
+    </tr>
+</table>
+<div class="form_new_03">
+    <div class="theh3">Ví dụ</div>
+    <div class="noithem"><p>- Nội dung của những ô bên trong phần tử &lt;tbody&gt; sẽ được canh nằm phía dưới của ô</p>
+</div>
+    <hr>
+    <pre>&lt;table&gt;
+    
+    ...
+
+    &lt;tbody valign=&quot;bottom&quot;&gt;
+        
+        ...
+
+    &lt;/tbody&gt;
+    
+    ...
+
+&lt;/table&gt;</pre>
+    <div class="nutxem"><a href="demoe892.html?file=2237" target="_blank">Xem ví dụ</a></div>
+</div>
+<p>- <i><u>Lưu ý</u>:</i> Thay vì dùng thuộc tính valign của thẻ &lt;tbody&gt; thì ta cũng có thể sử dụng thuộc tính vertical-align trong CSS để thay thế.</p>
+<h2>4) Định dạng CSS mặc định</h2>
+<div class="form_new_26">
+    <pre>tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}</pre>
+</div><div class="banner" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="breadcrumb">
+<a href="danh-sach-tat-ca-cac-the-tag-trong-html.html"><span class="fa fa-sign-out"></span> Danh sách các thẻ trong HTML (sắp xếp theo bảng chữ cái)</a>
+</div>
+</article>
+</div>
+<div class="side">
+<div class="top" style="display:none">
+<div></div>
+<div></div>
+</div>
+<div class="bottom">
+<div>
+<div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="../../connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+<div class="fb-like" data-href="https://www.facebook.com/webcoban.vn/" data-width="" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+</div>
+<div>
+<script src="../../apis.google.com/js/platform.js"></script>
+<div class="g-ytsubscribe" data-channelid="UCDGVJ64_Uaqlqh2tA2JR-Gw" data-layout="default" data-count="hidden"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="top">
+<div class="container">
+<div> 
+<p>GIỚI THIỆU</p>
+<p><span class="fa fa-graduation-cap fa-lg"></span> <u>WEB CƠ BẢN</u> là trang chia sẻ tài liệu học tập trực tuyến miễn phí, chúng tôi chuyên cung cấp các bài viết về lĩnh vực lập trình web, tài liệu hướng dẫn học HTML, CSS, Javascript, jQuery, MySQL, PHP, . . . .</p>
+<p><a href="#"><img src ="../home/image/dmca.jpg"></a></p>
+</div>
+<div>
+<p>LIÊN HỆ</p>
+<ul>
+<li><i class="fa fa-envelope fa-lg"></i> <span>webcoban.vn@yahoo.com</span></li>
+<li><i class="fa fa-facebook-square fa-lg"></i> <a href="https://facebook.com/www.thuvienlaptrinh.vn" target="_blank">facebook.com/webcoban.vn</a></li>
+</ul>
+</div>
+<div>
+<p>HỖ TRỢ TÁC GIẢ</p>
+<ul>
+<li>Nguyễn Thành Nhân</li>
+<li>Vietcombank: 0111000324400</li>
+<li>Agribank: 1800259109034</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<div>&copy;2016 Bản quyền thuộc về webcoban.vn</div>
+</div>
+</div>
+</footer>
+<div id="search_background"></div>
+<div id="search">
+<div class="container">
+<span class="close"><i class="fa fa-close fa-lg" onclick="close_search()"></i></span>
+<gcse:search></gcse:search>
+</div>
+</div>
+<div id="close"><i class="fa fa-close fa-lg" onclick="close_side()"></i></div>
+<script src="../home/js/page.js"></script>
+<script src="../home/highlight/highlight.pack.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140815313-1"></script>
+<script src="../home/js/analytics.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/the-tbody-trong-html.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:45:32 GMT -->
+</html>

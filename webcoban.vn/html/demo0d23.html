@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<!-- Mirrored from webcoban.vn/html/demo?file=3631 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:28 GMT -->
+<head>
+    <title>Xem ví dụ</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" href="../home/image/favicon.png">
+    <script src="../home/js/jquery.js"></script>
+    <style type="text/css">
+    body {
+        margin:auto;
+        width: 1280px;
+    }
+    #container {
+        width:1280px;
+        margin: auto;
+        position: absolute;
+        top:0px;
+        bottom: 0px;
+        background-color:#eee;
+        box-shadow: 1px 0px 3px #ccc, -1px 0px 3px #ccc;
+    }
+    #container #left{
+        position: absolute;
+        width:640px;
+        height:100%;
+    }
+    #container #left pre{
+        margin:0px;
+        background-color:white;
+        overflow: auto;
+        position: absolute;
+        top:10px;
+        bottom: 10px;
+        left:10px;
+        right:5px;
+        font-family: monospace;
+        font-size:15px;
+        border: 1px solid #b3b2b2;
+        padding:12px;
+        word-break: break-word;
+        word-wrap: normal;
+        white-space: pre-wrap;
+    }
+    #container #right{
+        position: absolute;
+        width:640px;
+        height:100%;
+        left:640px;
+    }
+    #container #right #top{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        position: absolute;
+        top:10px;
+        bottom:206px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #bottom{
+        margin:0px;
+        background-color:white;
+        border: 1px solid #b3b2b2;
+        height:185px;
+        position: absolute;
+        bottom:10px;
+        left:5px;
+        right:10px;
+    }
+    #container #right #top #iframeResult{
+        border:0px;
+        background-color: #ffffff;
+        height:100%;
+        width:100%;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="left"><pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Xem ví dụ&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;- Nếu bạn muốn chuyển đến trang chủ thì:&lt;/p&gt;
+    &lt;a href=&quot;http://webcoban.vn&quot; target=&quot;<span id="layvitri" style="color:red;font-weight:bold;font-size:18px">_self</span>&quot;&gt;Click here&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></div>
+        <div id="right">
+            <div id="top">
+            </div>
+            <div id="bottom" style="font-size:20px;padding-left:10px;">
+                <p style="margin-top:15px"><input type="radio" name="targetzz" value="_self" checked> _self</p>
+                <p><input type="radio" name="targetzz" value="_top"> _top</p>
+                <p><input type="radio" name="targetzz" value="_blank"> _blank</p>
+                <p><input type="radio" name="targetzz" value="_parent"> _parent</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function view_result(text) {
+            var ifr = document.createElement("iframe");
+            ifr.setAttribute("frameborder", "0");
+            ifr.setAttribute("id", "iframeResult");
+            document.getElementById("top").innerHTML = "";
+            document.getElementById("top").appendChild(ifr);
+            var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+            ifrw.document.open();
+            ifrw.document.write(text);
+            ifrw.document.close();
+        }
+        var text = "<iframe src='demo?file=3632' style='width:500px;height:350px;margin:30px 0px 0px 30px;border:1px solid #ccc'>";
+        view_result(text);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("input[name='targetzz']").change(function(){
+                var targetzz = $(this).val();
+                if(targetzz=="_self"){
+                    var text = "<iframe src='demo?file=3632' style='width:500px;height:350px;margin:30px 0px 0px 30px;border:1px solid #ccc'>";
+                }else if(targetzz=="_top"){
+                    var text = "<iframe src='demo?file=3633' style='width:500px;height:350px;margin:30px 0px 0px 30px;border:1px solid #ccc'>";
+                }else if(targetzz=="_blank"){
+                    var text = "<iframe src='demo?file=3634' style='width:500px;height:350px;margin:30px 0px 0px 30px;border:1px solid #ccc'>";
+                }else if(targetzz=="_parent"){
+                    var text = "<iframe src='demo?file=3635' style='width:500px;height:350px;margin:30px 0px 0px 30px;border:1px solid #ccc'>";
+                }
+                $("#layvitri").html($(this).val());
+                view_result(text);
+            });
+        });
+    </script>
+</body>
+
+<!-- Mirrored from webcoban.vn/html/demo?file=3631 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Nov 2019 03:44:29 GMT -->
+</html>﻿
